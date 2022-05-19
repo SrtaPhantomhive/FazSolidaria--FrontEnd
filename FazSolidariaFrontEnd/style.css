@@ -1,0 +1,15 @@
+/* Fonte do título */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Radio+Canada:wght@400;600;700&display=swap');
+
+/* cor de fundo do menu */
+.navbackground {
+    background-color: #39AF5B;
+}
+
+.fonteTitulo {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
