@@ -23,6 +23,29 @@
     width: 150px;
 }
 
+/* dimensionamento de carrossel */
+.dimcar {
+    overflow: hidden;
+    width: 2000px;
+    height: 470px;
+    margin: 0 auto;
+}
+
+/* dimensionamento da imagem de fundo página 1 */
+.pngfundo1 {
+    background-image: url("/assets/img/fundopagina01.png");
+    background-size: 1350px 646px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* dimensionamento da imagem de fundo pagina 2 */
+.pngfundo2 {
+    background-image: url("/assets/img/fundopagina2.png");
+    max-width: 100%;
+    height: auto;
+}
+
 /* fonte do nome da marca */
 .fonteTitulo {
     font-family: 'Amatic SC', cursive;
