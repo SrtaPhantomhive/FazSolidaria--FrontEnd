@@ -1,15 +1,42 @@
 /* Fonte do título */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Radio+Canada:wght@400;600;700&display=swap');
 
-/* cor de fundo do menu */
+/* cor de fundo do menu 1 */
 .navbackground {
     background-color: #39AF5B;
 }
 
+/* cor de fundo do menu 2 */
+.navbackground2 {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgba(117, 220, 54, 0.8);
+}
+
+/* diminui a opacidade do search */
+.searchbg {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* aumentar o tamanho dos botões */
+.btn-navbar2 {
+    width: 150px;
+}
+/* fonte do nome da marca */
 .fonteTitulo {
     font-family: 'Amatic SC', cursive;
     font-weight: bolder;
     font-size: 2em;
     /* font-family: 'Radio Canada', sans-serif;
     font-family: Amatic SC; */
+}
+
+/* relacionado ao botão de usuario */
+.line-height {
+    line-height: 18px;
+}
+
+/* Ajuste da fazenda para ela mudar de cor */
+#fazenda {
+    transition: all ease 0.5s;
 }
