@@ -1,9 +1,9 @@
 /* Fonte do título */
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Radio+Canada:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
 
 /* cor de fundo do menu 1 */
 .navbackground {
-    background-color: #39AF5B;
+    background-color: #2D964C;
 }
 
 /* cor de fundo do menu 2 */
@@ -63,4 +63,30 @@
 /* Ajuste da fazenda para ela mudar de cor */
 #fazenda {
     transition: all ease 0.5s;
+}
+
+
+
+/* PÁGINA 2 */
+
+.alinhamentoImg {
+    justify-content: center;
+    align-items: center;
+    padding-left: 11rem;
+}
+
+.fonteTxt {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 32px;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+.fonteTituloTxt {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
 }
