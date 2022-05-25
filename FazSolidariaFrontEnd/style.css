@@ -13,6 +13,16 @@
     background: rgba(117, 220, 54, 0.8);
 }
 
+.bg-btn {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgba(117, 220, 54);
+}
+
+.bg-btn:hover{
+    background-color: #2D964C;
+}
+
 /* diminui a opacidade do search */
 .searchbg {
     background: rgba(255, 255, 255, 0.8);
@@ -55,6 +65,14 @@
     font-family: Amatic SC; */
 }
 
+.fonteTituloLogin {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
 /* relacionado ao botão de usuario */
 .line-height {
     line-height: 18px;
@@ -83,10 +101,37 @@
     font-family: Amatic SC; */
 }
 
+.fonteTxtL {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
 .fonteTituloTxt {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
     font-size: 50px;
     /* font-family: 'Radio Canada', sans-serif;
     font-family: Amatic SC; */
+}
+
+#telaLogin{
+   padding: 20px;
+   background-color: rgb(255, 255, 255);
+   border-radius: 25px 0px 0px 25px;
+   box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+   
+}
+
+#nav{
+    margin-bottom: 150px;
+}
+
+#nav2{
+    margin-top: 6em;
+}
+#esqueceuSenha, #cadastre{
+    text-decoration: underline;
 }
