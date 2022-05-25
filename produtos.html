@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- CSS Iniciado. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FazSolidária</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Primeira Navbar -->
+    <!-- aqui precisa ser header, pq é cabeçalho -->
+    <header>
+        <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light fonteTitulo" href="#">
+                    <img src="/assets/img/fazsolidarialogobranca.png" width="70" height="70"
+                        class="d-inline-block align-center" alt="Logo da FazSolidária">
+                    FazSolidária
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Botão Loja Fazenda -->
+                        <li class="nav-item" id:'fazenda'>
+                            <a class="nav-link active bg-gradient-primary" aria-current="page" href="#"><img
+                                    src="/assets/img/casa.png" width="40" height="40" /></a>
+                        </li>
+                        <!-- Botão Cesto de compras -->
+                        <li class="nav-item">
+                            <abbr title="Cesto" class="bg-light">
+                                <a class="nav-link text-light" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-basket" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z" />
+                                    </svg></a>
+                            </abbr>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <!-- Botão Login Usuário + texto -->
+                            <a class="nav-link text-light d-flex align-items-center" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
+                                    class="bi bi-person" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                </svg>
+                                <span class="ml-8 line-height">Login ou
+                                    <span class="d-flex justify-content-end">Cadastro</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- container primeira tela inicio -->
+    <div class="container-justify pngfundo1 img-fluid">
+        <!-- imagem de fundo da página 1 -->
+        <img src="..." class="img-fluid" alt="">
+
+
+        <!-- Segunda Navbar -->
+        <header>
+            <!-- style="margin-top serve para ajustar o local da navbar" -->
+            <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground2" style="margin-top: 6em;">
+                <div class="container-fluid-center">
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- botão de pesquisa -->
+                        <form class="d-flex col-md-3">
+                            <input class="form-control me-2 searchbg" type="search" placeholder="Search"
+                                aria-label="Search">
+                        </form>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <!-- botão início -->
+                            <li class="nav-item ml-5">
+                                <button type="button" class="btn btn-outline-light btn-navbar2">Início</button>
+                            </li>
+                            <!-- botão certificações -->
+                            <li class="nav-item ml-5">
+                                <button type="button" class="btn btn-outline-light btn-navbar2">Certificações</button>
+                            </li>
+                            <!-- botão sobre nós -->
+                            <li class="nav-item ml-5">
+                                <button type="button" class="btn btn-outline-light btn-navbar2">Sobre Nós</button>
+                            </li>
+                            <!-- botão missão -->
+                            <li class="nav-item ml-5">
+                                <button type="button" class="btn btn-outline-light btn-navbar2">Missão</button>
+                            </li>
+                            <!-- botão equipe -->
+                            <li class="nav-item ml-5">
+                                <button type="button" class="btn btn-outline-light btn-navbar2">Equipe</button>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+  <!-- main -->
+  <main>
+    <!-- container produtos -->
+    <section class="container produtos">
+
+      <!-- title -->
+      <h1>Produtos Frescos</h1>
+      <p>
+        Toda semana ou quinzena uma cesta com frutas, legumes e verduras orgânicos, frescos e da estação entregues na sua casa
+      </p>
+      
+      <!-- listagem dos produtos -->
+      <article class="row">
+        <!-- produtos -->
+              <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://portaldoorganico.com.br/wp-content/uploads/2021/04/morango.jpg" class="img-fluid" alt="Morango">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Morango</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 9,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://hiperideal.vteximg.com.br/arquivos/ids/167687-1000-1000/46906.jpg?v=636615816230930000" class="img-fluid" alt="Beterraba">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Beterraba</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 5,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://cdn.dooca.store/457/products/cenoura-organica_1600x1600+fill_ffffff.png?v=1588556578&webp=0" class="img-fluid" alt="Cenoura">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Cenoura</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 5,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://www.anad.org.br/wp-content/uploads/2018/05/beneficios-da-maca.jpg" class="img-fluid" alt="Maçã">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Maçã</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 7,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://portaldoorganico.com.br/wp-content/uploads/2021/04/morango.jpg" class="img-fluid" alt="Morango">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Morango</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 9,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://hiperideal.vteximg.com.br/arquivos/ids/167687-1000-1000/46906.jpg?v=636615816230930000" class="img-fluid" alt="Beterraba">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Beterraba</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 5,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://cdn.dooca.store/457/products/cenoura-organica_1600x1600+fill_ffffff.png?v=1588556578&webp=0" class="img-fluid" alt="Cenoura">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Cenoura</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 5,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://www.anad.org.br/wp-content/uploads/2018/05/beneficios-da-maca.jpg" class="img-fluid" alt="Maçã">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Maçã</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 7,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+               <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://portaldoorganico.com.br/wp-content/uploads/2021/04/morango.jpg" class="img-fluid" alt="Morango">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Morango</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 9,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://hiperideal.vteximg.com.br/arquivos/ids/167687-1000-1000/46906.jpg?v=636615816230930000" class="img-fluid" alt="Beterraba">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Beterraba</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 5,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://cdn.dooca.store/457/products/cenoura-organica_1600x1600+fill_ffffff.png?v=1588556578&webp=0" class="img-fluid" alt="Cenoura">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Cenoura</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 5,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+        <!-- produtos -->
+        <a href="#" class="produtos-container col-md-3">
+          <!-- imagem do produto -->
+          <img src="https://www.anad.org.br/wp-content/uploads/2018/05/beneficios-da-maca.jpg" class="img-fluid" alt="Maçã">
+
+          <!-- itens do produto -->
+          <article class="produtos-itens">
+            <!-- title produto -->
+            <h2>Maçã</h2>
+
+            <!-- stars -->
+            <div class="produtos-stars">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+
+            <!-- preco -->
+            <strong class="produtos-preco">
+              R$ 7,90
+            </strong>
+          </article>
+          <!-- end itens do produto -->
+        </a>
+        <!-- end produtos -->
+
+      </article>
+      <!-- listagem dos produtos -->
+      <!-- end container produtos -->
+  </main>
+  <!-- end main -->
+
+  <!-- Footer -->
+  <footer class="container-fluid">
+    <!-- container -->
+    <section class="container">
+      <!-- menus -->
+      <section class="row">
+        <!-- atendimento -->
+        <article class="col-md-4">
+          <h4>
+            Atendimento
+          </h4>
+          <!-- links -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="tel:+5511999999999">(11) 9 9999 9999</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="mailto:contato@sualoja.com.br">contato@sualoja.com.br</a>
+            </li>
+
+            <li class="nav-item">
+              <strong>Horário de atendimento:</strong><br> 
+              Segunda à sexta das 9:00 até as 17:30h
+            </li>
+          </ul>
+        </article>
+        <!-- end atendimento -->
+
+        <!-- acesso rápido -->
+        <article class="col-md-3">
+          <h4>
+            Acesso rápido
+          </h4>
+          <!-- links -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#">Minha conta</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">Meus pedidos</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">Rastrear meus pedidos</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">Troca e devoluções</a>
+            </li>
+          </ul>
+        </article>
+        <!-- end acesso rápido -->
+
+        <!-- institucional -->
+        <article class="col-md-3">
+          <h4>
+            Institucional
+          </h4>
+          <!-- links -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#">Sobre Nós</a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="#">Certificações</a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="#">Missão</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">Equipe</a>
+            </li>
+          </ul>
+        </article>
+        <!-- end institucional -->
+
+        <!-- mais acessadas -->
+        <article class="col-md-2">
+          <h4>
+            Fale Conosco:
+          </h4>
+          <!-- links -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#">Chat Online</a>
+            </li>
+          </ul>
+        </article>
+        <!-- end mais acessadas -->
+      </section>
+      <!-- end menus -->
+    </section>
+    <!-- end container -->
+
+  </footer>
+  <!-- end Footer-->
+
+  <!-- Arquivos Bootstrap -->
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/popper.js"></script>
+  <script src="./assets/js/bootstrap.js"></script>
+</body>
+
+    
+</html>
