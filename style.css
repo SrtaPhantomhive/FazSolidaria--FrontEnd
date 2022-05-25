@@ -1,0 +1,328 @@
+/* Fonte do título */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* cor de fundo do menu 1 */
+.navbackground {
+    background-color: #2D964C;
+}
+
+/* cor de fundo do menu 2 */
+.navbackground2 {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgba(117, 220, 54, 0.8);
+}
+
+/* diminui a opacidade do search */
+.searchbg {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* aumentar o tamanho dos botões */
+.btn-navbar2 {
+    width: 150px;
+}
+
+/* dimensionamento de carrossel */
+.dimcar {
+    overflow: hidden;
+    width: 2000px;
+    height: 470px;
+    margin: 0 auto;
+}
+
+/* dimensionamento da imagem de fundo página 1 */
+.pngfundo1 {
+    background-image: url("/assets/img/fundopagina01.png");
+    background-size: 1350px 646px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* dimensionamento da imagem de fundo pagina 2 */
+.pngfundo2 {
+    background-image: url("/assets/img/fundopagina2.png");
+    max-width: 100%;
+    height: auto;
+}
+
+/* fonte do nome da marca */
+.fonteTitulo {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+/* relacionado ao botão de usuario */
+.line-height {
+    line-height: 18px;
+}
+
+/* Ajuste da fazenda para ela mudar de cor */
+#fazenda {
+    transition: all ease 0.5s;
+}
+
+
+
+/* PÁGINA 2 */
+
+.alinhamentoImg {
+    justify-content: center;
+    align-items: center;
+    padding-left: 11rem;
+}
+
+.fonteTxt {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 32px;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+.fonteTituloTxt {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+/*Estilo da page produtos*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+header {
+  padding: 25px;
+}
+
+header ul li {
+  position: relative;
+}
+
+header ul li a {
+  font-size: 16px;
+  font-weight: bold;
+}
+header ul li a svg {
+  font-size: 23px;
+}
+header ul li a:hover {
+  color: initial;
+}
+
+nav.nav-produtos ul.nav li {
+  position: relative;
+  padding: 10px;
+}
+nav.nav-produtos ul.nav li svg {
+  font-size: 20px;
+  margin-right: 10px;
+}
+nav.nav-produtos ul.nav li:hover {
+  background: black;
+}
+nav.nav-produtos ul.nav li:hover ul.nav {
+  display: block;
+}
+
+nav.nav-produtos ul.nav li ul.nav li {
+  padding: 10px 25px;
+}
+
+.produtos {
+  margin: 30px 0;
+}
+.produtos .produtos-container {
+  margin: 30px 0;
+}
+.produtos .produtos-container .produtos-itens {
+  color: #343A40;
+}
+.produtos .produtos-container .produtos-itens h2 {
+  font-size: 19px;
+  margin: 10px 0 0;
+}
+.produtos .produtos-container .produtos-itens .produtos-stars {
+  font-size: 10px;
+}
+.produtos .produtos-container .produtos-itens .produtos-stars svg {
+  fill: #2D964C;
+}
+.produtos .produtos-container .produtos-itens .produtos-preco {
+  font-size: 16px;
+}
+
+.produtos-compra figure {
+  margin: 0;
+}
+.produtos-compra .produtos-conteudo h1 {
+  margin: 0;
+  font-size: 32px;
+}
+.produtos-compra .produtos-conteudo p {
+  font-size: 16px;
+}
+.produtos-compra .produtos-preco .produtos-stars svg {
+  fill: #2D964C;
+}
+.produtos-compra .produtos-preco strong {
+  font-size: 40px;
+}
+.produtos-compra .produtos-preco form {
+  font-weight: 100;
+}
+.produtos-compra .produtos-preco form label {
+  margin: 0;
+}
+.produtos-compra .produtos-preco .produtos-stars svg, .produtos-compra .produtos-preco strong span, .produtos-compra .produtos-preco form {
+  font-size: 18px;
+}
+
+/*rodapé*/
+footer {
+  background: #2D964C;
+  padding: 25px 0;
+  color: #FFF;
+}
+footer a {
+  color: #FFF;
+}
+footer a:hover {
+  color: #FFF;
+}
+footer h4 {
+  color: #FFFFFF;
+  font-size: 19px;
+}
+footer ul li.ellipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*!
+ * Bootstrap v4.5.0 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+:root {
+  --blue:#007bff;
+  --indigo:#6610f2;
+  --purple:#6f42c1;
+  --pink:#e83e8c;
+  --red:#dc3545;
+  --orange:#fd7e14;
+  --yellow:#ffc107;
+  --green:#28a745;
+  --teal:#20c997;
+  --cyan:#17a2b8;
+  --white:#fff;
+  --gray:#6c757d;
+  --gray-dark:#343a40;
+  --primary:#007bff;
+  --secondary:#6c757d;
+  --success:#28a745;
+  --info:#17a2b8;
+  --warning:#ffc107;
+  --danger:#dc3545;
+  --light:#f8f9fa;
+  --dark:#343a40;
+  --breakpoint-xs:0;
+  --breakpoint-sm:576px;
+  --breakpoint-md:768px;
+  --breakpoint-lg:992px;
+  --breakpoint-xl:1200px;
+  --font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol, ol ul, ul ol, ul ul {
+  margin-bottom: 0;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
