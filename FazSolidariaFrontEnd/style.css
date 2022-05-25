@@ -1,6 +1,9 @@
 /* Fonte do título */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 /* cor de fundo do menu 1 */
 .navbackground {
     background-color: #2D964C;
@@ -13,15 +16,6 @@
     background: rgba(117, 220, 54, 0.8);
 }
 
-.bg-btn {
-    /* background-color: #75DC36; */
-    /* usei rgb para controlar a opacidade */
-    background: rgb(107, 201, 48);
-}
-
-.bg-btn:hover{
-    background-color: #2D964C;
-}
 
 /* diminui a opacidade do search */
 .searchbg {
@@ -65,14 +59,6 @@
     font-family: Amatic SC; */
 }
 
-.fonteTituloLogin {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bolder;
-    font-size: 3em;
-    /* font-family: 'Radio Canada', sans-serif;
-    font-family: Amatic SC; */
-}
-
 /* relacionado ao botão de usuario */
 .line-height {
     line-height: 18px;
@@ -101,14 +87,6 @@
     font-family: Amatic SC; */
 }
 
-.fonteTxtL {
-    font-family: 'Nunito', cursive;
-    font-weight: bold;
-    font-size: 18px;
-    /* font-family: 'Radio Canada', sans-serif;
-    font-family: Amatic SC; */
-}
-
 .fonteTituloTxt {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
@@ -117,16 +95,19 @@
     font-family: Amatic SC; */
 }
 
+/*login*/
+
 #telaLogin{
    padding: 20px;
    background-color: rgb(255, 255, 255);
    border-radius: 25px 0px 25px 0px;
    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+   margin-bottom: 20px;
    
 }
 
 #nav{
-    margin-bottom: 150px;
+    margin-bottom: 130px;
 }
 
 #nav2{
@@ -135,3 +116,53 @@
 #esqueceuSenha, #cadastre{
     text-decoration: underline;
 }
+
+.fonteTxtL {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+.fonteTituloLogin {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+.bg-btn {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgb(107, 201, 48);
+}
+
+.bg-btn:hover{
+    background-color: #2D964C;
+}
+
+/*rodapé*/
+footer {
+    background: #2D964C;
+    padding: 25px 0;
+    color: #FFF;
+  }
+  footer a {
+    color: #FFF;
+  }
+  footer a:hover {
+    color: #FFF;
+  }
+  footer h4 {
+    color: #FFFFFF;
+    font-size: 19px;
+  }
+  footer ul li.ellipsis {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
