@@ -6,6 +6,23 @@
     background-color: #2D964C;
 }
 
+/* configura o texto da página 1 */
+.configTxt {
+    overflow: hidden;
+    max-height: 1000px;
+    height: 400px;
+    max-width: 500px;
+    width: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 160px;
+    margin-bottom: 150px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 20px;
+}
+
 /* cor de fundo do menu 2 */
 .navbackground2 {
     /* background-color: #75DC36; */
@@ -26,17 +43,36 @@
 /* dimensionamento de carrossel */
 .dimcar {
     overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    height: 300px;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-left: 90px;
+    margin-right: 0;
+    border-radius: 20px;
+    /* overflow: hidden;
     width: 2000px;
     height: 470px;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
+
+/* alinha as navbars */
+.alinhamentomenu {
+    max-width: 100%;
+}
+
 
 /* dimensionamento da imagem de fundo página 1 */
 .pngfundo1 {
     background-image: url("/assets/img/fundopagina01.png");
     background-size: 1350px 646px;
     max-width: 100%;
-    height: auto;
+    height: 646px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 /* dimensionamento da imagem de fundo pagina 2 */
@@ -55,6 +91,11 @@
     font-family: Amatic SC; */
 }
 
+.fonteTituloTxt {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+}
 /* relacionado ao botão de usuario */
 .line-height {
     line-height: 18px;
@@ -65,28 +106,44 @@
     transition: all ease 0.5s;
 }
 
+/* altera as cores das caixas de texto */
+.coresCxTxt{
+    background: rgba(15, 15, 15, 0.5);
+}
 
 
 /* PÁGINA 2 */
-
+/* alinha as imagens dos certificados */
 .alinhamentoImg {
     justify-content: center;
     align-items: center;
     padding-left: 11rem;
 }
 
+/* fonte escolhida para os botões da aplicação */
+.fonteBotao{
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 35px;
+}
+/* altera a fonte dos textos da página 2 */
 .fonteTxt {
     font-family: 'Nunito', cursive;
     font-weight: lighter;
-    font-size: 32px;
-    /* font-family: 'Radio Canada', sans-serif;
-    font-family: Amatic SC; */
+    font-size: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
-.fonteTituloTxt {
+/* altera a fonte dos textos da página 1 */
+.fonteTxtpg1 {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
-    font-size: 50px;
-    /* font-family: 'Radio Canada', sans-serif;
-    font-family: Amatic SC; */
+    font-size: 25px;
+}
+
+
+/* deixa a borda arredondada */
+.borda {
+    border-radius: 20px;
 }
