@@ -15,9 +15,9 @@
 
 <body>
 
-    <!-- Primeira Navbar -->
-    <!-- aqui precisa ser header, pq é cabeçalho -->
+    <!-- Narvbars -->
     <header>
+        <!-- PRIMEIRA NAVBAR -->
         <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground">
             <div class="container-fluid">
                 <a class="navbar-brand text-light fonteTitulo" href="#">
@@ -65,56 +65,54 @@
                 </div>
             </div>
         </nav>
+
+        <!-- SEGUNDA NAVBAR -->
+        <!-- style="margin-top serve para ajustar o local da navbar" -->
+        <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground2" style="margin-top: 6em;">
+            <div class="container-fluid-center">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- botão de pesquisa -->
+                    <form class="d-flex col-md-3 fonteBotao">
+                        <input class="form-control me-2 searchbg" type="search" placeholder="Pesquisa"
+                            aria-label="Pesquisa">
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- botão início -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Início</button>
+                        </li>
+                        <!-- botão certificações -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Certificações</button>
+                        </li>
+                        <!-- botão sobre nós -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Sobre Nós</button>
+                        </li>
+                        <!-- botão missão -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Missão</button>
+                        </li>
+                        <!-- botão equipe -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Equipe</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- container primeira tela inicio -->
+
+    <!-- PÁGINA 1 INÍCIO -->
     <div class="container-justify pngfundo1 img-fluid">
         <!-- imagem de fundo da página 1 -->
         <img src="..." class="img-fluid" alt="">
 
-
-        <!-- Segunda Navbar -->
-        <header>
-            <!-- style="margin-top serve para ajustar o local da navbar" -->
-            <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground2" style="margin-top: 6em;">
-                <div class="container-fluid-center">
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- botão de pesquisa -->
-                        <form class="d-flex col-md-3 fonteBotao">
-                            <input class="form-control me-2 searchbg" type="search" placeholder="Search"
-                                aria-label="Search">
-                        </form>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <!-- botão início -->
-                            <li class="nav-item ml-5 fonteBotao">
-                                <button type="button" class="btn btn-outline-light btn-navbar2">Início</button>
-                            </li>
-                            <!-- botão certificações -->
-                            <li class="nav-item ml-5 fonteBotao">
-                                <button type="button" class="btn btn-outline-light btn-navbar2">Certificações</button>
-                            </li>
-                            <!-- botão sobre nós -->
-                            <li class="nav-item ml-5 fonteBotao">
-                                <button type="button" class="btn btn-outline-light btn-navbar2">Sobre Nós</button>
-                            </li>
-                            <!-- botão missão -->
-                            <li class="nav-item ml-5 fonteBotao">
-                                <button type="button" class="btn btn-outline-light btn-navbar2">Missão</button>
-                            </li>
-                            <!-- botão equipe -->
-                            <li class="nav-item ml-5 fonteBotao">
-                                <button type="button" class="btn btn-outline-light btn-navbar2">Equipe</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!-- texto da página 1 -->
         <div class="container">
             <div class="row w-100 d-flex justify-content-center fonteTxtpg1">
+                <!-- Texto Página 1 -->
                 <div class="col-md-6 coresCxTxt text-light configTxt">
                     <div>
                         <div class="fonteTituloTxt" style="color: black;">
@@ -160,159 +158,177 @@
         </div>
     </div>
 
-    <!-- SEGUNDA PÁGINA EM ANDAMENTO  -->
-    <!-- colunas e linhas pagina 2 -->
+
+    <!-- PÁGINA 2 CERTIFICADOS -->
     <div class="container mt-5 mb-3 p-3 fonteTituloTxt">
         <div class="row">
+            <!-- Título -->
             <div class="col text-center">Certificações</div>
         </div>
-    </div>
-    <!-- imagens certificados -->
-    <div class="container-fluid mb-4 alinhamentoImg navbackground2">
-        <div class="row">
-            <div class="col">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/assets/img/seloOrganico.png" alt="Selo Orgânico"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
-                            <h2>Orgânico</h2>
-                            <p>Produzimos alimentos sem o uso de agrotóxicos, aditivos e outros químicos!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/assets/img/seloSustentavel.png" alt="Selo Orgânico"
-                                style="width:200px;height:200px;">
-                        </div>
-                        <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
-                            <h2>Sustentável</h2>
-                            <p>Utilizamos energia limpa em nossa produção e nenhuma embalagem plástica!</p>
+        <!-- certificados Cards -->
+        <div class="container-fluid mb-4 alinhamentoImg navbackground2">
+            <div class="row">
+                <div class="col">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/assets/img/seloOrganico.png" alt="Selo Orgânico"
+                                    style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
+                                <h2>Orgânico</h2>
+                                <p>Produzimos alimentos sem o uso de agrotóxicos, aditivos e outros químicos!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="/assets/img/seloVegano.png" alt="Selo Orgânico" style="width:200px;height:200px;">
+                <div class="col">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/assets/img/seloSustentavel.png" alt="Selo Orgânico"
+                                    style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
+                                <h2>Sustentável</h2>
+                                <p>Utilizamos energia limpa em nossa produção e nenhuma embalagem plástica!</p>
+                            </div>
                         </div>
-                        <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
-                            <h2>Vegano</h2>
-                            <p>Não trabalhamos com produtos de origem animal e nem derivados!</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/assets/img/seloVegano.png" alt="Selo Orgânico"
+                                    style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
+                                <h2>Vegano</h2>
+                                <p>Não trabalhamos com produtos de origem animal e nem derivados!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- textos -->
-    <div class="container mt-5 text-light fonteTxt borda text-center">
-        <div class="row">
-            <div class="col">
-                <!-- TIMELINE -->
-                <div class="container">
-                    <div class="row text-center justify-content-center mb-5">
-                        <div class="col-xl-6 col-lg-8">
-                            <h2 class="fonteTituloTxt" style="color: black; font-size: 35px;">Qual Nosso Diferencial?
-                            </h2>
-                            <p class="text-muted">Nossa produção é certificada como orgânica por produzir alimentos
-                                cultivados com adubos naturais e defensivos biológicos, portanto, livres de agrotóxicos,
-                                adubos químicos ou hormônios, com
-                                respeito ao solo, os lençóis freáticos e os rios. Atuamos para contribuir com a
-                                conservação dos biomas agregando conhecimentos técnico-científicos, como a análise de
-                                impacto ao meio ambiente, aos modos de produção agroextrativistas da nossa comunidade,
-                                que são tradicionalmente passados de geração em geração. Nossos produtos são resultado
-                                de uma agricultura baseada em sustentabilidade, cultivo natural,
-                                equilíbrio ecológico e respeito ao homem.</p>
+        <div class="container mt-5 text-light fonteTxt borda text-center">
+            <div class="row">
+                <div class="col">
+                    <!-- TIMELINE -->
+                    <div class="container">
+                        <div class="row text-center justify-content-center mb-5">
+                            <!-- Textos -->
+                            <div class="col-xl-6 col-lg-8">
+                                <h2 class="fonteTituloTxt" style="color: black; font-size: 35px;">Qual Nosso
+                                    Diferencial?
+                                </h2>
+                                <p class="text-muted">Nossa produção é certificada como orgânica por produzir alimentos
+                                    cultivados com adubos naturais e defensivos biológicos, portanto, livres de
+                                    agrotóxicos,
+                                    adubos químicos ou hormônios, com
+                                    respeito ao solo, os lençóis freáticos e os rios. Atuamos para contribuir com a
+                                    conservação dos biomas agregando conhecimentos técnico-científicos, como a análise
+                                    de
+                                    impacto ao meio ambiente, aos modos de produção agroextrativistas da nossa
+                                    comunidade,
+                                    que são tradicionalmente passados de geração em geração. Nossos produtos são
+                                    resultado
+                                    de uma agricultura baseada em sustentabilidade, cultivo natural,
+                                    equilíbrio ecológico e respeito ao homem.</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-                                <div class="timeline-step">
-                                    <div class="timeline-content" data-toggle="popover" data-trigger="hover"
-                                        data-placement="top" title=""
-                                        data-content="And here's some amazing content. It's very engaging. Right?"
-                                        data-original-title="2003">
-                                        <div class="inner-circle"></div>
-                                        <p class="h6 mt-3 mb-1 fonteTituloTxt" style="color: black; font-size: 25px;">
-                                            Saúde</p>
-                                        <p class="h6 text-muted mb-0 mb-lg-0">Aqui não utilizamos nenhum químico
-                                            prejudicial à sua saúde!</p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                                    <div class="timeline-step">
+                                        <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                            data-placement="top" title=""
+                                            data-content="And here's some amazing content. It's very engaging. Right?"
+                                            data-original-title="2003">
+                                            <div class="inner-circle"></div>
+                                            <p class="h6 mt-3 mb-1 fonteTituloTxt"
+                                                style="color: black; font-size: 25px;">
+                                                Saúde</p>
+                                            <p class="h6 text-muted mb-0 mb-lg-0">Aqui não utilizamos nenhum químico
+                                                prejudicial à sua saúde!</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="timeline-step">
-                                    <div class="timeline-content" data-toggle="popover" data-trigger="hover"
-                                        data-placement="top" title=""
-                                        data-content="And here's some amazing content. It's very engaging. Right?"
-                                        data-original-title="2004">
-                                        <div class="inner-circle"></div>
-                                        <p class="h6 mt-3 mb-1 fonteTituloTxt" style="color: black; font-size: 25px;">Da
-                                            Época</p>
-                                        <p class="h6 text-muted mb-0 mb-lg-0">Nossa produção segue a sazonalidade de
-                                            nossos frutos e seus ciclos naturais, logo você encontrará apenas alimentos
-                                            fresquinhos da estação!</p>
+                                    <div class="timeline-step">
+                                        <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                            data-placement="top" title=""
+                                            data-content="And here's some amazing content. It's very engaging. Right?"
+                                            data-original-title="2004">
+                                            <div class="inner-circle"></div>
+                                            <p class="h6 mt-3 mb-1 fonteTituloTxt"
+                                                style="color: black; font-size: 25px;">Da
+                                                Época</p>
+                                            <p class="h6 text-muted mb-0 mb-lg-0">Nossa produção segue a sazonalidade de
+                                                nossos frutos e seus ciclos naturais, logo você encontrará apenas
+                                                alimentos
+                                                fresquinhos da estação!</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="timeline-step">
-                                    <div class="timeline-content" data-toggle="popover" data-trigger="hover"
-                                        data-placement="top" title=""
-                                        data-content="And here's some amazing content. It's very engaging. Right?"
-                                        data-original-title="2005">
-                                        <div class="inner-circle"></div>
-                                        <p class="h6 mt-3 mb-1 fonteTituloTxt" style="color: black; font-size: 25px;">
-                                            Educação</p>
-                                        <p class="h6 text-muted mb-0 mb-lg-0">Em nosso espaço, oferecemos visitações a
-                                            escolas. Dessa forma, podemos conscientizar os mais jovens sobre a
-                                            importância da conservação ao meio ambiente!</p>
+                                    <div class="timeline-step">
+                                        <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                            data-placement="top" title=""
+                                            data-content="And here's some amazing content. It's very engaging. Right?"
+                                            data-original-title="2005">
+                                            <div class="inner-circle"></div>
+                                            <p class="h6 mt-3 mb-1 fonteTituloTxt"
+                                                style="color: black; font-size: 25px;">
+                                                Educação</p>
+                                            <p class="h6 text-muted mb-0 mb-lg-0">Em nosso espaço, oferecemos visitações
+                                                a
+                                                escolas. Dessa forma, podemos conscientizar os mais jovens sobre a
+                                                importância da conservação ao meio ambiente!</p>
+                                            <button type="button"
+                                                class="btn btn-primary btn-sm mt-2 navbackground2 fonteTxt"
+                                                style="border: none; font-size: 16px;">Agende Aqui!</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="timeline-step">
-                                    <div class="timeline-content" data-toggle="popover" data-trigger="hover"
-                                        data-placement="top" title=""
-                                        data-content="And here's some amazing content. It's very engaging. Right?"
-                                        data-original-title="2010">
-                                        <div class="inner-circle"></div>
-                                        <p class="h6 mt-3 mb-1 fonteTituloTxt" style="color: black; font-size: 25px;">
-                                            Naturais</p>
-                                        <p class="h6 text-muted mb-0 mb-lg-0">Nossos alimentos possuem aspecto 100%
-                                            natural, como coloração e gosto acentuados!</p>
+                                    <div class="timeline-step">
+                                        <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                            data-placement="top" title=""
+                                            data-content="And here's some amazing content. It's very engaging. Right?"
+                                            data-original-title="2010">
+                                            <div class="inner-circle"></div>
+                                            <p class="h6 mt-3 mb-1 fonteTituloTxt"
+                                                style="color: black; font-size: 25px;">
+                                                Naturais</p>
+                                            <p class="h6 text-muted mb-0 mb-lg-0">Nossos alimentos possuem aspecto 100%
+                                                natural, como coloração e gosto acentuados!</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="timeline-step mb-0">
-                                    <div class="timeline-content" data-toggle="popover" data-trigger="hover"
-                                        data-placement="top" title=""
-                                        data-content="And here's some amazing content. It's very engaging. Right?"
-                                        data-original-title="2020">
-                                        <div class="inner-circle"></div>
-                                        <p class="h6 mt-3 mb-1 fonteTituloTxt" style="color: black; font-size: 25px;">
-                                            Doações</p>
-                                        <p class="h6 text-muted mb-0 mb-lg-0">Com seu pedido, uma parte vai para a
-                                            alimentação de famílias carentes</p>
+                                    <div class="timeline-step mb-0">
+                                        <div class="timeline-content" data-toggle="popover" data-trigger="hover"
+                                            data-placement="top" title=""
+                                            data-content="And here's some amazing content. It's very engaging. Right?"
+                                            data-original-title="2020">
+                                            <div class="inner-circle"></div>
+                                            <p class="h6 mt-3 mb-1 fonteTituloTxt"
+                                                style="color: black; font-size: 25px;">
+                                                Doações</p>
+                                            <p class="h6 text-muted mb-0 mb-lg-0">Com seu pedido, uma parte vai para a
+                                                alimentação de famílias carentes</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
-    </div>
 
+    <!-- PÁGINA 3 SOBRE NÓS -->
 
+    <!-- PÁGINA 4 MISSÃO -->
 
+    <!-- PÁGINA 5 NOSSAS FOTO -->
+
+    <!-- RODAPÉ -->
 
 
 

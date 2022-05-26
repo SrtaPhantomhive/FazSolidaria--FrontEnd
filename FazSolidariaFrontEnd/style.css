@@ -1,15 +1,56 @@
-/* Fonte do título */
+/* -------FONTES--------- */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
 
+
+/* ----------CORES GERAIS DO PROJETO--------- */
+/* cor do fundo do site */
 body {
     background-color: #FCF2B8;
 }
 
-/* cor de fundo do menu 1 */
+/* Cor de fundo navbar 1 */
 .navbackground {
     background-color: #2D964C;
 }
 
+/* cor de fundo do menu 2 */
+.navbackground2 {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgba(117, 220, 54, 0.8);
+}
+
+
+/* ---------CONFIG. NAVBARS-------- */
+/* alinha as navbars */
+.alinhamentomenu {
+    max-width: 100%;
+}
+
+
+/* -------CONFIG. BOTÕES--------- */
+/* diminui a opacidade do search */
+.searchbg {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* aumentar o tamanho dos botões */
+.btn-navbar2 {
+    width: 150px;
+}
+
+/* relacionado ao botão de usuario */
+.line-height {
+    line-height: 18px;
+}
+
+/* Ajuste da fazenda para ela mudar de cor */
+#fazenda {
+    transition: all ease 0.5s;
+}
+
+
+/* -------CONFIGURAÇÕES DE TEXTO------- */
 /* configura o texto da página 1 */
 .configTxt {
     overflow: hidden;
@@ -27,54 +68,6 @@ body {
     border-radius: 20px;
 }
 
-/* cor de fundo do menu 2 */
-.navbackground2 {
-    /* background-color: #75DC36; */
-    /* usei rgb para controlar a opacidade */
-    background: rgba(117, 220, 54, 0.8);
-}
-
-/* diminui a opacidade do search */
-.searchbg {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-/* aumentar o tamanho dos botões */
-.btn-navbar2 {
-    width: 150px;
-}
-
-/* dimensionamento de carrossel */
-.dimcar {
-    overflow: hidden;
-    width: 500px;
-    max-width: 100%;
-    height: 300px;
-    margin-top: 200px;
-    margin-bottom: 150px;
-    margin-left: 90px;
-    margin-right: 0;
-    border-radius: 20px;
-    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541)
-}
-
-/* alinha as navbars */
-.alinhamentomenu {
-    max-width: 100%;
-}
-
-/* dimensionamento da imagem de fundo página 1 */
-.pngfundo1 {
-    background-image: url("/assets/img/fundopg1.png");
-    background-size: 1350px 646px;
-    max-width: 100%;
-    height: 646px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
 /* fonte do nome da marca */
 .fonteTitulo {
     font-family: 'Amatic SC', cursive;
@@ -84,35 +77,16 @@ body {
     font-family: Amatic SC; */
 }
 
+/* fonte para títulos */
 .fonteTituloTxt {
     font-family: 'Amatic SC', cursive;
     font-weight: bolder;
     font-size: 50px;
 }
 
-/* relacionado ao botão de usuario */
-.line-height {
-    line-height: 18px;
-}
-
-/* Ajuste da fazenda para ela mudar de cor */
-#fazenda {
-    transition: all ease 0.5s;
-}
-
 /* altera as cores das caixas de texto */
 .coresCxTxt {
     background: rgb(252, 242, 184,0.6);
-}
-
-
-/* PÁGINA 2 */
-/* alinha as imagens dos certificados */
-.alinhamentoImg {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    padding-left: 0;
 }
 
 /* fonte escolhida para os botões da aplicação */
@@ -139,10 +113,48 @@ body {
 }
 
 
+/* ------CARROSSEL------- */
+/* dimensionamento de carrossel */
+.dimcar {
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    height: 300px;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    margin-left: 90px;
+    margin-right: 0;
+    border-radius: 20px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541)
+}
+
+
+/* ---------CONFIG. ADICIONAIS----------- */
+/* dimensionamento da imagem de fundo página 1 */
+.pngfundo1 {
+    background-image: url("/assets/img/fundopg1.png");
+    background-size: 1350px 646px;
+    max-width: 100%;
+    height: 646px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* alinha as imagens dos certificados */
+.alinhamentoImg {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
 /* deixa a borda arredondada */
 .borda {
     border-radius: 20px;
 }
+
 
 /* --------> CARDS <--------- */
 /* configura o tamanho do quadrado e a cor do mesmo */
@@ -208,12 +220,14 @@ body {
     margin-top: 20px;
 }
 
+/* organiza a disposição entre os pontinhos e as caixas de texto na horizontal */
 .timeline-steps {
     display: flex;
     justify-content: center;
     flex-wrap: wrap
 }
 
+/* Mantém o espaçamento entre os elementos */
 .timeline-steps .timeline-step {
     align-items: center;
     display: flex;
@@ -222,6 +236,7 @@ body {
     margin: 1rem
 }
 
+/* Configura o design dos espaços e círculos */
 @media (min-width:768px) {
     .timeline-steps .timeline-step:not(:last-child):after {
         content: "";
@@ -244,11 +259,13 @@ body {
     }
 }
 
+/* Alinha o texto */
 .timeline-steps .timeline-content {
     width: 10rem;
     text-align: center
 }
 
+/* Configura o círculo interno */
 .timeline-steps .timeline-content .inner-circle {
     border-radius: 1.5rem;
     height: 1rem;
@@ -259,6 +276,7 @@ body {
     background-color: rgba(117, 220, 54)
 }
 
+/* configura a cor do círculo interno */
 .timeline-steps .timeline-content .inner-circle:before {
     content: "";
     background-color: #2D964C;
