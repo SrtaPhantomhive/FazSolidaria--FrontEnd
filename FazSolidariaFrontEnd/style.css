@@ -1,6 +1,10 @@
 /* Fonte do título */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
 
+body {
+    background-color: #FCF2B8;
+}
+
 /* cor de fundo do menu 1 */
 .navbackground {
     background-color: #2D964C;
@@ -51,10 +55,7 @@
     margin-left: 90px;
     margin-right: 0;
     border-radius: 20px;
-    /* overflow: hidden;
-    width: 2000px;
-    height: 470px;
-    margin: 0 auto; */
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541)
 }
 
 /* alinha as navbars */
@@ -62,10 +63,9 @@
     max-width: 100%;
 }
 
-
 /* dimensionamento da imagem de fundo página 1 */
 .pngfundo1 {
-    background-image: url("/assets/img/fundopagina01.png");
+    background-image: url("/assets/img/fundopg1.png");
     background-size: 1350px 646px;
     max-width: 100%;
     height: 646px;
@@ -73,13 +73,6 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}
-
-/* dimensionamento da imagem de fundo pagina 2 */
-.pngfundo2 {
-    background-image: url("/assets/img/fundopagina2.png");
-    max-width: 100%;
-    height: auto;
 }
 
 /* fonte do nome da marca */
@@ -96,6 +89,7 @@
     font-weight: bolder;
     font-size: 50px;
 }
+
 /* relacionado ao botão de usuario */
 .line-height {
     line-height: 18px;
@@ -107,8 +101,8 @@
 }
 
 /* altera as cores das caixas de texto */
-.coresCxTxt{
-    background: rgba(15, 15, 15, 0.5);
+.coresCxTxt {
+    background: rgb(252, 242, 184,0.6);
 }
 
 
@@ -116,16 +110,18 @@
 /* alinha as imagens dos certificados */
 .alinhamentoImg {
     justify-content: center;
+    display: flex;
     align-items: center;
-    padding-left: 11rem;
+    padding-left: 0;
 }
 
 /* fonte escolhida para os botões da aplicação */
-.fonteBotao{
+.fonteBotao {
     font-family: 'Nunito', cursive;
     font-weight: bold;
     font-size: 35px;
 }
+
 /* altera a fonte dos textos da página 2 */
 .fonteTxt {
     font-family: 'Nunito', cursive;
@@ -146,4 +142,130 @@
 /* deixa a borda arredondada */
 .borda {
     border-radius: 20px;
+}
+
+/* --------> CARDS <--------- */
+/* configura o tamanho do quadrado e a cor do mesmo */
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: transparent;
+    perspective: 1000px;
+}
+
+/* altera a posição em relação ao próprio card*/
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Configura a passada de mouse e sua resposta*/
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Posição */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Configurações visuais da frente do card */
+.flip-card-front {
+    background-color: transparent;
+    color: black;
+    border-radius: 20px;
+}
+
+/* configurações visuais de trás do card */
+.flip-card-back {
+    background-color: #2D964C;
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    /* box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541); */
+    border-radius: 20px
+}
+
+/* centraliza o texto dentro dos cards */
+.centralizaTxt {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+
+/* --------> TIMELINE <-------- */
+body {
+    margin-top: 20px;
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted rgba(117, 220, 54);
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #2D964C;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(117, 220, 54)
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #2D964C;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5
 }
