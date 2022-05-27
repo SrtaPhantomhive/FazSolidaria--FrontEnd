@@ -11,10 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FazSolidária</title>
     <link rel="stylesheet" href="style.css">
+    <!-- gif -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
-
     <!-- Narvbars -->
     <header>
         <!-- PRIMEIRA NAVBAR -->
@@ -33,8 +34,8 @@
                 <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <!-- Botão Loja Fazenda -->
-                        <li class="nav-item" id:'fazenda'>
-                            <a class="nav-link active bg-gradient-primary" aria-current="page" href="#"><img
+                        <li class="nav-item" id='fazenda'>
+                            <a class="nav-link active bg-gradient-primary" aria-current="page" href="index.html"><img
                                     src="/assets/img/casa.png" width="40" height="40" /></a>
                         </li>
                         <!-- Botão Cesto de compras -->
@@ -50,7 +51,7 @@
                         </li>
                         <li class="nav-item dropdown ">
                             <!-- Botão Login Usuário + texto -->
-                            <a class="nav-link text-light d-flex align-items-center" href="#">
+                            <a class="nav-link text-light d-flex align-items-center" href="login.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
                                     class="bi bi-person" viewBox="0 0 16 16">
                                     <path
@@ -128,16 +129,16 @@
                     <!-- carrossel -->
                     <div id="carouselExampleInterval" class="carousel slide dimcar" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active" style="opacity: 90%;" data-interval="5000">
+                            <div class="carousel-item active" style="opacity: 90%;" data-interval="2000">
                                 <img src="/assets/img/img1.0.png" class="d-block w-100" alt="...">
                             </div>
-                            <div class="carousel-item" style="opacity: 90%;" data-interval="5000">
+                            <div class="carousel-item" style="opacity: 90%;" data-interval="2000">
                                 <img src="/assets/img/img1.0.png" class="d-block w-100" alt="...">
                             </div>
-                            <div class="carousel-item" style="opacity: 90%;" data-interval="1000">
+                            <div class="carousel-item" style="opacity: 90%;" data-interval="2000">
                                 <img src="/assets/img/img1.0.png" class="d-block w-100" alt="...">
                             </div>
-                            <div class="carousel-item" style="opacity: 90%;" data-interval="1000">
+                            <div class="carousel-item" style="opacity: 90%;" data-interval="2000">
                                 <img src="/assets/img/img1.0.png" class="d-block w-100" alt="...">
                             </div>
                         </div>
@@ -159,14 +160,15 @@
     </div>
 
 
+
     <!-- PÁGINA 2 CERTIFICADOS -->
-    <div class="container mt-5 mb-3 p-3 fonteTituloTxt">
+    <div class="mt-5 mb-3 fonteTituloTxt">
         <div class="row">
             <!-- Título -->
             <div class="col text-center">Certificações</div>
         </div>
         <!-- certificados Cards -->
-        <div class="container-fluid mb-4 alinhamentoImg navbackground2">
+        <div class="container-fluid mb-5 mt-4 alinhamentoImg navbackground2">
             <div class="row">
                 <div class="col">
                     <div class="flip-card">
@@ -212,12 +214,12 @@
                 </div>
             </div>
         </div>
+        <!-- TIMELINE -->
         <div class="container mt-5 text-light fonteTxt borda text-center">
             <div class="row">
                 <div class="col">
-                    <!-- TIMELINE -->
                     <div class="container">
-                        <div class="row text-center justify-content-center mb-5">
+                        <div class="row text-center justify-content-center mb-1">
                             <!-- Textos -->
                             <div class="col-xl-6 col-lg-8">
                                 <h2 class="fonteTituloTxt" style="color: black; font-size: 35px;">Qual Nosso
@@ -238,6 +240,17 @@
                                     equilíbrio ecológico e respeito ao homem.</p>
                             </div>
                         </div>
+                        <!-- GIF -->
+                        <div class="container-fluid alinhamentoImg mb-2">
+                            <div class="row">
+                                <img class="col">
+                                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_hbgek8qv.json"
+                                    background="transparent" speed="1" style="width: 250px; height: 210px;" loop
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col">
                                 <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
@@ -322,7 +335,59 @@
         </div>
     </div>
 
+
     <!-- PÁGINA 3 SOBRE NÓS -->
+    <!-- título -->
+    <div class="container-justify">
+        <div class="mt-5 mb-2 fonteTituloTxt">
+            <div class="row text-center justify-content-center mb-1">
+                <!-- Título -->
+                <div class="col text-center">Sobre Nós</div>
+            </div>
+            <!-- texto -->
+            <div class="container mb-5 mt-4">
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <h2 class="text-center mt-2">TITULO</h2>
+                        <p class="text-muted text-center"
+                            style="font-size: 25px; margin-top: 10px; margin-bottom: 10px;">Nossa produção é certificada
+                            como orgânica por
+                            produzir alimentos
+                            cultivados com adubos naturais e defensivos biológicos, portanto, livres de
+                            agrotóxicos,
+                            adubos químicos ou hormônios, com
+                            respeito ao solo, os lençóis freáticos e os rios. Atuamos para contribuir com a
+                            conservação dos biomas agregando conhecimentos técnico-científicos, como a análise
+                            de
+                        </p>
+                    </div>
+                    <div class="col-md-4 align-center">
+                        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_izbswkzm.json"
+                            background="transparent" speed="1"
+                            style="width: 300px; height: 200px; margin-top: 80px; margin-left: 20px;" loop autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="text-center mt-2">TITULO</h2>
+                        <p class="text-muted text-center"
+                            style="font-size: 25px; margin-top: 10px; margin-bottom: 10px;">Nossa produção é certificada
+                            como orgânica por
+                            produzir alimentos
+                            cultivados com adubos naturais e defensivos biológicos, portanto, livres de
+                            agrotóxicos,
+                            adubos químicos ou hormônios, com
+                            respeito ao solo, os lençóis freáticos e os rios. Atuamos para contribuir com a
+                            conservação dos biomas agregando conhecimentos técnico-científicos, como a análise
+                            de
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- PÁGINA 4 MISSÃO -->
 
@@ -333,7 +398,9 @@
 
 
 
-    <!-- SEPARATE JS -->
+
+
+    <!-- SEPARATE -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -343,6 +410,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

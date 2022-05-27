@@ -4,6 +4,10 @@
 
 /* ----------CORES GERAIS DO PROJETO--------- */
 /* cor do fundo do site */
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #FCF2B8;
 }
@@ -18,6 +22,12 @@ body {
     /* background-color: #75DC36; */
     /* usei rgb para controlar a opacidade */
     background: rgba(117, 220, 54, 0.8);
+}
+
+/* cor do fundo da caixa */
+.fundoCaixa{
+    background: #d1c99e;
+    opacity: 40%;
 }
 
 
@@ -86,7 +96,7 @@ body {
 
 /* altera as cores das caixas de texto */
 .coresCxTxt {
-    background: rgb(252, 242, 184,0.6);
+    background: rgb(252, 242, 184, 0.6);
 }
 
 /* fonte escolhida para os botões da aplicação */
@@ -128,6 +138,19 @@ body {
     box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541)
 }
 
+.dimcar2 {
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    height: 500px;
+    margin-right: 250px;
+    /* margin-top: 200px;
+    margin-bottom: 150px;
+    margin-left: 90px;
+    margin-right: 0; */
+    border-radius: 20px;
+}
+
 
 /* ---------CONFIG. ADICIONAIS----------- */
 /* dimensionamento da imagem de fundo página 1 */
@@ -154,6 +177,7 @@ body {
 .borda {
     border-radius: 20px;
 }
+
 
 
 /* --------> CARDS <--------- */
@@ -286,4 +310,68 @@ body {
     min-width: 3rem;
     border-radius: 6.25rem;
     opacity: .5
+}
+
+
+/*---------LOGIN--------*/
+#telaLogin {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+    margin-bottom: 20px;
+
+}
+
+#nav {
+    margin-bottom: 130px;
+}
+
+#nav2 {
+    margin-top: 6em;
+}
+
+#esqueceuSenha,
+#cadastre {
+    text-decoration: underline;
+}
+
+/* botão login */
+.bg-btn {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgb(107, 201, 48);
+}
+
+.bg-btn:hover {
+    background-color: #2D964C;
+}
+
+
+
+/*-----------RODAPÉ------------*/
+footer {
+    background: #2D964C;
+    padding: 25px 0;
+    color: #FFF;
+}
+
+footer a {
+    color: #FFF;
+}
+
+footer a:hover {
+    color: #FFF;
+}
+
+footer h4 {
+    color: #FFFFFF;
+    font-size: 19px;
+}
+
+footer ul li.ellipsis {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
