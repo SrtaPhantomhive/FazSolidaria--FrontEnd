@@ -47,7 +47,7 @@
                         </li>
                         <li class="nav-item dropdown " class="dropdown">
                             <!-- Botão Login Usuário + texto -->
-                            <a class="nav-link text-light d-flex align-items-center " href="#" type="button" data-toggle="tooltip" data-placement="bottom" title="Batata">
+                            <a class="nav-link text-light d-flex align-items-center " href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
                                     class="bi bi-person" viewBox="0 0 16 16">
                                     <path
@@ -56,7 +56,6 @@
                                 <span class="ml-8 line-height">Login ou
                                     <span class="d-flex justify-content-end">Cadastro</span>
                                 </span>
-                                
                             </a>
                         </li>
                     </ul>
@@ -76,26 +75,87 @@
         <section>
             <div class="container-fluid">
                 <div class="justify-content-center row " >
-                    <div class="col-12 colsm-6 col-md-4">
-                        <form id="telaLogin">
-                            <div class="form-group text-center fonteTituloLogin m-0">
-                                <label>Login</label>
+                    <div class="col-12 colsm-6 col-md-6">
+                        <form class="needs-validation" novalidate id="telaCadastro">
+                            <div class="form-group text-center fonteTituloCadastro m-0 p-0">
+                                <label>Cadastro</label>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                                <div class="valid-feedback">
+                                  Looks good!
+                                </div>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom02">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                                <div class="valid-feedback">
+                                  Looks good!
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">City</label>
+                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <div class="invalid-feedback">
+                                  Please provide a valid city.
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="validationCustom04">State</label>
+                                <select class="custom-select" id="validationCustom04" required>
+                                  <option selected disabled value="">Choose...</option>
+                                  <option>...</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label for="validationCustom05">Zip</label>
+                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <div class="invalid-feedback">
+                                  Please provide a valid zip.
+                                </div>
+                              </div>
                             </div>
                             <div class="form-group">
-                              <label for="exampleInputEmail1" class="fonteTxtL">Email</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Informe seu email" aria-describedby="emailHelp">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                  Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                  You must agree before submitting.
+                                </div>
+                              </div>
                             </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1" class="fonteTxtL">Senha</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira sua senha">
-                              <small id="passwordHelpInline" class="text-muted">
-                                A senha deve conter entre 8-15 caracteres
-                              </small>
-                              <a href="#"><small id="esqueceuSenha" class="form-text text-muted text-xl-right p-1 ">Esqueceu sua senha?</small></a>
-                            </div>
-                            <button type="submit" class="btn bg-btn btn-lg btn-block text-light">Entrar</button>
-                            <a href="#"><small id="cadastre" class="form-text text-muted text-lg-center p-1">Cadastre-se</small></a>
-                          </form>    
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                          </form>
+                          
+                          <script>
+                          // Example starter JavaScript for disabling form submissions if there are invalid fields
+                          (function() {
+                            'use strict';
+                            window.addEventListener('load', function() {
+                              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                              var forms = document.getElementsByClassName('needs-validation');
+                              // Loop over them and prevent submission
+                              var validation = Array.prototype.filter.call(forms, function(form) {
+                                form.addEventListener('submit', function(event) {
+                                  if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                  }
+                                  form.classList.add('was-validated');
+                                }, false);
+                              });
+                            }, false);
+                          })();
+                          </script>                           
                     </div>
                 </div>
             </div>
