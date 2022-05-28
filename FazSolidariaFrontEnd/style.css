@@ -6,10 +6,12 @@
 /* cor do fundo do site */
 html {
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
     background-color: #FCF2B8;
+
 }
 
 /* Cor de fundo navbar 1 */
@@ -25,7 +27,7 @@ body {
 }
 
 /* cor do fundo da caixa */
-.fundoCaixa{
+.fundoCaixa {
     background: #d1c99e;
     opacity: 40%;
 }
@@ -374,4 +376,20 @@ footer ul li.ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+
+
+
+/* botão */
+.botao-soma {
+    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
+    background-repeat: no-repeat;
+}
+
+.botao-subtrai {
+    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
+    background-repeat: no-repeat;
+
 }
