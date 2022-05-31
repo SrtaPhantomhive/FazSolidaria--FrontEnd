@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <title>Cadastro</title>
     
 </head>
 <body class="pngfundo2">
@@ -81,59 +81,197 @@
                                 <label>Cadastro</label>
                             </div>
                             <div class="form-row">
-                              <div class="col-md-6 mb-3">
-                                <label for="validationCustom01">First name</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                              <div class="col-md-12 mb-3">
+                                <label for="nome">Nome Completo*</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome" pattern="^[^-\s][a-zA-ZÀ-ú ]*" minlength="3" maxlength="50" required>
+                                <small id="passwordHelpInline" class="text-muted">
+                                  Deve conter somente letras, entre 3 e 50 caracteres.
+                                </small>
                                 <div class="valid-feedback">
-                                  Looks good!
+                                  Parece bom!
                                 </div>
-                              </div>
-                              <div class="col-md-6 mb-3">
-                                <label for="validationCustom02">Last name</label>
-                                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                                <div class="valid-feedback">
-                                  Looks good!
+                                <div class="invalid-feedback">
+                                  Insira um formato válido.
                                 </div>
                               </div>
                             </div>
                             <div class="form-row">
                               <div class="col-md-6 mb-3">
-                                <label for="validationCustom03">City</label>
-                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <label for="validationCustom02">CPF*</label>
+                                <input type="text" class="form-control" placeholder="Apenas números" id="validationCustom02" oninput="mascara(this, 'cpf')" required>
                                 <div class="invalid-feedback">
-                                  Please provide a valid city.
+                                  Por favor, insira um CPF válido.
                                 </div>
                               </div>
-                              <div class="col-md-3 mb-3">
-                                <label for="validationCustom04">State</label>
-                                <select class="custom-select" id="validationCustom04" required>
-                                  <option selected disabled value="">Choose...</option>
-                                  <option>...</option>
-                                </select>
+                              <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">Telefone*</label>
+                                <input type="text" class="form-control" placeholder="(__)____-___" id="validationCustom03" oninput="mascara(this, 'tel')" required>
                                 <div class="invalid-feedback">
-                                  Please select a valid state.
-                                </div>
-                              </div>
-                              <div class="col-md-3 mb-3">
-                                <label for="validationCustom05">Zip</label>
-                                <input type="text" class="form-control" id="validationCustom05" required>
-                                <div class="invalid-feedback">
-                                  Please provide a valid zip.
+                                  Por favor, insira um telefone válido.
                                 </div>
                               </div>
                             </div>
+                            <div class="form-row">
+                              <div class="col-md-3 mb-3">
+                                <label for="validationCustom04">Data de Nascimento*</label>
+                                <input type="date" class="form-control" id="validationCustom04" placeholder="Ex.: dd/mm/aaaa" oninput="mascara(this, 'data')" required>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Insira um formato válido.
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="col-md-3 mb-3">
+                                <label for="validationCustom05">CEP*</label>
+                                <input type="text" class="form-control" id="validationCustom05" placeholder="Ex.: xxxxx-xxx" oninput="mascara(this, 'cep')" required>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Insira um formato válido.
+                                </div>
+                              </div>
+                              <div class="col-md-7 mb-3">
+                                <label for="validationCustom06">Logradouro*</label>
+                                <input type="text" class="form-control" placeholder="Ex: Avenida Paulista" id="validationCustom06" disabled required>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Por favor, insira um formato válido.
+                                </div>
+                              </div>
+                              <div class="col-md-2 mb-3">
+                                <label for="validationCustom07">Número*</label>
+                                <input type="text" class="form-control" placeholder="Ex: 136" id="validationCustom07" required>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Por favor, insira um formato válido.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-5 mb-3">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" class="form-control" placeholder="Complemento" id="Complemento" name="complemento" required>
+                              </div>
+
+                              <div class="col-md-7 mb-3">
+                                <label for="validationCustom09">Bairro*</label>
+                                <input type="text" class="form-control" placeholder="Ex: Bela Vista" id="validationCustom09" disabled required>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Por favor, insira um formato válido.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="col-md-5 mb-3">
+                                <label for="estado">Estado*</label>
+                                <select class="form-select form-control" aria-label="Default select example" id="estado" name="estado" disabled required>
+                                  <option selected disabled>Selecione o estado</option>
+                                  <option value="AC">AC</option>
+                                  <option value="AL">AL</option>
+                                  <option value="AP">AP</option>
+                                  <option value="AM">AM</option>
+                                  <option value="BA">BA</option>
+                                  <option value="CE">CE</option>
+                                  <option value="DF">DF</option>
+                                  <option value="ES">ES</option>
+                                  <option value="GO">GO</option>
+                                  <option value="MA">MA</option>
+                                  <option value="MS">MS</option>
+                                  <option value="MT">MT</option>
+                                  <option value="MG">MG</option>
+                                  <option value="PA">PA</option>
+                                  <option value="PB">PB</option>
+                                  <option value="PR">PR</option>
+                                  <option value="PE">PE</option>
+                                  <option value="PI">PI</option>
+                                  <option value="RJ">RJ</option>
+                                  <option value="RN">RN</option>
+                                  <option value="RS">RS</option>
+                                  <option value="RO">RO</option>
+                                  <option value="RR">RR</option>
+                                  <option value="SC">SC</option>
+                                  <option value="SP">SP</option>
+                                  <option value="SE">SE</option>
+                                  <option value="TO">TO</option>
+                                </select>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Por favor, insira um formato válido.
+                                </div>
+                              </div>
+                              <div class="col-md-7 mb-3">
+                                <label for="validationCustom09">Cidade*</label>
+                                <input type="text" class="form-control" placeholder="Ex: São Paulo" id="validationCustom09" minlength="5" disabled required>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Por favor, insira um formato válido.
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="form-row">
+                              <div class="col-md-12 mb-3">
+                                <label for="email">E-mail*</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Ex: fulano@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" minlength="5" maxlength="100" required>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Insira um formato válido.
+                                </div>
+                                <div class="form-check mt-2">
+                                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                  <label class="form-check-label text-black-50" for="invalidCheck">
+                                    Receber e-mails promocionais
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="col-md-12 mb-3">
+                                <label for="senha">Senha*</label>
+                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Insira sua senha" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,15}$).*$" minlength="8" maxlength="15" required>
+                                <small id="passwordHelpInline" class="text-muted">
+                                  A senha deve conter pelo menos um caracter minusculo, um caracter maiúsculo, um número e um caracter especial. Também deve conter entre 8 e 15 caracteres.
+                                </small>
+                                <div class="valid-feedback">
+                                  Parece bom!
+                                </div>
+                                <div class="invalid-feedback">
+                                  Insira um formato válido.
+                                </div>
+                              </div>
+                            </div>
+
                             <div class="form-group">
                               <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                 <label class="form-check-label" for="invalidCheck">
-                                  Agree to terms and conditions
+                                  <a href="#">Aceito os termos e condições.</a>
                                 </label>
                                 <div class="invalid-feedback">
-                                  You must agree before submitting.
+                                  Você deve aceitar os termos e condições para se cadastrar
                                 </div>
                               </div>
                             </div>
-                            <button class="btn btn-primary" type="submit">Submit form</button>
+                            <button type="submit" class="btn bg-btn btn-lg btn-block text-light">Cadastrar</button>
                           </form>
                           
                           <script>
@@ -266,7 +404,59 @@
   <!-- end Footer-->
 
 
+<!-- Scrip máscaras-->
+<script>
+  function mascara(i,t){
+   
+   var v = i.value;
+   
+   if(isNaN(v[v.length-1])){
+      i.value = v.substring(0, v.length-1);
+      return;
+   }
+   
+   if(t == "data"){
+      i.setAttribute("maxlength", "10");
+      i.setAttribute("minlength", "10");
+      if (v.length == 2 || v.length == 5) i.value += "/";
+   }
 
+   if(t == "cpf"){
+      i.setAttribute("maxlength", "14");
+      i.setAttribute("minlength", "14");
+      if (v.length == 3 || v.length == 7) i.value += ".";
+      if (v.length == 11) i.value += "-";
+   }
+
+   if(t == "cnpj"){
+      i.setAttribute("maxlength", "18");
+      if (v.length == 2 || v.length == 6) i.value += ".";
+      if (v.length == 10) i.value += "/";
+      if (v.length == 15) i.value += "-";
+   }
+
+   if(t == "cep"){
+      i.setAttribute("maxlength", "9");
+      i.setAttribute("minlength", "9");
+      if (v.length == 5) i.value += "-";
+   }
+
+   if(t === "tel"){
+    if (v.length === 1) i.value = "(" + i.value;
+    if (v.length === 3) i.value += ") ";
+    if(v[5] == 9){
+     i.setAttribute("maxlength", "15");
+     i.setAttribute("minlength", "15");
+     if (v.length === 10) i.value += "-";
+    }else{
+     i.setAttribute("maxlength", "14");
+     i.setAttribute("minlength", "14");
+     if (v.length === 9) i.value += "-";
+    }
+}
+}
+</script>
+<!--Fim do scrip máscaras-->
 
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
