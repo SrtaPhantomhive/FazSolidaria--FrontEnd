@@ -2,6 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <script src="jquery-1.5.2.min.js"></script>
+    <script src="jquery.maskedinput-1.3.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -73,6 +75,8 @@
     <!-- main -->
     <main>
         <section>
+          <!--Inicio formulario de cadastro-->
+
             <div class="container-fluid">
                 <div class="justify-content-center row " >
                     <div class="col-12 colsm-6 col-md-6">
@@ -80,104 +84,105 @@
                             <div class="form-group text-center fonteTituloCadastro m-0 p-0">
                                 <label>Cadastro</label>
                             </div>
+                            <!--Compo Nome-->
                             <div class="form-row">
                               <div class="col-md-12 mb-3">
                                 <label for="nome">Nome Completo*</label>
                                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome" pattern="^[^-\s][a-zA-ZÀ-ú ]*" minlength="3" maxlength="50" required>
-                                <small id="passwordHelpInline" class="text-muted">
+                                <small id="Help-block" class="text-muted">
                                   Deve conter somente letras, entre 3 e 50 caracteres.
                                 </small>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
                                 <div class="invalid-feedback">
                                   Insira um formato válido.
                                 </div>
                               </div>
                             </div>
+
+                            <!--Campos CPF e Telefone-->
+
                             <div class="form-row">
+                              <!--CPF-->
                               <div class="col-md-6 mb-3">
-                                <label for="validationCustom02">CPF*</label>
-                                <input type="text" class="form-control" placeholder="Apenas números" id="validationCustom02" oninput="mascara(this, 'cpf')" required>
+                                <label for="cpf">CPF*</label>
+                                <input type="text" class="form-control" placeholder="Apenas números" id="cpf" name="cpf" required>
                                 <div class="invalid-feedback">
                                   Por favor, insira um CPF válido.
                                 </div>
                               </div>
+
+                              <!--Telefone-->
                               <div class="col-md-6 mb-3">
-                                <label for="validationCustom03">Telefone*</label>
-                                <input type="text" class="form-control" placeholder="(__)____-___" id="validationCustom03" oninput="mascara(this, 'tel')" required>
+                                <label for="telefone">Telefone*</label>
+                                <input type="text" class="form-control" id="telefone" name="telefone" required>
                                 <div class="invalid-feedback">
                                   Por favor, insira um telefone válido.
                                 </div>
                               </div>
                             </div>
+
+                            <!--Data Nascimento-->
                             <div class="form-row">
                               <div class="col-md-3 mb-3">
-                                <label for="validationCustom04">Data de Nascimento*</label>
-                                <input type="date" class="form-control" id="validationCustom04" placeholder="Ex.: dd/mm/aaaa" oninput="mascara(this, 'data')" required>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
+                                <label for="data">Data de Nascimento*</label>
+                                <input type="date" class="form-control" id="data" name="data" placeholder="Ex.: dd/mm/aaaa"  required>
                                 <div class="invalid-feedback">
                                   Insira um formato válido.
                                 </div>
                               </div>
                             </div>
 
+                            <!--Campos CEP, Logradouro e Numero-->
+
                             <div class="form-row">
+                              <!--CEP-->
                               <div class="col-md-3 mb-3">
-                                <label for="validationCustom05">CEP*</label>
-                                <input type="text" class="form-control" id="validationCustom05" placeholder="Ex.: xxxxx-xxx" oninput="mascara(this, 'cep')" required>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
+                                <label for="cep">CEP*</label>
+                                <input type="text" class="form-control" id="cep" name="cep" placeholder="Ex.: xxxxx-xxx" required>
                                 <div class="invalid-feedback">
-                                  Insira um formato válido.
+                                  Insira um CEP válido.
                                 </div>
                               </div>
+
+                              <!--Logradouro-->
                               <div class="col-md-7 mb-3">
-                                <label for="validationCustom06">Logradouro*</label>
-                                <input type="text" class="form-control" placeholder="Ex: Avenida Paulista" id="validationCustom06" disabled required>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
+                                <label for="logradouro">Logradouro*</label>
+                                <input type="text" class="form-control" placeholder="Ex: Avenida Paulista" id="logradouro" name="logradouro" required>
                                 <div class="invalid-feedback">
-                                  Por favor, insira um formato válido.
+                                  Por favor, insira um endereço válido.
                                 </div>
                               </div>
+
+                              <!--Numero-->
                               <div class="col-md-2 mb-3">
-                                <label for="validationCustom07">Número*</label>
-                                <input type="text" class="form-control" placeholder="Ex: 136" id="validationCustom07" required>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
+                                <label for="numero">Número*</label>
+                                <input type="text" class="form-control" placeholder="Ex: 136" id="numero" name="numero" required>
                                 <div class="invalid-feedback">
-                                  Por favor, insira um formato válido.
+                                  Insira um número válido.
                                 </div>
                               </div>
                             </div>
-                            <div class="form-row">
-                              <div class="col-md-5 mb-3">
-                                <label for="complemento">Complemento</label>
-                                <input type="text" class="form-control" placeholder="Complemento" id="Complemento" name="complemento" required>
-                              </div>
 
-                              <div class="col-md-7 mb-3">
-                                <label for="validationCustom09">Bairro*</label>
-                                <input type="text" class="form-control" placeholder="Ex: Bela Vista" id="validationCustom09" disabled required>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
+                            <!--Campos Complemento e Bairro-->
+
+                            <div class="form-row">
+                              <!--Bairro-->
+                              <div class="col-md-12 mb-3">
+                                <label for="bairro">Bairro*</label>
+                                <input type="text" class="form-control" placeholder="Ex: Bela Vista" id="bairro" required>
                                 <div class="invalid-feedback">
-                                  Por favor, insira um formato válido.
+                                  Por favor, insira um endereço válido.
                                 </div>
                               </div>
                             </div>
+
+                            <!--Campos Estado e Cidade-->
+
                             <div class="form-row">
+                              <!--Estado-->
                               <div class="col-md-5 mb-3">
                                 <label for="estado">Estado*</label>
-                                <select class="form-select form-control" aria-label="Default select example" id="estado" name="estado" disabled required>
-                                  <option selected disabled>Selecione o estado</option>
+                                <select class="form-select form-control" aria-label="Default select example" id="estado" name="estado" required>
+                                  <option selected disabled value="">Selecione o estado</option>
                                   <option value="AC">AC</option>
                                   <option value="AL">AL</option>
                                   <option value="AP">AP</option>
@@ -206,37 +211,31 @@
                                   <option value="SE">SE</option>
                                   <option value="TO">TO</option>
                                 </select>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
                                 <div class="invalid-feedback">
-                                  Por favor, insira um formato válido.
+                                  Por favor, insira um estado.
                                 </div>
                               </div>
+
+                              <!--Cidade-->
                               <div class="col-md-7 mb-3">
-                                <label for="validationCustom09">Cidade*</label>
-                                <input type="text" class="form-control" placeholder="Ex: São Paulo" id="validationCustom09" minlength="5" disabled required>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
+                                <label for="cidade">Cidade*</label>
+                                <input type="text" class="form-control" placeholder="Ex: São Paulo" id="cidade" name="cidade" minlength="5" required>
                                 <div class="invalid-feedback">
-                                  Por favor, insira um formato válido.
+                                  Por favor, insira um endereço válido.
                                 </div>
                               </div>
                             </div>
                             
+                            <!--E-mail(usuario)-->
                             <div class="form-row">
                               <div class="col-md-12 mb-3">
                                 <label for="email">E-mail*</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Ex: fulano@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" minlength="5" maxlength="100" required>
-                                <div class="valid-feedback">
-                                  Parece bom!
-                                </div>
                                 <div class="invalid-feedback">
-                                  Insira um formato válido.
+                                  E-mail incompleto.
                                 </div>
                                 <div class="form-check mt-2">
-                                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
                                   <label class="form-check-label text-black-50" for="invalidCheck">
                                     Receber e-mails promocionais
                                   </label>
@@ -244,6 +243,7 @@
                               </div>
                             </div>
 
+                            <!--Senha-->
                             <div class="form-row">
                               <div class="col-md-12 mb-3">
                                 <label for="senha">Senha*</label>
@@ -260,6 +260,7 @@
                               </div>
                             </div>
 
+                            <!--Termos e condições-->
                             <div class="form-group">
                               <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -297,6 +298,7 @@
                     </div>
                 </div>
             </div>
+          <!--Fim formulario e cadastro-->
         </section>
     </main>
 <!-- end main -->
@@ -405,7 +407,7 @@
 
 
 <!-- Scrip máscaras-->
-<script>
+<!--<script>
   function mascara(i,t){
    
    var v = i.value;
@@ -456,10 +458,20 @@
 }
 }
 </script>
-<!--Fim do scrip máscaras-->
+Fim do scrip máscaras-->
+<script>
+  jQuery(function($){
+  $("#cpf").mask("999.999.999-99");
+  $("#cep").mask("99999-999");
+  $("#telefone").mask("(99) 99999-9999");
+  });    
+</script>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+  
 </body>
 </html>
