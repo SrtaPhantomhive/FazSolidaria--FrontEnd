@@ -7,11 +7,18 @@
 html {
     overflow-x: hidden;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #FCF2B8;
 
+}
+
+/* cor de teste para os títulos */
+.teste {
+    background-color: #75c2cc;
+    opacity: 40%;
 }
 
 /* Cor de fundo navbar 1 */
@@ -180,6 +187,26 @@ body {
     border-radius: 20px;
 }
 
+/* Icones dos cards: nossa equipe */
+/* tira o ícone de lista */
+.iconeCards {
+    list-style: none;
+    padding: 0;
+}
+/* Deixa na mesma linha */
+.iconeCardsLi{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+/* Define a cor do ícone */
+.corIcones{
+    color: white;
+}
+/* Define a cor do hover */
+.corIcone-square:hover{
+    color: #75DC36;
+}
 
 
 /* --------> CARDS <--------- */
