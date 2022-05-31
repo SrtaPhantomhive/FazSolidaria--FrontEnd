@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- CSS Iniciado. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Produtos</title>
+    <link rel="shortcut icon" href="assets/img/vegetais.png" terra ícones" type="icon" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- gif -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <!-- Narvbars -->
+    <header>
+        <!-- PRIMEIRA NAVBAR -->
+        <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light fonteTitulo" href="#">
+                    <img src="assets/img/fazsolidarialogobranca.png" width="70" height="70"
+                        class="d-inline-block align-center" alt="Logo da FazSolidária">
+                    FazSolidária
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Botão Loja Fazenda -->
+                        <li class="nav-item" id='fazenda'>
+                            <a class="nav-link active bg-gradient-primary" aria-current="page" href="index.html"><img
+                                    src="assets/img/casa.png" width="40" height="40" /></a>
+                        </li>
+                        <!-- Botão Cesto de compras -->
+                        <li class="nav-item">
+                            <abbr title="Cesto" class="bg-light">
+                                <a class="nav-link text-light" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-basket" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z" />
+                                    </svg></a>
+                            </abbr>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <!-- Botão Login Usuário + texto -->
+                            <a class="nav-link text-light d-flex align-items-center" href="login.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
+                                    class="bi bi-person" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                </svg>
+                                <span class="ml-8 line-height">Login ou
+                                    <span class="d-flex justify-content-end">Cadastro</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SEGUNDA NAVBAR -->
+        <!-- style="margin-top serve para ajustar o local da navbar" -->
+        <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground2" style="margin-top: 6em;">
+            <div class="container-fluid-center">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- botão de pesquisa -->
+                    <form class="d-flex col-md-3 fonteBotao">
+                        <input class="form-control me-2 searchbg" type="search" placeholder="Pesquisa"
+                            aria-label="Pesquisa">
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- botão frutas -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Frutas</button>
+                        </li>
+                        <!-- botão legumes -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Legumes</button>
+                        </li>
+                        <!-- botão vegetais -->
+                        <li class="nav-item ml-5 fonteBotao">
+                            <button type="button" class="btn btn-outline-light btn-navbar2">Vegetais</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div></div>
+
+    <!-- BANNERS -->
+    <div class="container-fluid" id="banners-container" style="margin-top: 164px">
+        <div id="slider" class="carousel slide dimcar3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/teste.jpg" class="d-block w-100 img-fluid" style="width: 3000px" alt="banner1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/teste3.jpg""
+                        class=" d-block w-100 img-fluid" alt="banner2">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Catalogo de Produtos -->
+    <div class="mt-5 mb-3">
+        <div class="row text-center justify-content-center mb-1">
+
+            <!-- Textos -->
+            <div class="col-xl-6 col-lg-8">
+                <h2 class="fonteTituloTxt" style="color: black;">Confira os Produtos</h2>
+                <p class="text-muted fonteTxt">Nossa produção é certificada como orgânica por produzir alimentos
+                    cultivados com adubos naturais e defensivos biológicos, portanto, livres de
+                    agrotóxicos,
+                    adubos químicos ou hormônios, com
+                    respeito ao solo, os lençóis freáticos e os ri.</p>
+            </div>
+
+            <!-- Card Produtos 1ª linha -->
+            <div class="container-fluid mt-4 alinhamentoImg" style="margin-bottom: 200px;">
+
+                <div class="row">
+                    <!--1º card-->
+                    <div class="col">
+                        <div class="flip-card2">
+                            <div class="flip-card-inner2">
+                                <div class="flip-card-front2">
+                                    <img src="assets/img/Banana_pratapng.png" alt="Banana"
+                                        style="width:200px;height:200px; border-radius: 20px;">
+                                    <!-- itens do produto -->
+                                    <article class="produtos-itens">
+                                        <!-- title produto -->
+                                        <h2 class="font-produtos">Banana Prata</h2>
+                                        <!-- stars -->
+                                        <div class="produtos-stars">
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </div>
+                                        <!-- preco -->
+                                        <strong class="produtos-preco">
+                                            R$ 9,90
+                                        </strong>
+                                    </article>
+                                    </a>
+                                    <!--Back do card-->
+                                </div>
+                                <div class="flip-card-back2 text-center centralizaTxt fonteTxt"
+                                    style="font-size: 18px;">
+                                    <h2>Banana Prata</h2>
+                                    <p style="border:none; height: 160px;">Rica em nutrientes, possui quantidades
+                                        relevantes de magnésio, ferro e vitaminas
+                                        A, C e do complexo B. </p>
+                                    <div class="conteiner" style="margin-top: 25px;">
+                                        <button type="button" class="btn btn-light">Adicionar ao Carrinho</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--2º card-->
+                    <div class="col">
+                        <div class="flip-card2">
+                            <div class="flip-card-inner2">
+                                <div class="flip-card-front2">
+                                    <img src="assets/img/FRUTAS/uvaVerde.png" alt="Uva Verde"
+                                        style="width:200px;height:200px; border-radius: 20px;">
+                                    <!-- itens do produto -->
+                                    <article class="produtos-itens">
+                                        <!-- title produto -->
+                                        <h2 class="font-produtos">Uva Verde</h2>
+                                        <!-- stars -->
+                                        <div class="produtos-stars">
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </div>
+                                        <!-- preco -->
+                                        <strong class="produtos-preco">
+                                            R$ 9,90
+                                        </strong>
+                                    </article>
+                                    </a>
+                                    <!--Back do card-->
+                                </div>
+                                <div class="flip-card-back2 text-center centralizaTxt fonteTxt"
+                                    style="font-size: 18px;">
+                                    <h2>Uva Verde</h2>
+                                    <p style="border:none; height: 160px;">Rica em potássio, completando toda a equipe
+                                        dos sais minerais.</p>
+                                    <div class="conteiner" style="margin-top: 25px;">
+                                        <button type="button" class="btn btn-light">Adicionar ao Carrinho</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--3º card-->
+                    <div class="col">
+                        <div class="flip-card2">
+                            <div class="flip-card-inner2">
+                                <div class="flip-card-front2">
+                                    <img src="assets/img/FRUTAS/uvaVermelha.png" alt="Uva Vermelha"
+                                        style="width:200px;height:200px; border-radius: 20px;">
+                                    <!-- itens do produto -->
+                                    <article class="produtos-itens">
+                                        <!-- title produto -->
+                                        <h2 class="font-produtos">Uva Vermelha</h2>
+                                        <!-- stars -->
+                                        <div class="produtos-stars">
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </div>
+                                        <!-- preco -->
+                                        <strong class="produtos-preco">
+                                            R$ 9,90
+                                        </strong>
+                                    </article>
+                                    </a>
+                                    <!--Back do card-->
+                                </div>
+                                <div class="flip-card-back2 text-center centralizaTxt fonteTxt"
+                                    style="font-size: 18px;">
+                                    <h2 class="font-produtos">Uva Vermelha</h2>
+                                    <p>Rica em potássio, completando toda a equipe dos sais minerais.</p>
+                                    <div class="conteiner" style="margin-top: 70px;">
+                                        <button type="button" class="btn btn-light">Adicionar ao Carrinho</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--4º card-->
+                    <div class="col">
+                        <div class="flip-card2">
+                            <div class="flip-card-inner2">
+                                <div class="flip-card-front2">
+                                    <img src="assets/img/FRUTAS/morango.png" alt="Morango"
+                                        style="width:200px;height:200px; border-radius: 20px;">
+                                    <!-- itens do produto -->
+                                    <article class="produtos-itens">
+                                        <!-- title produto -->
+                                        <h2 class="font-produtos">Morango</h2>
+                                        <!-- stars -->
+                                        <div class="produtos-stars">
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                            </svg>
+                                        </div>
+                                        <!-- preco -->
+                                        <strong class="produtos-preco">
+                                            R$ 9,90
+                                        </strong>
+                                    </article>
+                                    </a>
+                                    <!--Back do card-->
+                                </div>
+                                <div class="flip-card-back2 text-center centralizaTxt fonteTxt"
+                                    style="font-size: 18px;">
+                                    <h2 class="font-produtos">Morango</h2>
+                                    <p>Fonte de vitamina C, atuando como antioxidante corporal e na prevenção de
+                                        diversas doenças como as do coração e câncer. </p>
+                                    <button type="button" class="btn btn-light">Adicionar ao Carrinho</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Produtos 2ª linha -->
+    <div class="container-fluid mt-4 alinhamentoImg" style="margin-bottom: 200px">
+
+        <div class="row">
+            <!--1º card-->
+            <div class="col">
+                <div class="flip-card2">
+                    <div class="flip-card-inner2">
+                        <div class="flip-card-front2">
+                            <img src="assets/img/LEGUMES E VERDURAS/cebola.png" alt="Cebola"
+                                style="width:200px;height:200px; border-radius: 20px;">
+                            <!-- itens do produto -->
+                            <article class="produtos-itens">
+                                <!-- title produto -->
+                                <h2 class="font-produtos">Banana Prata</h2>
+                                <!-- stars -->
+                                <div class="produtos-stars">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <!-- preco -->
+                                <strong class="produtos-preco">
+                                    R$ 9,90
+                                </strong>
+                            </article>
+                            </a>
+                            <!--Back do card-->
+                        </div>
+                        <div class="flip-card-back2 text-center centralizaTxt fonteTxt" style="font-size: 18px;">
+                            <h2 class="font-produtos">Cebola</h2>
+                            <p>A Cebola ajuda afinar o sangue, combater doenças respiratórias, controlar a hipertensão
+                                além de funções anti-inflamatórias e diuréticas. </p>
+                            <button type="button" class="btn btn-light">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--2º card-->
+            <div class="col">
+                <div class="flip-card2">
+                    <div class="flip-card-inner2">
+                        <div class="flip-card-front2">
+                            <img src="assets/img/LEGUMES E VERDURAS/couveManteiga.png" alt="Couve Manteiga"
+                                style="width:200px;height:200px; border-radius: 20px;">
+                            <!-- itens do produto -->
+                            <article class="produtos-itens">
+                                <!-- title produto -->
+                                <h2 class="font-produtos">Couve Manteiga</h2>
+                                <!-- stars -->
+                                <div class="produtos-stars">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <!-- preco -->
+                                <strong class="produtos-preco">
+                                    R$ 9,90
+                                </strong>
+                            </article>
+                            </a>
+                            <!--Back do card-->
+                        </div>
+                        <div class="flip-card-back2 text-center centralizaTxt fonteTxt" style="font-size: 18px;">
+                            <h2>Couve Manteiga</h2>
+                            <p>É uma folha súper versátil na cozinha, podendo ser consumida crua, cozida ou refogada.
+                            </p>
+                            <button type="button" class="btn btn-light">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--3º card-->
+            <div class="col">
+                <div class="flip-card2">
+                    <div class="flip-card-inner2">
+                        <div class="flip-card-front2">
+                            <img src="assets/img/LEGUMES E VERDURAS/mandioca.png" alt="Mandioca"
+                                style="width:200px;height:200px; border-radius: 20px;">
+                            <!-- itens do produto -->
+                            <article class="produtos-itens">
+                                <!-- title produto -->
+                                <h2 class="font-produtos">Mandioca</h2>
+                                <!-- stars -->
+                                <div class="produtos-stars">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <!-- preco -->
+                                <strong class="produtos-preco">
+                                    R$ 9,90
+                                </strong>
+                            </article>
+                            </a>
+                            <!--Back do card-->
+                        </div>
+                        <div class="flip-card-back2 text-center centralizaTxt fonteTxt" style="font-size: 18px;">
+                            <h2>Mandioca</h2>
+                            <p>Possui alto valor energético (para cada 100 gramas, são aproximadamente 150 calorias),
+                                sais minerais (cálcio, ferro e fósforo) e vitaminas do complexo B.</p>
+                            <button type="button" class="btn btn-light">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--4º card-->
+            <div class="col">
+                <div class="flip-card2">
+                    <div class="flip-card-inner2">
+                        <div class="flip-card-front2">
+                            <img src="assets/img/LEGUMES E VERDURAS/alfaceAmericana.png.crdownload.png"
+                                alt="Alface Americana" style="width:200px;height:200px; border-radius: 20px;">
+                            <!-- itens do produto -->
+                            <article class="produtos-itens">
+                                <!-- title produto -->
+                                <h2 class="font-produtos">Alface Americana</h2>
+                                <!-- stars -->
+                                <div class="produtos-stars">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <!-- preco -->
+                                <strong class="produtos-preco">
+                                    R$ 9,90
+                                </strong>
+                            </article>
+                            </a>
+                            <!--Back do card-->
+                        </div>
+                        <div class="flip-card-back2 text-center centralizaTxt fonteTxt" style="font-size: 18px;">
+                            <h2>Alface Americana</h2>
+                            <p>A alface americana tem sabor suave e textura crocante, e é rica em vitaminas A e C.</p>
+                            <button type="button" class="btn btn-light">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-- RODAPÉ -->
+    <!-- Footer -->
+    <footer class="container-fluid">
+        <!-- container -->
+        <section class="container">
+            <!-- menus -->
+            <section class="row">
+                <!-- atendimento -->
+                <article class="col-md-4">
+                    <h4>
+                        Atendimento
+                    </h4>
+                    <!-- links -->
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="tel:+5511999999999">(11) 9 9999 9999</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="mailto:contato@sualoja.com.br">contato@sualoja.com.br</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <strong>Horário de atendimento:</strong><br>
+                            Segunda à sexta das 9:00 até as 17:30h
+                        </li>
+                    </ul>
+                </article>
+                <!-- end atendimento -->
+
+                <!-- acesso rápido -->
+                <article class="col-md-3">
+                    <h4>
+                        Acesso rápido
+                    </h4>
+                    <!-- links -->
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#">Minha conta</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">Meus pedidos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">Rastrear meus pedidos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">Troca e devoluções</a>
+                        </li>
+                    </ul>
+                </article>
+                <!-- end acesso rápido -->
+
+                <!-- institucional -->
+                <article class="col-md-3">
+                    <h4>
+                        Institucional
+                    </h4>
+                    <!-- links -->
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#">Sobre Nós</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">Certificações</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">Missão</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#">Equipe</a>
+                        </li>
+                    </ul>
+                </article>
+                <!-- end institucional -->
+
+                <!-- mais acessadas -->
+                <article class="col-md-2">
+                    <h4>
+                        Fale Conosco:
+                    </h4>
+                    <!-- links -->
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#">Chat Online</a>
+                        </li>
+                    </ul>
+                </article>
+                <!-- end mais acessadas -->
+            </section>
+            <!-- end menus -->
+        </section>
+        <!-- end container -->
+
+    </footer>
+    <!-- end Footer-->
+
+
+
+
+
+
+
+    <!-- SEPARATE -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
