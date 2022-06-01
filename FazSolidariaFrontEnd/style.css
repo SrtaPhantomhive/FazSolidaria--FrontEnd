@@ -1,7 +1,6 @@
 /* -------FONTES--------- */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
 
-
 /* ----------CORES GERAIS DO PROJETO--------- */
 /* cor do fundo do site */
 html {
@@ -46,6 +45,9 @@ body {
     max-width: 100%;
 }
 
+.sombreamento {
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.4)
+}
 
 /* -------CONFIG. BOTÕES--------- */
 /* diminui a opacidade do search */
@@ -193,19 +195,33 @@ body {
     list-style: none;
     padding: 0;
 }
+
 /* Deixa na mesma linha */
-.iconeCardsLi{
+.iconeCardsLi {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+/* Define a cor do ícone */
+.corIcones {
+    color: white;
+}
+
+/* Define a cor do hover */
+.corIcone-square:hover {
+    color: #75DC36;
+}
+
+/* Icones rodapé */
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+ul.social-network li{
     display: inline;
     margin: 0;
     padding: 0;
-}
-/* Define a cor do ícone */
-.corIcones{
-    color: white;
-}
-/* Define a cor do hover */
-.corIcone-square:hover{
-    color: #75DC36;
 }
 
 
