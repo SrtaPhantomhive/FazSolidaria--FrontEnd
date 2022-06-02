@@ -46,9 +46,10 @@
     <!-- Primeira Navbar -->
     <!-- aqui precisa ser header, pq é cabeçalho -->
     <header id="nav">
+        <!-- PRIMEIRA NAVBAR -->
         <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground">
             <div class="container-fluid">
-                <a class="navbar-brand text-light fonteTitulo" href="index.html">
+                <a class="navbar-brand text-light fonteTitulo" href="#">
                     <img src="/assets/img/fazsolidarialogobranca.png" width="70" height="70"
                         class="d-inline-block align-center" alt="Logo da FazSolidária">
                     FazSolidária
@@ -83,28 +84,50 @@
                                     </svg></a>
                             </abbr>
                         </li>
-                        <li class="nav-item dropdown " class="dropdown">
+                        <li class="nav-item dropdown ">
                             <!-- Botão Login Usuário + texto -->
-                            <a class="nav-link text-light d-flex align-items-center " href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
-                                    class="bi bi-person" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                                </svg>
-                                <span class="ml-8 line-height">Login ou
-                                    <span class="d-flex justify-content-end">Cadastro</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
+                            <div class="btn-group dropdown">
+                                <a class="nav-link text-light d-flex align-items-center dropdown-toggle"
+                                    data-toggle="dropdown" href="login.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
+                                        class="bi bi-person " viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                    </svg>
+                                    <span class="ml-8 line-height">Login ou
+                                        <span class="d-flex justify-content-end">Cadastro</span>
+                                    </span>
+                                </a>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="dropdown-menu bordas fonteBotaoLoginCadastro"
+                                            style="padding: 20px;">
+                                            <p>Entre ou Cadastre-se!</p>
+                                            <!-- Dropdown menu links -->
+                                            <a href="login.html">
+                                                <button type="button"
+                                                    class="btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light">Login</button>
+                                            </a>
+                                            <a href="cadastro.html">
+                                                <button type="button"
+                                                    class="btn btn-block btn-lg btn-outline fonteBotaoLoginCadastro btn-cadastro">Cadastre-se</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
+                </li>
+                </ul>
+            </div>
             </div>
         </nav>
+
 
         <!-- Segunda Navbar -->
 
         <!-- id = "nav2" serve para ajustar o local da navbar" -->
-        <nav class="navbar fixed-top navbackground2" id="nav2">
+        <nav class="navbar nav2 navbackground2" id="nav2">
         </nav>
     </header>
 
@@ -358,7 +381,8 @@
                                     </svg>
                                 </a>
                                 <!-- github -->
-                                <a target="_blank" href="https://github.com/SrtaPhantomhive/FazSolidaria--FrontEnd" style="margin-right: 20px;">
+                                <a target="_blank" href="https://github.com/SrtaPhantomhive/FazSolidaria--FrontEnd"
+                                    style="margin-right: 20px;">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                                         class="bi bi-github mt-1 corIcone-square corIcones" viewBox="0 0 16 16">
                                         <path

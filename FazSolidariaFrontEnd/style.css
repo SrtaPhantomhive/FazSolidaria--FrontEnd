@@ -11,14 +11,23 @@ html {
 
 body {
     background-color: #FCF2B8;
-
 }
 
-/* cor de teste para os títulos */
-.teste {
-    background-color: #75c2cc;
-    opacity: 40%;
-}
+/* navbar2 */
+    .nav2{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    /* estilização borda */
+    .bordas{
+        border-radius: 25px 0px 25px 25px;
+        left: -227px;
+    }
+
 
 /* Cor de fundo navbar 1 */
 .navbackground {
@@ -86,7 +95,7 @@ body {
     margin-bottom: 150px;
     margin-left: 0;
     margin-right: 0;
-    border-radius: 20px;
+    border-radius: 25px 0px 25px 0px;
 }
 
 /* fonte do nome da marca */
@@ -115,6 +124,13 @@ body {
     font-family: 'Nunito', cursive;
     font-weight: bold;
     font-size: 35px;
+}
+
+/* fonte escolhida para os botões da aplicação */
+.fonteBotaoLoginCadastro {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* altera a fonte dos textos da página 2 */
@@ -146,7 +162,7 @@ body {
     margin-left: 90px;
     margin-right: 0;
     border-radius: 20px;
-    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541)
+    box-shadow: 1px 5px 50px rgba(0, 0, 0, 0.541)
 }
 
 .dimcar2 {
@@ -393,6 +409,20 @@ body {
     background-color: #2D964C;
 }
 
+.btn-cadastro{
+    color: #75DC36;
+    border-color: #75DC36;
+    border-width: 2px;
+}
+.btn-cadastro:hover{
+    color: #2D964C;
+    border-color: #2D964C;
+    border-width: 2px;
+}
+
+.dropdown-menu > a{
+    text-decoration: none;
+}
 
 
 /*-----------RODAPÉ------------*/
