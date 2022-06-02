@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-1.5.2.min.js"></script>
+    <script src="jquery.maskedinput-1.3.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+    <script>
+        jQuery(function ($) {
+            $("#cpf").mask("999.999.999-99");
+            $("#cep").mask("99999-999");
+            $("#telefone").mask("(99) 99999-9999");
+        });    
+    </script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</head>
+
+<body class="pngfundo2">
+
+    <!-- Primeira Navbar -->
+    <!-- aqui precisa ser header, pq é cabeçalho -->
+    <header id="nav">
+        <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light fonteTitulo" href="index.html">
+                    <img src="/assets/img/fazsolidarialogobranca.png" width="70" height="70"
+                        class="d-inline-block align-center" alt="Logo da FazSolidária">
+                    FazSolidária
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Botão Loja Fazenda -->
+                        <li class="nav-item" id='fazenda'>
+                            <a class="nav-link text-light" href="index.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-basket" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                    <path
+                                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <!-- Botão Cesto de compras -->
+                        <li class="nav-item">
+                            <abbr title="Cesto" class="bg-light">
+                                <a class="nav-link text-light" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-basket" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z" />
+                                    </svg></a>
+                            </abbr>
+                        </li>
+                        <li class="nav-item dropdown " class="dropdown">
+                            <!-- Botão Login Usuário + texto -->
+                            <a class="nav-link text-light d-flex align-items-center " href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor"
+                                    class="bi bi-person" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                </svg>
+                                <span class="ml-8 line-height">Login ou
+                                    <span class="d-flex justify-content-end">Cadastro</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Segunda Navbar -->
+
+        <!-- id = "nav2" serve para ajustar o local da navbar" -->
+        <nav class="navbar fixed-top navbackground2" id="nav2">
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <section>
+            <!--Inicio formulario de cadastro-->
+
+            <div class="container-fluid">
+                <div class="justify-content-center row ">
+                    <div class="col-12 colsm-6 col-md-6">
+                        <form class="needs-validation" novalidate id="telaCadastro">
+                            <div class="form-group text-center fonteTituloCadastro m-0 p-0">
+                                <label>Cadastro</label>
+                            </div>
+                            <!--Compo Nome-->
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="nome">Nome Completo*</label>
+                                    <input type="text" class="form-control" id="nome" name="nome"
+                                        placeholder="Insira seu nome" pattern="^[^-\s][a-zA-ZÀ-ú ]*" minlength="3"
+                                        maxlength="50" required>
+                                    <small id="Help-block" class="text-muted">
+                                        Deve conter somente letras, entre 3 e 50 caracteres.
+                                    </small>
+                                    <div class="invalid-feedback">
+                                        Insira um formato válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Campos CPF e Telefone-->
+
+                            <div class="form-row">
+                                <!--CPF-->
+                                <div class="col-md-6 mb-3">
+                                    <label for="cpf">CPF*</label>
+                                    <input type="text" class="form-control" placeholder="Apenas números" id="cpf"
+                                        name="cpf" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um CPF válido.
+                                    </div>
+                                </div>
+
+                                <!--Telefone-->
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefone">Telefone*</label>
+                                    <input type="text" class="form-control" id="telefone" name="telefone" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um telefone válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Data Nascimento-->
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="data">Data de Nascimento*</label>
+                                    <input type="date" class="form-control" id="data" name="data"
+                                        placeholder="Ex.: dd/mm/aaaa" required>
+                                    <div class="invalid-feedback">
+                                        Insira um formato válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Campos CEP, Logradouro e Numero-->
+
+                            <div class="form-row">
+                                <!--CEP-->
+                                <div class="col-md-3 mb-3">
+                                    <label for="cep">CEP*</label>
+                                    <input type="text" class="form-control" id="cep" name="cep"
+                                        placeholder="Ex.: xxxxx-xxx" required>
+                                    <div class="invalid-feedback">
+                                        Insira um CEP válido.
+                                    </div>
+                                </div>
+
+                                <!--Logradouro-->
+                                <div class="col-md-7 mb-3">
+                                    <label for="logradouro">Logradouro*</label>
+                                    <input type="text" class="form-control" placeholder="Ex: Avenida Paulista"
+                                        id="logradouro" name="logradouro" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um endereço válido.
+                                    </div>
+                                </div>
+
+                                <!--Numero-->
+                                <div class="col-md-2 mb-3">
+                                    <label for="numero">Número*</label>
+                                    <input type="text" class="form-control" placeholder="Ex: 136" id="numero"
+                                        name="numero" required>
+                                    <div class="invalid-feedback">
+                                        Insira um número válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Campos Complemento e Bairro-->
+
+                            <div class="form-row">
+                                <!--Bairro-->
+                                <div class="col-md-12 mb-3">
+                                    <label for="bairro">Bairro*</label>
+                                    <input type="text" class="form-control" placeholder="Ex: Bela Vista" id="bairro"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um endereço válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Campos Estado e Cidade-->
+
+                            <div class="form-row">
+                                <!--Estado-->
+                                <div class="col-md-5 mb-3">
+                                    <label for="estado">Estado*</label>
+                                    <select class="form-select form-control" aria-label="Default select example"
+                                        id="estado" name="estado" required>
+                                        <option selected disabled value="">Selecione o estado</option>
+                                        <option value="AC">AC</option>
+                                        <option value="AL">AL</option>
+                                        <option value="AP">AP</option>
+                                        <option value="AM">AM</option>
+                                        <option value="BA">BA</option>
+                                        <option value="CE">CE</option>
+                                        <option value="DF">DF</option>
+                                        <option value="ES">ES</option>
+                                        <option value="GO">GO</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MS">MS</option>
+                                        <option value="MT">MT</option>
+                                        <option value="MG">MG</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PB">PB</option>
+                                        <option value="PR">PR</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PI">PI</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="RN">RN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RR">RR</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SP">SP</option>
+                                        <option value="SE">SE</option>
+                                        <option value="TO">TO</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um estado.
+                                    </div>
+                                </div>
+
+                                <!--Cidade-->
+                                <div class="col-md-7 mb-3">
+                                    <label for="cidade">Cidade*</label>
+                                    <input type="text" class="form-control" placeholder="Ex: São Paulo" id="cidade"
+                                        name="cidade" minlength="5" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um endereço válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--E-mail(usuario)-->
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="email">E-mail*</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Ex: fulano@gmail.com"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" minlength="5" maxlength="100"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        E-mail incompleto.
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label text-black-50" for="invalidCheck">
+                                            Receber e-mails promocionais
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Senha-->
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="senha">Senha*</label>
+                                    <input type="password" class="form-control" id="senha" name="senha"
+                                        placeholder="Insira sua senha"
+                                        pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,15}$).*$"
+                                        minlength="8" maxlength="15" required>
+                                    <small id="passwordHelpInline" class="text-muted">
+                                        A senha deve conter pelo menos um caracter minusculo, um caracter maiúsculo, um
+                                        número e um caracter especial. Também deve conter entre 8 e 15 caracteres.
+                                    </small>
+                                    <div class="valid-feedback">
+                                        Parece bom!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Insira um formato válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Termos e condições-->
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        <a href="#">Aceito os termos e condições.</a>
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Você deve aceitar os termos e condições para se cadastrar
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn bg-btn btn-lg btn-block text-light">Cadastrar</button>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--Fim formulario e cadastro-->
+        </section>
+    </main>
+    <!-- end main -->
+
+    <!-- RODAPÉ -->
+    <footer class="text-center text-lg-start navbackground fonteTxt" style="width: 1349px;">
+        <!-- Section: Social media -->
+        <section class="container-flex justify-content-center justify-content-lg-between border-bottom">
+            <div class="container">
+                <div class="row flex-column justify-content-center">
+                    <!-- Redes socais -->
+                    <div class="col-md-12 text-center mb-2 mt-2">
+                        <ul class="social-network">
+                            <li>
+                                <!-- facebook -->
+                                <a target="_blank" href="https://www.linkedin.com/in/gerson-ronaldo/"
+                                    style="margin-right: 20px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                        class="bi bi-linkedin mt-1 corIcone-square corIcones" viewBox="0 0 16 16"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg>
+                                </a>
+                                <!-- github -->
+                                <a target="_blank" href="https://github.com/SrtaPhantomhive/FazSolidaria--FrontEnd" style="margin-right: 20px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                        class="bi bi-github mt-1 corIcone-square corIcones" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                    </svg>
+                                </a>
+                                <!-- instagram -->
+                                <a target="_blank" href="https://www.instagram.com/fazsolidaria/"
+                                    style="margin-right: 20px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                        class="bi bi-github mt-1 corIcone-square corIcones" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Left -->
+                    <!-- Right -->
+                    <div>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <!-- Right -->
+                </div>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-3">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 align-items-center">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 fonteTituloTxt" style="font-size: 35px;">
+                            <i class="fas fa-gem"></i>FazSolidária
+                        </h6>
+                        <img src="/assets/img/fazsolidarialogobranca.png" class=""
+                            style="width: 100px; height: 100px; margin-bottom: 4px;">
+                        <p class="" style="font-size: 18px;">
+                            O futuro é verde, e se faz junto!
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3 text-center">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 fonteTituloTxt" style="font-size: 35px;">
+                            Endereço
+                        </h6>
+                        <p><i class="fas fa-home"></i> AV. Paulista, 2300</p>
+                        <p><i class="fas fa-home"></i> São Paulo - SP</p>
+                        <p><i class="fas fa-home"></i> CEP: 13203-240</p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3 text-center">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 fonteTituloTxt" style="font-size: 35px;">
+                            Contato
+                        </h6>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            fazsolidaria@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone"></i> (11) 2169-8547</p>
+                        <p><i class="fas fa-phone"></i> (11) 2169-8547</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="https://fazsolidaria.com/">FazSolidaria.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Scrip máscaras-->
+    <!--<script>
+  function mascara(i,t){
+   
+   var v = i.value;
+   
+   if(isNaN(v[v.length-1])){
+      i.value = v.substring(0, v.length-1);
+      return;
+   }
+   
+   if(t == "data"){
+      i.setAttribute("maxlength", "10");
+      i.setAttribute("minlength", "10");
+      if (v.length == 2 || v.length == 5) i.value += "/";
+   }
+   if(t == "cpf"){
+      i.setAttribute("maxlength", "14");
+      i.setAttribute("minlength", "14");
+      if (v.length == 3 || v.length == 7) i.value += ".";
+      if (v.length == 11) i.value += "-";
+   }
+   if(t == "cnpj"){
+      i.setAttribute("maxlength", "18");
+      if (v.length == 2 || v.length == 6) i.value += ".";
+      if (v.length == 10) i.value += "/";
+      if (v.length == 15) i.value += "-";
+   }
+   if(t == "cep"){
+      i.setAttribute("maxlength", "9");
+      i.setAttribute("minlength", "9");
+      if (v.length == 5) i.value += "-";
+   }
+   if(t === "tel"){
+    if (v.length === 1) i.value = "(" + i.value;
+    if (v.length === 3) i.value += ") ";
+    if(v[5] == 9){
+     i.setAttribute("maxlength", "15");
+     i.setAttribute("minlength", "15");
+     if (v.length === 10) i.value += "-";
+    }else{
+     i.setAttribute("maxlength", "14");
+     i.setAttribute("minlength", "14");
+     if (v.length === 9) i.value += "-";
+    }
+}
+}
+</script>
+Fim do scrip máscaras-->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

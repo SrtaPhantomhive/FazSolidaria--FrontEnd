@@ -214,11 +214,12 @@ body {
 }
 
 /* Icones rodapé */
-ul.social-network{
+ul.social-network {
     list-style: none;
     padding: 0;
 }
-ul.social-network li{
+
+ul.social-network li {
     display: inline;
     margin: 0;
     padding: 0;
@@ -435,4 +436,46 @@ footer ul li.ellipsis {
     background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
     background-repeat: no-repeat;
 
+}
+
+
+
+/* cadastro */
+
+#telaCadastro {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+    margin-bottom: 20px;
+
+}
+
+#esqueceuSenha,
+#cadastre {
+    text-decoration: underline;
+}
+
+.fonteTxtL {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    /* font-family: 'Radio Canada', sans-serif;
+     font-family: Amatic SC; */
+}
+
+.fonteTituloCadastro {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+     font-family: Amatic SC; */
+}
+
+.fonteTituloLogin {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
 }
