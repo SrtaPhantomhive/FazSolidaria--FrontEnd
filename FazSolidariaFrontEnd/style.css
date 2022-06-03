@@ -25,7 +25,8 @@ body {
     /* estilização borda */
     .bordas{
         border-radius: 25px 0px 25px 25px;
-        left: -227px;
+        left: -104px;
+        padding: 20px;
     }
 
 
@@ -410,13 +411,13 @@ body {
 }
 
 .btn-cadastro{
-    color: #75DC36;
-    border-color: #75DC36;
+    color: #2D964C;
+    border-color: #2D964C;
     border-width: 2px;
 }
 .btn-cadastro:hover{
-    color: #2D964C;
-    border-color: #2D964C;
+    color: #75DC36;
+    border-color: #75DC36;
     border-width: 2px;
 }
 
