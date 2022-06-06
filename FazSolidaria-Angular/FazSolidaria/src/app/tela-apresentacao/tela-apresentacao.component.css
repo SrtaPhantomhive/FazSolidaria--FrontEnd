@@ -25,8 +25,7 @@ body {
     /* estilização borda */
     .bordas{
         border-radius: 25px 0px 25px 25px;
-        left: -104px;
-        padding: 20px;
+        left: -227px;
     }
 
 
@@ -134,6 +133,12 @@ body {
     font-size: 18px;
 }
 
+.fonteTxt1 {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
 /* altera a fonte dos textos da página 2 */
 .fonteTxt {
     font-family: 'Nunito', cursive;
@@ -155,14 +160,13 @@ body {
 /* dimensionamento de carrossel */
 .dimcar {
     overflow: hidden;
-    width: 500px;
+    width: 1349px;
     max-width: 100%;
-    height: 300px;
-    margin-top: 200px;
-    margin-bottom: 150px;
-    margin-left: 90px;
+    height: 545px;
+    margin-top: 75px;
+    margin-left: 0px;
     margin-right: 0;
-    border-radius: 20px;
+    border-radius: 0px;
     box-shadow: 1px 5px 50px rgba(0, 0, 0, 0.541)
 }
 
@@ -183,11 +187,9 @@ body {
 /* ---------CONFIG. ADICIONAIS----------- */
 /* dimensionamento da imagem de fundo página 1 */
 .pngfundo1 {
-    background-image: url("/assets/img/fundopg1.png");
     background-size: 1350px 646px;
     max-width: 100%;
     height: 646px;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -373,140 +375,4 @@ body {
     min-width: 3rem;
     border-radius: 6.25rem;
     opacity: .5
-}
-
-
-/*---------LOGIN--------*/
-#telaLogin {
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px 0px 25px 0px;
-    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
-    margin-bottom: 20px;
-
-}
-
-#nav {
-    margin-bottom: 130px;
-}
-
-#nav2 {
-    margin-top: 6em;
-}
-
-#esqueceuSenha,
-#cadastre {
-    text-decoration: underline;
-}
-
-/* botão login */
-.bg-btn {
-    /* background-color: #75DC36; */
-    /* usei rgb para controlar a opacidade */
-    background: rgb(107, 201, 48);
-}
-
-.bg-btn:hover {
-    background-color: #2D964C;
-}
-
-.btn-cadastro{
-    color: #2D964C;
-    border-color: #2D964C;
-    border-width: 2px;
-}
-.btn-cadastro:hover{
-    color: #75DC36;
-    border-color: #75DC36;
-    border-width: 2px;
-}
-
-.dropdown-menu > a{
-    text-decoration: none;
-}
-
-
-/*-----------RODAPÉ------------*/
-footer {
-    background: #2D964C;
-    padding: 25px 0;
-    color: #FFF;
-}
-
-footer a {
-    color: #FFF;
-}
-
-footer a:hover {
-    color: #FFF;
-}
-
-footer h4 {
-    color: #FFFFFF;
-    font-size: 19px;
-}
-
-footer ul li.ellipsis {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-
-
-
-
-/* botão */
-.botao-soma {
-    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
-    background-repeat: no-repeat;
-}
-
-.botao-subtrai {
-    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
-    background-repeat: no-repeat;
-
-}
-
-
-
-/* cadastro */
-
-#telaCadastro {
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px 0px 25px 0px;
-    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
-    margin-bottom: 20px;
-
-}
-
-#esqueceuSenha,
-#cadastre {
-    text-decoration: underline;
-}
-
-.fonteTxtL {
-    font-family: 'Nunito', cursive;
-    font-weight: bold;
-    font-size: 18px;
-    /* font-family: 'Radio Canada', sans-serif;
-     font-family: Amatic SC; */
-}
-
-.fonteTituloCadastro {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bolder;
-    font-size: 3em;
-    /* font-family: 'Radio Canada', sans-serif;
-     font-family: Amatic SC; */
-}
-
-.fonteTituloLogin {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bolder;
-    font-size: 3em;
-    /* font-family: 'Radio Canada', sans-serif;
-    font-family: Amatic SC; */
 }
