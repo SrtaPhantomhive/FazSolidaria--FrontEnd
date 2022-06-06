@@ -51,6 +51,13 @@ body {
     background-repeat: no-repeat;
     
 }
+.botao-lixo{
+    background-image: url("imagensFazSolidaria/icons8-remover-30.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: transparent;
+    ;
+}
 
 /* Ajuste da fazenda para ela mudar de cor */
 #fazenda {
