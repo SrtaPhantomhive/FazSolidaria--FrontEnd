@@ -43,10 +43,15 @@ body {
 
 /* cor do fundo da caixa */
 .fundoCaixa {
-    background: #d1c99e;
-    opacity: 40%;
+    background: rgba(209, 201, 158, 0.6);
+    /* opacity: 40%; */
 }
 
+/* muda a cor do texto da página1 */
+.corTextoCarrossel{
+    color: black;
+    border-radius: 25px 0px 25px 0px;
+}
 
 /* ---------CONFIG. NAVBARS-------- */
 /* alinha as navbars */
