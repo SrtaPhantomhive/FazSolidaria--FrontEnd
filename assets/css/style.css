@@ -214,11 +214,12 @@ body {
 }
 
 /* Icones rodapé */
-ul.social-network{
+ul.social-network {
     list-style: none;
     padding: 0;
 }
-ul.social-network li{
+
+ul.social-network li {
     display: inline;
     margin: 0;
     padding: 0;
@@ -519,7 +520,7 @@ footer ul li.ellipsis {
 }
 
 /*Configurações da fonte - página produtos*/
-.produtos-itens .font-produtos{
+.produtos-itens .font-produtos {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
     font-size: 30px;
@@ -538,62 +539,160 @@ footer ul li.ellipsis {
 }
 
 /* Estilo da tela-detalhes-produtos */
-#img-bg{
+#img-bg {
     background-image: url('https://blog.syngentadigital.ag/wp-content/uploads/2019/09/cacho-de-banana-720x480.jpg');
     min-height: 500px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  
+  .btn-light:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
   }
 
-  /* PRODUTOS RELACIONADOS */
-  #produtos-relacionados {
-    padding: 4em 0;
-  }
-  
-  #produtos-relacionados .row {
-    margin: 0;
-  }
-  
-  #produtos-relacionados .col-md-3 {
-    padding: 0;
-  }
-  
-  .title {
+/* PRODUTOS RELACIONADOS */
+
+.produto-relacionados {
+    padding: 20px 0;
+}
+
+.slider-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.slider-main {
+    position: absolute;
+    width: 2700px;
+}
+
+.item {
+    display:inline-block;
+    width: 250px;
+    height: 300px;
+    background: white;
+    position: relative;
+    margin: 0 12px;
+    border-radius: 10%;
+}
+
+.img-produto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+}
+
+
+/* BOTÃO PREVIOUS E NEXT */
+.next {
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #04AA6D;
+    color: white;
+}
+
+.previous {
+    position: absolute;
+    left: 230px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #04AA6D;
+    color: white;
+}
+
+.font-prod-relacionados {
     font-family: 'Nunito', cursive;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    text-align: center;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.font-prod-relacionados-preco{
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
   }
   
-  @media(min-width: 100px) {
-    .title {
-      text-align: left;
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+
+
+/* NEWS */
+
+#newsletter-container {
+    background-color: #FCF2B8;
+    border-bottom: 1px solid #dbd39f;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #news-form {
+    max-width: 600px;
+    margin: 15px auto;
+  }
+  
+  #news-form i {
+    font-size: 1.5em;
+  }
+  
+  #news-form .btn {
+    color: #FFF;
+  }
+
+  #news-form {
+    width: 100%;
+    margin: 2em 0;
+  }
+  
+  @media(min-width: 768px) {
+    #news-form {
+      width: 50%;
+      margin: 0;
     }
   }
   
-  .card {
-    text-align: center;
-    border-radius: 5%;
+  #news-form {
+    border: 2px solid #626262;
+    border-radius: 3px;
+    padding: 5px 15px;
+  }
+  
+   #news-form input {
     background-color: transparent;
-    max-width: 300px;
+    border: none;
+    color: #FFF;
   }
   
-  .card img {
-    width: 300px;
-    margin: 2em auto;
-    border-radius: 5%;
+    #news-form input:focus {
+    box-shadow: none;
   }
   
-  .card .card-category {
-    font-size: .8rem;
+    #news-form input::placeholder {
+    color: #FFF;
   }
-  
-  .card .card-text {
-    margin: 2em 0;
-    font-weight: bold;
-  }
-  
- 
