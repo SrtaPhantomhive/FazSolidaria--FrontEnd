@@ -301,4 +301,29 @@ body {
     opacity: .5
 }
 
+/* ---------CONFIG. TELA RESPONSIVA----------- */
+/* Tela carrinho */
 
+.tela-lg{
+    justify-content: center;
+    flex-flow: wrap;
+    flex-basis: auto;
+    
+
+}
+.quantidade{
+    justify-content: center;
+    flex-flow: wrap;
+    flex-shrink: 1;
+    
+}
+.produto{
+
+}
+.continuar-compra{
+
+}
+
+.finalizar-compra{
+
+}
