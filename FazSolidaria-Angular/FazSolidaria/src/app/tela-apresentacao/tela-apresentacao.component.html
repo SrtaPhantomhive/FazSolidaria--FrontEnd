@@ -10,180 +10,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- gif -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="tela-apresentacao.component.css">
 </head>
 
 <body>
-    <!-- Narvbars -->
-    <header>
-        <!-- PRIMEIRA NAVBAR -->
-        <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground">
-            <div class="container-fluid">
-                <a class="navbar-brand text-light fonteTitulo" href="#">
-                    <img src="/assets/img/fazsolidarialogobranca.png" width="70" height="70"
-                        class="d-inline-block align-center" alt="Logo da FazSolidária">
-                    FazSolidária
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- Botão Loja Fazenda -->
-                        <li class="nav-item" id='fazenda'>
-                            <a class="nav-link text-light" href="index.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                    class="bi bi-basket" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
-                                    <path
-                                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <!-- Botão Cesto de compras -->
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                class="bi bi-basket" viewBox="0 0 16 16">
-                                <path
-                                d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z" />
-                                </svg>
-                           </a>
-                        </li>
-                        <li class="nav-item dropdown ">
-                            <!-- Botão Login Usuário + texto -->
-                            <div class="btn-group dropdown">
-                                <a class="nav-link text-light d-flex align-items-center         dropdown-toggle" data-toggle="dropdown" href="login.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-person " viewBox="0 0 16 16">
-                                    <path
-                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                                    </svg>
-                                    <span class="ml-8 line-height">Login ou<span class="d-flex justify-content-end">Cadastro</span>
-                                    </span>
-                                </a>
-                                <div class="dropdown-menu bordas fonteBotaoLoginCadastro">
-                                    <p>Entre ou Cadastre-se!</p>
-                                    <!-- Dropdown menu links -->
-                                    <a href="login.html">
-                                        <button type="button"
-                                            class="btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light">Login
-                                        </button>
-                                    </a>
-                                    <a href="cadastro.html">
-                                        <button type="button"
-                                            class="btn btn-block btn-lg btn-outline fonteBotaoLoginCadastro btn-cadastro">Cadastre-se
-                                        </button>
-                                    </a>
-                                </div>                                        
-
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- SEGUNDA NAVBAR -->
-        <!-- style="margin-top serve para ajustar o local da navbar" -->
-        <nav class="navbar navbar nav2 navbar-expand-lg navbar-light navbackground2 sombreamento"
-            style="margin-top: 6em;">
-            <div class="container-fluid-center">
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- botão de pesquisa -->
-                    <form class="d-flex col-md-3 fonteBotao">
-                        <input class="form-control me-2 searchbg" type="search" placeholder="Pesquisar">
-                    </form>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- botão início -->
-                        <li class="nav-item ml-5 fonteBotao">
-                            <a href="#inicio"><button type="button"
-                                    class="btn btn-outline-light btn-navbar2">Início</button></a>
-                        </li>
-                        <!-- botão certificações -->
-                        <li class="nav-item ml-5 fonteBotao">
-                            <a href="#certificados"><button type="button"
-                                    class="btn btn-outline-light btn-navbar2">Certificações</button></a>
-                        </li>
-                        <!-- botão sobre nós -->
-                        <li class="nav-item ml-5 fonteBotao">
-                            <a href="#sobreNos"><button type="button" class="btn btn-outline-light btn-navbar2">Sobre
-                                    Nós</button></a>
-                        </li>
-                        <!-- botão missão -->
-                        <li class="nav-item ml-5 fonteBotao">
-                            <a href="#missao"><button type="button"
-                                    class="btn btn-outline-light btn-navbar2">Missão</button></a>
-                        </li>
-                        <!-- botão equipe -->
-                        <li class="nav-item ml-5 fonteBotao">
-                            <a href="#equipe"><button type="button"
-                                    class="btn btn-outline-light btn-navbar2">Equipe</button></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>        
-    </header>
-
-
+    <!-- NAVBAR -->
+    <app-menu></app-menu>
     <!-- PÁGINA 1 INÍCIO -->
-    <div class="container-justify pngfundo1 img-fluid" id="inicio">
-        <!-- imagem de fundo da página 1 -->
-        <img src="..." class="img-fluid" alt="">
-
-        <div class="container">
-            <div class="row w-100 d-flex justify-content-center fonteTxtpg1">
-                <!-- Texto Página 1 -->
-                <div class="col-md-6 coresCxTxt text-light configTxt">
-                    <div>
-                        <div class="fonteTituloTxt" style="color: black;">
-                            <h1> O futuro é verde, e se faz junto!</h1>
+    <div class="container-justify" id="inicio">
+        <div class="row">
+            <!-- carrossel -->
+            <div class="col-md-12">
+                <!-- carrossel -->
+                <div id="carouselExampleInterval" class="carousel slide dimcar" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="opacity: 90%;" data-interval="5000">
+                            <img src="../../assets/img/PAG1/CARROSSEL/tela1.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="fundoCaixa corTextoCarrossel">
+                                    <h5 class="fonteTituloTxt">First slide label</h5>
+                                    <p class="fonteTxt" style="font-size: 20px;  font-weight: bolder;">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="fonteTxtpg1 text-muted">
-                            <h3>Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat.
-                                Praesent lacinia ultrices consectetur. </h3>
+                        <div class="carousel-item" data-interval="5000">
+                            <img src="../../assets/img/PAG1/CARROSSEL/doações.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="fundoCaixa corTextoCarrossel">
+                                    <h5 class="fonteTituloTxt">First slide label</h5>
+                                    <p class="fonteTxt" style="font-size: 20px;  font-weight: bolder;">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="opacity: 90%;" data-interval="5000">
+                            <img src="../../assets/img/PAG1/CARROSSEL/veganoOrganico.png" class="d-block w-100"
+                                alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <div class="fundoCaixa corTextoCarrossel">
+                                        <h5 class="fonteTituloTxt">Zero Crueldade Animal</h5>
+                                        <p class="fonteTxt" style="font-size: 20px;  font-weight: bolder;">Todos os nossos produtos são veganos! Além de adotarmos um sistema de produção em que não utilizamos NADA de origem animal.</p>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="carousel-item" style="opacity: 90%;" data-interval="5000">
+                            <img src="../../assets/img/PAG1/CARROSSEL/doação.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="fundoCaixa corTextoCarrossel">
+                                    <h5 class="fonteTituloTxt">First slide label</h5>
+                                    <p class="fonteTxt" style="font-size: 20px;  font-weight: bolder;">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" style="opacity: 90%;" data-interval="5000">
+                            <img src="../../assets/img/PAG1/CARROSSEL/fazenda.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="fundoCaixa corTextoCarrossel">
+                                    <h5 class="fonteTituloTxt">First slide label</h5>
+                                    <p class="fonteTxt" style="font-size: 20px;  font-weight: bolder;">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </button>
                 </div>
-                <div class="col-md-6">
-                    <!-- carrossel -->
-                    <div id="carouselExampleInterval" class="carousel slide dimcar" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" style="opacity: 90%;" data-interval="2000">
-                                <img src="/assets/img/teste.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" style="opacity: 90%;" data-interval="2000">
-                                <img src="/assets/img/teste.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" style="opacity: 90%;" data-interval="2000">
-                                <img src="/assets/img/teste.png" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item" style="opacity: 90%;" data-interval="2000">
-                                <img src="/assets/img/teste.png" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </button>
-                    </div>
-                    <!-- Carrossel fim -->
-                </div>
+                <!-- Carrossel fim -->
             </div>
         </div>
     </div>
+
 
     <!-- PÁGINA 2 CERTIFICADOS -->
     <hr class="" style="margin-bottom: 180px;" id="certificados">
@@ -199,7 +102,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="/assets/img/seloOrganico.png" alt="Selo Orgânico"
+                                <img src="../../assets/img/PAG1/CERTIFICADOS/seloOrganico.png" alt="Selo Orgânico"
                                     style="width:200px;height:200px;">
                             </div>
                             <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
@@ -213,7 +116,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="/assets/img/seloSustentavel.png" alt="Selo Orgânico"
+                                <img src="../../assets/img/PAG1/CERTIFICADOS/seloSustentavel.png" alt="Selo Orgânico"
                                     style="width:200px;height:200px;">
                             </div>
                             <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
@@ -227,7 +130,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="/assets/img/seloVegano.png" alt="Selo Orgânico"
+                                <img src="../../assets/img/PAG1/CERTIFICADOS/seloVegano.png" alt="Selo Orgânico"
                                     style="width:200px;height:200px;">
                             </div>
                             <div class="flip-card-back text-center centralizaTxt fonteTxt" style="font-size: 18px;">
@@ -269,10 +172,7 @@
                         <div class="container-fluid alinhamentoImg mb-2">
                             <div class="row">
                                 <img class="col">
-                                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_hbgek8qv.json"
-                                    background="transparent" speed="1" style="width: 250px; height: 210px;" loop
-                                    autoplay>
-                                </lottie-player>
+                                <img src="assets/GIF/CERTIFICADOS.gif" alt="" style="height: 200px;">
                             </div>
                         </div>
                         <div class="row">
@@ -372,37 +272,27 @@
             <div class="container mb-5 mt-4">
                 <div class="row mt-3">
                     <div class="col-md-4">
-                        <h2 class="text-center mt-2">TITULO</h2>
                         <p class="text-muted text-center fonteTxt"
-                            style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Nossa produção é certificada
-                            como orgânica por
-                            produzir alimentos
-                            cultivados com adubos naturais e defensivos biológicos, portanto, livres de
-                            agrotóxicos,
-                            adubos químicos ou hormônios, com
-                            respeito ao solo, os lençóis freáticos e os rios. Atuamos para contribuir com a
-                            conservação dos biomas agregando conhecimentos técnico-científicos, como a análise
-                            de
+                            style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">A FazSolidária surgiu a
+                            partir da união de sete pessoas, com perfil profissional diversificado mas que tinham em
+                            comum a vontade de levar produtos orgânicos de qualidade, contribuir com o meio ambiente e
+                            impactar da melhor forma possível a comunidade local.
+                            Para cumprir nosso propósito, estamos atentos à todas as tecnologias limpas que estão ao
+                            nosso alcance, como a produção de alimentos com melhor valor nutricional e sabor original, a
+                            conservação da fertilidade do solo e o menor impacto ambiental possível.
                         </p>
                     </div>
                     <div class="col-md-4 align-center">
-                        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_izbswkzm.json"
-                            background="transparent" speed="1"
-                            style="width: 300px; height: 200px; margin-top: 150px; margin-left: 20px;" loop autoplay>
-                        </lottie-player>
+                        <img src="assets/GIF/sobreNos.gif" alt="" style="height: 400px; width: 400px;">
                     </div>
                     <div class="col-md-4">
-                        <h2 class="text-center mt-2">TITULO</h2>
                         <p class="text-muted text-center fonteTxt"
-                            style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Nossa produção é certificada
-                            como orgânica por
-                            produzir alimentos
-                            cultivados com adubos naturais e defensivos biológicos, portanto, livres de
-                            agrotóxicos,
-                            adubos químicos ou hormônios, com
-                            respeito ao solo, os lençóis freáticos e os rios. Atuamos para contribuir com a
-                            conservação dos biomas agregando conhecimentos técnico-científicos, como a análise
-                            de
+                            style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Investimos ainda no
+                            envolvimento da comunidade, estimulando o conhecimento quanto à produção de alimentos de
+                            forma sustentável e, ainda, atentos a proporcionar uma melhoria na qualidade de vida dos
+                            nossos colaboradores.
+                            Acreditamos que é possível praticar uma agricultura ambientalmente correta e socialmente
+                            justa, se agirmos em conjunto, em prol das mudanças necessárias! E você, vem com a gente?
                         </p>
                     </div>
                 </div>
@@ -415,19 +305,51 @@
     <div class="mt-5 mb-3">
         <div class="row text-center justify-content-center mb-1">
             <!-- Textos -->
-            <div class="col-xl-6 col-lg-8">
+            <div class="col-xl-10 col-lg-8">
                 <h2 class="fonteTituloTxt" style="color: black;">Nossa Missão
                 </h2>
-                <p class="text-muted fonteTxt" style="font-size: 20px;">Nossa produção é certificada como orgânica por
-                    produzir alimentos
-                    cultivados com adubos naturais e defensivos biológicos, portanto, livres de
-                    agrotóxicos,
-                    adubos químicos ou hormônios, com
-                    respeito ao solo, os lençóis freáticos e os ri.</p>
+                <p class="text-muted fonteTxt" style="font-size: 20px;">O projeto da FazSolidária envolve alimentação
+                    saudável, livre de venenos, pensamento coletivo, cuidado e respeito com o meio ambiente,
+                    responsabilidade social e educação.
+                    Acreditamos no “fazer”, quando queremos que algo mude, precisamos agir para que aconteça.
+                    Acreditamos no coletivo, sentimos a necessidade de olhar para o lado e caminhar juntos em prol do
+                    nosso objetivo. Assim, as chances de impactar de verdade e com grande alcance aumentam.
+                    Acreditamos no poder da educação, com investimento em conhecimento é possível enviar a mensagem que
+                    queremos, para começar a ser aplicada agora e consolidada no futuro!
+                    Nossa missão, portanto é revolucionar a alimentação saudável juntos do máximo de pessoas que sintam
+                    a necessidade de agir na construção do planeta que queremos.</p>
             </div>
             <div class="row justify-content-center mb-2">
                 <!-- imagem -->
-                <img src="/assets/img/vaquinhas.png" class="img-fluid" style="width: 1349px; height: 500px;" alt="">
+                <img src="../../assets/img/PAG1/BANNERS/missao.png" class="img-fluid"
+                    style="width: 1349px; height: 500px;" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <!-- Título -->
+                            <h2 class="col text-center fonteTituloTxt" style="font-size: 35px;">Programa de Doações</h2>
+                        </div>
+                        <!-- texto -->
+                        <p class="text-muted text-center fonteTxt1" style="font-size: 20px;">Além de todo nosso cuidado
+                            e
+                            preocupação com relação a saúde de nossos clientes, nós também possuímos um programa de
+                            doação para auxiliar famílias carentes.
+                            Dessa forma, a cada compra efetuada em nosso site, uma porcentagem do valor vai diretamente
+                            para a ONG Amigos do Bem que tem como o objetivo fornecer cestas básicas para famílias da
+                            região de São Paulo!
+                        </p>
+                        <p class="text-muted text-center fonteTxt1">Você pode conhecer mais sobre a ONG acessando o link
+                            abaixo:</p>
+                        <a target="_blank" href=""><button type="button"
+                                class="btn text-light btn-sm navbackground2 bg-btn" style="border:0ch;">Acesso a
+                                ONG!</button></a>
+                    </div>
+                    <div class="col-md-6 align-center">
+                        <img src="assets/GIF/DOACAO.gif" alt="" style="height: 250px; margin-top: 50px;">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -454,7 +376,7 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/assets/img/asta.jpg" alt="Selo Orgânico"
+                                        <img src="../../assets/img/PAG1/NOS/asta.jpg" alt="Selo Orgânico"
                                             style="width:200px;height:200px; border-radius: 20px;">
                                     </div>
                                     <div class="flip-card-back text-center centralizaTxt fonteTxt"
@@ -493,7 +415,7 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/assets/img/kaneki.png" alt="Selo Orgânico"
+                                        <img src="../../assets/img/PAG1/NOS/draken.jpg" alt="Selo Orgânico"
                                             style="width:200px;height:200px; border-radius: 20px;">
                                     </div>
                                     <div class="flip-card-back text-center centralizaTxt fonteTxt"
@@ -530,7 +452,7 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/assets/img/itadori.jpg" alt="Selo Orgânico"
+                                        <img src="../../assets/img/PAG1/NOS/tanjiro.png" alt="Selo Orgânico"
                                             style="width:200px;height:200px; border-radius: 20px;">
                                     </div>
                                     <div class="flip-card-back text-center centralizaTxt fonteTxt"
@@ -567,7 +489,7 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/assets/img/tanjiro.png" alt="Selo Orgânico"
+                                        <img src="../../assets/img/PAG1/NOS/midorya.PNG" alt="Selo Orgânico"
                                             style="width:200px;height:200px; border-radius: 20px;">
                                     </div>
                                     <div class="flip-card-back text-center centralizaTxt fonteTxt"
@@ -610,7 +532,7 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/assets/img/trish.jpg" alt="Rafaela Papai"
+                                        <img src="../../assets/img/PAG1/NOS/trish.jpg" alt="Rafaela Papai"
                                             style="width:200px;height:200px; border-radius: 20px;">
                                     </div>
                                     <div class="flip-card-back text-center centralizaTxt fonteTxt"
@@ -647,7 +569,7 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/assets/img/uraraka.jpg" alt="Selo Orgânico"
+                                        <img src="../../assets/img/PAG1/NOS/uraraka.jpg" alt="Selo Orgânico"
                                             style="width:200px;height:200px; border-radius: 20px;">
                                     </div>
                                     <div class="flip-card-back text-center centralizaTxt fonteTxt"
@@ -685,7 +607,7 @@
                             <div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img src="/assets/img/asuna.jpg" alt="Selo Orgânico"
+                                        <img src="../../assets/img/PAG1/NOS/asuna.jpg" alt="Selo Orgânico"
                                             style="width:200px;height:200px; border-radius: 20px;">
                                     </div>
                                     <div class="flip-card-back text-center centralizaTxt fonteTxt"
@@ -713,162 +635,16 @@
                                                 </svg>
                                             </a>
                                         </li>
-                                        <path
-                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                                        </svg>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-
-                <!-- RODAPÉ -->
-                <footer class="text-center text-lg-start navbackground fonteTxt" style="width: 1349px;">
-                    <!-- Section: Social media -->
-                    <section class="container-flex justify-content-center justify-content-lg-between border-bottom">
-                        <div class="container">
-                            <div class="row flex-column justify-content-center">
-                                <!-- Redes socais -->
-                                <div class="col-md-12 text-center mb-2 mt-2">
-                                    <ul class="social-network">
-                                        <li>
-                                            <!-- facebook -->
-                                            <a target="_blank" href="https://www.linkedin.com/in/gerson-ronaldo/"
-                                                style="margin-right: 20px;">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                                    fill="currentColor"
-                                                    class="bi bi-linkedin mt-1 corIcone-square corIcones"
-                                                    viewBox="0 0 16 16" aria-hidden="true">
-                                                    <path
-                                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                                                </svg>
-                                            </a>
-                                            <!-- github -->
-                                            <a target="_blank"
-                                                href="https://github.com/SrtaPhantomhive/FazSolidaria--FrontEnd"
-                                                style="margin-right: 20px;">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                                    fill="currentColor"
-                                                    class="bi bi-github mt-1 corIcone-square corIcones"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                                                </svg>
-                                            </a>
-                                            <!-- instagram -->
-                                            <a target="_blank" href="https://www.instagram.com/fazsolidaria/"
-                                                style="margin-right: 20px;">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                                    fill="currentColor"
-                                                    class="bi bi-github mt-1 corIcone-square corIcones"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Left -->
-                                <!-- Right -->
-                                <div>
-                                    <a href="" class="me-4 text-reset">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="" class="me-4 text-reset">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="" class="me-4 text-reset">
-                                        <i class="fab fa-google"></i>
-                                    </a>
-                                    <a href="" class="me-4 text-reset">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="" class="me-4 text-reset">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                                <!-- Right -->
-                            </div>
-                    </section>
-                    <!-- Section: Social media -->
-
-                    <!-- Section: Links  -->
-                    <section class="">
-                        <div class="container text-center text-md-start mt-3">
-                            <!-- Grid row -->
-                            <div class="row mt-3">
-                                <!-- Grid column -->
-                                <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 align-items-center">
-                                    <!-- Content -->
-                                    <h6 class="text-uppercase fw-bold mb-4 fonteTituloTxt" style="font-size: 35px;">
-                                        <i class="fas fa-gem"></i>FazSolidária
-                                    </h6>
-                                    <img src="/assets/img/fazsolidarialogobranca.png" class=""
-                                        style="width: 100px; height: 100px; margin-bottom: 4px;">
-                                    <p class="" style="font-size: 18px;">
-                                        O futuro é verde, e se faz junto!
-                                    </p>
-                                </div>
-                                <!-- Grid column -->
-
-                                <!-- Grid column -->
-                                <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3 text-center">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold mb-4 fonteTituloTxt" style="font-size: 35px;">
-                                        Endereço
-                                    </h6>
-                                    <p><i class="fas fa-home"></i> AV. Paulista, 2300</p>
-                                    <p><i class="fas fa-home"></i> São Paulo - SP</p>
-                                    <p><i class="fas fa-home"></i> CEP: 13203-240</p>
-                                </div>
-                                <!-- Grid column -->
-                                <!-- Grid column -->
-                                <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-3 text-center">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold mb-4 fonteTituloTxt" style="font-size: 35px;">
-                                        Contato
-                                    </h6>
-                                    <p>
-                                        <i class="fas fa-envelope"></i>
-                                        fazsolidaria@gmail.com
-                                    </p>
-                                    <p><i class="fas fa-phone"></i> (11) 2169-8547</p>
-                                    <p><i class="fas fa-phone"></i> (11) 2169-8547</p>
-                                </div>
-                                <!-- Grid column -->
-                            </div>
-                            <!-- Grid row -->
-                        </div>
-                    </section>
-                    <!-- Section: Links  -->
-                    <!-- Copyright -->
-                    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                        © 2022 Copyright:
-                        <a class="text-reset fw-bold" href="https://fazsolidaria.com/">FazSolidaria.com</a>
-                    </div>
-                    <!-- Copyright -->
-                </footer>
-
-
-
-
-
-
-
-                <!-- SEPARATE -->
-                <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-                    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-                    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-                    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-                    crossorigin="anonymous"></script>
-
+    <!-- RODAPÉ -->
+    <app-rodape></app-rodape>
 </body>
-
-</html>

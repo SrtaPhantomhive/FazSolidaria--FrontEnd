@@ -11,24 +11,14 @@ html {
 
 body {
     background-color: #FCF2B8;
+
 }
 
-/* navbar2 */
-    .nav2{
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 10;
-    }
-
-    /* estilização borda */
-    .bordas{
-        border-radius: 25px 0px 25px 25px;
-        left: -104px;
-        padding: 20px;
-    }
-
+/* cor de teste para os títulos */
+.teste {
+    background-color: #75c2cc;
+    opacity: 40%;
+}
 
 /* Cor de fundo navbar 1 */
 .navbackground {
@@ -96,7 +86,7 @@ body {
     margin-bottom: 150px;
     margin-left: 0;
     margin-right: 0;
-    border-radius: 25px 0px 25px 0px;
+    border-radius: 20px;
 }
 
 /* fonte do nome da marca */
@@ -125,13 +115,6 @@ body {
     font-family: 'Nunito', cursive;
     font-weight: bold;
     font-size: 35px;
-}
-
-/* fonte escolhida para os botões da aplicação */
-.fonteBotaoLoginCadastro {
-    font-family: 'Nunito', cursive;
-    font-weight: bold;
-    font-size: 18px;
 }
 
 /* altera a fonte dos textos da página 2 */
@@ -163,7 +146,7 @@ body {
     margin-left: 90px;
     margin-right: 0;
     border-radius: 20px;
-    box-shadow: 1px 5px 50px rgba(0, 0, 0, 0.541)
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541)
 }
 
 .dimcar2 {
@@ -231,12 +214,11 @@ body {
 }
 
 /* Icones rodapé */
-ul.social-network {
+ul.social-network{
     list-style: none;
     padding: 0;
 }
-
-ul.social-network li {
+ul.social-network li{
     display: inline;
     margin: 0;
     padding: 0;
@@ -410,20 +392,6 @@ body {
     background-color: #2D964C;
 }
 
-.btn-cadastro{
-    color: #2D964C;
-    border-color: #2D964C;
-    border-width: 2px;
-}
-.btn-cadastro:hover{
-    color: #75DC36;
-    border-color: #75DC36;
-    border-width: 2px;
-}
-
-.dropdown-menu > a{
-    text-decoration: none;
-}
 
 
 /*-----------RODAPÉ------------*/
@@ -453,10 +421,6 @@ footer ul li.ellipsis {
     white-space: nowrap;
 }
 
-
-
-
-
 /* botão */
 .botao-soma {
     background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
@@ -471,42 +435,164 @@ footer ul li.ellipsis {
 
 
 
-/* cadastro */
 
-#telaCadastro {
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px 0px 25px 0px;
-    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
-    margin-bottom: 20px;
+/*Estilo da página produtos*/
 
+/* BANNERS */
+#banners-container {
+    padding: 0px;
 }
 
-#esqueceuSenha,
-#cadastre {
-    text-decoration: underline;
+@media(min-width: 2085px) {
+
+    #slider .carousel-item,
+    #slider img {
+        height: 500px;
+    }
 }
 
-.fonteTxtL {
+.dimcar3 {
+    overflow: hidden;
+    width: 2080px;
+    width: 100%;
+    height: 500px;
+}
+
+
+/*CARD PRODUTOS*/
+/* configura o tamanho do quadrado e a cor do mesmo */
+.flip-card2 {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    perspective: 1000px;
+}
+
+/* altera a posição em relação ao próprio card*/
+.flip-card-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.2s;
+    transform-style: preserve-3d;
+}
+
+/* Configura a passada de mouse e sua resposta*/
+.flip-card2:hover .flip-card-inner2 {
+    transform: rotateY(180deg);
+}
+
+/* Posição */
+.flip-card-front2,
+.flip-card-back2 {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Configurações visuais da frente do card */
+.flip-card-front2 {
+    background-color: transparent;
+    color: black;
+    border-radius: 20px;
+}
+
+/* configurações visuais de trás do card */
+.flip-card-back2 {
+    background-color: #2D964C;
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    border-radius: 20px
+}
+
+/*Stars*/
+.produtos-stars {
+    font-size: 10px;
+}
+
+.produtos-stars svg {
+    fill: #FFC107;
+}
+
+/*Configurações da fonte - página produtos*/
+.produtos-itens .font-produtos{
     font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.produtos-preco {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.produtos-preco strong {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 30x;
+}
+
+/* Estilo da tela-detalhes-produtos */
+#img-bg{
+    background-image: url('https://blog.syngentadigital.ag/wp-content/uploads/2019/09/cacho-de-banana-720x480.jpg');
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+  }
+
+  /* PRODUTOS RELACIONADOS */
+  #produtos-relacionados {
+    padding: 4em 0;
+  }
+  
+  #produtos-relacionados .row {
+    margin: 0;
+  }
+  
+  #produtos-relacionados .col-md-3 {
+    padding: 0;
+  }
+  
+  .title {
+    font-family: 'Nunito', cursive;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  
+  @media(min-width: 100px) {
+    .title {
+      text-align: left;
+    }
+  }
+  
+  .card {
+    text-align: center;
+    border-radius: 5%;
+    background-color: transparent;
+    max-width: 300px;
+  }
+  
+  .card img {
+    width: 300px;
+    margin: 2em auto;
+    border-radius: 5%;
+  }
+  
+  .card .card-category {
+    font-size: .8rem;
+  }
+  
+  .card .card-text {
+    margin: 2em 0;
     font-weight: bold;
-    font-size: 18px;
-    /* font-family: 'Radio Canada', sans-serif;
-     font-family: Amatic SC; */
-}
-
-.fonteTituloCadastro {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bolder;
-    font-size: 3em;
-    /* font-family: 'Radio Canada', sans-serif;
-     font-family: Amatic SC; */
-}
-
-.fonteTituloLogin {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bolder;
-    font-size: 3em;
-    /* font-family: 'Radio Canada', sans-serif;
-    font-family: Amatic SC; */
-}
+  }
+  
