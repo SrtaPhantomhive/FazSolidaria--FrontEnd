@@ -1,14 +1,14 @@
-// import { NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TelaApresentacaoComponent } from './tela-apresentacao/tela-apresentacao.component';
 import { LogarComponent } from './logar/logar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { NgModule } from '@angular/core';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: TelaApresentacaoComponent },
-  { path: 'logar', component: LogarComponent },
+  { path: 'login', component: LogarComponent },
   { path: 'cadastrar', component: CadastrarComponent }
 
 ];
@@ -16,8 +16,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-
-
 })
 
 

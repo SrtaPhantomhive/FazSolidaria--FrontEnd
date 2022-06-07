@@ -10,25 +10,29 @@
             <!--Compo Nome-->
             <div class="form-row">
               <div class="col-md-12 mb-3">
-                <label for="nome">Nome Completo*</label>
+                <label for="nome">Nome Completo</label>
                 <input
+                  [(ngModel)]="usuario.nome"
                   type="text"
                   class="form-control"
                   id="nome"
                   name="nome"
-                  placeholder="Insira seu nome"
+                  placeholder="Nome"
                   pattern="^[^-\s][a-zA-ZÀ-ú ]*"
                   minlength="3"
                   maxlength="50"
                   required
                 />
-                <small id="Help-block" class="text-muted">
+                <!-- <small id="Help-block" class="text-muted">
                   Deve conter somente letras, entre 3 e 50 caracteres.
-                </small>
-                <div class="invalid-feedback">Insira um formato válido.</div>
-              </div>
-            </div>
+                </small> -->
+                <!-- <div class="invalid-feedback">Insira um formato válido.</div> -->
+                
 
+
+
+              </div> 
+            </div>
             <!--Campos CPF e Telefone-->
 
             <div class="form-row">
@@ -36,9 +40,10 @@
               <div class="col-md-6 mb-3">
                 <label for="cpf">CPF*</label>
                 <input
+                  [(ngModel)]="usuario.cpf"
                   type="text"
                   class="form-control"
-                  placeholder="Apenas números"
+                  placeholder="___.___.___-__"
                   id="cpf"
                   name="cpf"
                   required
@@ -52,8 +57,10 @@
               <div class="col-md-6 mb-3">
                 <label for="telefone">Telefone*</label>
                 <input
+                  [(ngModel)]="usuario.telefone"
                   type="text"
                   class="form-control"
+                  placeholder="(  ) _____-____"
                   id="telefone"
                   name="telefone"
                   required
@@ -69,6 +76,7 @@
               <div class="col-md-3 mb-3">
                 <label for="data">Data de Nascimento*</label>
                 <input
+                  [(ngModel)]="usuario.dataNasc"
                   type="date"
                   class="form-control"
                   id="data"
@@ -80,141 +88,12 @@
               </div>
             </div>
 
-            <!--Campos CEP, Logradouro e Numero-->
-
-            <div class="form-row">
-              <!--CEP-->
-              <div class="col-md-3 mb-3">
-                <label for="cep">CEP*</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cep"
-                  name="cep"
-                  placeholder="Ex.: xxxxx-xxx"
-                  required
-                />
-                <div class="invalid-feedback">Insira um CEP válido.</div>
-              </div>
-
-              <!--Logradouro-->
-              <div class="col-md-7 mb-3">
-                <label for="logradouro">Logradouro*</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Ex: Avenida Paulista"
-                  id="logradouro"
-                  name="logradouro"
-                  required
-                />
-                <div class="invalid-feedback">
-                  Por favor, insira um endereço válido.
-                </div>
-              </div>
-
-              <!--Numero-->
-              <div class="col-md-2 mb-3">
-                <label for="numero">Número*</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Ex: 136"
-                  id="numero"
-                  name="numero"
-                  required
-                />
-                <div class="invalid-feedback">Insira um número válido.</div>
-              </div>
-            </div>
-
-            <!--Campos Complemento e Bairro-->
-
-            <div class="form-row">
-              <!--Bairro-->
-              <div class="col-md-12 mb-3">
-                <label for="bairro">Bairro*</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Ex: Bela Vista"
-                  id="bairro"
-                  required
-                />
-                <div class="invalid-feedback">
-                  Por favor, insira um endereço válido.
-                </div>
-              </div>
-            </div>
-
-            <!--Campos Estado e Cidade-->
-
-            <div class="form-row">
-              <!--Estado-->
-              <div class="col-md-5 mb-3">
-                <label for="estado">Estado*</label>
-                <select
-                  class="form-select form-control"
-                  aria-label="Default select example"
-                  id="estado"
-                  name="estado"
-                  required
-                >
-                  <option selected disabled value="">Selecione o estado</option>
-                  <option value="AC">AC</option>
-                  <option value="AL">AL</option>
-                  <option value="AP">AP</option>
-                  <option value="AM">AM</option>
-                  <option value="BA">BA</option>
-                  <option value="CE">CE</option>
-                  <option value="DF">DF</option>
-                  <option value="ES">ES</option>
-                  <option value="GO">GO</option>
-                  <option value="MA">MA</option>
-                  <option value="MS">MS</option>
-                  <option value="MT">MT</option>
-                  <option value="MG">MG</option>
-                  <option value="PA">PA</option>
-                  <option value="PB">PB</option>
-                  <option value="PR">PR</option>
-                  <option value="PE">PE</option>
-                  <option value="PI">PI</option>
-                  <option value="RJ">RJ</option>
-                  <option value="RN">RN</option>
-                  <option value="RS">RS</option>
-                  <option value="RO">RO</option>
-                  <option value="RR">RR</option>
-                  <option value="SC">SC</option>
-                  <option value="SP">SP</option>
-                  <option value="SE">SE</option>
-                  <option value="TO">TO</option>
-                </select>
-                <div class="invalid-feedback">Por favor, insira um estado.</div>
-              </div>
-
-              <!--Cidade-->
-              <div class="col-md-7 mb-3">
-                <label for="cidade">Cidade*</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Ex: São Paulo"
-                  id="cidade"
-                  name="cidade"
-                  minlength="5"
-                  required
-                />
-                <div class="invalid-feedback">
-                  Por favor, insira um endereço válido.
-                </div>
-              </div>
-            </div>
-
             <!--E-mail(usuario)-->
             <div class="form-row">
               <div class="col-md-12 mb-3">
                 <label for="email">E-mail*</label>
                 <input
+                  [(ngModel)]="usuario.usuario"
                   type="email"
                   class="form-control"
                   id="email"
@@ -248,11 +127,12 @@
               <div class="col-md-12 mb-3">
                 <label for="senha">Senha*</label>
                 <input
+                  [(ngModel)]="usuario.senha"
                   type="password"
                   class="form-control"
                   id="senha"
                   name="senha"
-                  placeholder="Insira sua senha"
+                  placeholder="Senha"
                   pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,15}$).*$"
                   minlength="8"
                   maxlength="15"
@@ -271,12 +151,17 @@
             <!-- Tipo Usuario -->
             <div class="form-group">
               <label for="tipo">Tipo de Usuário</label>
-              <select class="form-control" name="tipo" id="tipo" >
-                  <option>Selecione um tipo de usuário</option>
-                  <option value="normal">Normal</option>
-                  <option value="adm">Administrador</option>
+              <select
+                class="form-control"
+                name="tipo"
+                id="tipo"
+                (change)="tipoUsuario($event)"
+              >
+                <option>Selecione um tipo de usuário</option>
+                <option value="normal">Normal</option>
+                <option value="adm">Administrador</option>
               </select>
-          </div>
+            </div>
 
             <!--Termos e condições-->
             <div class="form-group">
@@ -299,6 +184,7 @@
             <button
               type="submit"
               class="btn bg-btn btn-lg btn-block text-light"
+              (click)="cadastrar()"
             >
               Cadastrar
             </button>
