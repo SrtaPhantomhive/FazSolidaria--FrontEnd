@@ -12,5 +12,25 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     window.scroll(0,0)
   }
+// Evento para scrooll lenta
+  toInicio(){
+    document.getElementById('inicio')?.scrollIntoView({behavior:"smooth"});
+  }
+
+  toCertificacao(){
+    document.getElementById('certificados')?.scrollIntoView({behavior:"smooth"});
+  }
+
+  toSobreNos(){
+    document.getElementById('sobreNos')?.scrollIntoView({behavior:"smooth"});
+  }
+
+  toMissao(){
+    document.getElementById('missao')?.scrollIntoView({behavior:"smooth"});
+  }
+
+  toEquipe(){
+    document.getElementById('equipe')?.scrollIntoView({behavior:"smooth"});
+  }
 
 }
