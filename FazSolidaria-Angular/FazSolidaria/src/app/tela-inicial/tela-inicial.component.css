@@ -1,5 +1,34 @@
+<<<<<<< HEAD
 /* -------FONTES--------- */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
+=======
+/* -------CONFIGURAÇÕES DE TEXTO------- */
+/* configura o texto da página 1 */
+.configTxt {
+    overflow: hidden;
+    max-height: 1000px;
+    height: 400px;
+    max-width: 500px;
+    width: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 160px;
+    margin-bottom: 150px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 20px;
+}
+
+/* fonte do nome da marca */
+.fonteTitulo {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+>>>>>>> cf9f03c50ff541d3b874f02cc3038c326620ebce
 
 /* fonte para títulos */
 .fonteTituloTxt {
@@ -18,6 +47,7 @@
     padding-top: 25px;
 }
 
+<<<<<<< HEAD
 /* ---------CONFIG. ADICIONAIS----------- */
 
 /* alinha as imagens dos certificados */
@@ -38,6 +68,15 @@
 }
 
 
+=======
+/* altera a fonte dos textos da página 1 */
+.fonteTxtpg1 {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+>>>>>>> cf9f03c50ff541d3b874f02cc3038c326620ebce
 /*Estilo da página produtos*/
 
 /* BANNERS */
@@ -90,7 +129,7 @@
 .flip-card-front2,
 .flip-card-back2 {
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 150%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -101,6 +140,7 @@
     background-color: transparent;
     color: black;
     border-radius: 20px;
+    box-shadow: 3px 3px #ddd4a1, -1em 0 0.4em rgb(73, 73, 3);
 }
 
 /* configurações visuais de trás do card */
@@ -124,17 +164,80 @@
 .produtos-itens .font-produtos{
     font-family: 'Nunito', cursive;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .produtos-preco {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 16px;
 }
 
+<<<<<<< HEAD
 .produtos-preco strong {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
     font-size: 30x;
 }
+=======
+
+/* Estilo da tela-detalhes-produtos */
+#img-bg{
+    background-image: url('https://blog.syngentadigital.ag/wp-content/uploads/2019/09/cacho-de-banana-720x480.jpg');
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+  }
+
+  /* PRODUTOS RELACIONADOS */
+  #produtos-relacionados {
+    padding: 4em 0;
+  }
+  
+  #produtos-relacionados .row {
+    margin: 0;
+  }
+  
+  #produtos-relacionados .col-md-3 {
+    padding: 0;
+  }
+  
+  .title {
+    font-family: 'Nunito', cursive;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  
+  @media(min-width: 100px) {
+    .title {
+      text-align: left;
+    }
+  }
+  
+  .card {
+    text-align: center;
+    border-radius: 5%;
+    background-color: transparent;
+    max-width: 300px;
+  }
+  
+  .card img {
+    width: 300px;
+    margin: 2em auto;
+    border-radius: 5%;
+  }
+  
+  .card .card-category {
+    font-size: .8rem;
+  }
+  
+  .card .card-text {
+    margin: 2em 0;
+    font-weight: bold;
+  }
+  
+>>>>>>> cf9f03c50ff541d3b874f02cc3038c326620ebce

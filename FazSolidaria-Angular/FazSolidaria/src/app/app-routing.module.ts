@@ -6,7 +6,10 @@ import { NgModule } from '@angular/core';
 import { FormularioVisitaComponent } from './formulario-visita/formulario-visita.component';
 import { PerfilProdutoComponent } from './perfil-produto/perfil-produto.component';
 import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
+
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,11 +17,9 @@ const routes: Routes = [
   { path: 'home', component: TelaApresentacaoComponent },
   { path: 'login', component: LogarComponent },
   { path: 'cadastrar', component: CadastrarComponent },
+  { path: 'carrinho', component: CarrinhoComponent},
   { path: 'perfil-produtos', component: PerfilProdutoComponent},
-  { path: 'tela-inicial', component: TelaInicialComponent},
-  { path: 'carrinho', component: CarrinhoComponent}
-
-
+  { path: 'catalogo', component: TelaInicialComponent}
 ];
 
 @NgModule({
