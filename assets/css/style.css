@@ -633,7 +633,7 @@ a {
   }
   
   a:hover {
-    background-color: #ddd;
+    background-color: transparent;
     color: black;
   }
   
