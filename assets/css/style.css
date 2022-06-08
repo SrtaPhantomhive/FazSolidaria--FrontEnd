@@ -489,7 +489,7 @@ footer ul li.ellipsis {
 .flip-card-front2,
 .flip-card-back2 {
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 150%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -497,9 +497,10 @@ footer ul li.ellipsis {
 
 /* Configurações visuais da frente do card */
 .flip-card-front2 {
-    background-color: transparent;
+    background-color: white;
     color: black;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px #ddd4a1, -1em 0 0.4em olive;
 }
 
 /* configurações visuais de trás do card */
@@ -507,7 +508,7 @@ footer ul li.ellipsis {
     background-color: #2D964C;
     color: rgb(255, 255, 255);
     transform: rotateY(180deg);
-    border-radius: 20px
+    border-radius: 10px
 }
 
 /*Stars*/
@@ -523,7 +524,7 @@ footer ul li.ellipsis {
 .produtos-itens .font-produtos {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .produtos-preco {
@@ -545,6 +546,7 @@ footer ul li.ellipsis {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    /* box-shadow: 3px 3px #ddd4a1, -1em 0 0.4em olive; */
 }
 
 .btn-light {
