@@ -9,9 +9,6 @@ import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 
-
-
-
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'agendamento', component: FormularioVisitaComponent },
