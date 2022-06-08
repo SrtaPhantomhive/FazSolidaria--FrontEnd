@@ -12,6 +12,8 @@ import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { FormularioVisitaComponent } from './formulario-visita/formulario-visita.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { MenuCompactoComponent } from './menu-compacto/menu-compacto.component';
+import { MenuComprasComponent } from './menu-compras/menu-compras.component';
 
 
 
@@ -28,6 +30,8 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
     CarrinhoComponent,
     FormularioVisitaComponent,
     PagamentoComponent,
+    MenuCompactoComponent,
+    MenuComprasComponent,
   ],
   imports: [
     BrowserModule,
