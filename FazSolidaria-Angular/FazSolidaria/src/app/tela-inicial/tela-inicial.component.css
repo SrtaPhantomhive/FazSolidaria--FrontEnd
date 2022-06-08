@@ -112,7 +112,7 @@
 .flip-card-front2,
 .flip-card-back2 {
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 150%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -123,6 +123,7 @@
     background-color: transparent;
     color: black;
     border-radius: 20px;
+    box-shadow: 3px 3px #ddd4a1, -1em 0 0.4em rgb(73, 73, 3);
 }
 
 /* configurações visuais de trás do card */
@@ -146,20 +147,15 @@
 .produtos-itens .font-produtos{
     font-family: 'Nunito', cursive;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .produtos-preco {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 16px;
 }
 
-.produtos-preco strong {
-    font-family: 'Nunito', cursive;
-    font-weight: bolder;
-    font-size: 30x;
-}
 
 /* Estilo da tela-detalhes-produtos */
 #img-bg{
