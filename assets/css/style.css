@@ -541,7 +541,7 @@ footer ul li.ellipsis {
 /* Estilo da tela-detalhes-produtos */
 #img-bg {
     background-image: url('https://blog.syngentadigital.ag/wp-content/uploads/2019/09/cacho-de-banana-720x480.jpg');
-    min-height: 500px;
+    min-height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -560,7 +560,6 @@ footer ul li.ellipsis {
   }
 
 /* PRODUTOS RELACIONADOS */
-
 .produto-relacionados {
     padding: 20px 0;
 }
@@ -640,59 +639,4 @@ a {
   
   .round {
     border-radius: 50%;
-  }
-
-
-/* NEWS */
-
-#newsletter-container {
-    background-color: #FCF2B8;
-    border-bottom: 1px solid #dbd39f;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #news-form {
-    max-width: 600px;
-    margin: 15px auto;
-  }
-  
-  #news-form i {
-    font-size: 1.5em;
-  }
-  
-  #news-form .btn {
-    color: #FFF;
-  }
-
-  #news-form {
-    width: 100%;
-    margin: 2em 0;
-  }
-  
-  @media(min-width: 768px) {
-    #news-form {
-      width: 50%;
-      margin: 0;
-    }
-  }
-  
-  #news-form {
-    border: 2px solid #626262;
-    border-radius: 3px;
-    padding: 5px 15px;
-  }
-  
-   #news-form input {
-    background-color: transparent;
-    border: none;
-    color: #FFF;
-  }
-  
-    #news-form input:focus {
-    box-shadow: none;
-  }
-  
-    #news-form input::placeholder {
-    color: #FFF;
   }
