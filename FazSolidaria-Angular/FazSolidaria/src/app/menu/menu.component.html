@@ -47,6 +47,7 @@
                                 </svg>
                                 <span class="ml-8 line-height">Login ou<span class="d-flex justify-content-end">Cadastro</span>
                                 </span>
+
                             </a>
                             <div class="dropdown-menu bordas fonteBotaoLoginCadastro">
                                 <p>Entre ou Cadastre-se!</p>
@@ -83,31 +84,32 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- botão início -->
                     <li class="nav-item ml-5 fonteBotao">
-                        <a href="#inicio"><button type="button"
+                        <a (click)="toInicio()" routerLink="/inicio" routerLinkActive="active"><button type="button"
                                 class="btn btn-outline-light btn-navbar2">Início</button></a>
                     </li>
                     <!-- botão certificações -->
                     <li class="nav-item ml-5 fonteBotao">
-                        <a href="#certificados"><button type="button"
+                        <a (click)="toCertificacao()" routerLinkActive="active"><button type="button"
                                 class="btn btn-outline-light btn-navbar2">Certificações</button></a>
                     </li>
                     <!-- botão sobre nós -->
                     <li class="nav-item ml-5 fonteBotao">
-                        <a href="#sobreNos"><button type="button" class="btn btn-outline-light btn-navbar2">Sobre
+                        <a (click)="toSobreNos()" routerLinkActive="active"><button type="button" class="btn btn-outline-light btn-navbar2">Sobre
                                 Nós</button></a>
                     </li>
                     <!-- botão missão -->
                     <li class="nav-item ml-5 fonteBotao">
-                        <a href="#missao"><button type="button"
+                        <a (click)="toMissao()" routerLinkActive="active"><button type="button"
                                 class="btn btn-outline-light btn-navbar2">Missão</button></a>
                     </li>
                     <!-- botão equipe -->
                     <li class="nav-item ml-5 fonteBotao">
-                        <a href="#equipe"><button type="button"
+                        <a (click)="toEquipe()" routerLinkActive="active"><button type="button"
                                 class="btn btn-outline-light btn-navbar2">Equipe</button></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
