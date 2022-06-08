@@ -1,6 +1,6 @@
 <main>
     <section>
-      <div class="container-fluid">
+      <div class="container-fluid" style="margin-top: 200px;">
         <div class="justify-content-center row ">
           <div class="col-12 colsm-6 col-md-4">
             <form id="telaLogin">
@@ -18,12 +18,15 @@
                 <small id="passwordHelpInline" class="text-muted">
                   A senha deve conter entre 8-15 caracteres
                 </small>
+                <!-- Link para Esqueceu a Senha -->
                 <a href="#"><small id="esqueceuSenha" class="form-text text-muted text-xl-right p-1 ">Esqueceu sua
                     senha?</small></a>
               </div>
+              <!-- Botao Entrar -->
               <button type="submit" class="btn bg-btn btn-lg btn-block text-light" (click)="logar()">Entrar</button>
+              <!-- Link para Cadastra-se -->
               <a routerLink="/cadastrar"><small id="cadastre"
-                  class="form-text text-muted text-lg-center p-1">Cadastre-se</small></a>
+                  class="form-text text-muted text-lg-center p-2">Cadastre-se</small></a>
             </form>
           </div>
         </div>

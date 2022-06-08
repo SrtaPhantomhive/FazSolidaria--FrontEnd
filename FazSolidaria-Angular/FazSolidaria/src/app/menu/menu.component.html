@@ -16,7 +16,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- Botão Loja Fazenda -->
                     <li class="nav-item" id='fazenda'>
-                        <a class="nav-link text-light" href="index.html">
+                        <a class="nav-link text-light" routerLink="/catalogo">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                 class="bi bi-basket" viewBox="0 0 16 16">
                                 <path
@@ -29,7 +29,7 @@
                     <!-- Botão Cesto de compras -->
                     <li class="nav-item">
                         <abbr title="Cesto" class="bg-light">
-                            <a class="nav-link text-light" href="#">
+                            <a class="nav-link text-light" routerLink="/carrinho">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                     class="bi bi-basket" viewBox="0 0 16 16">
                                     <path
@@ -47,8 +47,24 @@
                                 </svg>
                                 <span class="ml-8 line-height">Login ou<span class="d-flex justify-content-end">Cadastro</span>
                                 </span>
-                            </a>                                  
-                        </div> 
+
+                            </a>
+                            <div class="dropdown-menu bordas fonteBotaoLoginCadastro">
+                                <p>Entre ou Cadastre-se!</p>
+                                <!-- Dropdown menu links -->
+                                <a routerLink="/login">
+                                    <button type="button"
+                                        class="btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light">Login
+                                    </button>
+                                </a>
+                                <a routerLink="/cadastrar">
+                                    <button type="button"
+                                        class="btn btn-block btn-lg btn-outline fonteBotaoLoginCadastro btn-cadastro">Cadastre-se
+                                    </button>
+                                </a>
+                            </div>                                        
+
+                        </div>
                     </li>
                 </ul>
             </div>

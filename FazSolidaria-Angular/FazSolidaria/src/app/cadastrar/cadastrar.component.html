@@ -1,6 +1,6 @@
 <main>
   <section>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 200px">
       <div class="justify-content-center row">
         <div class="col-12 colsm-6 col-md-6">
           <form class="needs-validation" novalidate id="telaCadastro">
@@ -27,17 +27,13 @@
                   Deve conter somente letras, entre 3 e 50 caracteres.
                 </small> -->
                 <!-- <div class="invalid-feedback">Insira um formato válido.</div> -->
-                
-
-
-
-              </div> 
+              </div>
             </div>
             <!--Campos CPF e Telefone-->
 
             <div class="form-row">
               <!--CPF-->
-              <div class="col-md-6 mb-3">
+              <div class="col-md-4 mb-3">
                 <label for="cpf">CPF*</label>
                 <input
                   [(ngModel)]="usuario.cpf"
@@ -54,7 +50,7 @@
               </div>
 
               <!--Telefone-->
-              <div class="col-md-6 mb-3">
+              <div class="col-md-4 mb-3">
                 <label for="telefone">Telefone*</label>
                 <input
                   [(ngModel)]="usuario.telefone"
@@ -69,11 +65,8 @@
                   Por favor, insira um telefone válido.
                 </div>
               </div>
-            </div>
-
-            <!--Data Nascimento-->
-            <div class="form-row">
-              <div class="col-md-3 mb-3">
+              <!--Data Nascimento-->
+              <div class="col-md-4 mb-3">
                 <label for="data">Data de Nascimento*</label>
                 <input
                   [(ngModel)]="usuario.dataNasc"
@@ -87,10 +80,9 @@
                 <div class="invalid-feedback">Insira um formato válido.</div>
               </div>
             </div>
-
-            <!--E-mail(usuario)-->
+            <!-- Email -->
             <div class="form-row">
-              <div class="col-md-12 mb-3">
+              <div class="col-md-6">
                 <label for="email">E-mail*</label>
                 <input
                   [(ngModel)]="usuario.usuario"
@@ -119,6 +111,22 @@
                     Receber e-mails promocionais
                   </label>
                 </div>
+              </div>
+              <!-- Foto -->
+              <div class="col-md-6 mb-3">
+                <label for="data">Link Foto*</label>
+                <input
+                [(ngModel)]="usuario.foto"
+                type="foto"
+                class="form-control"
+                id="foto"
+                name="foto"
+                placeholder="Link"
+                minlength="5"
+                maxlength="100"
+                required
+                />
+                <div class="invalid-feedback">Insira um link da foto</div>
               </div>
             </div>
 
