@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 /* -------FONTES--------- */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
-=======
+
 /* -------CONFIGURAÇÕES DE TEXTO------- */
 /* configura o texto da página 1 */
 .configTxt {
@@ -28,7 +27,6 @@
     /* font-family: 'Radio Canada', sans-serif;
     font-family: Amatic SC; */
 }
->>>>>>> cf9f03c50ff541d3b874f02cc3038c326620ebce
 
 /* fonte para títulos */
 .fonteTituloTxt {
@@ -47,7 +45,6 @@
     padding-top: 25px;
 }
 
-<<<<<<< HEAD
 /* ---------CONFIG. ADICIONAIS----------- */
 
 /* alinha as imagens dos certificados */
@@ -67,8 +64,6 @@
     padding-top: 20px;
 }
 
-
-=======
 /* altera a fonte dos textos da página 1 */
 .fonteTxtpg1 {
     font-family: 'Nunito', cursive;
@@ -76,7 +71,7 @@
     font-size: 25px;
 }
 
->>>>>>> cf9f03c50ff541d3b874f02cc3038c326620ebce
+
 /*Estilo da página produtos*/
 
 /* BANNERS */
@@ -173,13 +168,12 @@
     font-size: 16px;
 }
 
-<<<<<<< HEAD
+
 .produtos-preco strong {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
     font-size: 30x;
 }
-=======
 
 /* Estilo da tela-detalhes-produtos */
 #img-bg{
@@ -239,5 +233,3 @@
     margin: 2em 0;
     font-weight: bold;
   }
-  
->>>>>>> cf9f03c50ff541d3b874f02cc3038c326620ebce
