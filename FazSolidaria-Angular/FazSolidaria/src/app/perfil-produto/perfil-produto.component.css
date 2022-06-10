@@ -89,25 +89,16 @@
 }
 
 /* Estilo da tela-detalhes-produtos */
-#img-bg {
-    background-image: url('https://blog.syngentadigital.ag/wp-content/uploads/2019/09/cacho-de-banana-720x480.jpg');
-    min-height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* box-shadow: 3px 3px #ddd4a1, -1em 0 0.4em olive; */
-}
-
 .btn-light {
     color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
+    background-color: #dae0e5;
+    border-color: #dae0e5;
   }
   
   .btn-light:hover {
     color: #212529;
-    background-color: #e2e6ea;
-    border-color: #dae0e5;
+    background-color: #addbbd;
+    border-color: #addbbd;
   }
 
 /* PRODUTOS RELACIONADOS */
