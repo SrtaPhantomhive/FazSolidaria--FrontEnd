@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FazSolidária</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -103,103 +104,93 @@
     </header>
     <!-- Tela Carrinho de compras -->
     <section>
-        <div class="position-absolut">
+        <div class="">
             <!-- Titulo -->
             <div class="text-center fonteTituloTxt" style="margin-top: 180px;">Cesta de compras</div>
             <!-- Fecha Titulo -->
             <!-- Tabela -->
-
-            <section>
-                <div class="container">
-                    <div class="d-inline flex-lg-nowrap ">
-                <div class="row tela-mobile tela-lg bd-highlight mb-3">
-                    <div class="container-fluid row text-center justfy-content-center" style="margin-top: 15px;">
-                        <div class="col-12 col-lg-2 text-center">  
-                            <div class="col-12 col-lg-2 row m-0 col-lg-12 text-center border fonteTxt">
-                            <div class="col-6 ">Produto</div>
-                            <div class="col-6 p-1 text-center ">
-                                <img src="imagensFazSolidaria/imagemDeFundo.png" width="60px" class="" alt="...">
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid flex-item">
-                        <div class="col-12 col-lg-2 tela-lg text-center nome">
-                            <div class="col-12 col-lg-2 row m-0 col-lg-12 border flex-lg-nowrap flex-item fonteTxt">
-                                <div class="col-6 col-lg-6">Nome</div>
-                                <div class="col-6 col-lg-6"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid ">
-                        <div class="col-12 col-lg-2 text-center">
-                            <div class="col-12 col-lg-2 row m-0 col-lg-12 border fonteTxt">
-                                <div class="col-6 col-lg-6">Preço</div>
-                                <div class="col-6 col-lg-6"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid">
-                        <div class="col-12 col-lg-2 text-center ">
-                            <div class="col-12 col-lg-2 row m-0 col-lg-12 text-center border fonteTxt">
-                                <div class="col-6 col-lg-6">Quantidade</div>
-                                <div class="col-6 col-lg-6 text-center">
-                                    <div class="input-group text-center">
-                                        <button class="col-4 col-lg-4 m-0 botao-subtrai btn text-center" type="button"
-                                            id="button-addon"></button>
-                                        <input type="text" class="col-4 col-lg-3 m-0 form-control text-center"
-                                            style="width: 5px; " placeholder="0" aria-label="button addon"
-                                            aria-describedby="button-addon">
-                                        <button class="col-4 col-lg-4 botao-soma btn text-center" type="button"
-                                            id="button-addon"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid">
-                        <div class="col-12 col-lg-2 text-center">
-                            <div class="col-12 col-lg-2 row m-0 col-lg-12 border fonteTxt">
-                                <div class="col-6 col-lg-6">SubTotal</div>
-                                <div class="col-6 col-lg-6"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="col-12 col-lg-2 text-center">
-                            <div class="col-12 col-lg-2 row m-0 border fonteTxt">
-                                <div class="col-6 col-lg-6">Remover item</div>
-                                <button class="col-4 col-lg-4 botao-lixo text-center btn" type="button"
-                                    id="button-addon"></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid" style="margin-top: 5px;">
-                        <div class="col-12 col-lg-2 text-center">
-                            <div class="col-12 col-lg-12 row m-0 border fonteTxt">
-                                <div class="col-6 col-lg-6">Valor Total com frete:</div>
-                                <div class="col-6 col-lg-6"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="bordas-rounded-right-bottom bg-branco container px-0 bordas-rounded-left-top">
+                <div class="h5 header-carrinho text-uppercase d-none d-md-flex bg-principal color-branco bordas-rounded-left-top align-items-center">
+                    <div class="col-2  p-2 text-center">Produto</div>
+                    <div class="col-2  p-2 text-center">Nome</div>
+                    <div class="col-2  p-2 text-center">Preço</div>
+                    <div class="col-2  p-2 text-center">Quantidade</div>
+    
+                    <div class="col-2  p-2 text-center">Sub-total</div>
+                    <div class="col-2  p-2 text-center">Remover item</div>
                 </div>
-            </section>
-                <!-- Fecha tabela -->
-            <section>
-                <div class="container-flex ">
-                    <div class=" col-12 col-lg-6 fonteTxt">
-                        <button type="button" class="btn btn-success mb-2 fonteBotao col-lg-6">Continuar comprando</button>
-                        <button type="button " class="btn btn-success fonteBotao col-lg-6">Finalizar Compra</button>
+                <div class="d-flex flex-column flex-md-row align-items-center px-2">
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Produto</label><img class="img-fluid img-item-carrinho"
+                                                                  src="imagensFazSolidaria/imagemDeFundo.png"></div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Nome</label> Banana
                     </div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Preço</label>R$ 5,99
+                    </div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Qtd</label>
+                        <div class="d-flex quantidade-carrinho">
+                            <button class="col-4  m-0 botao-subtrai btn text-center" type="button"
+                                    id="button-addon"></button>
+                            <input type="text" class="col-4  m-0 form-control text-center"
+                                   style="width: 5px; " placeholder="0" aria-label="button addon"
+                                   aria-describedby="button-addon">
+                            <button class="col-4 botao-soma btn text-center" type="button"
+                                    id="button-addon"></button>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Sub-total</label> R$ 11,98
+                    </div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Remover item</label>   <button class="col-4 col-lg-4 botao-lixo text-center btn" type="button"
+                                                                             id="button-addon"></button></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row align-items-center px-2 container">
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Produto</label><img class="img-fluid img-item-carrinho"
+                                                                  src="imagensFazSolidaria/imagemDeFundo.png"></div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Nome</label> Banana
+                    </div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Preço</label>R$ 5,99
+                    </div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Qtd</label>
+                        <div class="d-flex quantidade-carrinho">
+                            <button class="col-4  m-0 botao-subtrai btn text-center" type="button"
+                                    id="button-addon"></button>
+                            <input type="text" class="col-4  m-0 form-control text-center"
+                                   style="width: 5px; " placeholder="0" aria-label="button addon"
+                                   aria-describedby="button-addon">
+                            <button class="col-4 botao-soma btn text-center" type="button"
+                                    id="button-addon"></button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Sub-total</label> R$ 11,98
+                    </div>
+                    <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center"><label
+                            class="d-md-none">Remover item</label>   <button class="col-4 col-lg-4 botao-lixo text-center btn" type="button"
+                                                                             id="button-addon"></button></div>
                 </div>
             </div>
+                <!-- Fecha tabela -->
+                    <div class="col-12 d-flex col-lg-12 fonteTxt">
+                        <button type="button" class="  btn btn-success fonteTxt ">Continuar comprando</button>
+                    </div>
+                    <div class="col-12 d-flex fonteTxt">
+                        <button type="button " class=" btn btn-success fonteTxt">Finalizar Compra</button>
+                    </div>
+               
+            </div>
         </div>
-            </section>
+    </section>
+         
 
 
             <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

@@ -45,10 +45,12 @@ body {
 .botao-soma{
     background-image: url("imagensFazSolidaria/icons8-adicionar-30.png");
     background-repeat: no-repeat;
+    background-position: center;
 }
 .botao-subtrai{
     background-image: url("imagensFazSolidaria/icons8-menos-30.png");
     background-repeat: no-repeat;
+    background-position: center;
     
 }
 .botao-lixo{
@@ -56,7 +58,7 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     background-color: transparent;
-    ;
+    min-height: 30px;
 }
 
 /* Ajuste da fazenda para ela mudar de cor */
@@ -301,38 +303,42 @@ body {
     opacity: .5
 }
 
-/* ---------CONFIG. TELA RESPONSIVA----------- */
+/* ---------CONFIG. TELA RESPONSIVA----------- *
 /* Tela carrinho */
-
+.bg-branco{
+    background-color: #ffffff;
+}
+.color-branco{
+    color: #ffffff;
+}
+.quantidade-carrinho{
+    min-width: 180px;
+}
+.img-item-carrinho{
+    max-width: 80px;
+}
+.bg-principal{
+    background-color: rgba(117, 220, 54,0.8) ;
+}
 .tela-lg{
     justify-content: center;
     flex-flow: wrap;
     flex-basis: auto;
 
 }
-.nome{
-    justify-content: center;
-    flex: 0 1 auto;
-    flex-flow: wrap;
-    flex-shrink: 1;
-}
-.flex-item{
-    flex: 0 1 auto;
-}
-.quantidade{
-    justify-content: center;
-    flex: 0 1 auto;
-    flex-flow: wrap;
-    flex-shrink: 1;
-    
-}
-.produto{
+.bordas-rounded-left-top{
+    border-top-left-radius: 20px;
 
 }
-.continuar-compra{
+.bordas-rounded-right-bottom{
+    border-bottom-right-radius: 20px;
 
 }
-
-.finalizar-compra{
-
+.header-carrinho{
+    height: 60px;
+}
+@media (min-width: 768px) {
+    .img-item-carrinho{
+        max-width: 120px;
+    }
 }
