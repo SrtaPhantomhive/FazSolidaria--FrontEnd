@@ -1,0 +1,514 @@
+/* -------FONTES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
+
+/* ----------CORES GERAIS DO PROJETO--------- */
+/* cor do fundo do site */
+html {
+    overflow-x: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FCF2B8;
+}
+
+/* navbar2 */
+.nav2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* estilização borda */
+.bordas {
+    border-radius: 25px 0px 25px 25px;
+    left: -227px;
+}
+
+/* Cor de fundo navbar 1 */
+.navbackground {
+    background-color: #2D964C;
+}
+
+/* cor de fundo do menu 2 */
+.navbackground2 {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgba(117, 220, 54, 0.8);
+}
+
+/* cor do fundo da caixa */
+.fundoCaixa {
+    background: #d1c99e;
+    opacity: 40%;
+}
+
+
+/* ---------CONFIG. NAVBARS-------- */
+/* alinha as navbars */
+.alinhamentomenu {
+    max-width: 100%;
+}
+
+.sombreamento {
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.4)
+}
+
+/* -------CONFIG. BOTÕES--------- */
+/* diminui a opacidade do search */
+.searchbg {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* aumentar o tamanho dos botões */
+.btn-navbar2 {
+    width: 150px;
+}
+
+/* relacionado ao botão de usuario */
+.line-height {
+    line-height: 18px;
+}
+
+/* Ajuste da fazenda para ela mudar de cor */
+#fazenda {
+    transition: all ease 0.5s;
+}
+
+
+/* -------CONFIGURAÇÕES DE TEXTO------- */
+/* configura o texto da página 1 */
+.configTxt {
+    overflow: hidden;
+    max-height: 1000px;
+    height: 400px;
+    max-width: 500px;
+    width: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 160px;
+    margin-bottom: 150px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 25px 0px 25px 0px;
+}
+
+/* fonte do nome da marca */
+.fonteTitulo {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+/* fonte para títulos */
+.fonteTituloTxt {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+/* altera as cores das caixas de texto */
+.coresCxTxt {
+    background: rgb(252, 242, 184, 0.6);
+}
+
+/* fonte escolhida para os botões da aplicação */
+.fonteBotao {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+/* fonte escolhida para os botões da aplicação */
+.fonteBotaoLoginCadastro {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.fonteTxt1 {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+/* altera a fonte dos textos da página 2 */
+.fonteTxt {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+/* altera a fonte dos textos da página 1 */
+.fonteTxtpg1 {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+
+/* ------CARROSSEL------- */
+/* dimensionamento de carrossel */
+.dimcar {
+    overflow: hidden;
+    width: 1349px;
+    max-width: 100%;
+    height: 545px;
+    margin-top: 75px;
+    margin-left: 0px;
+    margin-right: 0;
+    border-radius: 0px;
+    box-shadow: 1px 5px 50px rgba(0, 0, 0, 0.541)
+}
+
+.dimcar2 {
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    height: 500px;
+    margin-right: 250px;
+    /* margin-top: 200px;
+    margin-bottom: 150px;
+    margin-left: 90px;
+    margin-right: 0; */
+    border-radius: 20px;
+}
+
+
+/* ---------CONFIG. ADICIONAIS----------- */
+/* dimensionamento da imagem de fundo página 1 */
+.pngfundo1 {
+    background-size: 1350px 646px;
+    max-width: 100%;
+    height: 646px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* alinha as imagens dos certificados */
+.alinhamentoImg {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
+/* deixa a borda arredondada */
+.borda {
+    border-radius: 20px;
+}
+
+/* Icones dos cards: nossa equipe */
+/* tira o ícone de lista */
+.iconeCards {
+    list-style: none;
+    padding: 0;
+}
+
+/* Deixa na mesma linha */
+.iconeCardsLi {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+/* Define a cor do ícone */
+.corIcones {
+    color: white;
+}
+
+/* Define a cor do hover */
+.corIcone-square:hover {
+    color: #75DC36;
+}
+
+/* Icones rodapé */
+ul.social-network {
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------> CARDS <--------- */
+/* configura o tamanho do quadrado e a cor do mesmo */
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: transparent;
+    perspective: 1000px;
+}
+
+/* altera a posição em relação ao próprio card*/
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Configura a passada de mouse e sua resposta*/
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Posição */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Configurações visuais da frente do card */
+.flip-card-front {
+    background-color: transparent;
+    color: black;
+    border-radius: 20px;
+}
+
+/* configurações visuais de trás do card */
+.flip-card-back {
+    background-color: #2D964C;
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    /* box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541); */
+    border-radius: 20px
+}
+
+/* centraliza o texto dentro dos cards */
+.centralizaTxt {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+
+/* --------> TIMELINE <-------- */
+body {
+    margin-top: 20px;
+}
+
+/* organiza a disposição entre os pontinhos e as caixas de texto na horizontal */
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+/* Mantém o espaçamento entre os elementos */
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+/* Configura o design dos espaços e círculos */
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted rgba(117, 220, 54);
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #2D964C;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
+}
+
+/* Alinha o texto */
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center
+}
+
+/* Configura o círculo interno */
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(117, 220, 54)
+}
+
+/* configura a cor do círculo interno */
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #2D964C;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5
+}
+
+
+/*---------LOGIN--------*/
+#telaLogin {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+    margin-bottom: 20px;
+
+}
+
+#nav {
+    margin-bottom: 130px;
+}
+
+#nav2 {
+    margin-top: 6em;
+}
+
+#esqueceuSenha,
+#cadastre {
+    text-decoration: underline;
+}
+
+/* botão login */
+.bg-btn {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgb(107, 201, 48);
+}
+
+.bg-btn:hover {
+    background-color: #2D964C;
+}
+
+.btn-cadastro {
+    color: #75DC36;
+    border-color: #75DC36;
+    border-width: 2px;
+}
+
+.btn-cadastro:hover {
+    color: #2D964C;
+    border-color: #2D964C;
+    border-width: 2px;
+}
+
+.dropdown-menu>a {
+    text-decoration: none;
+}
+
+
+/*-----------RODAPÉ------------*/
+footer {
+    background: #2D964C;
+    padding: 25px 0;
+    color: #FFF;
+}
+
+footer a {
+    color: #FFF;
+}
+
+footer a:hover {
+    color: #FFF;
+}
+
+footer h4 {
+    color: #FFFFFF;
+    font-size: 19px;
+}
+
+footer ul li.ellipsis {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* botão */
+.botao-soma {
+    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
+    background-repeat: no-repeat;
+}
+
+.botao-subtrai {
+    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
+    background-repeat: no-repeat;
+
+}
+
+
+
+/* cadastro */
+
+#telaCadastro {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+    margin-bottom: 20px;
+
+}
+
+#esqueceuSenha,
+#cadastre {
+    text-decoration: underline;
+}
+
+.fonteTxtL {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    /* font-family: 'Radio Canada', sans-serif;
+     font-family: Amatic SC; */
+}
+
+.fonteTituloCadastro {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+     font-family: Amatic SC; */
+}
+
+.fonteTituloLogin {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
