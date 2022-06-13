@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./logar.component.css'],
 })
 export class LogarComponent implements OnInit {
-  usuarioLogin: UsuarioLogin = new UsuarioLogin();
+  usuarioLogin: UsuarioLogin = new UsuarioLogin
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -19,7 +19,7 @@ export class LogarComponent implements OnInit {
   }
 
   logar() {
-    this.authService.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
+    this.authService.entrar({ usuarioLogin: this.usuarioLogin }).subscribe((resp: UsuarioLogin) => {
         this.usuarioLogin = resp
         environment.token = this.usuarioLogin.token
         environment.nome = this.usuarioLogin.nome
@@ -44,7 +44,7 @@ export class LogarComponent implements OnInit {
 
   // para o botao sair evento de click
   sair(){
-    this.router.navigate(['/entrar'])
+    this.router.navigate(['/home'])
     environment.token = ''
     environment.nome = ''
     environment.id = 0

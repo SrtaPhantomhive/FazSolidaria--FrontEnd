@@ -6,6 +6,7 @@ export class Produto{
     public preco:number;
     public estoque:number;
     public imagem:string;
+    public descricao:string;
     public categoria:Categoria;
 
 }

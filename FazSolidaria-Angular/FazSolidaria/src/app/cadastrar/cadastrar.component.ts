@@ -10,7 +10,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario();
-  tipoUser: string;
+  tipoUsuario: string;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -19,12 +19,12 @@ export class CadastrarComponent implements OnInit {
   }
 
   //evento para escolha 
-  tipoUsuario(event: any) {
+  tipoUser(event: any) {
     this.tipoUser = event.target.value;
   }
 
   cadastrar() {
-    this.usuario.tipo = this.tipoUser;
+    this.usuario.tipo = this.tipoUsuario;
 
     this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
       this.usuario = resp;

@@ -8,6 +8,10 @@ import { PerfilProdutoComponent } from './perfil-produto/perfil-produto.componen
 import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +21,11 @@ const routes: Routes = [
   { path: 'cadastrar', component: CadastrarComponent },
   { path: 'carrinho', component: CarrinhoComponent},
   { path: 'perfil-produtos', component: PerfilProdutoComponent},
-  { path: 'catalogo', component: TelaInicialComponent}
+  { path: 'catalogo', component: TelaInicialComponent},
+  { path: 'categorias', component: CategoriaComponent},
+  { path: 'categoria-edit/:id', component: CategoriaEditComponent},
+  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
+  { path: 'usuario-edit/:id', component: UsuarioEditComponent}
 ];
 
 @NgModule({

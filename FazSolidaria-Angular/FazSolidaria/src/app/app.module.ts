@@ -15,6 +15,10 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { FormularioVisitaComponent } from './formulario-visita/formulario-visita.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 
@@ -32,6 +36,10 @@ import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
     FormularioVisitaComponent,
     PagamentoComponent,
     MenuLogadoComponent,
+    CategoriaComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent,
+    UsuarioEditComponent,
     
   ],
   imports: [
