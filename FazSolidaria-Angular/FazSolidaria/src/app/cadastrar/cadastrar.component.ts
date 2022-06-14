@@ -18,9 +18,9 @@ export class CadastrarComponent implements OnInit {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
   }
 
-  //evento para escolha 
+  //evento para escolha
   tipoUser(event: any) {
-    this.tipoUser = event.target.value;
+    this.tipoUsuario = event.target.value;
   }
 
   cadastrar() {
@@ -34,7 +34,7 @@ export class CadastrarComponent implements OnInit {
   }
 
 
-  
+
 }
 
 

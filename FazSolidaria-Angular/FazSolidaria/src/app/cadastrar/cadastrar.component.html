@@ -26,7 +26,7 @@
                 <!-- <small id="Help-block" class="text-muted">
                   Deve conter somente letras, entre 3 e 50 caracteres.
                 </small> -->
-                <!-- <div class="invalid-feedback">Insira um formato válido.</div> -->
+                <div class="invalid-feedback">Insira um formato válido.</div>
               </div>
             </div>
             <!--Campos CPF e Telefone-->
@@ -36,6 +36,7 @@
               <div class="col-md-4 mb-3">
                 <label for="cpf">CPF*</label>
                 <input
+                  oninput="mascara(this,'cpf')"
                   [(ngModel)]="usuario.cpf"
                   type="text"
                   class="form-control"
@@ -60,6 +61,7 @@
                   id="telefone"
                   name="telefone"
                   required
+                  oninput="mascara(this,'tel')"
                 />
                 <div class="invalid-feedback">
                   Por favor, insira um telefone válido.

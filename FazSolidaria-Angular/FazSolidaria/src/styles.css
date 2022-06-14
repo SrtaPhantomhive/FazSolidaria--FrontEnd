@@ -8,6 +8,6 @@ html {
 }
 
 body {
-    background-color: #FCF2B8;
+    background-color: #FCF2B8 !important;
     margin-top: 20px;
 }
