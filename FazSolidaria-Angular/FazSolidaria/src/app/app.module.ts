@@ -19,6 +19,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -48,7 +49,10 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy,
+  }],
   bootstrap: [AppComponent]
 
 })
