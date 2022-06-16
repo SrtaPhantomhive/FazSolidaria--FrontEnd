@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 /* ----------CORES GERAIS DO PROJETO--------- */
 /* cor do fundo do site */
 html {
@@ -8,4 +9,6 @@ html {
 
 body {
     background-color: #FCF2B8 !important;
+    margin-top: 20px;
 }
+

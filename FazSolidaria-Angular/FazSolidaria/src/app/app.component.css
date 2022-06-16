@@ -1,3 +1,5 @@
+/* ----------CORES GERAIS DO PROJETO--------- */
+/* cor do fundo do site */
 html {
     overflow-x: hidden;
     height: 100%;
@@ -6,4 +8,5 @@ html {
 
 body {
     background-color: #FCF2B8;
+    margin-top: 20px;
 }

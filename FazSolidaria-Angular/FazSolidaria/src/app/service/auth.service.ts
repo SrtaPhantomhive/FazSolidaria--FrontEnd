@@ -15,11 +15,15 @@ export class AuthService {
     headers: new HttpHeaders().set('Authorization', environment.token),
   };
 
-  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
+  refreshToken() {
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    };
+  }
+
+  entrar({ usuarioLogin }: { usuarioLogin: UsuarioLogin; }): Observable<UsuarioLogin>{
     return this.http.post<UsuarioLogin>(
-      'http://localhost:8080/usuarios/login-usuario',
-      usuarioLogin
-    );
+      'http://localhost:8080/usuarios/login-usuario', usuarioLogin);
   }
 
   cadastrar(usuario: Usuario) {
@@ -29,16 +33,30 @@ export class AuthService {
     );
   }
 
-  atualizarCadastro(usuario:Usuario):Observable<Usuario>{
+  atualizarCadastro(usuario:Usuario): Observable<Usuario>{
     return this.http.put<Usuario>("http://localhost:8080/usuarios/atualizar-usuario", usuario, this.token)
   }
 
+  buscarIdUsuario(id:number): Observable<Usuario>{
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/buscar-id-usuario/${id}`, this.token)
+  }
+
+  // Determinando para controle de componente
   logado() {
     let ok: boolean = false
 
     if (environment.token != "") {
       ok = true
     }
+    return ok
+  }
+
+  deslogado(){
+    let ok: boolean = false
+    if(environment.token == ""){
+      ok = true
+    }
+
     return ok
   }
 

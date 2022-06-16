@@ -1,3 +1,6 @@
+/* -------FONTES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
+
 /* -------CONFIGURAÇÕES DE TEXTO------- */
 /* configura o texto da página 1 */
 .configTxt {
@@ -32,17 +35,6 @@
     font-size: 50px;
 }
 
-/* altera as cores das caixas de texto */
-.coresCxTxt {
-    background: rgb(252, 242, 184, 0.6);
-}
-
-/* fonte escolhida para os botões da aplicação */
-.fonteBotao {
-    font-family: 'Nunito', cursive;
-    font-weight: bold;
-    font-size: 35px;
-}
 
 /* altera a fonte dos textos da página 2 */
 .fonteTxt {
@@ -53,12 +45,32 @@
     padding-top: 25px;
 }
 
+/* ---------CONFIG. ADICIONAIS----------- */
+
+/* alinha as imagens dos certificados */
+.alinhamentoImg {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
+/* --------> CARDS <--------- */
+
+/* centraliza o texto dentro dos cards */
+.centralizaTxt {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
 /* altera a fonte dos textos da página 1 */
 .fonteTxtpg1 {
     font-family: 'Nunito', cursive;
     font-weight: bolder;
     font-size: 25px;
 }
+
 
 /*Estilo da página produtos*/
 
@@ -135,6 +147,12 @@
 }
 
 
+.produtos-preco strong {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 30x;
+}
+
 /* Estilo da tela-detalhes-produtos */
 
   /* PRODUTOS RELACIONADOS */
@@ -187,3 +205,4 @@
     font-weight: bold;
   }
    */
+
