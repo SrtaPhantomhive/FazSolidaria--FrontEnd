@@ -1,2 +1,5 @@
+<app-menu *ngIf="auth.deslogado()"></app-menu>
+<app-menu-logado *ngIf="auth.logado()"></app-menu-logado>
 <router-outlet></router-outlet> 
-<!-- deixa as rotas dinamicas -->
+<app-rodape></app-rodape>
+ <!-- deixa as rotas dinamicas --> 

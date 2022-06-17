@@ -1,4 +1,6 @@
+import {HttpClientModule} from '@angular/common/http'
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +16,12 @@ import { FormularioVisitaComponent } from './formulario-visita/formulario-visita
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { MenuCompactoComponent } from './menu-compacto/menu-compacto.component';
 import { MenuComprasComponent } from './menu-compras/menu-compras.component';
-
+import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -32,12 +39,23 @@ import { MenuComprasComponent } from './menu-compras/menu-compras.component';
     PagamentoComponent,
     MenuCompactoComponent,
     MenuComprasComponent,
+    MenuLogadoComponent,
+    CategoriaComponent,
+    CategoriaEditComponent,
+    CategoriaDeleteComponent,
+    UsuarioEditComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy,
+  }],
   bootstrap: [AppComponent]
 
 })

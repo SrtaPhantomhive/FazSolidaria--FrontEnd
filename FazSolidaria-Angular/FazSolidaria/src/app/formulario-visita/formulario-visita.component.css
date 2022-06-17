@@ -484,25 +484,10 @@ footer ul li.ellipsis {
 
 }
 
-#esqueceuSenha,
-#cadastre {
-    text-decoration: underline;
-}
-
-.fonteTxtL {
-    font-family: 'Nunito', cursive;
-    font-weight: bold;
-    font-size: 18px;
-    /* font-family: 'Radio Canada', sans-serif;
-     font-family: Amatic SC; */
-}
-
 .fonteTituloCadastro {
     font-family: 'Amatic SC', cursive;
     font-weight: bolder;
     font-size: 3em;
-    /* font-family: 'Radio Canada', sans-serif;
-     font-family: Amatic SC; */
 }
 
 .fonteTituloLogin {
@@ -512,4 +497,5 @@ footer ul li.ellipsis {
     /* font-family: 'Radio Canada', sans-serif;
     font-family: Amatic SC; */
 }
+
 
