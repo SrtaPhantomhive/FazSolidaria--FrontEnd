@@ -316,9 +316,14 @@ body {
 }
 .img-item-carrinho{
     max-width: 80px;
+   
+}
+
+.img-item-comprados{
+    max-width: 80px;
 }
 .bg-principal{
-    background-color: rgba(117, 220, 54,0.8) ;
+    background-color: #2D964C;
 }
 .tela-lg{
     justify-content: center;
@@ -342,3 +347,8 @@ body {
         max-width: 120px;
     }
 }
+.botao-height{
+    max-height: 55px;
+    
+}
+
