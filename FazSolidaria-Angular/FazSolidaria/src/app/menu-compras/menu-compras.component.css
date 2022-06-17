@@ -35,7 +35,15 @@ body {
 
 /* cor de fundo do menu 2 */
 .navbackground2 {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
     background: rgba(117, 220, 54, 0.8);
+}
+
+/* cor do fundo da caixa */
+.fundoCaixa {
+    background: #d1c99e;
+    opacity: 40%;
 }
 
 
@@ -88,6 +96,7 @@ body {
     margin-right: 0;
     border-radius: 25px 0px 25px 0px;
 }
+
 /* fonte do nome da marca */
 .fonteTitulo {
     font-family: 'Amatic SC', cursive;
@@ -95,6 +104,18 @@ body {
     font-size: 2em;
     /* font-family: 'Radio Canada', sans-serif;
     font-family: Amatic SC; */
+}
+
+/* fonte para títulos */
+.fonteTituloTxt {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+/* altera as cores das caixas de texto */
+.coresCxTxt {
+    background: rgb(252, 242, 184, 0.6);
 }
 
 /* fonte escolhida para os botões da aplicação */
@@ -490,5 +511,4 @@ footer ul li.ellipsis {
     font-size: 3em;
     /* font-family: 'Radio Canada', sans-serif;
     font-family: Amatic SC; */
-
 }

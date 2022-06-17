@@ -14,13 +14,14 @@ import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { FormularioVisitaComponent } from './formulario-visita/formulario-visita.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { MenuCompactoComponent } from './menu-compacto/menu-compacto.component';
+import { MenuComprasComponent } from './menu-compras/menu-compras.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
 
 
 @NgModule({
@@ -36,6 +37,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     CarrinhoComponent,
     FormularioVisitaComponent,
     PagamentoComponent,
+    MenuCompactoComponent,
+    MenuComprasComponent,
     MenuLogadoComponent,
     CategoriaComponent,
     CategoriaEditComponent,
