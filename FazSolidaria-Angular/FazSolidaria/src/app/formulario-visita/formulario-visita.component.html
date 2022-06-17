@@ -38,9 +38,9 @@
         <main>
             <section>
                 <!--Inicio formulario de cadastro-->
-                <div class="container-fluid">
+                <div class="container-fluid"style="">
                     <div class="justify-content-center row ">
-                        <div class="col-12 colsm-6 col-md-6">
+                        <div class="col ml-5">
                             <form class="needs-validation" novalidate id="telaCadastro">
                                 <div class="form-group text-center fonteTituloCadastro m-0 p-0 mb-2">
                                     <div class="">Cadastro de Visitação Escolar</div>
@@ -117,10 +117,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn bg-btn btn-lg btn-block text-light">Cadastrar</button>
+                                <!-- Botões Cancelar e Cadastar -->
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-danger mr-5" routerLink="/home">Cancelar</button>
+                                    <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
+                                </div>
                             </form>
-
-
                         </div>
                     </div>
                 </div>
