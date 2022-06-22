@@ -9,24 +9,35 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
   providedIn: 'root',
 })
 export class AuthService {
+
   constructor(private http: HttpClient) {}
 
-  token={
+  token = {
     headers: new HttpHeaders().set('Authorization', environment.token),
-  };
+  }
 
-  refreshToken() {
+  refreshToken(): void {
     this.token = {
       headers: new HttpHeaders().set('Authorization', environment.token),
     };
   }
 
-  entrar({ usuarioLogin }: { usuarioLogin: UsuarioLogin; }): Observable<UsuarioLogin>{
+  // buscarIdUsuario(id: number): Observable<Usuario>{
+  //   return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`, this.token)
+  // }
+
+  buscarIdUsuario(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`, {
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    })
+  }
+
+  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
     return this.http.post<UsuarioLogin>(
       'http://localhost:8080/usuarios/login-usuario', usuarioLogin);
   }
 
-  cadastrar(usuario: Usuario) {
+  cadastrar(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(
       'http://localhost:8080/usuarios/cadastrar-usuario',
       usuario
@@ -34,11 +45,9 @@ export class AuthService {
   }
 
   atualizarCadastro(usuario:Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>("http://localhost:8080/usuarios/atualizar-usuario", usuario, this.token)
-  }
-
-  buscarIdUsuario(id:number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/buscar-id-usuario/${id}`, this.token)
+    return this.http.put<Usuario>("http://localhost:8080/usuarios/atualizar-usuario", usuario,{
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    })
   }
 
   // Determinando para controle de componente

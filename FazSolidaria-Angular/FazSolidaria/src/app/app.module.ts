@@ -2,7 +2,11 @@ import {HttpClientModule} from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+// carosel
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import  {  CarouselModule  }  from  'ngx-owl-carousel-o' ;
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -21,6 +25,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MenuApresentacaoComponent } from './menu-apresentacao/menu-apresentacao.component';
 
@@ -50,11 +55,14 @@ import { MenuApresentacaoComponent } from './menu-apresentacao/menu-apresentacao
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CarouselModule  
   ],
   providers: [{
+    // faz com que o angular nao ser perca nas rota, durante esse vai e vem, evita o erro 404
     provide: LocationStrategy,
     useClass: HashLocationStrategy,
   }],

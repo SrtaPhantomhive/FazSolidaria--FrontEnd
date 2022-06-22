@@ -23,9 +23,9 @@
                   maxlength="50"
                   required
                 />
-                <!-- <small id="Help-block" class="text-muted">
+                <small id="Help-block" class="text-muted">
                   Deve conter somente letras, entre 3 e 50 caracteres.
-                </small> -->
+                </small>
                 <div class="invalid-feedback">Insira um formato válido.</div>
               </div>
             </div>
@@ -83,7 +83,7 @@
               </div>
             </div>
             <!-- Email -->
-            <div class="form-row">
+            <div class="form-row align-items-center">
               <div class="col-md-6">
                 <label for="email">E-mail*</label>
                 <input
@@ -99,34 +99,20 @@
                   required
                 />
                 <div class="invalid-feedback">E-mail incompleto.</div>
-                <div class="form-check mt-2">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="invalidCheck"
-                  />
-                  <label
-                    class="form-check-label text-black-50"
-                    for="invalidCheck"
-                  >
-                    Receber e-mails promocionais
-                  </label>
-                </div>
               </div>
               <!-- Foto -->
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6 mb-3 mt-3">
                 <label for="data">Link Foto*</label>
                 <input
-                [(ngModel)]="usuario.foto"
-                type="foto"
-                class="form-control"
-                id="foto"
-                name="foto"
-                placeholder="Link"
-                minlength="5"
-                maxlength="100"
-                required
+                  [(ngModel)]="usuario.foto"
+                  type="foto"
+                  class="form-control"
+                  id="foto"
+                  name="foto"
+                  placeholder="Link"
+                  minlength="5"
+                  maxlength="100"
+                  required
                 />
                 <div class="invalid-feedback">Insira um link da foto</div>
               </div>
@@ -174,24 +160,6 @@
               </select>
             </div>
 
-            <!--Termos e condições-->
-            <div class="form-group">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="invalidCheck"
-                  required
-                />
-                <label class="form-check-label" for="invalidCheck">
-                  <a href="#">Aceito os termos e condições.</a>
-                </label>
-                <div class="invalid-feedback">
-                  Você deve aceitar os termos e condições para se cadastrar
-                </div>
-              </div>
-            </div>
             <button
               type="submit"
               class="btn bg-btn btn-lg btn-block text-light"
@@ -203,10 +171,55 @@
         </div>
       </div>
     </div>
-    <!--Fim formulario e cadastro-->
+    <!-- Fim formulario e cadastro -->
   </section>
 </main>
 
+<!-- <div class="container mb-5 mt-5">
+  <div class="row">
+      <div class="col-md-12">
+          <h1 class="text-center text-secondary">Atualizar usuário</h1>
+      </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+      <div class="col-md-10">
 
+          <div class="form-group">
+              <label for="nome">Nome</label>
+              <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Adelvan Santos" />
+          </div>
 
+          <div class="form-group">
+              <label for="usuario">Email</label>
+              <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="usuario" id="usuario" placeholder="Email" />
+          </div>
 
+          <div class="form-group">
+              <label for="usuario">Link da sua Foto</label>
+              <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+                  placeholder="Profile photo url" />
+          </div>
+
+          <div class="form-group">
+              <label for="confirmSenha">Confirmar Senha</label>
+              <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                  placeholder="Password confirm" />
+          </div>
+
+          <div class="form-group">
+              <label for="tipo">Tipo de Usuário</label>
+              <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
+                  <option>Selecione um tipo de usuário</option>
+                  <option value="normal">Padrão</option>
+                  <option value="adm">Administrador</option>
+              </select>
+          </div>
+          <div class="d-flex justify-content-center mt-4 mb-4">
+              <button type="submit" class="bn632-hover bn28 mr-4" routerLink="/inicio">Cancelar</button>
+              <button type="submit" class="bn632-hover bn22 ml-4"(click)="atualizarCadastro()">Atualizar</button>
+          </div>
+      </div>
+  </div>
+</div>
+      <div class="col-md-6" id="img-bg">
+</div> -->

@@ -22,7 +22,7 @@ export class UsuarioEditComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
-    
+
     // toda vez que a atualiza a pagina ele retorna para a pag de login
     if (environment.token == '') {
       this.router.navigate(['/entrar']);
@@ -34,11 +34,10 @@ export class UsuarioEditComponent implements OnInit {
     // na rota ativa apresenta o id escolhido para editar
     this.buscarIdUsuario(this.idUsuario);
 
-
-    console.log("Token edit-usuario:" + environment.token)
+    console.log('Token edit-usuario:' + environment.token);
   }
 
-  buscarIdUsuario(id:number) {
+  buscarIdUsuario(id: number) {
     this.authService.buscarIdUsuario(id).subscribe((resp: Usuario) => {
       this.usuario = resp;
     });

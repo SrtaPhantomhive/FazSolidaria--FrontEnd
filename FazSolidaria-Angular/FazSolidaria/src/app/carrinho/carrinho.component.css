@@ -81,6 +81,48 @@
 
 @media (min-width: 768px) {
     .img-item-carrinho {
+
+/* ---------CONFIG. TELA RESPONSIVA----------- *
+/* Tela carrinho */
+.bg-branco{
+    background-color: #ffffff;
+}
+.color-branco{
+    color: #ffffff;
+}
+.quantidade-carrinho{
+    min-width: 180px;
+}
+.img-item-carrinho{
+    max-width: 80px;
+   
+}
+
+.img-item-comprados{
+    max-width: 90px;
+}
+.bg-principal{
+    background-color: #2D964C;
+}
+.tela-lg{
+    justify-content: center;
+    flex-flow: wrap;
+    flex-basis: auto;
+
+}
+.bordas-rounded-left-top{
+    border-top-left-radius: 20px;
+
+}
+.bordas-rounded-right-bottom{
+    border-bottom-right-radius: 20px;
+
+}
+.header-carrinho{
+    height: 60px;
+}
+@media (min-width: 768px) {
+    .img-item-carrinho{
         max-width: 120px;
     }
 }
