@@ -2,8 +2,8 @@
 <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light navbackground">
     <div class="container-fluid">
         <a class="navbar-brand text-light fonteTitulo" href="#">
-            <img src="../../assets/img/fazsolidarialogobranca.png" width="70" height="70"
-                class="d-inline-block align-center" alt="Logo da FazSolidária">
+            <img src="/assets/img/fazsolidarialogobranca.png" width="70" height="70" class="d-inline-block align-center"
+                alt="Logo da FazSolidária">
             FazSolidária
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -14,7 +14,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <!-- Botão Loja Fazenda -->
                 <li class="nav-item" id='fazenda'>
-                    <a class="nav-link text-light" routerLink="/catalogo">
+                    <a class="nav-link text-light" href="index.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                             class="bi bi-basket" viewBox="0 0 16 16">
                             <path
@@ -27,7 +27,7 @@
                 <!-- Botão Cesto de compras -->
                 <li class="nav-item">
                     <abbr title="Cesto" class="bg-light">
-                        <a class="nav-link text-light" routerLink="carrinho">
+                        <a class="nav-link text-light" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                 class="bi bi-basket" viewBox="0 0 16 16">
                                 <path
@@ -54,7 +54,7 @@
                                 <div class="dropdown-menu bordas fonteBotaoLoginCadastro" style="padding: 20px;">
                                     <p>Entre ou Cadastre-se!</p>
                                     <!-- Dropdown menu links -->
-                                    <a routerLink="/login">
+                                    <a routerLink="/logar">
                                         <button type="button"
                                             class="btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light">Login</button>
                                     </a>
@@ -71,42 +71,8 @@
         </div>
     </div>
 </nav>
+
 <!-- SEGUNDA NAVBAR -->
 <!-- style="margin-top serve para ajustar o local da navbar" -->
 <nav class="navbar navbar nav2 navbar-expand-lg navbar-light navbackground2 sombreamento" style="margin-top: 6em;">
-    <div class="container-fluid-center">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- botão de pesquisa -->
-            <form class="d-flex col-md-3 fonteBotao">
-                <input class="form-control me-2 searchbg" type="search" placeholder="Pesquisar">
-            </form>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- botão início -->
-                <li class="nav-item ml-5 fonteBotao">
-                    <a href="#inicio"><button type="button"
-                            class="btn btn-outline-light btn-navbar2">Início</button></a>
-                </li>
-                <!-- botão certificações -->
-                <li class="nav-item ml-5 fonteBotao">
-                    <a href="#certificados"><button type="button"
-                            class="btn btn-outline-light btn-navbar2">Certificações</button></a>
-                </li>
-                <!-- botão sobre nós -->
-                <li class="nav-item ml-5 fonteBotao">
-                    <a href="#sobreNos"><button type="button" class="btn btn-outline-light btn-navbar2">Sobre
-                            Nós</button></a>
-                </li>
-                <!-- botão missão -->
-                <li class="nav-item ml-5 fonteBotao">
-                    <a href="#missao"><button type="button"
-                            class="btn btn-outline-light btn-navbar2">Missão</button></a>
-                </li>
-                <!-- botão equipe -->
-                <li class="nav-item ml-5 fonteBotao">
-                    <a href="#equipe"><button type="button"
-                            class="btn btn-outline-light btn-navbar2">Equipe</button></a>
-                </li>
-            </ul>
-        </div>
-    </div>
 </nav>

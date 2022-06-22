@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* ----------CORES GERAIS DO PROJETO--------- */
 /* cor do fundo do site */
 html {
     overflow-x: hidden;
@@ -9,8 +8,8 @@ html {
 
 body {
     background-color: #FCF2B8 !important;
-    margin-top: 20px;
 }
+
 
  /* botao do carrosel */
 .listas .owl-next, .listas .owl-prev{
@@ -40,3 +39,4 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
   }
+
