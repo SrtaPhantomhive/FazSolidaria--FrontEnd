@@ -12,3 +12,31 @@ body {
     margin-top: 20px;
 }
 
+ /* botao do carrosel */
+.listas .owl-next, .listas .owl-prev{
+    background:rgb(120, 233, 120) !important;
+    color: #0a0a0a;
+    height: 32px !important;
+    width: 32px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 50%;
+
+  }
+
+  .listas .owl-next{
+    right: -36px;
+    transform: translate(-50%, -50%);
+  }
+
+  .listas .owl-prev{
+    left: -2px;
+    transform: translate(-50%, -50%);
+  }
+
+  .listas .owl-next img, .listas .owl-prev img {
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+  }

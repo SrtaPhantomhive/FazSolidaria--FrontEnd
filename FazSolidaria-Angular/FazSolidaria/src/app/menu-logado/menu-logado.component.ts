@@ -19,7 +19,7 @@ export class MenuLogadoComponent implements OnInit {
   idCategoria: number;
   categoria: Categoria = new Categoria();
   produto: Produto = new Produto();
-  
+  listaProdutos: Produto[];
 
   constructor(
     private router: Router,
@@ -30,8 +30,7 @@ export class MenuLogadoComponent implements OnInit {
   ngOnInit() {
     //Mostra todas as categorias cadastradas quando entra nessa rota
     this.mostrarCategoriasCadastradas();
-
-    console.log("Token edit-usuario:" + environment.token)
+    this.mostrarProdutosCadastrados();
   }
 
   mostrarCategoriasCadastradas() {
@@ -50,6 +49,14 @@ export class MenuLogadoComponent implements OnInit {
       });
   }
 
+  mostrarProdutosCadastrados() {
+    this.produtoService.mostrarProdutosCadastrados().subscribe(
+      (resp: Produto[]) => {
+        this.listaProdutos = resp;
+      }
+    );
+  }
+
 
   cadastrarProduto(){
     this.categoria.id = this.idCategoria
@@ -59,6 +66,7 @@ export class MenuLogadoComponent implements OnInit {
       this.produto=resp
       alert('Cadastro do Produto Realizado')
       this.produto = new Produto()
+      this.mostrarProdutosCadastrados()
     })
 
   }

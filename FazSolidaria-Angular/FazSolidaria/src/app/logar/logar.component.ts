@@ -14,12 +14,12 @@ export class LogarComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     window.scroll(0, 0);
   }
 
   logar() {
-    this.authService.entrar({ usuarioLogin: this.usuarioLogin }).subscribe((resp: UsuarioLogin) => {
+    this.authService.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
         this.usuarioLogin = resp
         environment.token = this.usuarioLogin.token
         environment.nome = this.usuarioLogin.nome

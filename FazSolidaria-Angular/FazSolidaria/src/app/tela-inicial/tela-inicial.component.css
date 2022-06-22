@@ -79,7 +79,7 @@
 .flip-card2 {
     background-color: white;
     width: 250px;
-    height: 200px;
+    /* height: 200px; */
     border-radius: 20px;
     perspective: 1000px;
 }
@@ -152,6 +152,73 @@
     font-weight: bolder;
     font-size: 30x;
 }
+
+
+
+
+
+
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: ;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+border: none;
+  /* box-shadow: 1px 1px #ffffff, -1em 0 0.4em rgb(229 229 211); */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2D964C;
+  color: rgb(255, 255, 255);
+  transform: rotateY(180deg);
+  border-radius: 20px;
+}
+
+.carousel-control-prev{ 
+  background: #29b941;
+  margin-left: 0;
+}
+
+.carousel-control-next{
+  background: #29b941;
+  margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Estilo da tela-detalhes-produtos */
 
