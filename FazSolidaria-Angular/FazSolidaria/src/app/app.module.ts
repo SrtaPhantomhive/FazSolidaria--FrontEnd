@@ -22,6 +22,7 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MenuApresentacaoComponent } from './menu-apresentacao/menu-apresentacao.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     CategoriaEditComponent,
     CategoriaDeleteComponent,
     UsuarioEditComponent,
+    MenuApresentacaoComponent,
     
   ],
   imports: [

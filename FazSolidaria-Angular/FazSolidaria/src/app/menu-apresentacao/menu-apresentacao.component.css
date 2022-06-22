@@ -28,7 +28,6 @@ body {
     left: -227px;
 }
 
-
 /* Cor de fundo navbar 1 */
 .navbackground {
     background-color: #2D964C;
@@ -43,15 +42,10 @@ body {
 
 /* cor do fundo da caixa */
 .fundoCaixa {
-    background: rgba(209, 201, 158, 0.6);
-    /* opacity: 40%; */
+    background: #d1c99e;
+    opacity: 40%;
 }
 
-/* muda a cor do texto da página1 */
-.corTextoCarrossel {
-    color: black;
-    border-radius: 25px 0px 25px 0px;
-}
 
 /* ---------CONFIG. NAVBARS-------- */
 /* alinha as navbars */
@@ -165,9 +159,9 @@ body {
 /* dimensionamento de carrossel */
 .dimcar {
     overflow: hidden;
-    width: auto;
+    width: 1349px;
     max-width: 100%;
-    height: auto;
+    height: 545px;
     margin-top: 75px;
     margin-left: 0px;
     margin-right: 0;
@@ -383,16 +377,138 @@ body {
 }
 
 
+/*---------LOGIN--------*/
+#telaLogin {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+    margin-bottom: 20px;
 
-/* RESPONSIVIDADE */
-/* cards certificação */
-@media screen and (max-width:768px) {
-    .rootCert>.row {
-        flex-wrap: unset;
-    }
+}
 
-    .rootCert>.row>.col>.fli {
-        
-    }
+#nav {
+    margin-bottom: 130px;
+}
 
+#nav2 {
+    margin-top: 6em;
+}
+
+#esqueceuSenha,
+#cadastre {
+    text-decoration: underline;
+}
+
+/* botão login */
+.bg-btn {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgb(107, 201, 48);
+}
+
+.bg-btn:hover {
+    background-color: #2D964C;
+}
+
+.btn-cadastro {
+    color: #75DC36;
+    border-color: #75DC36;
+    border-width: 2px;
+}
+
+.btn-cadastro:hover {
+    color: #2D964C;
+    border-color: #2D964C;
+    border-width: 2px;
+}
+
+.dropdown-menu>a {
+    text-decoration: none;
+}
+
+
+/*-----------RODAPÉ------------*/
+footer {
+    background: #2D964C;
+    padding: 25px 0;
+    color: #FFF;
+}
+
+footer a {
+    color: #FFF;
+}
+
+footer a:hover {
+    color: #FFF;
+}
+
+footer h4 {
+    color: #FFFFFF;
+    font-size: 19px;
+}
+
+footer ul li.ellipsis {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* botão */
+.botao-soma {
+    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
+    background-repeat: no-repeat;
+}
+
+.botao-subtrai {
+    background-image: url("/assets/img/icons8-login-arredondado-à-direita-24.png");
+    background-repeat: no-repeat;
+
+}
+
+
+
+/* cadastro */
+
+#telaCadastro {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+    margin-bottom: 20px;
+
+}
+
+#esqueceuSenha,
+#cadastre {
+    text-decoration: underline;
+}
+
+.fonteTxtL {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    /* font-family: 'Radio Canada', sans-serif;
+     font-family: Amatic SC; */
+}
+
+.fonteTituloCadastro {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+     font-family: Amatic SC; */
+}
+
+.fonteTituloLogin {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
 }
