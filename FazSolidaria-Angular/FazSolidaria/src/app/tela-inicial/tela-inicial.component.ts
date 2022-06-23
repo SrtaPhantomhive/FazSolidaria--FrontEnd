@@ -20,10 +20,6 @@ export class TelaInicialComponent implements OnInit {
 
   ngOnInit() {
     // toda vez que a atualiza a pagina ele retorna para a pag de login
-    if (environment.token == '') {
-      alert('Sua seção expirou, faça o login novamente!');
-      this.router.navigate(['/login']);
-    }
     this.mostrarProdutosCadastrados();
   }
 

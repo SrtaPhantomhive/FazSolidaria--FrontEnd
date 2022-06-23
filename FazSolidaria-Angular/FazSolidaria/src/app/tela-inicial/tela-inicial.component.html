@@ -95,7 +95,7 @@
   <div class="container">
     <owl-carousel-o [options]="listaFrutas">
 
-
+       <!-- slice(0,10) -->
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0,10)">
         <!-- <div *ngIf="produto.categoria.id == 1"> -->
         <div class="p-1 flip-card">
@@ -135,19 +135,26 @@
                     d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                 </svg>
               </div>
-              <strong class="produtos-preco">{{ produto.preco }}</strong>
-            </div>
-            <div class="card flip-card-back align align-items-center">
-              <a routerLink="/perfil-produto" target="_blank" style="text-decoration: none; color: inherit"></a>
-              <h2>{{ produto.nome }}</h2>
-              <p style="border: none; height: 160px">
-                {{ produto.descricao }}
-              </p>
-              <button type="button" class="btn btn-light" style="width: 160px" [routerLink]="['/carrinho', produto.id]">
-                Adicionar ao Carrinho
-              </button>
-            </div>
-
+              <div class="card flip-card-back align align-items-center">
+                <a
+                  routerLink="/perfil-produto"
+                  target="_blank"
+                  style="text-decoration: none; color: inherit"
+                ></a>
+                <h2>{{ produto.nome }}</h2>
+                <p style="border: none; height: 160px">
+                  {{ produto.descricao }}
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style="width: 160px"
+                  [routerLink]="['/carrinho', produto.id]"
+                >
+                  Adicionar ao Carrinho
+                </button>
+              </div>
+            
           </div>
         </div>
       </ng-template>
@@ -159,6 +166,8 @@
 <section class="listas">
   <div class="container">
     <owl-carousel-o [options]="listaVerduras">
+
+      <!-- slice(10,20) -->
 
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(10,20)">
         <!-- <div *ngIf="produto.categoria.id == 3"> -->
@@ -192,12 +201,39 @@
                   <path
                     d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                 </svg>
-
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-star-fill"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                    />
+                  </svg>
+                </div>
+                <strong class="produtos-preco">{{ produto.preco }}</strong>
+              </div>
+              <div class="card flip-card-back align align-items-center">
+                <a
+                  routerLink="/perfil-produto"
+                  target="_blank"
+                  style="text-decoration: none; color: inherit"
+                ></a>
+                <h2>{{ produto.nome }}</h2>
+                <p style="border: none; height: 160px">
+                  {{ produto.descricao }}
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style="width: 160px"
+                  [routerLink]="['/carrinho', produto.id]"
+                >
+                  Adicionar ao Carrinho
+                </button>
               </div>
               <strong class="produtos-preco">{{ produto.preco }}</strong>
             </div>
@@ -223,6 +259,8 @@
 <section class="listas">
   <div class="container">
     <owl-carousel-o [options]="listaLegumes">
+
+      <!-- slice(20,30) -->
 
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(20,30)">
         <!-- <div *ngIf="produto.categoria.id == 3"> -->
@@ -257,11 +295,40 @@
                     d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                 </svg>
 
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
+                  <svg
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-star-fill"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                    />
+                  </svg>
+                </div>
+                <strong class="produtos-preco">{{ produto.preco }}</strong>
+              </div>
+              <div class="card flip-card-back align align-items-center">
+                <a
+                  routerLink="/perfil-produto"
+                  target="_blank"
+                  style="text-decoration: none; color: inherit"
+                ></a>
+                <h2>{{ produto.nome }}</h2>
+                <p style="border: none; height: 160px">
+                  {{ produto.descricao }}
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style="width: 160px"
+                  [routerLink]="['/carrinho', produto.id]"
+                >
+                  Adicionar ao Carrinho
+                </button>
+
               </div>
               <strong class="produtos-preco">{{ produto.preco }}</strong>
             </div>
