@@ -148,7 +148,7 @@
     <owl-carousel-o [options]="listaFrutas">
      
        <!-- slice(0,10) -->
-      <ng-template carouselSlide *ngFor="let produto of listaProdutos">
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0,10)">
         <!-- <div *ngIf="produto.categoria.id == 1"> -->
           <div class="p-1 flip-card">
             <div class="card mb-2 mr-3 flip-card-inner">
@@ -260,7 +260,7 @@
   <div class="container">
     <owl-carousel-o [options]="listaVerduras">
       <!-- slice(10,20) -->
-      <ng-template carouselSlide *ngFor="let produto of listaProdutos">
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(10,20)">
         <!-- <div *ngIf="produto.categoria.id == 3"> -->
           <div class="p-1 flip-card">
             <div class="card mb-2 mr-3 flip-card-inner">
@@ -372,7 +372,7 @@
   <div class="container">
     <owl-carousel-o [options]="listaLegumes">
       <!-- slice(20,30) -->
-      <ng-template carouselSlide *ngFor="let produto of listaProdutos">
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(20,30)">
         <!-- <div *ngIf="produto.categoria.id == 3"> -->
           <div class="p-1 flip-card">
             <div class="card mb-2 mr-3 flip-card-inner">
