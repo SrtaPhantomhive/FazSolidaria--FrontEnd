@@ -8,5 +8,6 @@ export class Produto{
     public imagem:string;
     public descricao:string;
     public categoria:Categoria;
+    public quantidade:number = 1;
 
 }
