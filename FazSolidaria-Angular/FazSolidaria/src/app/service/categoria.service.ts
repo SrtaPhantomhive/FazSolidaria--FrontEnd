@@ -22,11 +22,11 @@ export class CategoriaService {
   }
 
   mostrarCategoriasCadastradas(): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>('http://localhost:8080/categorias', this.token)
+    return this.http.get<Categoria[]>('http://localhost:8080/categorias')
   }
 
   buscarIdCategoria(id:number): Observable<Categoria>{
-    return this.http.get<Categoria>(`http://localhost:8080/categorias/buscar-id-categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`http://localhost:8080/categorias/buscar-id-categoria/${id}`)
   }
 
   cadastrarCategoria(categoria:Categoria): Observable<Categoria>{
