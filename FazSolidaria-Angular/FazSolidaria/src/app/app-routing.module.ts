@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'login', component: LogarComponent },
   { path: 'cadastrar', component: CadastrarComponent },
   { path: 'carrinho/:id', component: CarrinhoComponent},
-  { path: 'perfil-produtos', component: PerfilProdutoComponent},
+  { path: 'perfil-produtos/:id', component: PerfilProdutoComponent},
   { path: 'catalogo', component: TelaInicialComponent},
   { path: 'categorias', component: CategoriaComponent},
   { path: 'categoria-edit/:id', component: CategoriaEditComponent},

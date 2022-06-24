@@ -70,25 +70,18 @@
 }
 
 /*Configurações da fonte - página produtos*/
-.produtos-itens .font-produtos{
+.font-produtos{
     font-family: 'Nunito', cursive;
-    font-weight: bolder;
-    font-size: 30px;
+    font-size: 35px;
 }
 
-.produtos-preco {
+.produtos-preco{
     font-family: 'Nunito', cursive;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 35px;
 }
 
-.produtos-preco strong {
-    font-family: 'Nunito', cursive;
-    font-weight: bolder;
-    font-size: 30x;
-}
-
-/* Estilo da tela-detalhes-produtos */
+/* Estilo da perfil-produtos */
 .btn-light {
     color: #212529;
     background-color: #dae0e5;
