@@ -161,23 +161,34 @@
               style="border-radius: 20px"
             />
             <div class="card-body">
-              <h4 class="card-title font-produtos ">{{ produto.nome }}</h4>
+              <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
-                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width:100px;">
+                <img
+                  src="../../assets/img/stars.jpg"
+                  class="mx-auto d-block"
+                  style="width: 100px"
+                />
               </div>
-              <strong class="produtos-preco ">R$ {{ produto.preco }}</strong>
+              <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a [routerLink]="['/perfil-produtos', produto.id]" style="text-decoration: none; color: inherit">
+              <a
+                [routerLink]="['/perfil-produtos', produto.id]"
+                style="text-decoration: none; color: inherit"
+              >
                 <h2>{{ produto.nome }}</h2>
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
-                <button type="button" class="btn btn-light" style="width: 160px"
-                  (click)="adicionarCarrinho(produto.id)">
-                  Adicionar ao Carrinho
-                </button>
               </a>
+              <button
+                type="button"
+                class="btn btn-light"
+                style="width: 160px"
+                (click)="adicionarCarrinho(produto.id)"
+              >
+                Adicionar ao Carrinho
+              </button>
             </div>
           </div>
         </div>
@@ -204,22 +215,32 @@
             <div class="card-body">
               <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
-
-                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width:100px;">
+                <img
+                  src="../../assets/img/stars.jpg"
+                  class="mx-auto d-block"
+                  style="width: 100px"
+                />
               </div>
               <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a [routerLink]="['/perfil-produtos', produto.id]" style="text-decoration: none; color: inherit">
+              <a
+                [routerLink]="['/perfil-produtos', produto.id]"
+                style="text-decoration: none; color: inherit"
+              >
                 <h2>{{ produto.nome }}</h2>
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
-                <button type="button" class="btn btn-light" style="width: 160px"
-                  (click)="adicionarCarrinho(produto.id)">
-                  Adicionar ao Carrinho
-                </button>
               </a>
+              <button
+                type="button"
+                class="btn btn-light"
+                style="width: 160px"
+                (click)="adicionarCarrinho(produto.id)"
+              >
+                Adicionar ao Carrinho
+              </button>
             </div>
           </div>
         </div>
@@ -231,7 +252,10 @@
 <section class="listas">
   <div class="container">
     <owl-carousel-o [options]="listaLegumes">
-      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(20,30)">
+      <ng-template
+        carouselSlide
+        *ngFor="let produto of listaProdutos.slice(20, 30)"
+      >
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
             <img
@@ -243,21 +267,32 @@
             <div class="card-body">
               <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
-                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width:100px;">
+                <img
+                  src="../../assets/img/stars.jpg"
+                  class="mx-auto d-block"
+                  style="width: 100px"
+                />
               </div>
               <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a [routerLink]="['/perfil-produtos', produto.id]" style="text-decoration: none; color: inherit">
+              <a
+                [routerLink]="['/perfil-produtos', produto.id]"
+                style="text-decoration: none; color: inherit"
+              >
                 <h2>{{ produto.nome }}</h2>
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
-                <button type="button" class="btn btn-light" style="width: 160px"
-                 (click)="adicionarCarrinho(produto.id)>
-                  Adicionar ao Carrinho
-                </button>
               </a>
+              <button
+                type="button"
+                class="btn btn-light"
+                style="width: 160px"
+                (click)="adicionarCarrinho(produto.id)"
+              >
+                Adicionar ao Carrinho
+              </button>
             </div>
           </div>
         </div>

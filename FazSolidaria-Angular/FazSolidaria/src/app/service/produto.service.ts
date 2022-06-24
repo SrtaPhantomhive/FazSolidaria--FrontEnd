@@ -25,11 +25,8 @@ export class ProdutoService {
   return this.http.get<Produto[]>('http://localhost:8080/produtos') 
   }
 
-<<<<<<< HEAD
-  buscarPeloIdProduto(id:number):Observable<Produto>{
-=======
+
   buscarPeloIdProduto(id:number): Observable<Produto>{
->>>>>>> f9314619d03247931e862598b07e7021a11d4b96
   return this.http.get<Produto>(`http://localhost:8080/produtos/buscar-id-produto/${id}`)
   }
 
