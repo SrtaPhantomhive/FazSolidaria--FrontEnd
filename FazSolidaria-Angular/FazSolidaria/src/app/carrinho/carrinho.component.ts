@@ -10,8 +10,9 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./carrinho.component.css'],
 })
 export class CarrinhoComponent implements OnInit {
-  listaProduto: Produto[];
+  listaProduto: Array<Produto> = [];
   produto: Produto = new Produto();
+  carrinho = environment.carrinho
   // listaProduto = [{ nome: '', foto: '', descricao: '', preco: 0.00, tipo: '', quantidade: 0 }];
   constructor(
     private route: ActivatedRoute,
@@ -20,13 +21,18 @@ export class CarrinhoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.listaProduto = params['listaProduto'];
-    });
+    window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
+
+    // this.route.params.subscribe(params => {
+    //   this.listaProduto = params['listaProduto'];
+    // });
     // this.listaProduto = [{ nome: 'Banana', foto: '', descricao: 'Descrição da banana', preco: 5.99, tipo: 'Fruta', quantidade: 2 }, { nome: 'Maça', foto: '', descricao: 'Descrição da maça', preco: 9.99, tipo: 'Fruta', quantidade: 2 }]
 
-    let id = this.route.snapshot.params['id'];
-    this.buscarPeloIdProduto(id);
+    // let id = this.route.snapshot.params['id'];
+    // this.buscarPeloIdProduto(id);
+
+    this.carrinhoCompleto()
+    console.log(this.carrinhoCompleto())
   }
 
   removerQtdProduto = (index: any) => {
@@ -39,9 +45,13 @@ export class CarrinhoComponent implements OnInit {
   addQtdProduto = (index: any) => {
     this.listaProduto[index].estoque = this.listaProduto[index].estoque + 1;
   };
-  removeItemProduto = (index: any) => {
-    this.listaProduto.splice(index);
-  };
+  // removeItemProduto = (index: any) => {
+  //   this.listaProduto.splice(index);
+  // };
+
+  removeItemProduto(){
+    this.listaProduto.pop()
+  }
 
   calculaSubTotal = (preco: any, quantidade: any) => {
     if (preco && quantidade) {
@@ -53,6 +63,16 @@ export class CarrinhoComponent implements OnInit {
   buscarPeloIdProduto(id: number) {
     this.produtoService.buscarPeloIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp;
+      this.listaProduto.push(this.produto)
     });
+  }
+
+  carrinhoCompleto(){
+    for(let item in this.carrinho){
+      if(this.carrinho[item] > 0){
+        let id = this.carrinho[item]
+        this.buscarPeloIdProduto(id)
+      }  
+    }
   }
 }

@@ -242,7 +242,7 @@
                   type="button"
                   class="btn btn-light"
                   style="width: 160px"
-                  [routerLink]="['/carrinho', produto.id]"
+                  (click)="adicionarCarrinho(produto.id)"
                 >
                   Adicionar ao Carrinho
                 </button>
@@ -354,7 +354,7 @@
                   type="button"
                   class="btn btn-light"
                   style="width: 160px"
-                  [routerLink]="['/carrinho', produto.id]"
+                  (click)="adicionarCarrinho(produto.id)"
                 >
                   Adicionar ao Carrinho
                 </button>
@@ -463,10 +463,10 @@
                   {{ produto.descricao }}
                 </p>
                 <button
+                (click)="adicionarCarrinho(produto.id)"
                   type="button"
                   class="btn btn-light"
                   style="width: 160px"
-                  [routerLink]="['/carrinho', produto.id]"
                 >
                   Adicionar ao Carrinho
                 </button>
