@@ -32,26 +32,33 @@ export class CarrinhoComponent implements OnInit {
     // this.buscarPeloIdProduto(id);
 
     this.carrinhoCompleto()
-    console.log(this.carrinhoCompleto())
+
   }
 
   removerQtdProduto = (index: any) => {
     // this.listaProduto[index].quantidade = this.listaProduto[index].quantidade - 1;
     this.listaProduto[index].estoque = this.listaProduto[index].estoque - 1;
+    // this.listaProduto[index].estoque = 0 - 1;
     // if (this.listaProduto[index].quantidade === 0) {
     //exibir um alerta de confirmação, se deseja remover o item
     // }
   };
   addQtdProduto = (index: any) => {
     this.listaProduto[index].estoque = this.listaProduto[index].estoque + 1;
+    // this.listaProduto[index].estoque = 0 + 1;
   };
-  // removeItemProduto = (index: any) => {
-  //   this.listaProduto.splice(index);
-  // };
 
-  removeItemProduto(){
-    this.listaProduto.pop()
-  }
+
+  removeItemProduto = (index: any) => {
+    this.listaProduto.splice(index);
+
+  };
+
+  // removeItemProduto(){
+  //     this.listaProduto.splice()
+    
+    
+  // }
 
   calculaSubTotal = (preco: any, quantidade: any) => {
     if (preco && quantidade) {
@@ -72,7 +79,7 @@ export class CarrinhoComponent implements OnInit {
       if(this.carrinho[item] > 0){
         let id = this.carrinho[item]
         this.buscarPeloIdProduto(id)
-      }  
+      } 
     }
   }
 }

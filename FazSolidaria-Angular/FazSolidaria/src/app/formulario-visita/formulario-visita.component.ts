@@ -11,12 +11,9 @@ export class FormularioVisitaComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-<<<<<<< HEAD
+
   ngOnInit(){
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
-=======
-  ngOnInit(): void {
->>>>>>> cbdeb84e2e43114632e1d0c6a2faac3214dc0190
   }
 
 
