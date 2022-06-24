@@ -28,6 +28,7 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MenuApresentacaoComponent } from './menu-apresentacao/menu-apresentacao.component';
+import { EnderecoEditComponent } from './edit/endereco-edit/endereco-edit.component';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { MenuApresentacaoComponent } from './menu-apresentacao/menu-apresentacao
     CategoriaDeleteComponent,
     UsuarioEditComponent,
     MenuApresentacaoComponent,
-    
+    EnderecoEditComponent,   
   ],
   imports: [
     BrowserModule,

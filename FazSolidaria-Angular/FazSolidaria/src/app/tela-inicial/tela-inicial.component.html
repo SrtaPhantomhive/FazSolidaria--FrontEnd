@@ -161,113 +161,24 @@
               style="border-radius: 20px"
             />
             <div class="card-body">
-              <h4 class="card-title">{{ produto.nome }}</h4>
+              <h4 class="card-title font-produtos ">{{ produto.nome }}</h4>
               <div class="produtos-stars">
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
+                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width:100px;">
               </div>
-              <strong class="produtos-preco">{{ produto.preco }}</strong>
+              <strong class="produtos-preco ">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a
-                routerLink="/perfil-produto"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              ></a>
-              <h2>{{ produto.nome }}</h2>
-              <p style="border: none; height: 160px">
-                {{ produto.descricao }}
-              </p>
-              <button
-                type="button"
-                class="btn btn-light"
-                style="width: 160px"
-                (click)="adicionarCarrinho(produto.id)"
-              >
-                Adicionar ao Carrinho
-              </button>
+              <a [routerLink]="['/perfil-produtos', produto.id]" style="text-decoration: none; color: inherit">
+                <h2>{{ produto.nome }}</h2>
+                <p style="border: none; height: 160px">
+                  {{ produto.descricao }}
+                </p>
+                <button type="button" class="btn btn-light" style="width: 160px"
+                  (click)="adicionarCarrinho(produto.id)">
+                  Adicionar ao Carrinho
+                </button>
+              </a>
             </div>
-            <strong class="produtos-preco">{{ produto.preco }}</strong>
-          </div>
-          <div class="card flip-card-back align align-items-center">
-            <a
-              routerLink="/perfil-produto"
-              target="_blank"
-              style="text-decoration: none; color: inherit"
-            ></a>
-            <h2>{{ produto.nome }}</h2>
-            <p style="border: none; height: 160px">
-              {{ produto.descricao }}
-            </p>
-            <button
-              type="button"
-              class="btn btn-light"
-              style="width: 160px"
-              [routerLink]="['/carrinho', produto.id]"
-            >
-              Adicionar ao Carrinho
-            </button>
           </div>
         </div>
       </ng-template>
@@ -291,113 +202,25 @@
               style="border-radius: 20px"
             />
             <div class="card-body">
-              <h4 class="card-title">{{ produto.nome }}</h4>
+              <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
 
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
+                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width:100px;">
               </div>
-              <strong class="produtos-preco">{{ produto.preco }}</strong>
+              <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a
-                routerLink="/perfil-produto"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              ></a>
-              <h2>{{ produto.nome }}</h2>
-              <p style="border: none; height: 160px">
-                {{ produto.descricao }}
-              </p>
-              <button
-                type="button"
-                class="btn btn-light"
-                style="width: 160px"
-                (click)="adicionarCarrinho(produto.id)"
-              >
-                Adicionar ao Carrinho
-              </button>
+              <a [routerLink]="['/perfil-produtos', produto.id]" style="text-decoration: none; color: inherit">
+                <h2>{{ produto.nome }}</h2>
+                <p style="border: none; height: 160px">
+                  {{ produto.descricao }}
+                </p>
+                <button type="button" class="btn btn-light" style="width: 160px"
+                  (click)="adicionarCarrinho(produto.id)">
+                  Adicionar ao Carrinho
+                </button>
+              </a>
             </div>
-            <strong class="produtos-preco">{{ produto.preco }}</strong>
-          </div>
-          <div class="card flip-card-back align align-items-center">
-            <a
-              routerLink="/perfil-produto"
-              target="_blank"
-              style="text-decoration: none; color: inherit"
-            ></a>
-            <h2>{{ produto.nome }}</h2>
-            <p style="border: none; height: 160px">
-              {{ produto.descricao }}
-            </p>
-            <button
-              type="button"
-              class="btn btn-light"
-              style="width: 160px"
-              [routerLink]="['/carrinho', produto.id]"
-            >
-              Adicionar ao Carrinho
-            </button>
           </div>
         </div>
       </ng-template>
@@ -408,13 +231,7 @@
 <section class="listas">
   <div class="container">
     <owl-carousel-o [options]="listaLegumes">
-      <!-- slice(20,30) -->
-
-      <ng-template
-        carouselSlide
-        *ngFor="let produto of listaProdutos.slice(20, 30)"
-      >
-        <!-- <div *ngIf="produto.categoria.id == 3"> -->
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(20,30)">
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
             <img
@@ -424,118 +241,26 @@
               style="border-radius: 20px"
             />
             <div class="card-body">
-              <h4 class="card-title">{{ produto.nome }}</h4>
+              <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
-
-                <svg
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-star-fill"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  />
-                </svg>
+                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width:100px;">
               </div>
-              <strong class="produtos-preco">{{ produto.preco }}</strong>
+              <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a
-                routerLink="/perfil-produto"
-                target="_blank"
-                style="text-decoration: none; color: inherit"
-              ></a>
-              <h2>{{ produto.nome }}</h2>
-              <p style="border: none; height: 160px">
-                {{ produto.descricao }}
-              </p>
-              <button
-                (click)="adicionarCarrinho(produto.id)"
-                type="button"
-                class="btn btn-light"
-                style="width: 160px"
-              >
-                Adicionar ao Carrinho
-              </button>
+              <a [routerLink]="['/perfil-produtos', produto.id]" style="text-decoration: none; color: inherit">
+                <h2>{{ produto.nome }}</h2>
+                <p style="border: none; height: 160px">
+                  {{ produto.descricao }}
+                </p>
+                <button type="button" class="btn btn-light" style="width: 160px"
+                 (click)="adicionarCarrinho(produto.id)>
+                  Adicionar ao Carrinho
+                </button>
+              </a>
             </div>
-            <strong class="produtos-preco">{{ produto.preco }}</strong>
-          </div>
-          <div class="card flip-card-back align align-items-center">
-            <a
-              routerLink="/perfil-produto"
-              target="_blank"
-              style="text-decoration: none; color: inherit"
-            ></a>
-            <h2>{{ produto.nome }}</h2>
-            <p style="border: none; height: 160px">
-              {{ produto.descricao }}
-            </p>
-            <button
-              type="button"
-              class="btn btn-light"
-              style="width: 160px"
-              [routerLink]="['/carrinho', produto.id]"
-            >
-              Adicionar ao Carrinho
-            </button>
           </div>
         </div>
-
-        <!-- </div> -->
       </ng-template>
     </owl-carousel-o>
   </div>
