@@ -1,3 +1,4 @@
+<app-menu-compras></app-menu-compras>
 <div class="container-justify">
   <div class="row">
     <!-- carrossel -->
@@ -94,7 +95,7 @@
   <div class="container">
     <owl-carousel-o [options]="listaFrutas">
 
-
+       <!-- slice(0,10) -->
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0,10)">
         <!-- <div *ngIf="produto.categoria.id == 1"> -->
         <div class="p-1 flip-card">
@@ -132,6 +133,8 @@
 <section class="listas">
   <div class="container">
     <owl-carousel-o [options]="listaVerduras">
+
+      <!-- slice(10,20) -->
 
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(10,20)">
         <!-- <div *ngIf="produto.categoria.id == 3"> -->

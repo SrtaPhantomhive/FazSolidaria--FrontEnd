@@ -28,6 +28,7 @@
     "ngx-owl-carousel-o": "^7.0.2",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^11.4.18",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
