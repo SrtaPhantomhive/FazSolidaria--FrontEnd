@@ -18,7 +18,7 @@ export class PerfilProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0,0) // quando minha pagina iniciar coloque no ponto  x e y = 0
     let id = this.route.snapshot.params['id']
     this.bucarIdProduto(id)
   }
