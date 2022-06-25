@@ -1,0 +1,28 @@
+<div class="container-fluid mb-5 bg-white" style="margin-top: 200px;">
+    <div class="row mb-5 d-flex justify-content-center">
+        <div class="col-d-12">
+          <h1 class=" text-center text-dark fonteTituloTxt">Apagar Produto</h1>
+        </div>
+      </div>
+    
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h4 class="text-center text-dark">
+          Você tem certeza que deseja apagar esse Produto?
+        </h4>
+      </div>
+    </div>
+  
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <h5 class="text-center text-info">Produto: {{ produto.nome }}</h5>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center p-3">
+        <button class="btn btn-danger mr-4" routerLink="/cadastrar-produto">Não</button>
+        <button class="btn btn-success" (click)="deletarProduto()">Sim</button>
+      </div>
+    </div>
+  </div>
