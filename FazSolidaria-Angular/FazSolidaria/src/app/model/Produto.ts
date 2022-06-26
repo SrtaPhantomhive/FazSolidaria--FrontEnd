@@ -7,7 +7,8 @@ export class Produto{
     public estoque:number;
     public imagem:string;
     public descricao:string;
+    public qtd:number;
     public categoria:Categoria;
-    public quantidade:number = 1;
+  
 
 }

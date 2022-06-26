@@ -1,10 +1,11 @@
-<section>
-    <div class="px-2">
+ <section>
+     <div class="px-2">  
         <!-- Titulo -->
         <div class="text-center fonteTituloTxt" style="margin-top: 180px;">Cesta de compras</div>
         <!-- Fecha Titulo -->
         <!-- Tabela -->
         <div class="bordas-rounded-right-bottom bg-branco container px-0 mx-auto bordas-rounded-left-top fonteBasica">
+            <div *ngIf="mostrarCarrinho">
             <div
                 class="h5 header-carrinho text-uppercase d-none d-md-flex bg-principal color-branco align-items-center fonteTxt">
                 <div class="col-2  p-2 text-center">Produto</div>
@@ -15,7 +16,7 @@
                 <div class="col-2  p-2 text-center">Remover item</div>
             </div>
             <div class="d-flex flex-column flex-md-row align-items-center border-bottom fonteBasica"
-                *ngFor="let produto of listaProduto; let i = index">
+                *ngFor="let produto of mostrarCarrinho;">
                 <div
                     class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center p-2 mt-0 text-center">
                     <label class="d-md-none">Produto</label><img class="img-fluid img-item-carrinho"
@@ -33,33 +34,43 @@
                     <label class="d-md-none">Qtd</label>
                     <div class="d-flex quantidade-carrinho">
                         <button class="col-4  m-0 botao-subtrai btn text-center" type="button" id="button-addon"
-                            (click)="removerQtdProduto(i)"></button>
+                            (click)="decrementoQtd(produto.id, produto.qtd)"></button>
                         <input type="text" class="col-4  m-0 form-control text-center" style="width: 5px; "
-                            placeholder="0" aria-label="button addon" value="{{produto.estoque}}"
+                            placeholder="0" aria-label="button addon" value="{{produto.qtd}}"
                             aria-describedby="button-addon">
                         <button class="col-4 botao-soma btn text-center" type="button" id="button-addon"
-                            (click)="addQtdProduto(i)"></button>
+                        (click)="incrementoQtd(produto.id, produto.qtd)"></button>
                     </div>
                 </div>
 
                 <div
                     class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-                    <label class="d-md-none">Sub-total</label> {{ calculaSubTotal(produto.preco,produto.estoque) }}
+                    <label class="d-md-none">Sub-total</label> {{ calculaSubTotal(produto.preco,produto.qtd) }}
                 </div>
                 <div
                     class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
                     <label class="d-md-none">Remover item</label> <button
-                        class="col-4 col-lg-4 botao-lixo text-center btn" (click)="removeItemProduto(i)" type="button"
+                        class="col-4 col-lg-4 botao-lixo text-center btn" (click)="deletarProdutoCarrinho(produto.id)" type="button"
                         id="button-addon"></button></div>
             </div>
-
+            </div>
         </div>
+    
             <!-- Fecha tabela -->
             <div class="col-12 d-flex d-md-block flex-column flex-md-row text-center mt-2 mb-3">
                 <button type="button" class=" mt-1 col-md-2 btn btn-success botao-height ml-2"
-                    [routerLink]="['catalogo',listaProduto]">Continuar comprando</button>
+                   routerLink="/catalogo">Continuar comprando</button>
                 <button type="button " class="mt-1 col-md-2 btn btn-success botao-height ml-2"
-                    [routerLink]="['pagamento',listaProduto]">Finalizar Compra</button>
+                    (click)="emitirPedido()">Finalizar Compra</button>
             </div>
         </div>
+
+        <div>
+            <h3>Total: R$ {{total}}</h3>
+        </div>
+
+        <button (click)="excluirTodosItensCarrinho()">Remover Todos Itens</button>
 </section>
+
+
+

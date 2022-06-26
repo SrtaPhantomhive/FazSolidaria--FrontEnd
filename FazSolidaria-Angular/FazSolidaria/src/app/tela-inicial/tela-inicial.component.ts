@@ -3,10 +3,8 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
-import  {  OwlOptions  }  from  'ngx-owl-carousel-o' ;
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CategoriaService } from '../service/categoria.service';
-
-
 
 @Component({
   selector: 'app-tela-inicial',
@@ -15,16 +13,19 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class TelaInicialComponent implements OnInit {
   listaProdutos: Produto[];
-  carrinho = environment.carrinho
+  carrinho = environment.carrinho;
 
-  constructor(private router: Router, private produtoService: ProdutoService, private categoriaService: CategoriaService) {}
+  constructor(
+    private router: Router,
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService
+  ) {}
 
   ngOnInit() {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
 
     // toda vez que a atualiza a pagina ele retorna para a pag de login
     this.mostrarProdutosCadastrados();
-    
   }
 
   listaFrutas: OwlOptions = {
@@ -34,24 +35,26 @@ export class TelaInicialComponent implements OnInit {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: ['<img src="../../assets/img/left-arrow.png">', '<img src="../../assets/img/arrow-right.png">    '],
+    navText: [
+      '<img src="../../assets/img/left-arrow.png">',
+      '<img src="../../assets/img/arrow-right.png">    ',
+    ],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       400: {
-        items: 2
+        items: 2,
       },
       740: {
-        items: 3
+        items: 3,
       },
       940: {
-        items: 5
-      }
+        items: 5,
+      },
     },
-    nav: true
-  }
-
+    nav: true,
+  };
 
   listaVerduras: OwlOptions = {
     loop: false,
@@ -60,23 +63,26 @@ export class TelaInicialComponent implements OnInit {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: ['<img src="../../assets/img/left-arrow.png">', '<img src="../../assets/img/arrow-right.png">    '],
+    navText: [
+      '<img src="../../assets/img/left-arrow.png">',
+      '<img src="../../assets/img/arrow-right.png">    ',
+    ],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       400: {
-        items: 2
+        items: 2,
       },
       740: {
-        items: 3
+        items: 3,
       },
       940: {
-        items: 5
-      }
+        items: 5,
+      },
     },
-    nav: true
-  }
+    nav: true,
+  };
 
   listaLegumes: OwlOptions = {
     loop: false,
@@ -85,35 +91,63 @@ export class TelaInicialComponent implements OnInit {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: ['<img src="../../assets/img/left-arrow.png">', '<img src="../../assets/img/arrow-right.png">    '],
+    navText: [
+      '<img src="../../assets/img/left-arrow.png">',
+      '<img src="../../assets/img/arrow-right.png">    ',
+    ],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       400: {
-        items: 2
+        items: 2,
       },
       740: {
-        items: 3
+        items: 3,
       },
       940: {
-        items: 5
-      }
+        items: 5,
+      },
     },
-    nav: true
-  }
-  
-  mostrarProdutosCadastrados() {  
-      this.produtoService.mostrarProdutosCadastrados().subscribe((resp: Produto[]) => {
-          this.listaProdutos = resp
-    });
-  
-  }
+    nav: true,
+  };
 
-  adicionarCarrinho(id:number){
-    this.carrinho.push(id)
-    alert("Adicionado ao carriho")
+  mostrarProdutosCadastrados() {
+    this.produtoService
+      .mostrarProdutosCadastrados()
+      .subscribe((resp: Produto[]) => {
+        this.listaProdutos = resp;
+      });
   }
 
+  itensCarrinho: any = [];
+  adicionarCarrinho(produto: any) {
+    console.log(produto);
+    let dadosCarrinhoNulo = localStorage.getItem('ProdCarrinho');
+    if (dadosCarrinhoNulo == null) {
+      let pegarDadosArmazena: any = [];
+      pegarDadosArmazena.push(produto);
+      localStorage.setItem('ProdCarrinho', JSON.stringify(pegarDadosArmazena));
+    } else {
+      var id = produto.id;
+      let index: number = -1;
+      this.itensCarrinho = JSON.parse(localStorage.getItem('ProdCarrinho')!);
+      for (let i = 0; i < this.itensCarrinho.length; i++) {
+        if (parseInt(id) === parseInt(this.itensCarrinho[i].id)) {
+          this.itensCarrinho[i].estoque = produto.estoque;
+          index = i;
+          break;
+        }
+      }
+      if (index == -1) {
+        this.itensCarrinho.push(produto);
+        localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
+        alert('Adicionado ao carrinho');
+      } else {
+        localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
+        alert('Adicionado ao carrinho');
+      }
+    }
 
+  } 
 }

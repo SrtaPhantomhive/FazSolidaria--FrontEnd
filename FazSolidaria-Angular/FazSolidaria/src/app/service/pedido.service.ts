@@ -30,7 +30,9 @@ return this.http.get<Pedido[]>('http://localhost:8080/pedidos', this.token)
   }
 
   criarPedido(pedido: Pedido): Observable<Pedido>{
-    return this.http.post<Pedido>('http://localhost:8080/pedidos/cadastrar-pedido', this.token)
+    return this.http.post<Pedido>('http://localhost:8080/pedidos/cadastrar-pedido', pedido, {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    } )
   }
 
 }

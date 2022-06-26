@@ -189,7 +189,7 @@
                 type="button"
                 class="btn btn-light"
                 style="width: 160px"
-                (click)="adicionarCarrinho(produto.id)"
+                (click)="adicionarCarrinho(produto)"
               >
                 Adicionar ao Carrinho
               </button>
@@ -244,7 +244,7 @@
                 type="button"
                 class="btn btn-light"
                 style="width: 160px"
-                (click)="adicionarCarrinho(produto.id)"
+                (click)="adicionarCarrinho(produto)"
               >
                 Adicionar ao Carrinho
               </button>
@@ -266,6 +266,7 @@
         carouselSlide
         *ngFor="let produto of listaProdutos.slice(20, 30)"
       >
+      <div *ngIf="listaProdutos.length > 0;">
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
             <img
@@ -299,13 +300,15 @@
                 type="button"
                 class="btn btn-light"
                 style="width: 160px"
-                (click)="adicionarCarrinho(produto.id)"
+                (click)="adicionarCarrinho(produto)"
               >
                 Adicionar ao Carrinho
               </button>
             </div>
           </div>
         </div>
+      </div>
+
       </ng-template>
     </owl-carousel-o>
   </div>
