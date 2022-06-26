@@ -53,23 +53,28 @@
                         class="col-4 col-lg-4 botao-lixo text-center btn" (click)="deletarProdutoCarrinho(produto.id)" type="button"
                         id="button-addon"></button></div>
             </div>
+            <div class="d-flex col-12 align-content-end bg-branco mt-0 " >
+                <p class="ml-auto p-1 text-center d-sm-none">Total: R$ {{total}}</p>
+            </div>
             </div>
         </div>
     
             <!-- Fecha tabela -->
+            
             <div class="col-12 d-flex d-md-block flex-column flex-md-row text-center mt-2 mb-3">
-                <button type="button" class=" mt-1 col-md-2 btn btn-success botao-height ml-2"
+                <button type="button" class=" mt-1 col-md-2 btn btn-success ml-2"
                    routerLink="/catalogo">Continuar comprando</button>
-                <button type="button " class="mt-1 col-md-2 btn btn-success botao-height ml-2"
+                <button type="button " class="mt-1 col-md-2 btn btn-success ml-2"
                     (click)="emitirPedido()">Finalizar Compra</button>
             </div>
+            <div class="col-12 d-flex d-md-block flex-column flex-md-row text-center mt-2 mb-3">
+                <button type="button " class=" col-md-2 btn btn-success botao-height ml-2"
+                 (click)="excluirTodosItensCarrinho()">Remover Todos Itens</button>
+            </div> 
         </div>
 
-        <div>
-            <h3>Total: R$ {{total}}</h3>
-        </div>
-
-        <button (click)="excluirTodosItensCarrinho()">Remover Todos Itens</button>
+        
+        
 </section>
 
 
