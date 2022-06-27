@@ -11,7 +11,7 @@ export class Pedido {
     public dataConfirmacao:Date;
     public dataCancelamento:Date;
     public dataEntrega:Date;
-    public usuario:Usuario;
+    public cliente:Usuario;
     public itens:ItemPedido[];
 
 }

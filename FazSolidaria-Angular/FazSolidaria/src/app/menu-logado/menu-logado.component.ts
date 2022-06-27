@@ -15,59 +15,12 @@ import { ProdutoService } from '../service/produto.service';
 export class MenuLogadoComponent implements OnInit {
   nome = environment.nome;
   id = environment.id;
-  listaCategorias: Categoria[];
-  idCategoria: number;
-  categoria: Categoria = new Categoria();
-  produto: Produto = new Produto();
-  listaProdutos: Produto[];
 
   constructor(
     private router: Router,
-    private categoriaService: CategoriaService,
-    private produtoService: ProdutoService
   ) {}
 
   ngOnInit() {
-    //Mostra todas as categorias cadastradas quando entra nessa rota
-    this.mostrarCategoriasCadastradas();
-    this.mostrarProdutosCadastrados();
-  }
-
-  mostrarCategoriasCadastradas() {
-    this.categoriaService
-      .mostrarCategoriasCadastradas()
-      .subscribe((resp: Categoria[]) => {
-        this.listaCategorias = resp;
-      });
-  }
-
-  buscarPeloIdCategoria() {
-    this.categoriaService
-      .buscarIdCategoria(this.idCategoria)
-      .subscribe((resp: Categoria) => {
-        this.categoria = resp;
-      });
-  }
-
-  mostrarProdutosCadastrados() {
-    this.produtoService.mostrarProdutosCadastrados().subscribe(
-      (resp: Produto[]) => {
-        this.listaProdutos = resp;
-      }
-    );
-  }
-
-
-  cadastrarProduto(){
-    this.categoria.id = this.idCategoria
-    this.produto.categoria = this.categoria
-
-    this.produtoService.cadastrarProduto(this.produto).subscribe((resp:Produto)=>{
-      this.produto=resp
-      alert('Cadastro do Produto Realizado')
-      this.produto = new Produto()
-      this.mostrarProdutosCadastrados()
-    })
 
   }
 
