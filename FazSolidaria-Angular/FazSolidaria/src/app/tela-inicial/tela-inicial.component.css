@@ -201,7 +201,23 @@
 .flip-card-inner {
   position: relative;
   width: 100%;
+}
   /* height: 100; */
+/*Configurações da fonte - página produtos*/
+.font-produtos{
+    font-family: 'Nunito', cursive;
+    font-size: 20px;
+}
+
+.produtos-preco{
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -311,3 +327,4 @@
     font-weight: bold;
   }
    */
+

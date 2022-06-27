@@ -22,17 +22,19 @@ export class ProdutoService {
   }
 
   mostrarProdutosCadastrados(): Observable<Produto[]>{
-  return this.http.get<Produto[]>('http://localhost:8080/produtos', this.token) 
+  return this.http.get<Produto[]>('http://localhost:8080/produtos') 
   }
 
+<<<<<<< HEAD
   buscarPeloIdProduto(id:number):Observable<Produto>{
-  return this.http.get<Produto>(`http://localhost:8080/produtos/buscar-id-produto/${id}`, {
-    headers: new HttpHeaders().set('Authorization', environment.token)
-  })
+=======
+  buscarPeloIdProduto(id:number): Observable<Produto>{
+>>>>>>> f9314619d03247931e862598b07e7021a11d4b96
+  return this.http.get<Produto>(`http://localhost:8080/produtos/buscar-id-produto/${id}`)
   }
 
   cadastrarProduto(produto:Produto): Observable<Produto>{
-    return this.http.post<Produto>('http://localhost:8080/produtos/cadastrar-produto', produto, this.token)
+    return this.http.post<Produto>('http://localhost:8080/produtos/cadastrar-produto', produto)
   }
 
   atualizarCadastroProduto(produto:Produto): Observable<Produto>{

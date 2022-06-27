@@ -7,5 +7,6 @@ export const environment = {
   tipo: "",
   senha:"",
   usuario:"",
-  categoria: ''
+  categoria: '',
+  carrinho: [0]
 };

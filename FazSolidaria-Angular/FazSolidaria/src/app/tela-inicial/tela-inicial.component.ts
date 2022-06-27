@@ -17,10 +17,13 @@ import Swal from 'sweetalert2'
 })
 export class TelaInicialComponent implements OnInit {
   listaProdutos: Produto[];
+  carrinho = environment.carrinho
 
   constructor(private router: Router, private produtoService: ProdutoService, private categoriaService: CategoriaService) {}
 
   ngOnInit() {
+    window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
+
     // toda vez que a atualiza a pagina ele retorna para a pag de login
     if (environment.token == '') {
       Swal.fire(
@@ -36,6 +39,7 @@ export class TelaInicialComponent implements OnInit {
       this.router.navigate(['/login']);
     }
     this.mostrarProdutosCadastrados();
+    
   }
 
   listaFrutas: OwlOptions = {
@@ -120,4 +124,11 @@ export class TelaInicialComponent implements OnInit {
     });
   
   }
+
+  adicionarCarrinho(id:number){
+    this.carrinho.push(id)
+    alert("Adicionado ao carriho")
+  }
+
+
 }
