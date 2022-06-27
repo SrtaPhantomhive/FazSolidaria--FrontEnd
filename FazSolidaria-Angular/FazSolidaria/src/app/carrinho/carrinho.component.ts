@@ -9,6 +9,7 @@ import { AuthService } from '../service/auth.service';
 import { ItemPedidoService } from '../service/item-pedido.service';
 import { PedidoService } from '../service/pedido.service';
 import { ProdutoService } from '../service/produto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-carrinho',
@@ -133,6 +134,33 @@ export class CarrinhoComponent implements OnInit {
     });
   }
 
+  retornaCatalogo() {
+    this.router.navigate(['/catalogo']);
+  }
+
+  finalizarCompra() {
+
+    this.router.navigate(['/home']);//quando cadastrar automaticamente vai para essa pagina(rota)
+    Swal.fire(
+      {
+        title: 'Obrigada!',
+        text: 'Sua compra foi finalizada com sucesso! Rumo à um futuro mais verde!',
+        icon: 'success',
+        showConfirmButton: true,
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#75DC36',
+        showCancelButton: false,
+      });
+  }
+
+
+  carrinhoCompleto(){
+    for(let item in this.carrinho){
+      if(this.carrinho[item] > 0){
+        let id = this.carrinho[item]
+        this.buscarPeloIdProduto(id)
+      } 
+
   cadastrarItemPedido() {
     if (localStorage.getItem('ProdCarrinho')) {
       this.mostrarCarrinho = JSON.parse(localStorage.getItem('ProdCarrinho')!);
@@ -144,3 +172,4 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 }
+
