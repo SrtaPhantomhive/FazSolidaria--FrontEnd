@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-menu',
@@ -39,7 +40,5 @@ export class MenuComponent implements OnInit {
   toEquipe(){
     document.getElementById('equipe')?.scrollIntoView({behavior:"smooth"});
   }
-
-  
 
 }

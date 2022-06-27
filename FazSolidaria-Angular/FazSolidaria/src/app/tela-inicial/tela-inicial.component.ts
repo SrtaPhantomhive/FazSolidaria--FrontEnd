@@ -5,6 +5,8 @@ import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
 import  {  OwlOptions  }  from  'ngx-owl-carousel-o' ;
 import { CategoriaService } from '../service/categoria.service';
+import Swal from 'sweetalert2'
+
 
 
 
@@ -21,7 +23,16 @@ export class TelaInicialComponent implements OnInit {
   ngOnInit() {
     // toda vez que a atualiza a pagina ele retorna para a pag de login
     if (environment.token == '') {
-      alert('Sua seção expirou, faça o login novamente!');
+      Swal.fire(
+        {
+          title: 'Ops!',
+          text: 'Sua sessão expirou! Por favor, faça o login novamente.',
+          icon: 'warning',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#75DC36',
+          showCancelButton: false,
+        });
       this.router.navigate(['/login']);
     }
     this.mostrarProdutosCadastrados();

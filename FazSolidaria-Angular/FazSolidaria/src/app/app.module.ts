@@ -1,11 +1,11 @@
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 // carosel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import  {  CarouselModule  }  from  'ngx-owl-carousel-o' ;
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -51,15 +51,14 @@ import { MenuApresentacaoComponent } from './menu-apresentacao/menu-apresentacao
     CategoriaDeleteComponent,
     UsuarioEditComponent,
     MenuApresentacaoComponent,
-    
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CarouselModule  
+    CarouselModule
   ],
   providers: [{
     // faz com que o angular nao ser perca nas rota, durante esse vai e vem, evita o erro 404

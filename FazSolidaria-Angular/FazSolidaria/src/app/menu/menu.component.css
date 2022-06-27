@@ -163,23 +163,6 @@ body {
 
 
 /* ---------CONFIG. ADICIONAIS----------- */
-/* dimensionamento da imagem de fundo página 1 */
-.pngfundo1 {
-    background-size: 1350px 646px;
-    max-width: 100%;
-    height: 646px;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-/* alinha as imagens dos certificados */
-.alinhamentoImg {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    padding-left: 0;
-}
 
 /* deixa a borda arredondada */
 .borda {
