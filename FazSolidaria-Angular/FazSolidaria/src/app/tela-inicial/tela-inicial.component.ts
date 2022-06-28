@@ -5,7 +5,10 @@ import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CategoriaService } from '../service/categoria.service';
+import { ItensCarrinho } from '../model/ItensCarrinho';
+import { CarrinhoServeService } from '../service/carrinho-serve.service';
 import Swal from 'sweetalert2'
+
 
 
 @Component({
@@ -16,11 +19,14 @@ import Swal from 'sweetalert2'
 export class TelaInicialComponent implements OnInit {
   listaProdutos: Produto[];
   carrinho = environment.carrinho;
+  idProduto: number;
+  produtoEsp: Produto = new Produto();
 
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private carrinhoService: CarrinhoServeService
   ) {}
 
   ngOnInit() {
@@ -41,6 +47,8 @@ export class TelaInicialComponent implements OnInit {
       this.router.navigate(['/login']);
     }
     this.mostrarProdutosCadastrados();
+    // this.mostraProdEspe()
+  
   }
 
   listaFrutas: OwlOptions = {
@@ -135,34 +143,51 @@ export class TelaInicialComponent implements OnInit {
       });
   }
 
-  itensCarrinho: any = [];
-  adicionarCarrinho(produto: any) {
-    console.log(produto);
-    let dadosCarrinhoNulo = localStorage.getItem('ProdCarrinho');
-    if (dadosCarrinhoNulo == null) {
-      let pegarDadosArmazena: any = [];
-      pegarDadosArmazena.push(produto);
-      localStorage.setItem('ProdCarrinho', JSON.stringify(pegarDadosArmazena));
-    } else {
-      var id = produto.id;
-      let index: number = -1;
-      this.itensCarrinho = JSON.parse(localStorage.getItem('ProdCarrinho')!);
-      for (let i = 0; i < this.itensCarrinho.length; i++) {
-        if (parseInt(id) === parseInt(this.itensCarrinho[i].id)) {
-          this.itensCarrinho[i].estoque = produto.estoque;
-          index = i;
-          break;
-        }
-      }
-      if (index == -1) {
-        this.itensCarrinho.push(produto);
-        localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-        alert('Adicionado ao carrinho');
-      } else {
-        localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-        alert('Adicionado ao carrinho');
-      }
-    }
+  // itensCarrinho: any = [];
+  // adicionarCarrinho(produto: any) {
+  //   console.log(produto);
+  //   let dadosCarrinhoNulo = localStorage.getItem('ProdCarrinho');
+  //   if (dadosCarrinhoNulo == null) {
+  //     let pegarDadosArmazena: any = [];
+  //     pegarDadosArmazena.push(produto);
+  //     localStorage.setItem('ProdCarrinho', JSON.stringify(pegarDadosArmazena));
+  //   } else {
+  //     var id = produto.id;
+  //     let index: number = -1;
+  //     this.itensCarrinho = JSON.parse(localStorage.getItem('ProdCarrinho')!);
+  //     for (let i = 0; i < this.itensCarrinho.length; i++) {
+  //       if (parseInt(id) === parseInt(this.itensCarrinho[i].id)) {
+  //         this.itensCarrinho[i].estoque = produto.estoque;
+  //         index = i;
+  //         break;
+  //       }
+  //     }
+  //     if (index == -1) {
+  //       this.itensCarrinho.push(produto);
+  //       localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
+  //       alert('Adicionado ao carrinho');
+  //     } else {
+  //       localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
+  //       alert('Adicionado ao carrinho');
+  //     }
+  //   }
 
-  } 
+  // }
+  adicionarCarrinho(produto: Produto) {
+    const itensCarrinho = new ItensCarrinho(produto);
+    this.carrinhoService.adicionarAoCarrinho(produto);
+    alert('Adicionado ao carrinho');
+  }
+
+  buscarIdProduto(id: number) {
+    this.produtoService.buscarPeloIdProduto(id).subscribe((resp: Produto) => {
+      this.produtoEsp = resp;
+    });
+  }
+
+  mostrarProduto(produto:Produto) {
+    this.produtoEsp = produto
+    console.log(this.produtoEsp)
+  }
+
 }

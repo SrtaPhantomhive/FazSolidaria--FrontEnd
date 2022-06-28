@@ -224,7 +224,7 @@
         carouselSlide
         *ngFor="let produto of listaProdutos.slice(20, 30)"
       >
-      <div *ngIf="listaProdutos.length > 0;">
+      <!-- <div *ngIf="listaProdutos.length > 0;"> -->
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
             <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
@@ -269,48 +269,40 @@
               >
                 Adicionar ao Carrinho
               </button>
+              <!-- <button (click)="mostrarProduto(produto)" >Botao Produto</button> -->
+
+              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal"data-target="#ExemploModalCentralizado">
+                {{produto.nome}}
+              </button>
             </div>
           </div>
         </div>
-      </div>
-
+      <!-- </div> -->
       </ng-template>
     </owl-carousel-o>
   </div>
 </section>
 
 <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true" *ngFor="let produto of listaProdutos">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-center fonteTituloTxt" id="perfil-produto">{{produto.nome}}</h5>
-        </div>
-
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-5">
-                <img src="../../assets/img/FRUTAS/bananaNanica.jpg" style="height: 250px; width: 250px;">
-              </div>
-              <div class="col-md-5 mt-2 fonteTxt1 mb-1 justify-content-center">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar
-                  sed ex sit amet sollicitudin. Mauris sit amet aliquet arcu. Class
-                  aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                  inceptos.
-                </p>
-                <!-- <div class="row justify-content-center">
-                <p class=" col-md-12 fonteTxt2 text-center mb-2" id="preco"> Valor Unitário: R${{produto.preco}}</p>
-              </div> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="modal-footer align-items-center justify-content-center">
-            <button type="button" class="btn btn-cadastro" data-dismiss="modal">Fechar</button>
-          </div>
-        </div>
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">{{produtoEsp.nome}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
+  </div>
+</div>
+
+
+

@@ -16,6 +16,7 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'usuarios/:id', component: UsuarioEditComponent},
   { path: 'cadastrar-produto', component: CadastroProdutoComponent},
   { path: 'produto-edit/:id', component: ProdutoEditComponent},
-  { path: 'produto-delete/:id', component: ProdutoDeleteComponent}
+  { path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+  { path: 'checkout', component: CheckoutComponent}
 ];
 
 @NgModule({
