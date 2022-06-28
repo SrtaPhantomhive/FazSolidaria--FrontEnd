@@ -56,11 +56,11 @@ export class CarrinhoServeService {
 
 
   logCartData(totalPriceValue: number, totalQuantityValue: number) {
-    console.log('-----------the cart content--------')
+    console.log('----------- Itens do Carrinho --------')
     for(let tempCartItem of this.cartItems){
       let subTotalPrice = tempCartItem.preco * tempCartItem.qtd;
-      console.log(`Name: ${tempCartItem.nome}, quantity: ${tempCartItem.qtd}, price: ${tempCartItem.preco}, subTotalPrice: ${subTotalPrice} `);
-      console.log(`totalPrice: ${totalPriceValue}, totalQuantity: ${totalQuantityValue}`);
+      console.log(`Nome: ${tempCartItem.nome}, Quantidade: ${tempCartItem.qtd}, preço: ${tempCartItem.preco}, subTotalPreço: ${subTotalPrice} `);
+      console.log(`PreçoTotal: ${totalPriceValue}, QuantidadeTotal: ${totalQuantityValue}`);
     }
   }
 
@@ -82,6 +82,13 @@ export class CarrinhoServeService {
       this.cartItems.splice(itemIndex, 1);
       this.computeCartTotals();
     }
-    
   }
+
+
+  removerTodosItens(){
+    this.cartItems = [];
+    this.computeCartTotals();
+  }
+
+
 }

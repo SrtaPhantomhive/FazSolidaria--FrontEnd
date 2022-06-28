@@ -1,45 +1,54 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { CarrinhoServeService } from '../service/carrinho-serve.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
+  precoTotal: number = 0.0;
+  quantidadeTotal: number = 0;
 
-  nome = environment.nome
-  foto = environment.foto
-
-  constructor(
-    private router: Router
-  ) { }
+  constructor(private carrinhoService: CarrinhoServeService) {}
 
   ngOnInit() {
-    window.scroll(0,0)
-  }
-// Evento para scrooll lenta
-  toInicio(){
-    document.getElementById('inicio')?.scrollIntoView({behavior:"smooth"});
-  }
+    window.scroll(0, 0);
 
-  toCertificacao(){
-    document.getElementById('certificados')?.scrollIntoView({behavior:"smooth"});
+    this.atualizacaoCarrinho();
+  }
+  // Evento para scrooll lenta
+  toInicio() {
+    document.getElementById('inicio')?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  toSobreNos(){
-    document.getElementById('sobreNos')?.scrollIntoView({behavior:"smooth"});
+  toCertificacao() {
+    document
+      .getElementById('certificados')
+      ?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  toMissao(){
-    document.getElementById('missao')?.scrollIntoView({behavior:"smooth"});
+  toSobreNos() {
+    document.getElementById('sobreNos')?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  toEquipe(){
-    document.getElementById('equipe')?.scrollIntoView({behavior:"smooth"});
+  toMissao() {
+    document.getElementById('missao')?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  
+  toEquipe() {
+    document.getElementById('equipe')?.scrollIntoView({ behavior: 'smooth' });
+  }
 
+  atualizacaoCarrinho() {
+    this.carrinhoService.totalPrice.subscribe((data) => {
+      this.precoTotal = data;
+    });
+
+    this.carrinhoService.totalQuantity.subscribe((data) => {
+      this.quantidadeTotal = data;
+    });
+  }
 }

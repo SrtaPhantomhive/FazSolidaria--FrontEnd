@@ -492,3 +492,17 @@ footer ul li.ellipsis {
     font-family: Amatic SC; */
 
 }
+
+/* Personalizacao do valor do carrinho */
+.cart_value{
+    position: absolute;
+    top: 5px;
+    right: 152px;
+    background: #FFF;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 2px 10px;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}

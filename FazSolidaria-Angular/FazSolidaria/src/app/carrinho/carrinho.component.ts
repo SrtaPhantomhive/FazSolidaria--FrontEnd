@@ -181,4 +181,10 @@ export class CarrinhoComponent implements OnInit {
   removeCartItem(theCartItem: ItensCarrinho){
     this.carrinhoService.removeCartItem(theCartItem);
   }
+
+  excluiTodosItens(){
+    this.cartItems = []
+    this.carrinhoService.removerTodosItens()
 }
+}
+
