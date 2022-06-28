@@ -28,7 +28,7 @@ export class CarrinhoComponent implements OnInit {
     private itemPedidoService: ItemPedidoService,
     private pedidoService: PedidoService,
     private authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit() {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
@@ -90,7 +90,7 @@ export class CarrinhoComponent implements OnInit {
       ) {
         return acumulador + valor.preco * valor.qtd;
       },
-      0);
+        0);
     }
   }
 
@@ -154,20 +154,22 @@ export class CarrinhoComponent implements OnInit {
   }
 
 
-  carrinhoCompleto(){
-    for(let item in this.carrinho){
-      if(this.carrinho[item] > 0){
-        let id = this.carrinho[item]
-        this.buscarPeloIdProduto(id)
-      } 
+  // carrinhoCompleto() {
+  //   for (let item in this.carrinho) {
+  //     if (this.carrinho[item] > 0) {
+  //       let id = this.carrinho[item]
+  //       this.buscarPeloIdProduto(id)
+  //     }
+  //   }
+  // }
 
   cadastrarItemPedido() {
     if (localStorage.getItem('ProdCarrinho')) {
       this.mostrarCarrinho = JSON.parse(localStorage.getItem('ProdCarrinho')!);
       for (let i = 0; i < this.mostrarCarrinho.length; i++) {
         this.itemPedidoService.cadastrarItemPedido(this.itensPedido).subscribe((resp: ItemPedido) => {
-            this.itensPedido = resp
-          });
+          this.itensPedido = resp
+        });
       }
     }
   }

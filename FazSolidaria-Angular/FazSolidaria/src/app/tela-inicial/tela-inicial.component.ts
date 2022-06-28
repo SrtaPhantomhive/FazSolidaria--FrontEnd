@@ -16,12 +16,14 @@ import Swal from 'sweetalert2'
 export class TelaInicialComponent implements OnInit {
   listaProdutos: Produto[];
   carrinho = environment.carrinho;
+  produtoEsp: Produto = new Produto();
+  apProd: Produto;
 
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService
-  ) {}
+  ) { }
 
   ngOnInit() {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
@@ -127,6 +129,11 @@ export class TelaInicialComponent implements OnInit {
     nav: true,
   };
 
+  mostrarProduto(produto: Produto) {
+    this.produtoEsp = produto
+    console.log(this.produtoEsp)
+  }
+
   mostrarProdutosCadastrados() {
     this.produtoService
       .mostrarProdutosCadastrados()
@@ -157,12 +164,30 @@ export class TelaInicialComponent implements OnInit {
       if (index == -1) {
         this.itensCarrinho.push(produto);
         localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-        alert('Adicionado ao carrinho');
+        Swal.fire(
+          {
+            title: 'Aviso:',
+            text: 'Produto adicionado ao carrinho!',
+            icon: 'success',
+            showConfirmButton: true,
+            confirmButtonText: 'Ok',
+            confirmButtonColor: '#75DC36',
+            showCancelButton: false,
+          });
       } else {
         localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-        alert('Adicionado ao carrinho');
+        Swal.fire(
+          {
+            title: 'Aviso:',
+            text: 'Produto adicionado ao carrinho!',
+            icon: 'success',
+            showConfirmButton: true,
+            confirmButtonText: 'Ok',
+            confirmButtonColor: '#75DC36',
+            showCancelButton: false,
+          });
       }
     }
 
-  } 
+  }
 }

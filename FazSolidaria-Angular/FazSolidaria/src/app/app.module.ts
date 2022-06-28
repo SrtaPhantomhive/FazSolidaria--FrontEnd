@@ -32,6 +32,7 @@ import { EnderecoEditComponent } from './edit/endereco-edit/endereco-edit.compon
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { HistoricoComprasComponent } from './historico-compras/historico-compras.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     EnderecoEditComponent,
     CadastroProdutoComponent,
     ProdutoEditComponent,
-    ProdutoDeleteComponent,   
+    ProdutoDeleteComponent,
+    HistoricoComprasComponent,   
   ],
   imports: [
     AppRoutingModule,
