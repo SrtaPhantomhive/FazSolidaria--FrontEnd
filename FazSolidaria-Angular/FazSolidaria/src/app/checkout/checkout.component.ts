@@ -75,27 +75,27 @@ export class CheckoutComponent implements OnInit {
 
   listCartDetails() {
     // get a handle to the cart items
-    this.cartItems = this.carrinhoService.cartItems;
+    this.cartItems = this.carrinhoService.itensCarrinho;
 
     // subscribe to the cart totalPrice
-    this.carrinhoService.totalPrice.subscribe(
+    this.carrinhoService.precoTotal.subscribe(
       (data) => (this.totalPrice = data)
     );
 
     // subscribe to the cart totalQuantity
-    this.carrinhoService.totalQuantity.subscribe(
+    this.carrinhoService.quantidadeTotal.subscribe(
       (data) => (this.totalQuantity = data)
     );
     // compute cart total price and quantity
-    this.carrinhoService.computeCartTotals();
+    this.carrinhoService.calcularTotalCarrinho();
   }
 
   reviewCartTotals() {
-    this.carrinhoService.totalPrice.subscribe(
+    this.carrinhoService.precoTotal.subscribe(
       (data) => (this.totalPrice = data)
     );
 
-    this.carrinhoService.totalQuantity.subscribe(
+    this.carrinhoService.quantidadeTotal.subscribe(
       (data) => (this.totalQuantity = data)
     );
   }
@@ -107,7 +107,7 @@ export class CheckoutComponent implements OnInit {
     pedido.quantidadeTotal = this.totalQuantity;
 
     // pegar produtos carrinho - get cart items
-    const carrinhoItens = this.carrinhoService.cartItems;
+    const carrinhoItens = this.carrinhoService.itensCarrinho;
 
     // cria itensPedido a partir de itensCarrinho - create orderItems from cartItems
     let itensPedido: ItemPedido[] = carrinhoItens.map(
@@ -155,9 +155,9 @@ export class CheckoutComponent implements OnInit {
 
   resetCart() {
     // apaga os dados do carrinho -reset cart data
-    this.carrinhoService.cartItems = [];
-    this.carrinhoService.totalPrice.next(0);
-    this.carrinhoService.totalQuantity.next(0);
+    this.carrinhoService.itensCarrinho = [];
+    this.carrinhoService.precoTotal.next(0);
+    this.carrinhoService.quantidadeTotal.next(0);
 
     // Reseta formulario - reset the form
     // this.checkoutFormGroup.reset();

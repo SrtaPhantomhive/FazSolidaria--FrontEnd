@@ -42,7 +42,7 @@ export class CarrinhoComponent implements OnInit {
     // this.detalhesCarrinho();
     // this.somatoriaTotal();
 
-    this.listCartDetails();
+    this.mostrarItensCarrinho();
 
     this.idUsuario = environment.id;
     this.buscarIdUsuario(this.idUsuario);
@@ -153,33 +153,33 @@ export class CarrinhoComponent implements OnInit {
   //   }
   // }
 
-  listCartDetails() {
+  mostrarItensCarrinho() {
 
     // get a handle to the cart items
-    this.cartItems = this.carrinhoService.cartItems;
+    this.cartItems = this.carrinhoService.itensCarrinho;
 
     // subscribe to the cart totalPrice
-    this.carrinhoService.totalPrice.subscribe(
+    this.carrinhoService.precoTotal.subscribe(
       data => this.totalPrice = data
     );
 
     // subscribe to the cart totalQuantity
-    this.carrinhoService.totalQuantity.subscribe(
+    this.carrinhoService.quantidadeTotal.subscribe(
       data => this.totalQuantity = data
     );
     // compute cart total price and quantity
-      this.carrinhoService.computeCartTotals();
+      this.carrinhoService.calcularTotalCarrinho();
   }
 
-  incrementQuantity(theCartItem: ItensCarrinho){
-    this.carrinhoService.addToCart(theCartItem);
+  incrementarQuantidade(itemCarrinho: ItensCarrinho){
+    this.carrinhoService.adicionarAoCarrinho(itemCarrinho);
   }
-  decrementQuantity(theCartItem: ItensCarrinho){
-    this.carrinhoService.decrementQuantity(theCartItem);
+  decrementarQuantidade(itemCarrinho: ItensCarrinho){
+    this.carrinhoService.decrementarQuantidade(itemCarrinho);
   }
   
-  removeCartItem(theCartItem: ItensCarrinho){
-    this.carrinhoService.removeCartItem(theCartItem);
+  removerItemCarrinho(itemCarrinho: ItensCarrinho){
+    this.carrinhoService.removeCartItem(itemCarrinho);
   }
 
   excluiTodosItens(){

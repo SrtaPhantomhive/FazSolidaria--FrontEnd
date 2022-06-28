@@ -7,87 +7,86 @@ import { ItensCarrinho } from '../model/ItensCarrinho';
 })
 export class CarrinhoServeService {
   
-  cartItems: ItensCarrinho[] = [];
-  totalPrice: Subject<number> = new BehaviorSubject<number>(0);
-  totalQuantity: Subject<number> = new BehaviorSubject<number>(0);
+  itensCarrinho: ItensCarrinho[] = [];
+  precoTotal: Subject<number> = new BehaviorSubject<number>(0);
+  quantidadeTotal: Subject<number> = new BehaviorSubject<number>(0);
 
   constructor() { }
 
-  addToCart(theCartItem: ItensCarrinho){
-    // check if we already have the item in our cart.
-    let alreadyExistInCart: boolean = false;
-    let existingCartItem: ItensCarrinho = undefined!;
+  adicionarAoCarrinho(itemCarrinho: ItensCarrinho){
+    // Verificar se ja existe o item no carrinho
+    let jaExisteNoCarrinho: boolean = false;
+    let itemCarrinhoExistente: ItensCarrinho = undefined!;
 
-    if(this.cartItems.length > 0){
-          //find the item in the cart based on item id
-          existingCartItem = this.cartItems.find(tempCartItem => tempCartItem.id === theCartItem.id)!;
-          // check if we found it
-          alreadyExistInCart = (existingCartItem != undefined);
+    if(this.itensCarrinho.length > 0){
+          //encontre o item no carrinho com base no ID do item
+          itemCarrinhoExistente = this.itensCarrinho.find(tempCartItem => tempCartItem.id === itemCarrinho.id)!;
+          // Verificar se ja existe
+          jaExisteNoCarrinho = (itemCarrinhoExistente != undefined);
     }
 
-    if(alreadyExistInCart){
-      // increment the quantity
-      existingCartItem.qtd++;
+    if(jaExisteNoCarrinho){
+      // Incrementar Quantidade Carrinho
+      itemCarrinhoExistente.qtd++;
     }else{
-      // just add the item in the array
-      this.cartItems.push(theCartItem);
+      // Adicionando Item no Carrinho
+      this.itensCarrinho.push(itemCarrinho);
     }
     
     // compute the totals
-    this.computeCartTotals();
+    this.calcularTotalCarrinho();
   }
 
-  computeCartTotals() {
-    let totalPriceValue: number =0;
-    let totalQuantityValue: number =0;
+  calcularTotalCarrinho() {
+    let valorTotalPreco: number =0;
+    let valorTotalQuantidade: number =0;
 
-    for(let tempCartItem of this.cartItems){
-      totalPriceValue += tempCartItem.qtd * tempCartItem.preco; 
-      totalQuantityValue += tempCartItem.qtd;
+    for(let tempCartItem of this.itensCarrinho){
+      valorTotalPreco += tempCartItem.qtd * tempCartItem.preco; 
+      valorTotalQuantidade += tempCartItem.qtd;
     }
 
-    // publish the new values....all subscribers will recieve the new data
-    this.totalPrice.next(totalPriceValue);
-    this.totalQuantity.next(totalQuantityValue);
+    // mostra os novos valores para o usuario
+    this.precoTotal.next(valorTotalPreco);
+    this.quantidadeTotal.next(valorTotalQuantidade);
 
-    // log the cart data just for debugging purpose
-    this.logCartData( totalPriceValue , totalQuantityValue);
+    // registre os dados do carrinho apenas para fins de depuração
+    this.registroDadosCarrinho( valorTotalPreco , valorTotalQuantidade);
   }
 
 
-  logCartData(totalPriceValue: number, totalQuantityValue: number) {
+  registroDadosCarrinho(valorTotalPreco: number, valorTotalQuantidade: number) {
     console.log('----------- Itens do Carrinho --------')
-    for(let tempCartItem of this.cartItems){
-      let subTotalPrice = tempCartItem.preco * tempCartItem.qtd;
-      console.log(`Nome: ${tempCartItem.nome}, Quantidade: ${tempCartItem.qtd}, preço: ${tempCartItem.preco}, subTotalPreço: ${subTotalPrice} `);
-      console.log(`PreçoTotal: ${totalPriceValue}, QuantidadeTotal: ${totalQuantityValue}`);
+    for(let itemTemporarioCarrinho of this.itensCarrinho){
+      let subTotalPreço = itemTemporarioCarrinho.preco * itemTemporarioCarrinho.qtd;
+      console.log(`Nome: ${itemTemporarioCarrinho.nome}, Quantidade: ${itemTemporarioCarrinho.qtd}, preço: ${itemTemporarioCarrinho.preco}, subTotalPreço: ${subTotalPreço} `);
+      console.log(`PreçoTotal: ${valorTotalPreco}, QuantidadeTotal: ${valorTotalQuantidade}`);
     }
   }
 
 
-  decrementQuantity(theCartItem: ItensCarrinho) {
-     theCartItem.qtd--;
-     if(theCartItem.qtd == 0){
-       this.removeCartItem(theCartItem);
+  decrementarQuantidade(itemCarrinho: ItensCarrinho) {
+    itemCarrinho.qtd--;
+     if(itemCarrinho.qtd == 0){
+       this.removeCartItem(itemCarrinho);
      }else{
-       this.computeCartTotals();
+       this.calcularTotalCarrinho();
      }
   }
 
-  removeCartItem(theCartItem: ItensCarrinho) {
-    // get the item index in the array
-    const itemIndex = this.cartItems.findIndex(tempCartItem => tempCartItem.id == theCartItem.id);
-    // if found, remove the item from the aray at the given index
+  removeCartItem(itemCarrinho: ItensCarrinho) {
+    // pega o indice do item no array(matriz)
+    const itemIndex = this.itensCarrinho.findIndex(itemTemporarioCarrinho => itemTemporarioCarrinho.id == itemCarrinho.id);
+    // se encontrado, remova o item do aray no índice fornecido
     if(itemIndex > -1){
-      this.cartItems.splice(itemIndex, 1);
-      this.computeCartTotals();
+      this.itensCarrinho.splice(itemIndex, 1);
+      this.calcularTotalCarrinho();
     }
   }
 
-
   removerTodosItens(){
-    this.cartItems = [];
-    this.computeCartTotals();
+    this.itensCarrinho = [];
+    this.calcularTotalCarrinho();
   }
 
 

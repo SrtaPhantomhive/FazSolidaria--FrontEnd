@@ -43,11 +43,11 @@ export class MenuComponent implements OnInit {
   }
 
   atualizacaoCarrinho() {
-    this.carrinhoService.totalPrice.subscribe((data) => {
+    this.carrinhoService.precoTotal.subscribe((data) => {
       this.precoTotal = data;
     });
 
-    this.carrinhoService.totalQuantity.subscribe((data) => {
+    this.carrinhoService.quantidadeTotal.subscribe((data) => {
       this.quantidadeTotal = data;
     });
   }
