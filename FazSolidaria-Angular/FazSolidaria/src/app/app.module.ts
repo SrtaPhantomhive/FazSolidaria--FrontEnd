@@ -1,6 +1,6 @@
 import {HttpClientModule} from '@angular/common/http'
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 // carosel
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +32,7 @@ import { EnderecoEditComponent } from './edit/endereco-edit/endereco-edit.compon
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     EnderecoEditComponent,
     CadastroProdutoComponent,
     ProdutoEditComponent,
-    ProdutoDeleteComponent,   
+    ProdutoDeleteComponent,
+    CheckoutComponent,   
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CarouselModule  
+    CarouselModule,
+    ReactiveFormsModule  
   ],
   providers: [{
     // faz com que o angular nao ser perca nas rota, durante esse vai e vem, evita o erro 404
