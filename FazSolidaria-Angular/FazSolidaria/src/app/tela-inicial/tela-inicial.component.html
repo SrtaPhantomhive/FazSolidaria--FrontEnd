@@ -4,65 +4,36 @@
     <!-- carrossel -->
     <div class="col-md-12">
       <!-- carrossel -->
-      <div
-        id="carouselExampleInterval"
-        class="carousel slide dimcar"
-        data-ride="carousel"
-      >
+      <div id="carouselExampleInterval" class="carousel slide dimcar" data-ride="carousel">
         <div class="carousel-inner">
-          <div
-            class="carousel-item active"
-            style="opacity: 90%"
-            data-interval="5000"
-          >
-            <img
-              src="../../assets/img/PAG1/CARROSSEL/tela1.png"
-              class="d-block w-100"
-              alt="..."
-            />
+          <div class="carousel-item active" style="opacity: 90%" data-interval="5000">
+            <img src="../../assets/img/PAG1/CARROSSEL/tela1.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
                 <h5 class="fonteTituloTxt">First slide label</h5>
-                <p
-                  class="fonteTxt"
-                  style="font-size: 20px; font-weight: bolder"
-                >
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
               </div>
             </div>
           </div>
           <div class="carousel-item" data-interval="5000">
-            <img
-              src="../../assets/img/PAG1/CARROSSEL/doações.png"
-              class="d-block w-100"
-              alt="..."
-            />
+            <img src="../../assets/img/PAG1/CARROSSEL/doações.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
                 <h5 class="fonteTituloTxt">First slide label</h5>
-                <p
-                  class="fonteTxt"
-                  style="font-size: 20px; font-weight: bolder"
-                >
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
               </div>
             </div>
           </div>
           <div class="carousel-item" style="opacity: 90%" data-interval="5000">
-            <img
-              src="../../assets/img/PAG1/CARROSSEL/veganoOrganico.png"
-              class="d-block w-100"
-              alt="..."
-            />
+            <img src="../../assets/img/PAG1/CARROSSEL/veganoOrganico.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
                 <h5 class="fonteTituloTxt">Zero Crueldade Animal</h5>
-                <p
-                  class="fonteTxt"
-                  style="font-size: 20px; font-weight: bolder"
-                >
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
                   Todos os nossos produtos são veganos! Além de adotarmos um
                   sistema de produção em que não utilizamos NADA de origem
                   animal.
@@ -71,57 +42,33 @@
             </div>
           </div>
           <div class="carousel-item" style="opacity: 90%" data-interval="5000">
-            <img
-              src="../../assets/img/PAG1/CARROSSEL/doação.png"
-              class="d-block w-100"
-              alt="..."
-            />
+            <img src="../../assets/img/PAG1/CARROSSEL/doação.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
                 <h5 class="fonteTituloTxt">First slide label</h5>
-                <p
-                  class="fonteTxt"
-                  style="font-size: 20px; font-weight: bolder"
-                >
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
               </div>
             </div>
           </div>
           <div class="carousel-item" style="opacity: 90%" data-interval="5000">
-            <img
-              src="../../assets/img/PAG1/CARROSSEL/fazenda.png"
-              class="d-block w-100"
-              alt="..."
-            />
+            <img src="../../assets/img/PAG1/CARROSSEL/fazenda.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
                 <h5 class="fonteTituloTxt">First slide label</h5>
-                <p
-                  class="fonteTxt"
-                  style="font-size: 20px; font-weight: bolder"
-                >
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-target="#carouselExampleInterval"
-          data-slide="prev"
-        >
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-target="#carouselExampleInterval"
-          data-slide="next"
-        >
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </button>
@@ -152,18 +99,11 @@
  <div class="container">
  
     <owl-carousel-o [options]="listaFrutas">
-      <ng-template
-        carouselSlide
-        *ngFor="let produto of listaProdutos.slice(0, 10)"
-      >
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0, 10)">
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
-            <img
-              class="card-img-top"
-              [src]="produto.imagem"
-              alt="{{ produto.categoria }}"
-              style="border-radius: 20px"
-            />
+            <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
+              style="border-radius: 20px" />
             <div class="card-body">
               <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
@@ -184,6 +124,15 @@
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
+                <button type="button" class="btn btn-light" style="width: 160px"
+                  (click)="adicionarCarrinho(produto.id)">
+                  Adicionar ao Carrinho
+                </button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#exampleModalCenter">
+                  Mais Informações
+                </button>
               </a>
               <button
                 type="button"
@@ -207,18 +156,11 @@
 <div class="container">
   <h3 class="text-center fonteTituloTxt" >Verduras</h3>
     <owl-carousel-o [options]="listaVerduras">
-      <ng-template
-        carouselSlide
-        *ngFor="let produto of listaProdutos.slice(10, 20)"
-      >
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(10, 20)">
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
-            <img
-              class="card-img-top"
-              [src]="produto.imagem"
-              alt="{{ produto.categoria }}"
-              style="border-radius: 20px"
-            />
+            <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
+              style="border-radius: 20px" />
             <div class="card-body">
               <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
@@ -239,6 +181,22 @@
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
+
+                <button type="button" class="btn btn-light" style="width: 160px"
+                  (click)="adicionarCarrinho(produto.id)">
+                  Adicionar ao Carrinho
+                </button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#exampleModalCenter">
+                  Mais Informações
+                </button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#exampleModalCenter">
+                  Mais Informações
+                </button>
+
               </a>
               <button
                 type="button"
@@ -269,12 +227,8 @@
       <!-- <div *ngIf="listaProdutos.length > 0;"> -->
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
-            <img
-              class="card-img-top"
-              [src]="produto.imagem"
-              alt="{{ produto.categoria }}"
-              style="border-radius: 20px"
-            />
+            <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
+              style="border-radius: 20px" />
             <div class="card-body">
               <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
@@ -295,6 +249,17 @@
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
+
+                <button type="button" class="btn btn-light" style="width: 160px"
+                  (click)="adicionarCarrinho(produto.id)">
+                  Adicionar ao Carrinho
+                </button>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#exampleModalCenter">
+                  Mais Informações
+                </button>
+
               </a>
               <button
                 type="button"
@@ -318,10 +283,6 @@
   </div>
 </section>
 
-
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -342,5 +303,6 @@
     </div>
   </div>
 </div>
+
 
 

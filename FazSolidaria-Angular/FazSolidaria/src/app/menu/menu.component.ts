@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { CarrinhoServeService } from '../service/carrinho-serve.service';
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-menu',
@@ -51,4 +53,5 @@ export class MenuComponent implements OnInit {
       this.quantidadeTotal = data;
     });
   }
+
 }

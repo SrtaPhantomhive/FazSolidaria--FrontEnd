@@ -11,6 +11,7 @@ import { CarrinhoServeService } from '../service/carrinho-serve.service';
 import { ItemPedidoService } from '../service/item-pedido.service';
 import { PedidoService } from '../service/pedido.service';
 import { ProdutoService } from '../service/produto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-carrinho',
@@ -171,6 +172,7 @@ export class CarrinhoComponent implements OnInit {
       this.carrinhoService.calcularTotalCarrinho();
   }
 
+
   incrementarQuantidade(itemCarrinho: ItensCarrinho){
     this.carrinhoService.adicionarAoCarrinho(itemCarrinho);
   }
@@ -186,5 +188,7 @@ export class CarrinhoComponent implements OnInit {
     this.cartItems = []
     this.carrinhoService.removerTodosItens()
 }
+
 }
+
 

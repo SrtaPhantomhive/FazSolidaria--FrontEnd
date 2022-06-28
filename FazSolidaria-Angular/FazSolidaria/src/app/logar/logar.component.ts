@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-logar',
@@ -48,5 +49,19 @@ export class LogarComponent implements OnInit {
     environment.token = ''
     environment.nome = ''
     environment.id = 0
+  }
+
+  doacao() {
+    this.router.navigate(['/']);//quando cadastrar automaticamente vai para essa pagina(rota)
+    Swal.fire(
+      {
+        title: 'Compra = Doação!',
+        text: 'A cada compra, uma parte do valor pago é revertido em cestas básicas para famílias carentes!',
+        icon: 'info',
+        showConfirmButton: true,
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#75DC36',
+        showCancelButton: false,
+      });
   }
 }

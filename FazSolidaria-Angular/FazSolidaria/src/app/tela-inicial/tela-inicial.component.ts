@@ -7,6 +7,9 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CategoriaService } from '../service/categoria.service';
 import { ItensCarrinho } from '../model/ItensCarrinho';
 import { CarrinhoServeService } from '../service/carrinho-serve.service';
+import Swal from 'sweetalert2'
+
+
 
 @Component({
   selector: 'app-tela-inicial',
@@ -30,6 +33,19 @@ export class TelaInicialComponent implements OnInit {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
 
     // toda vez que a atualiza a pagina ele retorna para a pag de login
+    if (environment.token == '') {
+      Swal.fire(
+        {
+          title: 'Ops!',
+          text: 'Sua sessão expirou! Por favor, faça o login novamente.',
+          icon: 'warning',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#75DC36',
+          showCancelButton: false,
+        });
+      this.router.navigate(['/login']);
+    }
     this.mostrarProdutosCadastrados();
     // this.mostraProdEspe()
   

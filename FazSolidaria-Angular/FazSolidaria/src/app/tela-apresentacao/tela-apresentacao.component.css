@@ -64,10 +64,6 @@ body {
 }
 
 /* -------CONFIG. BOTÕES--------- */
-/* diminui a opacidade do search */
-.searchbg {
-    background: rgba(255, 255, 255, 0.8);
-}
 
 /* aumentar o tamanho dos botões */
 .btn-navbar2 {
@@ -129,6 +125,12 @@ body {
     font-family: 'Nunito', cursive;
     font-weight: bold;
     font-size: 35px;
+}
+
+.btn-cadastro {
+    color: #75DC36;
+    border-color: #75DC36;
+    border-width: 2px;
 }
 
 /* fonte escolhida para os botões da aplicação */
@@ -391,8 +393,5 @@ body {
         flex-wrap: unset;
     }
 
-    .rootCert>.row>.col>.fli {
-        
-    }
-
+    .rootCert>.row>.col>.fli {}
 }
