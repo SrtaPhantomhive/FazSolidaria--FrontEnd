@@ -62,15 +62,13 @@
             <!-- Fecha tabela -->
             
             <div class="col-12 d-flex d-md-block flex-column flex-md-row text-center mt-2 mb-3">
-                <button type="button" class=" mt-1 col-md-2 btn btn-success botao-height ml-2"
-                    [routerLink]="['catalogo',listaProduto]"(click)="retornaCatalogo()">Continuar comprando</button>
                 <button type="button " class="mt-1 col-md-2 btn btn-success botao-height ml-2"
                     routerLink="/checkout">Finalizar Compra</button>
 
             </div>
             <div class="col-12 d-flex d-md-block flex-column flex-md-row text-center mt-2 mb-3">
                 <button type="button " class=" col-md-2 btn btn-success botao-height ml-2"
-                 (click)="excluirTodosItensCarrinho()">Remover Todos Itens</button>
+                 (click)="excluiTodosItens()">Remover Todos Itens</button>
             </div> 
         </div>
 
@@ -78,12 +76,4 @@
         <div>
             <h3>{{ totalPrice | currency: 'USD' }}</h3>
         </div>
-
-        <button (click)="excluiTodosItens()">Excluir Tudo</button>
-
-        <!-- <button (click)="excluirTodosItensCarrinho()">Remover Todos Itens</button> -->
 </section>
-
-
-
-<!-- https://www.youtube.com/watch?v=G6Nj1PcNomQ -->

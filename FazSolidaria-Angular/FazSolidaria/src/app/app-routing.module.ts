@@ -17,28 +17,31 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { BuscaProdutoComponent } from './busca-produto/busca-produto.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'agendamento', component: FormularioVisitaComponent },
-  { path: 'home', component: TelaApresentacaoComponent },
-  { path: 'login', component: LogarComponent },
-  { path: 'cadastrar', component: CadastrarComponent },
-  { path: 'perfil-produtos/:id', component: PerfilProdutoComponent},
-  { path: 'carrinho', component: CarrinhoComponent},
-  { path: 'catalogo', component: TelaInicialComponent},
-  { path: 'categorias', component: CategoriaComponent},
-  { path: 'categoria-edit/:id', component: CategoriaEditComponent},
-  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
-  { path: 'usuarios/:id', component: UsuarioEditComponent},
-  { path: 'cadastrar-produto', component: CadastroProdutoComponent},
-  { path: 'produto-edit/:id', component: ProdutoEditComponent},
-  { path: 'produto-delete/:id', component: ProdutoDeleteComponent},
-  { path: 'checkout', component: CheckoutComponent}
+  { path: 'agendamento', component: FormularioVisitaComponent,  data: {isHeader: true} },
+  { path: 'home', component: TelaApresentacaoComponent, data: {isHeader: true} },
+  { path: 'login', component: LogarComponent, data: {isHeader: true}  },
+  { path: 'cadastrar', component: CadastrarComponent , data: {isHeader: true} },
+  { path: 'perfil-produtos/:id', component: PerfilProdutoComponent, data: {isHeader: true}},
+  { path: 'carrinho', component: CarrinhoComponent, data: {isHeader: true}},
+  { path: 'catalogo', component: TelaInicialComponent, data: {isHeader: true}},
+  { path: 'categorias', component: CategoriaComponent, data: {isHeader: true}},
+  { path: 'categoria-edit/:id', component: CategoriaEditComponent, data: {isHeader: true}},
+  { path: 'categoria-delete/:id', component: CategoriaDeleteComponent, data: {isHeader: true}},
+  { path: 'usuarios/:id', component: UsuarioEditComponent, data: {isHeader: true}},
+  { path: 'cadastrar-produto', component: CadastroProdutoComponent, data: {isHeader: true}},
+  { path: 'produto-edit/:id', component: ProdutoEditComponent, data: {isHeader: true}},
+  { path: 'produto-delete/:id', component: ProdutoDeleteComponent, data: {isHeader: true}},
+  { path: 'checkout', component: CheckoutComponent, data: {isHeader: true}},
+  { path:'busca-produto/:nome', component: BuscaProdutoComponent, data: {isHeader: true}}
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,)],
   exports: [RouterModule],
 })
 

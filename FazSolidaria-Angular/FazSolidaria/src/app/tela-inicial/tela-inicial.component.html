@@ -97,7 +97,6 @@
 <!-- Carrossel -->
 <section class="listas" >
  <div class="container">
- 
     <owl-carousel-o [options]="listaFrutas">
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0, 10)">
         <div class="p-1 flip-card">
@@ -116,32 +115,20 @@
               <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a
-                [routerLink]="['/perfil-produtos', produto.id]"
-                style="text-decoration: none; color: inherit"
-              >
                 <h2>{{ produto.nome }}</h2>
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
-                <button type="button" class="btn btn-light" style="width: 160px"
-                  (click)="adicionarCarrinho(produto.id)">
-                  Adicionar ao Carrinho
-                </button>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
-                  data-target="#exampleModalCenter">
+                <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#ExemploModalCentralizado">
                   Mais Informações
                 </button>
-              </a>
-              <button
-                type="button"
-                class="btn btn-light"
-                style="width: 160px"
-                (click)="adicionarCarrinho(produto)"
-              >
-                Adicionar ao Carrinho
-              </button>
+                <!-- Bota adicionar carrinho -->
+                <button type="button" class="btn btn-light" style="width: 160px"
+                  (click)="adicionarCarrinho(produto)">
+                  Adicionar ao Carrinho
+                </button>
             </div>
           </div>
         </div>
@@ -173,37 +160,18 @@
               <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
-              <a
-                [routerLink]="['/perfil-produtos', produto.id]"
-                style="text-decoration: none; color: inherit"
-              >
                 <h2>{{ produto.nome }}</h2>
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
-
+                <!-- Button trigger modal -->
+                <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#ExemploModalCentralizado">
+                  Mais Informações
+                </button>
+                <!-- Botão Adicionar Carrinho -->
                 <button type="button" class="btn btn-light" style="width: 160px"
-                  (click)="adicionarCarrinho(produto.id)">
-                  Adicionar ao Carrinho
-                </button>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
-                  data-target="#exampleModalCenter">
-                  Mais Informações
-                </button>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
-                  data-target="#exampleModalCenter">
-                  Mais Informações
-                </button>
-
-              </a>
-              <button
-                type="button"
-                class="btn btn-light"
-                style="width: 160px"
-                (click)="adicionarCarrinho(produto)"
-              >
+                (click)="adicionarCarrinho(produto)">
                 Adicionar ao Carrinho
               </button>
             </div>
@@ -223,8 +191,7 @@
       <ng-template
         carouselSlide
         *ngFor="let produto of listaProdutos.slice(20, 30)"
-      >
-      <!-- <div *ngIf="listaProdutos.length > 0;"> -->
+      >   
         <div class="p-1 flip-card">
           <div class="card mb-2 mr-3 flip-card-inner">
             <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
@@ -240,40 +207,22 @@
               </div>
               <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
-            <div class="card flip-card-back align align-items-center">
-              <a
-                [routerLink]="['/perfil-produtos', produto.id]"
-                style="text-decoration: none; color: inherit"
-              >
+            <div class="card flip-card-back align align-items-center">  
                 <h2>{{ produto.nome }}</h2>
                 <p style="border: none; height: 160px">
                   {{ produto.descricao }}
                 </p>
-
-                <button type="button" class="btn btn-light" style="width: 160px"
-                  (click)="adicionarCarrinho(produto.id)">
-                  Adicionar ao Carrinho
-                </button>
+               
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
-                  data-target="#exampleModalCenter">
+                <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#ExemploModalCentralizado">
                   Mais Informações
                 </button>
-
-              </a>
-              <button
-                type="button"
-                class="btn btn-light"
-                style="width: 160px"
-                (click)="adicionarCarrinho(produto)"
-              >
-                Adicionar ao Carrinho
-              </button>
-              <!-- <button (click)="mostrarProduto(produto)" >Botao Produto</button> -->
-
-              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal"data-target="#ExemploModalCentralizado">
-                {{produto.nome}}
-              </button>
+                <!-- Botão Adicionar Carrinho -->
+              <button type="button" class="btn btn-light" style="width: 160px"
+              (click)="adicionarCarrinho(produto)">
+              Adicionar ao Carrinho
+            </button>
             </div>
           </div>
         </div>

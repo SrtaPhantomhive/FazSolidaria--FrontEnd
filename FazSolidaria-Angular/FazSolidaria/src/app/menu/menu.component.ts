@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { CarrinhoServeService } from '../service/carrinho-serve.service';
 import Swal from 'sweetalert2'
+import { AuthService } from '../service/auth.service';
 
 
 @Component({
@@ -10,16 +11,32 @@ import Swal from 'sweetalert2'
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, AfterContentChecked {
+  @Input() isHeader: boolean;
+  idUser = environment.id;
+  nome = environment.nome
+  tipo = environment.tipo
   precoTotal: number = 0.0;
   quantidadeTotal: number = 0;
+  nomeProduto: string;
 
-  constructor(private carrinhoService: CarrinhoServeService) {}
+
+  constructor(private carrinhoService: CarrinhoServeService, public authService: AuthService,   private router: Router,
+   ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
 
     this.atualizacaoCarrinho();
+  }
+
+
+  ngAfterContentChecked() {
+    // this.tipoUser = localStorage.getItem('tipo')
+    // this.nomeUser = localStorage.getItem('nome')
+    this.nome = environment.nome
+    this.tipo = environment.tipo
+    this.idUser = environment.id
   }
   // Evento para scrooll lenta
   toInicio() {
@@ -53,5 +70,13 @@ export class MenuComponent implements OnInit {
       this.quantidadeTotal = data;
     });
   }
+  
+  sair() {
+    this.router.navigate(['/catalogo']);
+    environment.token = '';
+    environment.nome = '';
+    environment.id = 0;
+  }
 
+  
 }
