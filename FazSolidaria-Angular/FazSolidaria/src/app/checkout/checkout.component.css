@@ -1,0 +1,61 @@
+#telaEndereco {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px 0px 25px 0px;
+  box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+  margin-bottom: 20px;
+
+}
+
+.fonteTituloEndereco {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+.fonteTituloTxt {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.fonteBasica {
+  font-family: 'Nunito', cursive;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.quantidade-carrinho {
+  min-width: 180px;
+}
+
+.img-item-carrinho {
+  max-width: 80px;
+
+}
+
+.img-item-comprados {
+  max-width: 90px;
+}
+
+.header-carrinho {
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .img-item-carrinho {
+    max-width: 80px;
+  }
+}
+
+.header-carrinho {
+  height: 60px;
+}
+
+.bg-principal {
+  background-color: #2D964C;
+}
+
+.color-branco {
+    color: #ffffff;
+}
