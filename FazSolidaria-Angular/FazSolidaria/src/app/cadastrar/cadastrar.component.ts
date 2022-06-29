@@ -37,5 +37,4 @@ export class CadastrarComponent implements OnInit {
 
 }
 
-
 //subscribe -> transforma em objeto json para o servidor entender
