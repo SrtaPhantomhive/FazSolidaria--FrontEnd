@@ -163,7 +163,7 @@ export class TelaInicialComponent implements OnInit {
   adicionarCarrinho(produto: Produto) {
     const itensCarrinho = new ItensCarrinho(produto);
     this.carrinhoService.adicionarAoCarrinho(produto);
-    alert('Adicionado ao carrinho');
+    
   }
 
   buscarIdProduto(id: number) {

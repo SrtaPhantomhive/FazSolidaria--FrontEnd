@@ -94,8 +94,13 @@
 <h3 class="text-center fonteTituloTxt d-grid gap-3" id="frutas">Frutas</h3>
 
 <!-- Carrossel -->
+<<<<<<< HEAD
 <section class="listas">
   <div class="container">
+=======
+<section class="listas" >
+ <div class="container">
+>>>>>>> 2cd4275e1497662faa7505be5bc703280ac6d330
     <owl-carousel-o [options]="listaFrutas">
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0, 10)">
         <div class="p-1 flip-card">
@@ -109,6 +114,7 @@
               </div><strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
+<<<<<<< HEAD
               <h2>{{ produto.nome }}</h2>
               <p style="border: none; height: 160px">{{ produto.descricao }}</p>
               <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
@@ -117,6 +123,22 @@
               <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
                 data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
                 informações</button>
+=======
+                <h2>{{ produto.nome }}</h2>
+                <p style="border: none; height: 160px">
+                  {{ produto.descricao }}
+                </p>
+                <!-- Button trigger modal -->
+                <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
+                  data-target="#ExemploModalCentralizado">
+                  Mais Informações
+                </button>
+                <!-- Bota adicionar carrinho -->
+                <button type="button" class="btn btn-light" style="width: 160px"
+                  (click)="adicionarCarrinho(produto)">
+                  Adicionar ao Carrinho
+                </button>
+>>>>>>> 2cd4275e1497662faa7505be5bc703280ac6d330
             </div>
           </div>
         </div>

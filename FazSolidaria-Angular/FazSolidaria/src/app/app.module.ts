@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http'
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 // carosel
@@ -33,6 +33,7 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { BuscaProdutoComponent } from './busca-produto/busca-produto.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CadastroProdutoComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,
-    CheckoutComponent,   
+    CheckoutComponent,
+    BuscaProdutoComponent,   
   ],
   imports: [
     AppRoutingModule,
@@ -72,7 +74,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ReactiveFormsModule  
 
   ],
-  providers: [{
+  providers: [
+    
+    {
     // faz com que o angular nao ser perca nas rota, durante esse vai e vem, evita o erro 404
     provide: LocationStrategy,
     useClass: HashLocationStrategy,
