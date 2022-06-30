@@ -26,8 +26,9 @@ export class TelaInicialComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
 
-    this.mostrarProdutosCadastrados();
-  
+    // toda vez que a atualiza a pagina ele retorna para a pag de login
+      this.mostrarProdutosCadastrados();
+    // this.mostraProdEspe()
   }
 
   listaFrutas: OwlOptions = {
@@ -122,36 +123,6 @@ export class TelaInicialComponent implements OnInit {
       });
   }
 
-  // itensCarrinho: any = [];
-  // adicionarCarrinho(produto: any) {
-  //   console.log(produto);
-  //   let dadosCarrinhoNulo = localStorage.getItem('ProdCarrinho');
-  //   if (dadosCarrinhoNulo == null) {
-  //     let pegarDadosArmazena: any = [];
-  //     pegarDadosArmazena.push(produto);
-  //     localStorage.setItem('ProdCarrinho', JSON.stringify(pegarDadosArmazena));
-  //   } else {
-  //     var id = produto.id;
-  //     let index: number = -1;
-  //     this.itensCarrinho = JSON.parse(localStorage.getItem('ProdCarrinho')!);
-  //     for (let i = 0; i < this.itensCarrinho.length; i++) {
-  //       if (parseInt(id) === parseInt(this.itensCarrinho[i].id)) {
-  //         this.itensCarrinho[i].estoque = produto.estoque;
-  //         index = i;
-  //         break;
-  //       }
-  //     }
-  //     if (index == -1) {
-  //       this.itensCarrinho.push(produto);
-  //       localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-  //       alert('Adicionado ao carrinho');
-  //     } else {
-  //       localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-  //       alert('Adicionado ao carrinho');
-  //     }
-  //   }
-
-  // }
   adicionarCarrinho(produto: Produto) {
     this.carrinhoService.adicionarAoCarrinho(produto);
     

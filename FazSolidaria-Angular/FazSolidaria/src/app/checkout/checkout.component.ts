@@ -4,6 +4,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Endereco } from '../model/Endereco';
 
 import { ItemPedido } from '../model/ItemPedido';
@@ -129,9 +130,20 @@ export class CheckoutComponent implements OnInit {
     // call REST API via checkoutService
     this.checkoutService.placeOrder(purchase).subscribe(
       (data) => {
-        alert(
-          `your order has been recieved.\n order tracking number: ${data.orderTrackingNumber}`
-        );
+        // alert(
+        //   `your order has been recieved.\n order tracking number: ${data.orderTrackingNumber}`
+        // );
+
+        Swal.fire(
+          {
+            title: 'Pedido Finalizado',
+            text: `Número do Pedido: ${data.orderTrackingNumber}`,
+            icon: 'success',
+            showConfirmButton: true,
+            confirmButtonText: 'Ok',
+            confirmButtonColor: '#75DC36',
+            showCancelButton: false,
+          });
 
         // reseta todas as informações do carrinho
         console.log(purchase)
@@ -156,5 +168,25 @@ export class CheckoutComponent implements OnInit {
 
     // volta para a tela de catalogo
     this.router.navigateByUrl('/catalogo');
+  }
+
+  calculaSubTotal = (preco: any, qtd: any) => {
+    if (preco && qtd) {
+      return preco * qtd;
+    }
+    return 0.0;
+  };
+
+  enderecoCadastrado(){
+    Swal.fire(
+      {
+        title: 'Endereço Cadastrado!',
+        text: 'Endereço salvo com sucesso!',
+        icon: 'success',
+        showConfirmButton: true,
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#75DC36',
+        showCancelButton: false,
+      });
   }
 }
