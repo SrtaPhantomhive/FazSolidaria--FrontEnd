@@ -19,6 +19,8 @@ export class CategoriaComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    //pagina inicia x=0 e y=0
+    window.scroll(0,0)
 
     // toda vez que a atualiza a pagina ele retorna para a pag de login
     if(environment.token == ''){

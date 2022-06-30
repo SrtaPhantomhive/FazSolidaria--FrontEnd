@@ -41,6 +41,7 @@ export class ProdutoEditComponent implements OnInit {
   buscarPeloIdProduto(id: number) {
     this.produtoService.buscarPeloIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp;
+      console.log(this.produto)
     });
   }
 

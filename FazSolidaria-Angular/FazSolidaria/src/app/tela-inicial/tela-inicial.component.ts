@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { CategoriaService } from '../service/categoria.service';
-import Swal from 'sweetalert2'
+import { CarrinhoServeService } from '../service/carrinho-serve.service';
+
 
 
 @Component({
@@ -15,34 +13,21 @@ import Swal from 'sweetalert2'
 })
 export class TelaInicialComponent implements OnInit {
   listaProdutos: Produto[];
-  carrinho = environment.carrinho;
+  
+  idProduto: number;
   produtoEsp: Produto = new Produto();
-  apProd: Produto;
 
   constructor(
-    private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
-  ) { }
+    private carrinhoService: CarrinhoServeService
+  ) {}
 
   ngOnInit() {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
 
     // toda vez que a atualiza a pagina ele retorna para a pag de login
-    if (environment.token == '') {
-      Swal.fire(
-        {
-          title: 'Ops!',
-          text: 'Sua sessão expirou! Por favor, faça o login novamente.',
-          icon: 'warning',
-          showConfirmButton: true,
-          confirmButtonText: 'Ok',
-          confirmButtonColor: '#75DC36',
-          showCancelButton: false,
-        });
-      this.router.navigate(['/login']);
-    }
-    this.mostrarProdutosCadastrados();
+      this.mostrarProdutosCadastrados();
+    // this.mostraProdEspe()
   }
 
   listaFrutas: OwlOptions = {
@@ -141,53 +126,15 @@ export class TelaInicialComponent implements OnInit {
         this.listaProdutos = resp;
       });
   }
-
-  itensCarrinho: any = [];
-  adicionarCarrinho(produto: any) {
-    console.log(produto);
-    let dadosCarrinhoNulo = localStorage.getItem('ProdCarrinho');
-    if (dadosCarrinhoNulo == null) {
-      let pegarDadosArmazena: any = [];
-      pegarDadosArmazena.push(produto);
-      localStorage.setItem('ProdCarrinho', JSON.stringify(pegarDadosArmazena));
-    } else {
-      var id = produto.id;
-      let index: number = -1;
-      this.itensCarrinho = JSON.parse(localStorage.getItem('ProdCarrinho')!);
-      for (let i = 0; i < this.itensCarrinho.length; i++) {
-        if (parseInt(id) === parseInt(this.itensCarrinho[i].id)) {
-          this.itensCarrinho[i].estoque = produto.estoque;
-          index = i;
-          break;
-        }
-      }
-      if (index == -1) {
-        this.itensCarrinho.push(produto);
-        localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-        Swal.fire(
-          {
-            title: 'Aviso:',
-            text: 'Produto adicionado ao carrinho!',
-            icon: 'success',
-            showConfirmButton: true,
-            confirmButtonText: 'Ok',
-            confirmButtonColor: '#75DC36',
-            showCancelButton: false,
-          });
-      } else {
-        localStorage.setItem('ProdCarrinho', JSON.stringify(this.itensCarrinho));
-        Swal.fire(
-          {
-            title: 'Aviso:',
-            text: 'Produto adicionado ao carrinho!',
-            icon: 'success',
-            showConfirmButton: true,
-            confirmButtonText: 'Ok',
-            confirmButtonColor: '#75DC36',
-            showCancelButton: false,
-          });
-      }
-    }
-
+  adicionarCarrinho(produto: Produto) {
+    this.carrinhoService.adicionarAoCarrinho(produto);
+    
   }
+  buscarIdProduto(id: number) {
+    this.produtoService.buscarPeloIdProduto(id).subscribe((resp: Produto) => {
+      this.produtoEsp = resp;
+    });
+  }
+
 }
+
