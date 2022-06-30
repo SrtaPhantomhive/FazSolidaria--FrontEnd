@@ -1,4 +1,7 @@
             <div class="container-fluid " style="margin-top: 150px">
+              <div class="form-group text-center fonteTituloEndereco m-0 p-0">
+                <label>Finalizar compra</label>
+              </div>
               <div class="row justify-content-center">
                 <div class="col-4 col-sm-4 col-md-4">
                   <form class="needs-validation" novalidate id="telaEndereco">
@@ -43,7 +46,7 @@
                       <!--UF-->
                       <div class="col-md-4 mb-3">
                         <label for="data">UF*</label>
-                        <select [(ngModel)]="endereco.uf" class="form-control">
+                        <select [(ngModel)]="endereco.uf" name="uf" class="form-control">
                           <option value="Selecione">Selecione</option>
                           <option value="AC">Acre</option>
                           <option value="AL">Alagoas</option>
@@ -75,73 +78,80 @@
                         </select>
                       </div>
                     </div>
-
-                    <!-- Complemento -->
-                    <div class="form-row ">
-                      <div class="col-md-12">
-                        <label for="bairro">Complemento*</label>
-                        <input type="Complemento" class="form-control" id="Complemento" name="Complemento"
-                          placeholder="Complemento" minlength="2" maxlength="100" required />
-                      </div>
-                    </div>
-                    <button type="button" class="mt-4 col-md-12 btn btn-success text-center" (click)="onSubmit()">Salvar Endereço</button>
-
+                    <button type="button" class="mt-4 col-md-12 btn btn-success text-center"
+                      (click)="enderecoCadastrado()">Salvar Endereço</button>
                     <div class="form-group text-center fonteTituloEndereco mt-4 m-0 p-0">
                       <label>Dados Pessoais</label>
                     </div>
-                    <p>Nome: {{usuario.nome}}</p>
-                    <p>Telefone: {{usuario.telefone}}</p>
-                    <p>E-mail: {{usuario.usuario}}</p>
-                    <button type="button" class="mt-4 col-md-12 btn btn-link text-center">Alterar dados</button>
+                    <label for="nome">Nome: </label>
+                    <input class="form-control" placeholder="{{usuario.nome}}" />
+                    <!-- Telefone -->
+                    <div class="form-row mt-3">
+                      <div class="col-md-4 mb-3">
+                        <label for="nome">Telefone: </label>
+                        <input class="form-control" placeholder="{{usuario.telefone}}" required
+                        oninput="mascara(this,'tel')"/>
+                      </div>
+                      <!-- E-mail -->
+                      <div class="col-md-8">
+                        <label for="nome">E-mail: </label>
+                        <input class="form-control" placeholder="{{usuario.usuario}}" />
+                      </div>
+                    </div>
+                    <button type="button" class="mt-4 col-md-12 btn btn-link text-center" [routerLink]="['/usuarios', usuario.id]">Alterar dados</button>
                   </form>
                   <!-- Fim formulario-->
                 </div>
-
                 <div class="col-4 col-sm-4 col-md-4" id="telaEndereco">
                   <div class="row justify-content-center">
-                    <div class="form-group text-center fonteTituloEndereco m-0 p-0">
+                    <div class="text-center fonteTituloEndereco m-0 p-0">
                       <label>Resumo do Pedido</label>
                     </div>
-                    <div class="bordas-rounded-right-bottom bg-branco container px-0 mx-auto bordas-rounded-left-top fonteBasica">
+                    <div
+                      class="bordas-rounded-right-bottom bg-branco container px-0 mx-auto bordas-rounded-left-top fonteBasica">
                       <div
-                          class="h5 header-carrinho text-uppercase d-none d-md-flex bg-principal color-branco align-items-center fonteTxt">
-                          <div class="col-2  p-2 text-center">Produto</div>
-                          <div class="col-2  p-2 text-center">Nome</div>
-                          <div class="col-2  p-2 text-center">Preço</div>
-                          <div class="col-2  p-2 text-center">Quantidade</div>
-                          <div class="col-2  p-2 text-center">Valor Total</div>
+                        class="h5 header-carrinho text-uppercase d-none d-md-flex bg-principal color-branco align-items-center fonteTxt">
+                        <div class="col-2  p-2 text-center">Produto</div>
+                        <div class="col-2  p-2 text-center">Nome</div>
+                        <div class="col-2  p-2 text-center">Preço</div>
+                        <div class="col-2  p-2 text-center">Quantidade</div>
+                        <div class="col-2  p-2 text-center">Valor Total</div>
                       </div>
-                    <div class="d-flex flex-column flex-md-row align-items-center border-bottom fonteBasica"
-                      *ngFor="let produto of cartItems;">
-                      <div
-                        class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center p-2 mt-0 text-center">
-                        <label class="d-md-none">Produto</label><img class="img-fluid img-item-carrinho"
-                          [src]="produto.imagem"></div>
-                      <div
-                        class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-                        <label class="d-md-none">Nome</label> {{ produto.nome }}
-                      </div>
-                      <div
-                        class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-                        <label class="d-md-none">Preço</label>R$ {{ produto.preco }}
-                      </div>
-                      <div
-                        class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-                        <label class="d-md-none justify-content-center">Qtd</label>
-                        <div class="d-flex quantidade-carrinho ">
-                          <input type="text" class="col-4  m-0 form-control text-center" style="width: 5px;"
-                            placeholder="0" aria-label="button addon" value="{{produto.qtd}}"
-                            aria-describedby="button-addon">
+                      <div class="d-flex flex-column flex-md-row align-items-center border-bottom fonteBasica"
+                        *ngFor="let produto of cartItems;">
+                        <div
+                          class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center p-2 mt-0 text-center">
+                          <label class="d-md-none">Produto</label><img class="img-fluid img-item-carrinho"
+                            [src]="produto.imagem"></div>
+                        <div
+                          class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+                          <label class="d-md-none">Nome</label> {{ produto.nome }}
+                        </div>
+                        <div
+                          class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+                          <label class="d-md-none">Preço</label>R$ {{ produto.preco }}
+                        </div>
+                        <div
+                          class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+                          <label class="d-md-none justify-content-center">Qtd</label>
+                          <div class="d-flex quantidade-carrinho ">
+                            <input type="text" class="col-4  m-0 form-control text-center" style="width: 5px;"
+                              placeholder="0" aria-label="button addon" value="{{produto.qtd}}"
+                              aria-describedby="button-addon">
+                          </div>
+                        </div>
+                        <div
+                          class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+                          <label class="d-md-none">Sub-total</label> {{ calculaSubTotal(produto.preco,produto.qtd) }}
                         </div>
                       </div>
-                      <div
-                        class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-                        <label class="d-md-none">Quantidade Total:</label>{{ totalPrice | currency: 'USD'}}
-                      </div>
                     </div>
-                    </div>
-                    <button type="button" class="mt-4 col-md-6 btn btn-success text-center" (click)="onSubmit()">Criar Pedido</button>
+                    <button type="button" class="mt-4 col-md-6 btn btn-success text-center" (click)="onSubmit()">Criar
+                      Pedido</button>
+                  </div>
+                  <div class="d-flex flex-row-reverse">
+                      <h3><strong>Total: {{ totalPrice | currency: 'BRL' }}</strong></h3>
+                  </div>
                   </div>
                 </div>
               </div>
-            </div>
