@@ -16,10 +16,10 @@
                         <label for="nome">Logradouro*</label>
                         <input
                         [(ngModel)]="endereco.logradouro"
+                          name="logradouro"
                           type="text"
                           class="form-control"
                           id="logradouro"
-                          name="logradouro"
                           placeholder="logradouro"
                           required
                         />
@@ -31,10 +31,10 @@
                           <label for="nome">Nº*</label>
                           <input
                           [(ngModel)]="endereco.numero"
+                            name="numero"
                             type="text"
                             class="form-control"
                             id="numero"
-                            name="numero"
                             placeholder="numero"
                             required
                           />
@@ -46,11 +46,11 @@
                       <div class="col-md-4 mb-3">
                         <label for="cpf">CEP*</label>
                         <input
-                        [(ngModel)]="endereco.cep"              
+                        [(ngModel)]="endereco.cep"      
+                        name="cep"        
                         type="cep"
                         class="form-control"
                         id="cep"
-                        name="cep"
                         placeholder="__-__"
                         minlength="8"
                         maxlength="8"
@@ -64,11 +64,11 @@
                         <label for="telefone">Cidade*</label>
                         <input
                         [(ngModel)]="endereco.localidade"
+                          name="localidade"
                           type="text"
                           class="form-control"
                           placeholder="Cidade"
                           id="Cidade"
-                          name="Cidade"
                           required
                           />
                         </div>
@@ -76,7 +76,7 @@
                       <!--UF-->
                       <div class="col-md-4 mb-3">
                         <label for="data">UF*</label>
-                              <select [(ngModel)]="endereco.uf" class="form-control">
+                              <select [(ngModel)]="endereco.uf" name="uf" class="form-control">
                               <option value="">Selecione</option>
                               <option value="AC">Acre</option>
                               <option value="AL">Alagoas</option>
@@ -125,18 +125,13 @@
                           required
                         />
                       </div>
-                    </div> -->
-        
-                    <!-- <button type="submit" class="btn bg-btn btn-lg btn-block text-light">
-                      Salvar Endereço</button> -->
+                    </div>
                   </form>
                 </div>
               </div>
             </div>
             <!-- Fim formulario-->
           </section>
-        <!-- <button (click)="cadastrarEndereco()"> Cadastrar Endereco
-          </button> -->
     </div>
 
 
@@ -156,10 +151,10 @@
     </div>
 
 
-    <p>Quantidade Total: {{ totalQuantity }}</p> 
-    <p>Valor Total: R$ {{ totalPrice | currency: 'USD' }}</p>
+    <p>Quantidade Total: {{ quantidadeTotal }}</p> 
+    <p>Valor Total: R$ {{ precoTotal }}</p>
 
 
 
-    <button (click)="onSubmit()">Criar Pedido</button>
+    <button (click)="emitirPedido()">Criar Pedido</button>
 </div>

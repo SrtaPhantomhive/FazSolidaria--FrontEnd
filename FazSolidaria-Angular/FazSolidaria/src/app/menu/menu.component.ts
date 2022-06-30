@@ -2,7 +2,6 @@ import { AfterContentChecked, Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { CarrinhoServeService } from '../service/carrinho-serve.service';
-import Swal from 'sweetalert2'
 import { AuthService } from '../service/auth.service';
 
 
@@ -77,6 +76,7 @@ export class MenuComponent implements OnInit, AfterContentChecked {
     environment.nome = '';
     environment.id = 0;
   }
+
 
   
 }

@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FormBuilder,
-  FormControl,
   FormGroup,
-  Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -15,10 +12,11 @@ import { Pedido } from '../model/Pedido';
 import { Purchase } from '../model/purchase';
 
 import { Usuario } from '../model/Usuario';
+import { UsuarioNovo } from '../model/UsuarioNovo';
 import { AuthService } from '../service/auth.service';
 import { CarrinhoServeService } from '../service/carrinho-serve.service';
 import { CkeckoutService } from '../service/ckeckout.service';
-import { EnderecoService } from '../service/endereco.service';
+
 
 @Component({
   selector: 'app-checkout',
@@ -30,20 +28,18 @@ export class CheckoutComponent implements OnInit {
   endereco: Endereco = new Endereco();
 
   idUsuario: number;
-  usuario: Usuario = new Usuario();
+  usuario: UsuarioNovo = new UsuarioNovo();
 
-  totalPrice: number = 0;
-  totalQuantity: number = 0;
+  precoTotal: number = 0;
+  quantidadeTotal: number = 0;
 
-  creditCardYears: number[] = [];
-  creditCardMonths: number[] = [];
 
   cartItems: ItensCarrinho[] = [];
 
   constructor(
-    private formBuilder: FormBuilder,
+
     private carrinhoService: CarrinhoServeService,
-    private enderecoService: EnderecoService,
+  
     private checkoutService: CkeckoutService,
 
     private router: Router,
@@ -51,19 +47,22 @@ export class CheckoutComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    //pagina inicia x=0 e y=0
+    window.scroll(0,0)
+
     if (environment.token == '') {
       alert('Sua seção expirou, faça o login novamente!');
       this.router.navigate(['/login']);
     }
     this.idUsuario = environment.id;
-    this.buscarIdUsuario(this.idUsuario);
+    this.buscarIdUsuario(environment.id);
     console.log(this.usuario);
 
     this.reviewCartTotals();
 
     this.listCartDetails();
 
-    console.log()
+    console.log(environment.id)
   }
 
   buscarIdUsuario(id: number) {
@@ -79,12 +78,12 @@ export class CheckoutComponent implements OnInit {
 
     // subscribe to the cart totalPrice
     this.carrinhoService.precoTotal.subscribe(
-      (data) => (this.totalPrice = data)
+      (data) => (this.precoTotal = data)
     );
 
     // subscribe to the cart totalQuantity
     this.carrinhoService.quantidadeTotal.subscribe(
-      (data) => (this.totalQuantity = data)
+      (data) => (this.quantidadeTotal = data)
     );
     // compute cart total price and quantity
     this.carrinhoService.calcularTotalCarrinho();
@@ -92,19 +91,19 @@ export class CheckoutComponent implements OnInit {
 
   reviewCartTotals() {
     this.carrinhoService.precoTotal.subscribe(
-      (data) => (this.totalPrice = data)
+      (data) => (this.precoTotal = data)
     );
 
     this.carrinhoService.quantidadeTotal.subscribe(
-      (data) => (this.totalQuantity = data)
+      (data) => (this.quantidadeTotal = data)
     );
   }
 
-  onSubmit() {
+  emitirPedido() {
     // criacao pedido - set up order
     let pedido = new Pedido();
-    pedido.precoTotal = this.totalPrice;
-    pedido.quantidadeTotal = this.totalQuantity;
+    pedido.precoTotal = this.precoTotal;
+    pedido.quantidadeTotal = this.quantidadeTotal;
 
     // pegar produtos carrinho - get cart items
     const carrinhoItens = this.carrinhoService.itensCarrinho;
@@ -134,7 +133,7 @@ export class CheckoutComponent implements OnInit {
           `your order has been recieved.\n order tracking number: ${data.orderTrackingNumber}`
         );
 
-        // reset checkout form
+        // reseta todas as informações do carrinho
         console.log(purchase)
         this.resetCart();
       },
@@ -146,13 +145,6 @@ export class CheckoutComponent implements OnInit {
    
   }
 
-  // cadastrarEndereco(){
-  //   this.endereco.usuario = this.usuario;
-  //   this.enderecoService.cadastrarEndereco(this.endereco).subscribe((resp: Endereco)=>{
-  //     this.endereco = resp;
-  //   })
-  // }
-
   resetCart() {
     // apaga os dados do carrinho -reset cart data
     this.carrinhoService.itensCarrinho = [];
@@ -162,7 +154,7 @@ export class CheckoutComponent implements OnInit {
     // Reseta formulario - reset the form
     // this.checkoutFormGroup.reset();
 
-    // navigate back to the products page
+    // volta para a tela de catalogo
     this.router.navigateByUrl('/catalogo');
   }
 }

@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
 import { Produto } from '../model/Produto';
 import { ProdutoService } from '../service/produto.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { CategoriaService } from '../service/categoria.service';
-import { ItensCarrinho } from '../model/ItensCarrinho';
 import { CarrinhoServeService } from '../service/carrinho-serve.service';
-import Swal from 'sweetalert2'
+
 
 
 
@@ -18,14 +14,12 @@ import Swal from 'sweetalert2'
 })
 export class TelaInicialComponent implements OnInit {
   listaProdutos: Produto[];
-  carrinho = environment.carrinho;
+  
   idProduto: number;
   produtoEsp: Produto = new Produto();
 
   constructor(
-    private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService,
     private carrinhoService: CarrinhoServeService
   ) {}
 
@@ -33,7 +27,6 @@ export class TelaInicialComponent implements OnInit {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
 
     this.mostrarProdutosCadastrados();
-    // this.mostraProdEspe()
   
   }
 
@@ -160,7 +153,6 @@ export class TelaInicialComponent implements OnInit {
 
   // }
   adicionarCarrinho(produto: Produto) {
-    const itensCarrinho = new ItensCarrinho(produto);
     this.carrinhoService.adicionarAoCarrinho(produto);
     
   }

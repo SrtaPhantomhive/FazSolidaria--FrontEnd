@@ -21,7 +21,7 @@ export class BuscaProdutoComponent implements OnInit {
   }
 
   ngOnInit(){
-   
+    window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
       let nome = this.route.snapshot.params['nome']
       this.buscarPeloNomeProduto(nome);
     
@@ -51,7 +51,6 @@ export class BuscaProdutoComponent implements OnInit {
 
 
   adicionarCarrinho(produto: Produto) {
-    const itensCarrinho = new ItensCarrinho(produto);
     this.carrinhoService.adicionarAoCarrinho(produto);
     alert('Adicionado ao carrinho');
   }

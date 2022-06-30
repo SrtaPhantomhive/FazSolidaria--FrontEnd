@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rodape',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rodape.component.css']
 })
 export class RodapeComponent implements OnInit {
+  @Input() isHeader: boolean; // isheader
 
   constructor() { }
 

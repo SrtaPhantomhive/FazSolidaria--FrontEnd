@@ -4,7 +4,6 @@ import { LogarComponent } from './logar/logar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { NgModule } from '@angular/core';
 import { FormularioVisitaComponent } from './formulario-visita/formulario-visita.component';
-import { PerfilProdutoComponent } from './perfil-produto/perfil-produto.component';
 import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 
 import { CarrinhoComponent } from './carrinho/carrinho.component';
@@ -12,7 +11,6 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
-import { PagamentoComponent } from './pagamento/pagamento.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
@@ -25,7 +23,6 @@ const routes: Routes = [
   { path: 'home', component: TelaApresentacaoComponent, data: {isHeader: true} },
   { path: 'login', component: LogarComponent, data: {isHeader: true}  },
   { path: 'cadastrar', component: CadastrarComponent , data: {isHeader: true} },
-  { path: 'perfil-produtos/:id', component: PerfilProdutoComponent, data: {isHeader: true}},
   { path: 'carrinho', component: CarrinhoComponent, data: {isHeader: true}},
   { path: 'catalogo', component: TelaInicialComponent, data: {isHeader: true}},
   { path: 'categorias', component: CategoriaComponent, data: {isHeader: true}},
@@ -41,7 +38,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,)],
+  imports: [RouterModule.forRoot(routes,{ onSameUrlNavigation: 'reload' })],
   exports: [RouterModule],
 })
 
