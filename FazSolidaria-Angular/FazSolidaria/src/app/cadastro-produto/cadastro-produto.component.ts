@@ -5,6 +5,7 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastro-produto',
@@ -24,7 +25,16 @@ export class CadastroProdutoComponent implements OnInit {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
 
     if (environment.token == '') {
-      alert('Sua seção expirou, faça o login novamente!');
+      Swal.fire(
+        {
+          title: 'Pedido Finalizado',
+          text: `Seu pedido foi realizado com sucesso! Enviaremos um email quando estiver tudo certo para a entrega!`,
+          icon: 'success',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#75DC36',
+          showCancelButton: false,
+        });
       this.router.navigate(['/login']);
     }
 

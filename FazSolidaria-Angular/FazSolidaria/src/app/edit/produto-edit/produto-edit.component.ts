@@ -5,6 +5,7 @@ import { Produto } from 'src/app/model/Produto';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-produto-edit',
@@ -28,7 +29,16 @@ export class ProdutoEditComponent implements OnInit {
     window.scroll(0, 0); // quando minha pagina iniciar coloque no ponto  x e y = 0
 
     if (environment.token == '') {
-      alert('Sua seção expirou, faça o login novamente!');
+      Swal.fire(
+        {
+          title: 'Sua sessão expirou!',
+          text: `Por favor, faça seu login novamente!`,
+          icon: 'info',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#75DC36',
+          showCancelButton: false,
+        });
       this.router.navigate(['/login']);
     }
 

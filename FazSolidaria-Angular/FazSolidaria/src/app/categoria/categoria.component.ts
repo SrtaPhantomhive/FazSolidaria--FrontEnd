@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { CategoriaService } from '../service/categoria.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-categoria',
@@ -24,7 +25,16 @@ export class CategoriaComponent implements OnInit {
 
     // toda vez que a atualiza a pagina ele retorna para a pag de login
     if(environment.token == ''){
-      alert('Sua seção expirou, faça o login novamente!')
+      Swal.fire(
+        {
+          title: 'Sua sessão expirou!',
+          text: `Por favor, faça seu login novamente!`,
+          icon: 'info',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#75DC36',
+          showCancelButton: false,
+        });
       this.router.navigate(['/login'])
     }
 

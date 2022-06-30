@@ -10,9 +10,10 @@
             <img src="../../assets/img/PAG1/CARROSSEL/tela1.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
-                <h5 class="fonteTituloTxt">First slide label</h5>
+                <h5 class="fonteTituloTxt">Colheira Sazonal: Bem-Vindos ao Inverno!</h5>
                 <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  Nosso plantio respeita a sazonalidade dos alimentos. Sendo assim, fazendo a venda de cada alimento em
+                  sua época e estação! Iniciamos no mês de julho as vendas de Inverno!
                 </p>
               </div>
             </div>
@@ -21,33 +22,9 @@
             <img src="../../assets/img/PAG1/CARROSSEL/doações.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
-                <h5 class="fonteTituloTxt">First slide label</h5>
+                <h5 class="fonteTituloTxt">Mas e o frete?</h5>
                 <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" style="opacity: 90%" data-interval="5000">
-            <img src="../../assets/img/PAG1/CARROSSEL/veganoOrganico.png" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <div class="fundoCaixa corTextoCarrossel">
-                <h5 class="fonteTituloTxt">Zero Crueldade Animal</h5>
-                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
-                  Todos os nossos produtos são veganos! Além de adotarmos um
-                  sistema de produção em que não utilizamos NADA de origem
-                  animal.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" style="opacity: 90%" data-interval="5000">
-            <img src="../../assets/img/PAG1/CARROSSEL/doação.png" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <div class="fundoCaixa corTextoCarrossel">
-                <h5 class="fonteTituloTxt">First slide label</h5>
-                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  Para potencializarmos nosso trabalho social, decidimos oferecer a nossos clientes FRETE GRÁTIS! Mas corre, que é por tempo limitado.
                 </p>
               </div>
             </div>
@@ -56,9 +33,9 @@
             <img src="../../assets/img/PAG1/CARROSSEL/fazenda.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
-                <h5 class="fonteTituloTxt">First slide label</h5>
+                <h5 class="fonteTituloTxt">Doações</h5>
                 <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  A cada compra efetuada em nossa loja, uma parte do valor pago é convertido para cestas básicas que serão entregues a famílias carentes da região.
                 </p>
               </div>
             </div>
@@ -84,14 +61,12 @@
 <div class="col-xl-12 text-center mt-5">
   <h2 class="fonteTituloTxt" style="color: black">Confira os Produtos</h2>
   <p class="text-muted fonteTxt">
-    Nossa produção é certificada como orgânica por produzir alimentos cultivados
-    com adubos naturais e defensivos biológicos, portanto, livres de
-    agrotóxicos, adubos químicos ou hormônios, com respeito ao solo, os lençóis
-    freáticos e os ri.
+    Nossos produtos são frescos! Fazemos a colheita poucos momentos antes do envio, garantindo assim frutos, legumes e
+    verduras saborosas e nutritivas diretamente da horta para sua casa.
   </p>
 </div>
 
-<h3 class="text-center fonteTituloTxt d-grid gap-3" id="frutas">Frutas</h3>
+<h3 class="text-center fonteTituloTxt d-grid gap-3" style="scroll-margin-top: 180px;" id="frutas">Frutas</h3>
 
 <!-- Carrossel -->
 <section class="listas">
@@ -125,7 +100,7 @@
   </div>
 </section>
 
-<section class="listas mt-5" id="verduras">
+<section class="listas mt-5" style="scroll-margin-top: 180px;" id="verduras">
   <div class="container">
     <h3 class="text-center fonteTituloTxt">Verduras</h3>
     <owl-carousel-o [options]="listaVerduras">
@@ -157,7 +132,7 @@
   </div>
 </section>
 
-<section class="listas mt-5" id="legumes">
+<section class="listas mt-5" style="scroll-margin-top: 180px;" id="legumes">
   <div class="container">
     <h3 class="text-center fonteTituloTxt">Legumes</h3>
     <owl-carousel-o [options]="listaLegumes">
@@ -193,22 +168,29 @@
 <!-- Modal -->
 <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
   aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">{{produtoEsp.nome}}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title text-center fonteTituloTxt" style="margin:auto" id="TituloModalCentralizado">
+          {{produtoEsp.nome}}</h5>
       </div>
       <div class="modal-body">
-        ...
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+              <img style="height: 250px; width: 250px;" [src]="produtoEsp.imagem">
+            </div>
+            <div class="col-md-5 mt-2 fonteTxt1 mb-1 justify-content-center">
+              <p>
+                {{produtoEsp.descricao}}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+      <div class="modal-footer align-items-center justify-content-center">
+        <button type="button" class="btn btn-cadastro" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
 </div>
-

@@ -52,7 +52,6 @@ export class BuscaProdutoComponent implements OnInit {
 
   adicionarCarrinho(produto: Produto) {
     this.carrinhoService.adicionarAoCarrinho(produto);
-    alert('Adicionado ao carrinho');
   }
 
   

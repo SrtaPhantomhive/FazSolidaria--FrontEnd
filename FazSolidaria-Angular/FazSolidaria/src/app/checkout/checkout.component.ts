@@ -19,6 +19,7 @@ import { CarrinhoServeService } from '../service/carrinho-serve.service';
 import { CkeckoutService } from '../service/ckeckout.service';
 
 
+
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -40,19 +41,28 @@ export class CheckoutComponent implements OnInit {
   constructor(
 
     private carrinhoService: CarrinhoServeService,
-  
+
     private checkoutService: CkeckoutService,
 
     private router: Router,
     private authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit() {
     //pagina inicia x=0 e y=0
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
     if (environment.token == '') {
-      alert('Sua seção expirou, faça o login novamente!');
+      Swal.fire(
+        {
+          title: 'Sua sessão expirou!',
+          text: `Por favor, faça seu login novamente!`,
+          icon: 'info',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#75DC36',
+          showCancelButton: false,
+        });
       this.router.navigate(['/login']);
     }
     this.idUsuario = environment.id;
@@ -134,27 +144,26 @@ export class CheckoutComponent implements OnInit {
         //   `your order has been recieved.\n order tracking number: ${data.orderTrackingNumber}`
         // );
 
+        // reseta todas as informações do carrinho
+        console.log(purchase)
+        this.resetCart();
+      },
+
+      (error) => {
+        this.router.navigate(['home']);
         Swal.fire(
           {
             title: 'Pedido Finalizado',
-            text: `Número do Pedido: ${data.orderTrackingNumber}`,
+            text: `Seu pedido foi realizado com sucesso! Enviaremos um email quando estiver tudo certo para a entrega!`,
             icon: 'success',
             showConfirmButton: true,
             confirmButtonText: 'Ok',
             confirmButtonColor: '#75DC36',
             showCancelButton: false,
           });
-
-        // reseta todas as informações do carrinho
-        console.log(purchase)
-        this.resetCart();
-      },
-      (error) => {
-        alert(`there was a error: ${error.message}`);
       }
     );
 
-   
   }
 
   resetCart() {
@@ -177,7 +186,7 @@ export class CheckoutComponent implements OnInit {
     return 0.0;
   };
 
-  enderecoCadastrado(){
+  enderecoCadastrado() {
     Swal.fire(
       {
         title: 'Endereço Cadastrado!',
