@@ -56,7 +56,7 @@ export class CheckoutComponent implements OnInit {
       Swal.fire(
         {
           title: 'Sua sessão expirou!',
-          text: `Por favor, faça seu login novamente!`,
+          text: 'Por favor, faça seu login novamente!',
           icon: 'info',
           showConfirmButton: true,
           confirmButtonText: 'Ok',
