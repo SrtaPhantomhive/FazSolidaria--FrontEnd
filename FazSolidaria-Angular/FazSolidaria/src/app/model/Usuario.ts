@@ -1,4 +1,5 @@
 import { Endereco } from "./Endereco";
+import { Pedido } from "./Pedido";
 
 export class Usuario{
     public id:number;
@@ -11,4 +12,5 @@ export class Usuario{
     public foto:string;
     public tipo:string;
     public endereco:Endereco[];
+    public pedidos: Pedido[];
 }

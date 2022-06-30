@@ -20,7 +20,10 @@ export class CategoriaEditComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-     // toda vez que a atualiza a pagina ele retorna para a pag de login
+    //pagina inicia x=0 e y=0
+    window.scroll(0,0)
+    
+    //  toda vez que a atualiza a pagina ele retorna para a pag de login
      if(environment.token == ''){
       alert('Sua seção expirou, faça o login novamente!')
       this.router.navigate(['/login'])

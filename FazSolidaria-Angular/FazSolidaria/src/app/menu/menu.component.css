@@ -108,7 +108,7 @@ body {
 .fonteBotaoLoginCadastro {
     font-family: 'Nunito', cursive;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .fonteTxt1 {
@@ -474,4 +474,129 @@ footer ul li.ellipsis {
     /* font-family: 'Radio Canada', sans-serif;
     font-family: Amatic SC; */
 
+}
+
+/* Personalizacao do valor do carrinho */
+.cart_value{
+    position: absolute;
+    top: 17px;
+    right: 168px;
+    background: #FFF;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 2px 10px;
+    color: black;
+    font-weight: 800;
+    font-size: 15px;
+}
+/* span.cart_value{
+    top: 0;
+}
+
+path{
+    top: 0;
+} */
+
+
+/* posicionamento do dropdown */
+/* .dropdown-menu{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+} */
+
+/* 
+dropdown-menu[_ngcontent-dbh-c72] {
+    position: absolute;
+    top: 100%;
+    left: -131px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1pxsolidrgba(0,0,0,.15);
+    border-radius: .25rem;
+} */
+
+
+/* Dropdown do menu alinhamento */
+.dropdown-menu.show {
+    display: block;
+    left: -74px;
+    line-height: 1.8;
+    top: 68px;
+    border-radius: 25px 0px 25px 25px;
+    padding: 10px;
+}
+
+/* Configuração do icone do menu usuario */
+.img1{
+    display: flex;
+    text-decoration: none;
+    width: auto;
+    cursor: default;
+    position: relative;
+    height: 80px;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+    z-index: 0;
+
+}
+
+/* .sp1{
+    margin-left: -5px;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sp2{
+      display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 36px;
+    line-height: 0;
+} */
+
+
+/* .sp2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 36px;
+    line-height: 0;
+}
+
+
+.sp1 {
+    margin-left: -3px;
+    line-height: 18px;
+    font-size: 15px;
+    font-weight: 700;
+} */
+
+.sp2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -2px;
+    line-height: 1;
+}
+
+
+.sp1 {
+    margin-left: 2px;
+    line-height: 22px;
+    font-size: 15px;
+    font-weight: 400;
 }

@@ -91,13 +91,11 @@
   </p>
 </div>
 
-
 <h3 class="text-center fonteTituloTxt d-grid gap-3" id="frutas">Frutas</h3>
 
 <!-- Carrossel -->
 <section class="listas">
   <div class="container">
-
     <owl-carousel-o [options]="listaFrutas">
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0, 10)">
         <div class="p-1 flip-card">
@@ -108,22 +106,17 @@
               <h4 class="card-title font-produtos mt-2">{{ produto.nome }}</h4>
               <div class="produtos-stars">
                 <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
-              </div>
-              <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+              </div><strong class="produtos-preco">R$ {{ produto.preco }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
-              <p style="border: none; height: 160px">
-                {{ produto.descricao }}
-              </p>
-              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto.id)">
+              <p style="border: none; height: 160px">{{ produto.descricao }}</p>
+              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
                 Adicionar ao Carrinho
               </button>
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
-                data-target="#exampleModalCenter" (click)="mostrarProduto(produto)">
-                Mais Informações
-              </button>
+              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
+                informações</button>
             </div>
           </div>
         </div>
@@ -131,8 +124,6 @@
     </owl-carousel-o>
   </div>
 </section>
-
-
 
 <section class="listas mt-5" id="verduras">
   <div class="container">
@@ -152,18 +143,12 @@
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
-              <p style="border: none; height: 160px">
-                {{ produto.descricao }}
-              </p>
-
-              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto.id)">
-                Adicionar ao Carrinho
-              </button>
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
-                data-target="#exampleModalCenter" (click)="mostrarProduto(produto)">
-                Mais Informações
-              </button>
+              <p style="border: none; height: 160px"> {{ produto.descricao }} </p>
+              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
+                Adicionar ao Carrinho</button>
+              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
+                informações</button>
             </div>
           </div>
         </div>
@@ -171,75 +156,59 @@
     </owl-carousel-o>
   </div>
 </section>
-
-
 
 <section class="listas mt-5" id="legumes">
   <div class="container">
     <h3 class="text-center fonteTituloTxt">Legumes</h3>
     <owl-carousel-o [options]="listaLegumes">
       <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(20, 30)">
-        <div *ngIf="listaProdutos.length > 0;">
-          <div class="p-1 flip-card">
-            <div class="card mb-2 mr-3 flip-card-inner">
-              <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
-                style="border-radius: 20px" />
-              <div class="card-body">
-                <h4 class="card-title font-produtos mt-2">{{ produto.nome }}</h4>
-                <div class="produtos-stars">
-                  <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
-                </div>
-                <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
-              </div>
-              <div class="card flip-card-back align align-items-center">
-                <h2>{{ produto.nome }}</h2>
-                <p style="border: none; height: 160px">
-                  {{ produto.descricao }}
-                </p>
-
-                <button type="button" class="btn btn-light" style="width: 160px"
-                  (click)="adicionarCarrinho(produto.id)">
-                  Adicionar ao Carrinho
-                </button>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-light mt-2 mb-3 btn-cadastro" data-toggle="modal"
-                  data-target="#exampleModalCenter" (click)="mostrarProduto(produto)">
-                  Mais Informações
-                </button>
-              </div>
+        <div class="p-1 flip-card">
+          <div class="card mb-2 mr-3 flip-card-inner">
+            <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }} "
+              style="border-radius: 20px" />
+            <div class="card-body">
+              <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
+              <div class="produtos-stars">
+                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
+              </div><strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+            </div>
+            <div class="card flip-card-back align align-items-center">
+              <h2>{{ produto.nome }}</h2>
+              <p style="border: none; height: 160px">{{ produto.descricao }}</p>
+              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
+                Adicionar ao Carrinho</button>
+              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">
+                Mais informações
+              </button>
             </div>
           </div>
         </div>
-
+        <!-- </div> -->
       </ng-template>
     </owl-carousel-o>
   </div>
 </section>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
+  aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-center fonteTituloTxt" style="margin:auto" id="perfil-produto">{{produtoEsp.nome}}</h5>
+        <h5 class="modal-title" id="TituloModalCentralizado">{{produtoEsp.nome}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
       <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-5">
-              <img style="height: 250px; width: 250px;" [src]="produtoEsp.imagem"> 
-            </div>
-            <div class="col-md-5 mt-2 fonteTxt1 mb-1 justify-content-center">
-              <p>
-                {{produtoEsp.descricao}}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer align-items-center justify-content-center">
-          <button type="button" class="btn btn-cadastro" data-dismiss="modal">Fechar</button>
-        </div>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar mudanças</button>
       </div>
     </div>
   </div>
+</div>
+

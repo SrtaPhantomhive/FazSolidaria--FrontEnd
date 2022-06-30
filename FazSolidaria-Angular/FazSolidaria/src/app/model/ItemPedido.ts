@@ -1,11 +1,18 @@
-import { Pedido } from "./Pedido";
-import { Produto } from "./Produto";
+import { ItensCarrinho } from "./ItensCarrinho";
+
 
 export class ItemPedido{
-    public id:number;
-    public pedido:Pedido;
-    public produto:Produto;
-    public precoUnitario:number;
-    public precoTotal:number;
-    public quantidade:number;
+
+    imagem: string;
+    precoUnitario: number;
+    quantidade: number;
+    produtoId: number;
+
+
+    constructor(itemCarrinho: ItensCarrinho){
+        this.imagem = itemCarrinho.imagem
+        this.precoUnitario = itemCarrinho.preco
+        this.quantidade = itemCarrinho.qtd
+        this.produtoId = itemCarrinho.id
+    }
 }
