@@ -18,8 +18,8 @@ export class CarrinhoComponent implements OnInit {
   idUsuario = environment.id;
 
   itensCarrinho: ItensCarrinho[] = [];
-  precoTotal: number = 0;
-  quantidadeTotal: number = 0;
+  precoTotal: number = 0.00;
+  quantidadeTotal: number = 0.00;
 
   constructor(
     private authService: AuthService,
@@ -36,7 +36,10 @@ export class CarrinhoComponent implements OnInit {
   }
   calculaSubTotal = (preco: any, qtd: any) => {
     if (preco && qtd) {
-      return preco * qtd;
+
+let subTotal = preco * qtd
+
+      return subTotal.toFixed(2);
     }
     return 0.0;
   };
