@@ -55,8 +55,8 @@ export class CheckoutComponent implements OnInit {
     if (environment.token == '') {
       Swal.fire(
         {
-          title: 'Sua sessão expirou!',
-          text: `Por favor, faça seu login novamente!`,
+          title: 'Faça o login!',
+          text: 'Você precisa estar logado para finalizar a compra!',
           icon: 'info',
           showConfirmButton: true,
           confirmButtonText: 'Ok',
@@ -143,6 +143,18 @@ export class CheckoutComponent implements OnInit {
         // alert(
         //   `your order has been recieved.\n order tracking number: ${data.orderTrackingNumber}`
         // );
+
+        this.router.navigate(['home']);
+        Swal.fire(
+          {
+            title: 'Pedido Finalizado',
+            text: `Seu pedido foi realizado com sucesso! Enviaremos um email quando estiver tudo certo para a entrega!: ${data.orderTrackingNumber}`,
+            icon: 'success',
+            showConfirmButton: true,
+            confirmButtonText: 'Ok',
+            confirmButtonColor: '#75DC36',
+            showCancelButton: false,
+          });
 
         // reseta todas as informações do carrinho
         console.log(purchase)

@@ -26,7 +26,7 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MenuApresentacaoComponent } from './menu-apresentacao/menu-apresentacao.component';
-import { EnderecoEditComponent } from './edit/endereco-edit/endereco-edit.component';
+
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
@@ -54,7 +54,6 @@ import { BuscaProdutoComponent } from './busca-produto/busca-produto.component';
     CategoriaDeleteComponent,
     UsuarioEditComponent,
     MenuApresentacaoComponent,
-    EnderecoEditComponent,
     CadastroProdutoComponent,
     ProdutoEditComponent,
     ProdutoDeleteComponent,

@@ -10,7 +10,7 @@
             <img src="../../assets/img/CARROSSEL LOJA/inverninho.png" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-none d-md-block">
               <div class="fundoCaixa corTextoCarrossel">
-                <h5 class="fonteTituloTxt">Colheira Sazonal: Bem-Vindos ao Inverno!</h5>
+                <h5 class="fonteTituloTxt">Colheita Sazonal: Bem-Vindos ao Inverno!</h5>
                 <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
                   Nosso plantio respeita a sazonalidade dos alimentos. Sendo assim, fazendo a venda de cada alimento em
                   sua época e estação! Iniciamos no mês de julho as vendas de Inverno!
@@ -87,12 +87,15 @@
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
+
+              <div  style="margin-top: 80px;" >
               <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
                 Adicionar ao Carrinho
               </button>
               <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
                 data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
                 informações</button>
+              </div>
             </div>
           </div>
         </div>
@@ -119,11 +122,13 @@
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
+              <div style="margin-top: 80px;" >
               <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
                 Adicionar ao Carrinho</button>
               <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
                 data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
                 informações</button>
+              </div>
             </div>
           </div>
         </div>
@@ -149,12 +154,14 @@
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
+              <div style="margin-top: 80px;" >
               <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
                 Adicionar ao Carrinho</button>
               <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
                 data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">
                 Mais informações
               </button>
+            </div>
             </div>
           </div>
         </div>

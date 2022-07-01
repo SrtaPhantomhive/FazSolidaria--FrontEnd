@@ -146,6 +146,7 @@
             <!-- Tipo Usuario -->
             <div class="form-group">
               <label for="tipo">Tipo de Usuário</label>
+              <div class="invalid-feedback">Insira um formato válido.</div>
               <select
                 class="form-control"
                 name="tipo"
@@ -153,6 +154,7 @@
                 (change)="tipoUser($event)"
                 required
               >
+              
                 <option>Selecione um tipo de usuário</option>
                 <option value="normal">Normal</option>
                 <option value="adm">Administrador</option>

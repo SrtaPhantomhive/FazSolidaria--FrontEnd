@@ -37,10 +37,20 @@ export class LogarComponent implements OnInit {
       },
       (erro) => {
         if ((erro.status = 500)) {
-          alert('Usuario ou Senha estão incorretos')
           console.log(environment.token + "token")
           console.log(environment.usuario + "usuario")
           console.log(environment.senha + "senha")
+          Swal.fire(
+            {
+              title: 'Dados Inválidos',
+              text: 'Usuario ou Senha incorretos',
+              icon: 'error',
+              showConfirmButton: true,
+              confirmButtonText: 'Ok',
+              confirmButtonColor: '#75DC36',
+              showCancelButton: false,
+            });
+            this.router.navigate(['/login'])
         }
       }
     );
