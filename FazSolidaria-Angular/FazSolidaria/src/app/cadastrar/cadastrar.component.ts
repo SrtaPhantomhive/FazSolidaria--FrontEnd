@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 
@@ -29,7 +30,16 @@ export class CadastrarComponent implements OnInit {
     this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
       this.usuario = resp;
       this.router.navigate(['/login']);//quando cadastrar automaticamente vai para essa pagina(rota)
-      alert('Usuario cadastrado com sucesso');
+      Swal.fire(
+        {
+          title: 'Cadastro Realizado!!',
+          text: 'Usuário cadastrado com sucesso!',
+          icon: 'success',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+          confirmButtonColor: '#75DC36',
+          showCancelButton: false,
+        });
     });
   }
 
