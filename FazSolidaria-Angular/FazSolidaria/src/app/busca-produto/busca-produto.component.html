@@ -20,9 +20,8 @@
         </div>
         <div class="card flip-card-back align align-items-center">
           <h2>{{ item.nome }}</h2>
-          <p style="border: none; height: 160px">
-            {{ item.descricao }}
-          </p>
+
+          
           <button (click)="mostrarProduto(item)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
             data-toggle="modal" data-target="#ExemploModalCentralizado">
             Mais Informações
@@ -31,6 +30,8 @@
           <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(item)">
             Adicionar ao Carrinho
           </button>
+      
+
         </div>
       </div>
     </div>
