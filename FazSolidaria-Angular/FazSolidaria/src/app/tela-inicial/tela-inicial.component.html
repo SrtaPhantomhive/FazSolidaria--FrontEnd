@@ -1,0 +1,202 @@
+<app-menu-compras></app-menu-compras>
+<div class="container-justify">
+  <div class="row">
+    <!-- carrossel -->
+    <div class="col-md-12">
+      <!-- carrossel -->
+      <div id="carouselExampleInterval" class="carousel slide dimcar" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="opacity: 90%" data-interval="5000">
+            <img src="../../assets/img/CARROSSEL LOJA/inverninho.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <div class="fundoCaixa corTextoCarrossel">
+                <h5 class="fonteTituloTxt">Colheita Sazonal: Bem-Vindos ao Inverno!</h5>
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
+                  Nosso plantio respeita a sazonalidade dos alimentos. Sendo assim, fazendo a venda de cada alimento em
+                  sua época e estação! Iniciamos no mês de julho as vendas de Inverno!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="5000">
+            <img src="../../assets/img/PAG1/CARROSSEL/doações.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <div class="fundoCaixa corTextoCarrossel">
+                <h5 class="fonteTituloTxt">Mas e o frete?</h5>
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
+                  Para potencializarmos nosso trabalho social, decidimos oferecer a nossos clientes FRETE GRÁTIS! Mas
+                  corre, que é por tempo limitado.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="opacity: 90%" data-interval="5000">
+            <img src="../../assets/img/CARROSSEL LOJA/donation.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <div class="fundoCaixa corTextoCarrossel">
+                <h5 class="fonteTituloTxt">Doações</h5>
+                <p class="fonteTxt" style="font-size: 20px; font-weight: bolder">
+                  A cada compra efetuada em nossa loja, uma parte do valor pago é convertido para cestas básicas que
+                  serão entregues a famílias carentes da região.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+      <!-- Carrossel fim -->
+    </div>
+  </div>
+</div>
+
+<!-- Catalogo de Produtos -->
+
+<!--Textos -->
+<div class="col-xl-12 text-center mt-5">
+  <h2 class="fonteTituloTxt" style="color: black">Confira os Produtos</h2>
+  <p class="text-muted fonteTxt">
+    Nossos produtos são frescos! Fazemos a colheita poucos momentos antes do envio, garantindo assim frutos, legumes e
+    verduras saborosas e nutritivas diretamente da horta para sua casa.
+  </p>
+</div>
+
+<h3 class="text-center fonteTituloTxt d-grid gap-3" style="scroll-margin-top: 180px;" id="frutas">Frutas</h3>
+
+<!-- Carrossel -->
+<section class="listas">
+  <div class="container">
+    <owl-carousel-o [options]="listaFrutas">
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(0, 10)">
+        <div class="p-1 flip-card">
+          <div class="card mb-2 mr-3 flip-card-inner">
+            <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
+              style="border-radius: 20px" />
+            <div class="card-body">
+              <h4 class="card-title font-produtos mt-2">{{ produto.nome }}</h4>
+              <div class="produtos-stars">
+                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
+              </div><strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+            </div>
+            <div class="card flip-card-back align align-items-center">
+              <h2>{{ produto.nome }}</h2>
+
+              <div  style="margin-top: 80px;" >
+              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
+                Adicionar ao Carrinho
+              </button>
+              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
+                informações</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</section>
+
+<section class="listas mt-5" style="scroll-margin-top: 180px;" id="verduras">
+  <div class="container">
+    <h3 class="text-center fonteTituloTxt">Verduras</h3>
+    <owl-carousel-o [options]="listaVerduras">
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(10, 20)">
+        <div class="p-1 flip-card">
+          <div class="card mb-2 mr-3 flip-card-inner">
+            <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }}"
+              style="border-radius: 20px" />
+            <div class="card-body">
+              <h4 class="card-title font-produtos mt-2">{{ produto.nome }}</h4>
+              <div class="produtos-stars">
+                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
+              </div>
+              <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+            </div>
+            <div class="card flip-card-back align align-items-center">
+              <h2>{{ produto.nome }}</h2>
+              <div style="margin-top: 80px;" >
+              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
+                Adicionar ao Carrinho</button>
+              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
+                informações</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</section>
+
+<section class="listas mt-5" style="scroll-margin-top: 180px;" id="legumes">
+  <div class="container">
+    <h3 class="text-center fonteTituloTxt">Legumes</h3>
+    <owl-carousel-o [options]="listaLegumes">
+      <ng-template carouselSlide *ngFor="let produto of listaProdutos.slice(20, 30)">
+        <div class="p-1 flip-card">
+          <div class="card mb-2 mr-3 flip-card-inner">
+            <img class="card-img-top" [src]="produto.imagem" alt="{{ produto.categoria }} "
+              style="border-radius: 20px" />
+            <div class="card-body">
+              <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
+              <div class="produtos-stars">
+                <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
+              </div><strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+            </div>
+            <div class="card flip-card-back align align-items-center">
+              <h2>{{ produto.nome }}</h2>
+              <div style="margin-top: 80px;" >
+              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
+                Adicionar ao Carrinho</button>
+              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">
+                Mais informações
+              </button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
+  aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center fonteTituloTxt" style="margin:auto" id="TituloModalCentralizado">
+          {{produtoEsp.nome}}</h5>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+              <img style="height: 250px; width: 250px;" [src]="produtoEsp.imagem">
+            </div>
+            <div class="col-md-5 mt-2 fonteTxt1 mb-1 justify-content-center">
+              <p>
+                {{produtoEsp.descricao}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer align-items-center justify-content-center">
+        <button type="button" class="btn btn-cadastro" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

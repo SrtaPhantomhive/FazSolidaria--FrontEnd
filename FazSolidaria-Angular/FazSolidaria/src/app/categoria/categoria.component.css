@@ -1,0 +1,11 @@
+.navbackground2 {
+    /* background-color: #75DC36; */
+    /* usei rgb para controlar a opacidade */
+    background: rgba(117, 220, 54, 0.8);
+}
+
+.fonteTituloTxt {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+}

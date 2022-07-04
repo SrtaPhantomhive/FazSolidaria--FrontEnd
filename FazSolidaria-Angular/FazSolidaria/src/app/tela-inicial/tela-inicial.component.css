@@ -1,0 +1,330 @@
+/* -------FONTES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
+
+/* -------CONFIGURAÇÕES DE TEXTO------- */
+/* configura o texto da página 1 */
+.configTxt {
+  overflow: hidden;
+  max-height: 1000px;
+  height: 400px;
+  max-width: 500px;
+  width: auto;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin-top: 160px;
+  margin-bottom: 150px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 20px;
+}
+
+/* fonte do nome da marca */
+.fonteTitulo {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  font-size: 2em;
+  /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+/* fonte para títulos */
+.fonteTituloTxt {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+/* estilização borda */
+.bordas {
+  border-radius: 25px 0px 25px 25px;
+  left: -227px;
+}
+
+.btn-cadastro {
+  color: #75DC36;
+  border-color: #75DC36;
+  border-width: 2px;
+  align-items: center;
+}
+
+/* perfil produto */
+.fonteTxt1 {
+  font-family: 'Nunito', cursive;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+/* perfil produto preço */
+.fonteTxt2 {
+  font-family: 'Nunito', cursive;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+/* altera a fonte dos textos da página 2 */
+.fonteTxt {
+  font-family: 'Nunito', cursive;
+  font-weight: lighter;
+  font-size: 20px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+/* cor do fundo da caixa */
+.fundoCaixa {
+  background: rgba(209, 201, 158, 0.6);
+  /* opacity: 40%; */
+}
+
+/* muda a cor do texto da página1 */
+.corTextoCarrossel {
+  color: black;
+  border-radius: 25px 0px 25px 0px;
+}
+
+/* ---------CONFIG. ADICIONAIS----------- */
+
+/* alinha as imagens dos certificados */
+.alinhamentoImg {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+/* --------> CARDS <--------- */
+
+/* centraliza o texto dentro dos cards */
+.centralizaTxt {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+/* altera a fonte dos textos da página 1 */
+.fonteTxtpg1 {
+  font-family: 'Nunito', cursive;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+
+/*Estilo da página produtos*/
+
+/*CARD PRODUTOS*/
+/* configura o tamanho do quadrado e a cor do mesmo */
+.flip-card2 {
+  background-color: white;
+  width: 250px;
+  /* height: 200px; */
+  border-radius: 20px;
+  perspective: 1000px;
+}
+
+/* altera a posição em relação ao próprio card*/
+.flip-card-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+}
+
+/* Configura a passada de mouse e sua resposta*/
+.flip-card2:hover .flip-card-inner2 {
+  transform: rotateY(180deg);
+}
+
+/* Posição */
+.flip-card-front2,
+.flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Configurações visuais da frente do card */
+.flip-card-front2 {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 3px 3px #ffffff, -1em 0 0.4em rgb(229 229 211);
+}
+
+/* configurações visuais de trás do card */
+.flip-card-back2 {
+  background-color: #2D964C;
+  color: rgb(255, 255, 255);
+  transform: rotateY(180deg);
+  border-radius: 20px
+}
+
+/*Stars*/
+.produtos-stars {
+  font-size: 10px;
+}
+
+.produtos-stars svg {
+  fill: #FFC107;
+}
+
+/*Configurações da fonte - página produtos*/
+.font-produtos {
+  font-family: 'Nunito', cursive;
+  font-size: 18px;
+}
+
+.produtos-preco {
+  font-family: 'Nunito', cursive;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+
+.produtos-preco strong {
+  font-family: 'Nunito', cursive;
+  font-weight: bolder;
+  font-size: 30x;
+}
+
+
+
+
+
+
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+}
+  /* height: 100; */
+/*Configurações da fonte - página produtos*/
+.font-produtos{
+    font-family: 'Nunito', cursive;
+    font-size: 20px;
+}
+
+.produtos-preco{
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: none;
+  /* box-shadow: 1px 1px #ffffff, -1em 0 0.4em rgb(229 229 211); */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2D964C;
+  color: rgb(255, 255, 255);
+  transform: rotateY(180deg);
+  border-radius: 20px;
+}
+
+.carousel-control-prev {
+  background: #29b941;
+  margin-left: 0;
+}
+
+.carousel-control-next {
+  background: #29b941;
+  margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo da tela-detalhes-produtos */
+
+/* PRODUTOS RELACIONADOS */
+/* #produtos-relacionados {
+    padding: 4em 0;
+  }
+  
+  #produtos-relacionados .row {
+    margin: 0;
+  }
+  
+  #produtos-relacionados .col-md-3 {
+    padding: 0;
+  }
+  
+  .title {
+    font-family: 'Nunito', cursive;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  
+  @media(min-width: 100px) {
+    .title {
+      text-align: left;
+    }
+  }
+  
+  .card {
+    text-align: center;
+    border-radius: 5%;
+    background-color: transparent;
+    max-width: 300px;
+  }
+  
+  .card img {
+    width: 300px;
+    margin: 2em auto;
+    border-radius: 5%;
+  }
+  
+  .card .card-category {
+    font-size: .8rem;
+  }
+  
+  .card .card-text {
+    margin: 2em 0;
+    font-weight: bold;
+  }
+   */
+

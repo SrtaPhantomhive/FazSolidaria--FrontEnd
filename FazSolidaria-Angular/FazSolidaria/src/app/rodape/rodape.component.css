@@ -1,0 +1,46 @@
+/* -------FONTES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
+
+
+
+/* fonte para títulos */
+.fonteTituloTxt {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+/* altera a fonte dos textos da página 2 */
+.fonteTxt {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+/* Define a cor do ícone */
+.corIcones {
+    color: white;
+}
+
+/* Define a cor do hover */
+.corIcone-square:hover {
+    color: #75DC36;
+}
+
+/* Icones rodapé */
+ul.social-network {
+    list-style: none;
+    padding: 0;
+}
+
+.bg-btn:hover {
+    background-color: #2D964C;
+}
+
+/*-----------RODAPÉ------------*/
+footer {
+    background: #2D964C;
+    padding: 25px 0;
+    color: #FFF;
+}

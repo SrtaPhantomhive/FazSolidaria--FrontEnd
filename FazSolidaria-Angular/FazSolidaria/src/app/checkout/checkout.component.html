@@ -1,0 +1,159 @@
+<div class="container-fluid " style="margin-top: 150px">
+  <div class="form-group text-center fonteTituloEndereco m-0 p-0">
+    <label class="mb-2">Finalizar compra</label>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-10 col-sm-10 col-md-10">
+      <form class="needs-validation" novalidate id="telaEndereco">
+        <div class="form-group text-center fonteTituloEndereco m-0 p-0">
+          <label>Endereço de entrega</label>
+        </div>
+        <!--Logradouro-->
+        <div class="form-row">
+          <div class="col-md-12 mb-3">
+            <label for="nome">Logradouro*</label>
+            <input [(ngModel)]="endereco.logradouro" type="text" class="form-control" id="logradouro" name="logradouro"
+              placeholder="logradouro" required />
+          </div>
+        </div>
+        <!-- Número -->
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="nome">Nº*</label>
+            <input [(ngModel)]="endereco.numero" type="text" class="form-control" id="numero" name="numero"
+              placeholder="numero" required />
+          </div>
+          <!-- Bairro -->
+          <div class="col-md-8">
+            <label for="bairro">Bairro*</label>
+            <input [(ngModel)]="endereco.bairro" type="bairro" class="form-control" id="bairro" name="bairro"
+              placeholder="Bairro" minlength="2" maxlength="100" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <!--CEP-->
+          <div class="col-md-4 mb-3">
+            <label for="cpf">CEP*</label>
+            <input [(ngModel)]="endereco.cep" type="cep" class="form-control" id="cep" name="cep" placeholder="__-__"
+              minlength="8" maxlength="8" required oninput="mascara(this,'cep')" />
+          </div>
+          <!--Cidade-->
+          <div class="col-md-4 mb-3">
+            <label for="telefone">Cidade*</label>
+            <input [(ngModel)]="endereco.localidade" type="text" class="form-control" placeholder="Cidade" id="Cidade"
+              name="Cidade" required />
+          </div>
+          <!--UF-->
+          <div class="col-md-4 mb-3">
+            <label for="data">UF*</label>
+            <select [(ngModel)]="endereco.uf" name="uf" class="form-control">
+              <option value="Selecione">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espirito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" class="mt-4 col-md-12 btn btn-success text-center" (click)="enderecoCadastrado()">Salvar
+          Endereço</button>
+        <div class="form-group text-center fonteTituloEndereco mt-4 m-0 p-0">
+          <label>Dados Pessoais</label>
+        </div>
+        <label for="nome">Nome: </label>
+        <input class="form-control" placeholder="{{usuario.nome}}" />
+        <!-- Telefone -->
+        <div class="form-row mt-3">
+          <div class="col-md-4 mb-3">
+            <label for="nome">Telefone: </label>
+            <input class="form-control" placeholder="{{usuario.telefone}}" required oninput="mascara(this,'tel')" />
+          </div>
+          <!-- E-mail -->
+          <div class="col-md-8">
+            <label for="nome">E-mail: </label>
+            <input class="form-control" placeholder="{{usuario.usuario}}" />
+          </div>
+        </div>
+        <button type="button" class="mt-4 col-md-12 btn btn-link text-center"
+          [routerLink]="['/usuarios', usuario.id]">Alterar dados</button>
+      </form>
+      <!-- Fim formulario-->
+    </div>
+  </div>
+</div>
+
+<!-- resumo do pedido -->
+<div class="container-fluid mt-5">
+  <div class="row justify-content-center">
+<div class="col-10 col-sm-10 col-md-10" id="telaEndereco">
+  <div class="row justify-content-center">
+    <div class="text-center fonteTituloEndereco m-0 p-0">
+      <label>Resumo do Pedido</label>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+     
+    <div class="bordas-rounded-right-bottom bg-branco container px-0 mx-auto bordas-rounded-left-top fonteBasica">
+      <div
+        class="h5 header-carrinho text-uppercase d-none d-md-flex bg-principal color-branco align-items-center fonteTxt">
+        <div class="col-2  p-2 text-center">Produto</div>
+        <div class="col-2  p-2 text-center">Nome</div>
+        <div class="col-2  p-2 text-center">Preço</div>
+        <div class="col-2  p-2 text-center">Quantidade</div>
+        <div class="col-3  p-2 text-center">Total</div>
+      </div>
+      <div class="d-flex flex-column flex-md-row align-items-center border-bottom fonteBasica"
+        *ngFor="let produto of cartItems;">
+        <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center p-2 mt-0 text-center">
+          <label class="d-md-none">Produto</label><img class="img-fluid img-item-carrinho" [src]="produto.imagem">
+        </div>
+        <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+          <label class="d-md-none">Nome</label> {{ produto.nome }}
+        </div>
+        <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+          <label class="d-md-none">Preço</label>R$ {{ produto.preco }}
+        </div>
+        <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+          <label class="d-md-none justify-content-center">Qtd</label>
+          <div class="d-flex quantidade-carrinho ">
+            <input type="text" class="col-4  m-0 form-control text-center" style="width: 5px;" placeholder="0"
+              aria-label="button addon" value="{{produto.qtd}}" aria-describedby="button-addon">
+          </div>
+        </div>
+        <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+          <label class="d-md-none">Sub-total</label> {{ calculaSubTotal(produto.preco,produto.qtd) }}
+        </div>
+      </div>
+    </div>
+    <button type="button" class="mt-4 col-md-6 btn btn-success text-center" (click)="emitirPedido()">Criar
+      Pedido</button>
+  </div>
+  <div class="d-flex flex-row-reverse">
+    <h3><strong>Total: {{ precoTotal | currency: 'BRL' }}</strong></h3>
+  </div>
+</div>
+</div>
+</div>

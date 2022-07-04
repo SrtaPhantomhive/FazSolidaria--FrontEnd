@@ -1,0 +1,136 @@
+<!-- Textos -->
+<app-menu-compacto></app-menu-compacto>
+
+<div class="row text-center" style="margin-top: 150px;">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row text-center justify-content-center">
+                <!-- Textos -->
+                <div class="col-xl-6 col-lg-8">
+                    <h6 class=" text-uppercase fonteTituloTxt" style="color: black;">Projeto Mini Produtores</h6>
+                    <!-- Gradient divider -->
+                    <hr data-content="AND" class="hr-text">
+                </div>
+            </div>
+            <p class="text-muted fonteTxt"> A vida é feita das etapas de um processo, onde nascemos, crescemos e
+                morremos. É
+                assim para os seres humanos e também para as plantas.
+                E é sobre o ciclo da vida das plantas que falamos com as crianças a partir dos 5 anos e que estejam
+                em idade escolar, para que possamos agregar conhecimentos, e, uma visão de mundo mais completa
+                possível sobre sustentabilidade, e, também, sobre a importância da comunidade. Nosso intuito é que
+                tenhamos cada vez mais adultos e crianças conscientes da sua relevância como agente potencializador
+                do mundo que queremos construir!
+                Cadastre sua escola e entraremos em contato com você para agendar dia e horário da visitação!</p>
+        </div>
+    </div>
+</div>
+<!-- GIF -->
+<div class="container">
+    <div class="row justify-content-center">
+        <img src="assets/GIF/visita.gif" alt="" style="height: 300px;">
+    </div>
+</div>
+
+<!-- FORMULÁRIO -->
+<div class="container">
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <!-- main -->
+        <main>
+            <section>
+                <!--Inicio formulario de cadastro-->
+                <div class="container-fluid"style="">
+                    <div class="justify-content-center row ">
+                        <div class="col ml-5">
+                            <form class="needs-validation" novalidate id="telaCadastro">
+                                <div class="form-group text-center fonteTituloCadastro m-0 p-0 mb-2">
+                                    <div class="">Cadastro de Visitação Escolar</div>
+                                </div>
+                                <!-- nome da instituição -->
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="nome">Nome da Instituição*</label>
+                                        <input type="text" class="form-control" id="nomeInst" name="nomeInst"
+                                            placeholder="Insira o nome completo" pattern="^[^-\s][a-zA-ZÀ-ú ]*"
+                                            minlength="3" maxlength="50" required>
+                                        <small id="Help-block" class="text-muted">
+                                            Deve conter somente letras, entre 3 e 50 caracteres.
+                                        </small>
+                                        <div class="invalid-feedback">
+                                            Insira um formato válido.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Compo Nome-->
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="nome">Nome Completo do Responsável*</label>
+                                        <input type="text" class="form-control" id="nomeResp" name="nomeResp"
+                                            placeholder="Insira seu nome" pattern="^[^-\s][a-zA-ZÀ-ú ]*" minlength="3"
+                                            maxlength="50" required>
+                                        <small id="Help-block" class="text-muted">
+                                            Deve conter somente letras, entre 3 e 50 caracteres.
+                                        </small>
+                                        <div class="invalid-feedback">
+                                            Insira um formato válido.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Campos CPF e Telefone-->
+
+                                <div class="form-row">
+
+                                    <!--Telefone-->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="telefone">Telefone para Contato*</label>
+                                        <input type="text" class="form-control" placeholder="Apenas números"
+                                            id="telefoneInst" name="telefoneInst" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, insira um telefone válido.
+                                        </div>
+                                    </div>
+
+                                    <!--E-mail(usuario)-->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email">E-mail para Contato*</label>
+                                        <input type="email" class="form-control" id="emailInst" name="emailInst"
+                                            placeholder="Ex: fulano@gmail.com"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" minlength="5"
+                                            maxlength="100" required>
+                                        <div class="invalid-feedback">
+                                            E-mail incompleto.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--Termos e condições-->
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                            required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                            <a href="#">Aceito os termos e condições.</a>
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Você deve aceitar os termos e condições para se cadastrar
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Botões Cancelar e Cadastar -->
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-danger mr-5" routerLink="/home">Cancelar</button>
+                                    <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim formulario e cadastro-->
+            </section>
+        </main>
+        <!-- end main -->
+    </div>
+</div>
+</div>

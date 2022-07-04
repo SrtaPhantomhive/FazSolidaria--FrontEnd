@@ -1,0 +1,69 @@
+<div class="row" style="margin-top: 150px;">
+  <div class="col-md-12">
+    <h3 class="text-center text-secondary">Resultados da busca "{{nomeProcurado}}"</h3>
+  </div>
+</div>
+<hr>
+
+
+<div class="row mt-5 mb-5">
+  <div class="col-lg-3 text-center" *ngFor="let item of produtos">
+    <div class="p-1 flip-card">
+      <div class="card mb-2 mr-3 flip-card-inner">
+        <img class="card-img-top" [src]="item.imagem" alt="{{ item.categoria }}" style="border-radius: 20px" />
+        <div class="card-body">
+          <h4 class="card-title font-produtos">{{ item.nome }}</h4>
+          <div class="produtos-stars">
+            <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
+          </div>
+          <strong class="produtos-preco">R$ {{ item.preco }}</strong>
+        </div>
+        <div class="card flip-card-back align align-items-center">
+          <h2>{{ item.nome }}</h2>
+          <p style="border: none; height: 160px">
+            {{ item.descricao }}
+          </p>
+          <button (click)="mostrarProduto(item)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+            data-toggle="modal" data-target="#ExemploModalCentralizado">
+            Mais Informações
+          </button>
+          <!-- Bota adicionar carrinho -->
+          <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(item)">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
+  aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center fonteTituloTxt" style="margin:auto" id="TituloModalCentralizado">
+          {{produtoEsp.nome}}</h5>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+              <img style="height: 250px; width: 250px;" [src]="produtoEsp.imagem">
+            </div>
+            <div class="col-md-5 mt-2 fonteTxt1 mb-1 justify-content-center">
+              <p>
+                {{produtoEsp.descricao}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer align-items-center justify-content-center">
+        <button type="button" class="btn btn-cadastro" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

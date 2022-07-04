@@ -1,0 +1,138 @@
+/* ---------CONFIG. TELA RESPONSIVA----------- *
+/* Tela carrinho */
+/* fonte para títulos */
+
+.botao-lixo {
+    background-image: url("../../assets/img/CARRINHO/icons8-remover-30.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: transparent;
+    min-height: 30px;
+}
+
+.botao-soma {
+    background-image: url("../../assets/img/CARRINHO/icons8-adicionar-30.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.botao-subtrai {
+    background-image: url("../../assets/img/CARRINHO/icons8-menos-30.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fonteTituloTxt {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.fonteBasica {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.bg-branco {
+    background-color: #ffffff;
+}
+
+.color-branco {
+    color: #ffffff;
+}
+
+.quantidade-carrinho {
+    min-width: 180px;
+}
+
+.img-item-carrinho {
+    max-width: 80px;
+
+}
+
+.img-item-comprados {
+    max-width: 90px;
+}
+
+.bg-principal {
+    background-color: #2D964C;
+}
+
+.tela-lg {
+    justify-content: center;
+    flex-flow: wrap;
+    flex-basis: auto;
+
+}
+
+.bordas-rounded-left-top {
+    border-top-left-radius: 20px;
+
+}
+
+.bordas-rounded-right-bottom {
+    border-bottom-right-radius: 20px;
+
+}
+
+.header-carrinho {
+    height: 60px;
+}
+
+@media (min-width: 768px) {
+    .img-item-carrinho {
+        max-width: 80px;
+    }
+
+    /* ---------CONFIG. TELA RESPONSIVA----------- *
+/* Tela carrinho */
+    .bg-branco {
+        background-color: #ffffff;
+    }
+
+    .color-branco {
+        color: #ffffff;
+    }
+
+    .quantidade-carrinho {
+        min-width: 180px;
+    }
+
+    .img-item-carrinho {
+        max-width: 80px;
+    }
+
+    .img-item-comprados {
+        max-width: 90px;
+    }
+
+    .bg-principal {
+        background-color: #2D964C;
+    }
+
+    .tela-lg {
+        justify-content: center;
+        flex-flow: wrap;
+        flex-basis: auto;
+    }
+
+    .bordas-rounded-left-top {
+        border-top-left-radius: 20px;
+    }
+
+    .bordas-rounded-right-bottom {
+        border-bottom-right-radius: 20px;
+    }
+
+    .header-carrinho {
+        height: 60px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .img-item-carrinho {
+        max-width: 120px;
+    }
+}

@@ -1,0 +1,201 @@
+/* -------FONTES--------- */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:ital,wght@0,200;0,700;1,200&family=Radio+Canada:wght@400;600;700&display=swap');
+
+/* ----------CORES GERAIS DO PROJETO--------- */
+/* cor do fundo do site */
+
+
+
+
+
+
+
+
+/* -------CONFIGURAÇÕES DE TEXTO------- */
+/* configura o texto da página 1 */
+.configTxt {
+    overflow: hidden;
+    max-height: 1000px;
+    height: 400px;
+    max-width: 500px;
+    width: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 160px;
+    margin-bottom: 150px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 25px 0px 25px 0px;
+}
+
+/* fonte do nome da marca */
+.fonteTitulo {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+/* fonte para títulos */
+.fonteTituloTxt {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+/* altera as cores das caixas de texto */
+.coresCxTxt {
+    background: rgb(252, 242, 184, 0.6);
+}
+
+/* fonte escolhida para os botões da aplicação */
+.fonteBotao {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+/* fonte escolhida para os botões da aplicação */
+.fonteBotaoLoginCadastro {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.fonteTxt1 {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+/* altera a fonte dos textos da página 2 */
+.fonteTxt {
+    font-family: 'Nunito', cursive;
+    font-weight: lighter;
+    font-size: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+/* altera a fonte dos textos da página 1 */
+.fonteTxtpg1 {
+    font-family: 'Nunito', cursive;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+
+/* ------CARROSSEL------- */
+
+
+
+/* ---------CONFIG. ADICIONAIS----------- */
+/* dimensionamento da imagem de fundo página 1 */
+.pngfundo1 {
+    background-size: 1350px 646px;
+    max-width: 100%;
+    height: 646px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* alinha as imagens dos certificados */
+.alinhamentoImg {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
+/* deixa a borda arredondada */
+.borda {
+    border-radius: 20px;
+}
+
+/* Icones dos cards: nossa equipe */
+/* tira o ícone de lista */
+.iconeCards {
+    list-style: none;
+    padding: 0;
+}
+
+/* Deixa na mesma linha */
+.iconeCardsLi {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+/* Define a cor do ícone */
+.corIcones {
+    color: white;
+}
+
+/* Define a cor do hover */
+.corIcone-square:hover {
+    color: #75DC36;
+}
+
+/* Icones rodapé */
+ul.social-network {
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------> CARDS <--------- */
+/* configura o tamanho do quadrado e a cor do mesmo */
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: transparent;
+    perspective: 1000px;
+}
+
+/* altera a posição em relação ao próprio card*/
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* cadastro */
+
+#telaCadastro {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 1px 5px 50px rgba(73, 73, 73, 0.541);
+    margin-bottom: 20px;
+
+}
+
+.fonteTituloCadastro {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+}
+
+.fonteTituloLogin {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 3em;
+    /* font-family: 'Radio Canada', sans-serif;
+    font-family: Amatic SC; */
+}
+
+

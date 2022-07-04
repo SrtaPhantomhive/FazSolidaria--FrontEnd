@@ -1,0 +1,197 @@
+<app-menu-compacto></app-menu-compacto>
+<main>
+  <section>
+    <div class="container-fluid" style="margin-top: 150px;">
+      <div class="justify-content-center row">
+        <div class="col-12 colsm-6 col-md-6">
+          <form class="needs-validation" novalidate id="telaCadastro">
+            <div class="form-group text-center fonteTituloCadastro m-0 p-0">
+              <label>Cadastro</label>
+            </div>
+            <!--Campo Nome-->
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <label for="nome">Nome Completo</label>
+                <input
+                  [(ngModel)]="usuario.nome"
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  name="nome"
+                  placeholder="Nome"
+                  pattern="^[^-\s][a-zA-ZÀ-ú ]*"
+                  minlength="3"
+                  maxlength="50"
+                  required
+                />
+                <small id="Help-block" class="text-muted">
+                  Deve conter somente letras, entre 3 e 50 caracteres.
+                </small>
+                <div class="invalid-feedback">Insira um formato válido.</div>
+              </div>
+            </div>
+            <!--Campos CPF e Telefone-->
+
+            <div class="form-row">
+              <!--CPF-->
+              <div class="col-md-4 mb-3">
+                <label for="cpf">CPF*</label>
+                <input
+                  oninput="mascara(this,'cpf')"
+                  [(ngModel)]="usuario.cpf"
+                  type="text"
+                  class="form-control"
+                  placeholder="___.___.___-__"
+                  id="cpf"
+                  name="cpf"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor, insira um CPF válido.
+                </div>
+              </div>
+
+              <!--Telefone-->
+              <div class="col-md-4 mb-3">
+                <label for="telefone">Telefone*</label>
+                <input
+                  [(ngModel)]="usuario.telefone"
+                  type="text"
+                  class="form-control"
+                  placeholder="(  ) _____-____"
+                  id="telefone"
+                  name="telefone"
+                  required
+                  oninput="mascara(this,'tel')"
+                />
+                <div class="invalid-feedback">
+                  Por favor, insira um telefone válido.
+                </div>
+              </div>
+              <!--Data Nascimento-->
+              <div class="col-md-4 mb-3">
+                <label for="data">Data de Nascimento*</label>
+                <input
+                  [(ngModel)]="usuario.dataNasc"
+                  type="date"
+                  class="form-control"
+                  id="data"
+                  name="data"
+                  placeholder="Ex.: dd/mm/aaaa"
+                  required
+                />
+                <div class="invalid-feedback">Insira um formato válido.</div>
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="email">E-mail*</label>
+                <input
+                  [(ngModel)]="usuario.usuario"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Ex: fulano@gmail.com"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  minlength="5"
+                  maxlength="100"
+                  required
+                />
+                <div class="invalid-feedback">E-mail incompleto.</div>
+                <div class="form-check mt-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck"
+                  />
+                  <label
+                    class="form-check-label text-black-50"
+                    for="invalidCheck"
+                  >
+                    Receber e-mails promocionais
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!--Senha-->
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <label for="senha">Senha*</label>
+                <input
+                  [(ngModel)]="usuario.senha"
+                  type="password"
+                  class="form-control"
+                  id="senha"
+                  name="senha"
+                  placeholder="Senha"
+                  pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?=^.{8,15}$).*$"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                <small id="passwordHelpInline" class="text-muted">
+                  A senha deve conter pelo menos um caracter minusculo, um
+                  caracter maiúsculo, um número e um caracter especial. Também
+                  deve conter entre 8 e 15 caracteres.
+                </small>
+                <div class="valid-feedback">Parece bom!</div>
+                <div class="invalid-feedback">Insira um formato válido.</div>
+              </div>
+            </div>
+
+            <!-- Tipo Usuario -->
+            <div class="form-group">
+              <label for="tipo">Tipo de Usuário</label>
+              <div class="invalid-feedback">Insira um formato válido.</div>
+              <select
+                class="form-control"
+                name="tipo"
+                id="tipo"
+                (change)="tipoUser($event)"
+                required
+              >
+              
+                <option>Selecione um tipo de usuário</option>
+                <option value="normal">Normal</option>
+                <option value="adm">Administrador</option>
+              </select>
+            </div>
+
+            <!--Termos e condições-->
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck"
+                  required
+                />
+                <label class="form-check-label" for="invalidCheck">
+                  <a href="#">Aceito os termos e condições.</a>
+                </label>
+                <div class="invalid-feedback">
+                  Você deve aceitar os termos e condições para se cadastrar
+                </div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn bg-btn btn-lg btn-block text-light"
+              (click)="cadastrar()"
+            >
+              Cadastrar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Fim formulario e cadastro-->
+  </section>
+</main>
+
+

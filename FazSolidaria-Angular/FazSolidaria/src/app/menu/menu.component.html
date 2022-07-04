@@ -1,0 +1,208 @@
+<div *ngIf="isHeader">
+  
+  <nav
+    class="navbar navbar-expand-lg navbar-light fixed-top navbar-light navbackground "
+  >
+    <a class="navbar-brand ml-5 text-light fonteTitulo" routerLink="/home"
+      ><img
+        class="tm-logo"
+        src="../../assets/img/fazsolidarialogobranca.png"
+        width="70"
+        height="70"
+        alt="Logo Avançar"/>FazSolidária
+      </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Buscar -->
+      <ul class="navbar-nav m-auto">
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            [(ngModel)]="nomeProduto"
+            class="form-control tm-busca" 
+            name="nomeProduto"
+            type="search"
+            placeholder="Busque um produto"
+            aria-label="Pesquisar"
+          />
+          <button [routerLink]="['busca-produto', nomeProduto]" class="btn" type="submit">
+            <i class="fa fa-search text-light" aria-hidden="true"></i>
+          </button>
+        </form>
+      </ul>
+
+      <span class="navbar-text text-light">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+
+          <!-- Bota loja -->
+          <li class="nav-item">
+            <a class="nav-link text-light mr-2" routerLink="/catalogo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="currentColor"
+                class="bi bi-basket"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                />
+                <path
+                  d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <!-- Botao Cesta -->
+          <li class="nav-item">
+            <a class="nav-link text-light mr-3" routerLink="/carrinho">
+              <div class="cart_value">{{ quantidadeTotal }}</div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="currentColor"
+                class="bi bi-basket"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"
+                />
+                </svg>
+              </a>
+          </li>
+
+          <!-- Menu Deslogado  -->
+          <li class="nav-item dropdown" *ngIf="authService.logado() == false">
+            <a
+              class="nav-link dropdown-toggle text-light img1"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                fill="currentColor"
+                class="bi bi-person"
+                viewBox="0 0 16 13"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                />
+              </svg>
+              <span class="sp1">
+                Login/ <br />
+                <span class="sp2"> Cadastra-se</span>
+              </span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <!-- Botão Login -->
+              <button
+                routerLink="/login"
+                type="button"
+                class="dropdown-item btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light text-center"
+                
+              >
+                Login
+              </button>
+              <!-- Botão Cadastra-se -->
+              <button
+                routerLink="/cadastrar"
+                type="button"
+                class="dropdown-item btn btn-block btn-lg btn-outline fonteBotaoLoginCadastro btn-cadastro text-center"
+              >
+                Cadastre-se
+              </button>
+
+
+            </div>
+          </li>
+
+          <li class="nav-item dropdown  " *ngIf="authService.logado()">
+            <a
+              class="nav-link dropdown-toggle text-light img1"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                fill="currentColor"
+                class="bi bi-person"
+                viewBox="0 0 16 13"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                />
+              </svg>
+              <span class="sp1">
+                Olá, {{ nome }} <br />
+                <span class="sp2"> Meu perfil,</span>
+              </span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <!-- Botão Login -->
+              <button
+                [routerLink]="['/usuarios', idUser]"
+                type="button"
+                class="dropdown-item btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light"
+              >
+                Atualizar Cadastro
+              </button>
+              <!-- Botão Cadastra-se -->
+              <div *ngIf="tipo === 'adm'">
+                <button
+                  routerLink="/cadastrar-produto"
+                  type="button"
+                  class="dropdown-item btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light text-center"
+                >
+                  Cadastrar Produto
+                </button>
+              </div>
+
+              <!-- Pedidos -->
+              <!-- <button
+                routerLink="/historico-compras" type="button"
+                class="dropdown-item btn btn-block btn-lg mb-3 bg-btn fonteBotaoLoginCadastro text-light text-center"
+              >
+                Pedidos
+              </button> -->
+
+              <!-- Sair -->
+              <div class="dropdown-divider"></div>
+              <button
+                (click)="sair()"
+                type="button"
+                class="dropdown-item btn btn-block btn-lg bg-btn fonteBotaoLoginCadastro text-light text-center"
+              >
+                Sair
+              </button>
+            </div>
+          </li>
+        </ul>
+      </span>
+    </div>
+  </nav>
+</div>
