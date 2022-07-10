@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./categoria-edit.component.css']
 })
 export class CategoriaEditComponent implements OnInit {
-  categoria: Categoria = new Categoria()
+  categoria: Categoria = new Categoria();
 
   constructor(
     private categoriaService: CategoriaService,
