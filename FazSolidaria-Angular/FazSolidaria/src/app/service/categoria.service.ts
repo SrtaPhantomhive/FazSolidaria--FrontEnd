@@ -30,15 +30,21 @@ export class CategoriaService {
   }
 
   cadastrarCategoria(categoria:Categoria): Observable<Categoria>{
-    return this.http.post<Categoria>('http://localhost:8080/categorias/cadastrar-categoria', categoria, this.token)
+    return this.http.post<Categoria>('http://localhost:8080/categorias/cadastrar-categoria', categoria, {
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    });
   }
 
   atualizarCadastroCategoria(categoria:Categoria): Observable<Categoria>{
-    return this.http.put<Categoria>('http://localhost:8080/categorias/atualizar-categoria',categoria, this.token)
+    return this.http.put<Categoria>('http://localhost:8080/categorias/atualizar-categoria',categoria, {
+      headers: new HttpHeaders().set('Authorization', environment.token),
+    });
   }
 
   deletarCategoria(id:number){
-    return this.http.delete(`http://localhost:8080/categorias/deletar-id-categoria/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080/categorias/deletar-id-categoria/${id}`, {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    });
   }
  
 }

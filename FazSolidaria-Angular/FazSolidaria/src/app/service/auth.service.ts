@@ -29,7 +29,7 @@ export class AuthService {
   buscarIdUsuario(id: number): Observable<Usuario>{
     return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`, {
       headers: new HttpHeaders().set('Authorization', environment.token),
-    })
+    });
   }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin>{
@@ -47,7 +47,7 @@ export class AuthService {
   atualizarCadastro(usuario:Usuario): Observable<Usuario>{
     return this.http.put<Usuario>("http://localhost:8080/usuarios/atualizar-usuario", usuario,{
       headers: new HttpHeaders().set('Authorization', environment.token),
-    })
+    });
   }
 
   // Determinando para controle de componente
